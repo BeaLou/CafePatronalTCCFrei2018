@@ -45,6 +45,66 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TELAS\Cadastro de Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\Cadastro de Clientes.Designer.cs">
+      <DependentUpon>Cadastro de Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TELAS\Consulta de Estoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\Consulta de Estoque.Designer.cs">
+      <DependentUpon>Consulta de Estoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TELAS\Consulta de Fluxo de Caixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\Consulta de Fluxo de Caixa.Designer.cs">
+      <DependentUpon>Consulta de Fluxo de Caixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TELAS\Controle de Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\Controle de Cliente.Designer.cs">
+      <DependentUpon>Controle de Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TELAS\Controle de Fornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\Controle de Fornecedor.Designer.cs">
+      <DependentUpon>Controle de Fornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TELAS\Controle de Pedido de Compra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\Controle de Pedido de Compra.Designer.cs">
+      <DependentUpon>Controle de Pedido de Compra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TELAS\Controle de Pedido de Venda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\Controle de Pedido de Venda.Designer.cs">
+      <DependentUpon>Controle de Pedido de Venda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TELAS\Controle de Produto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\Controle de Produto.Designer.cs">
+      <DependentUpon>Controle de Produto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TELAS\Controle De Usuário.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\Controle De Usuário.Designer.cs">
+      <DependentUpon>Controle De Usuário.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TELAS\Folha de Pagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\Folha de Pagamento.Designer.cs">
+      <DependentUpon>Folha de Pagamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="TELAS\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +122,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TELAS\Controle De Usuário.resx">
+      <DependentUpon>Controle De Usuário.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TELAS\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
