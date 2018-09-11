@@ -105,6 +105,7 @@
     <Compile Include="TELAS\Folha de Pagamento.Designer.cs">
       <DependentUpon>Folha de Pagamento.cs</DependentUpon>
     </Compile>
+    <Compile Include="TELAS\História.cs" />
     <Compile Include="TELAS\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
