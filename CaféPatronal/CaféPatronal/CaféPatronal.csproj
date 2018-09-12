@@ -105,7 +105,12 @@
     <Compile Include="TELAS\Folha de Pagamento.Designer.cs">
       <DependentUpon>Folha de Pagamento.cs</DependentUpon>
     </Compile>
-    <Compile Include="TELAS\História.cs" />
+    <Compile Include="TELAS\Historia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\Historia.Designer.cs">
+      <DependentUpon>Historia.cs</DependentUpon>
+    </Compile>
     <Compile Include="TELAS\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,8 +135,38 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="TELAS\Cadastro de Clientes.resx">
+      <DependentUpon>Cadastro de Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TELAS\Consulta de Estoque.resx">
+      <DependentUpon>Consulta de Estoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TELAS\Consulta de Fluxo de Caixa.resx">
+      <DependentUpon>Consulta de Fluxo de Caixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TELAS\Controle de Cliente.resx">
+      <DependentUpon>Controle de Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TELAS\Controle de Fornecedor.resx">
+      <DependentUpon>Controle de Fornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TELAS\Controle de Pedido de Compra.resx">
+      <DependentUpon>Controle de Pedido de Compra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TELAS\Controle de Pedido de Venda.resx">
+      <DependentUpon>Controle de Pedido de Venda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TELAS\Controle de Produto.resx">
+      <DependentUpon>Controle de Produto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TELAS\Controle De Usuário.resx">
       <DependentUpon>Controle De Usuário.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TELAS\Folha de Pagamento.resx">
+      <DependentUpon>Folha de Pagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TELAS\Historia.resx">
+      <DependentUpon>Historia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
@@ -160,6 +195,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\gif.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cafe.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cafe2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

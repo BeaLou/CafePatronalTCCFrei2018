@@ -1,6 +1,6 @@
 ﻿namespace CaféPatronal.TELAS
 {
-    partial class Controle_de_Fornecedor
+    partial class Historia
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             this.SuspendLayout();
             // 
-            // Controle_de_Fornecedor
+            // Historia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -38,9 +38,9 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1195, 574);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Controle_de_Fornecedor";
+            this.Name = "Historia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Controle_de_Fornecedor";
+            this.Text = "Historia";
             this.ResumeLayout(false);
 
         }
