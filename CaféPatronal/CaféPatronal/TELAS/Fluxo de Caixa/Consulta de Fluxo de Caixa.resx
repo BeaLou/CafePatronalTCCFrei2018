@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnConsultarVendas.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnConsultarFluxo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADr4AAA6+AepCscAAAAEwSURBVDhPndO9SwJxHMfxy5ZIIhyKQGnLTVykhyVoaJEI
+        YQUAAAAJcEhZcwAADr0AAA69AUf7kK0AAAEwSURBVDhPndO9SwJxHMfxy5ZIIhyKQGnLTVykhyVoaJEI
         STFqqf4Ft7akGmqKpoiGcnBudHAziaQhSkIHl7YCKaLo+eH9iYbr7mdwfuAFd987vve7333PsqUDEayh
         iDIOkEA3/k0nFtDAJ25xg1c8YBcDaJk07nCFDKIIYxoFfCAHP1wJ4hTXmFTBkT4cQquZVcGZOejiFrQP
         poxDr5KHXvdPVqElGrv/Rqu4RAU9KtiThRrM/5yZ048aTuBqkMILduBTwRDtzRP24bpH3Y+gTzcD5z4M

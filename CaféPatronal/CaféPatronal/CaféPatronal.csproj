@@ -83,77 +83,41 @@
     <Compile Include="Programacao\Produto\ProdutoDTO.cs" />
     <Compile Include="Programacao\UserSession.cs" />
     <Compile Include="Programacao\Validação.cs" />
-    <Compile Include="TELAS\Cadastro\CadastrarFornecedor.cs">
+    <Compile Include="TELAS\Cadastro e Consulta\Fornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TELAS\Cadastro\CadastrarFornecedor.Designer.cs">
-      <DependentUpon>CadastrarFornecedor.cs</DependentUpon>
+    <Compile Include="TELAS\Cadastro e Consulta\Fornecedor.Designer.cs">
+      <DependentUpon>Fornecedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="TELAS\Cadastro\CadastrarPedido.cs">
+    <Compile Include="TELAS\Cadastro e Consulta\Pedido.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TELAS\Cadastro\CadastrarPedido.Designer.cs">
-      <DependentUpon>CadastrarPedido.cs</DependentUpon>
+    <Compile Include="TELAS\Cadastro e Consulta\Pedido.Designer.cs">
+      <DependentUpon>Pedido.cs</DependentUpon>
     </Compile>
-    <Compile Include="TELAS\Cadastro\CadastrarProduto.cs">
+    <Compile Include="TELAS\Cadastro e Consulta\Produto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TELAS\Cadastro\CadastrarProduto.Designer.cs">
-      <DependentUpon>CadastrarProduto.cs</DependentUpon>
+    <Compile Include="TELAS\Cadastro e Consulta\Produto.Designer.cs">
+      <DependentUpon>Produto.cs</DependentUpon>
     </Compile>
-    <Compile Include="TELAS\Cadastro\CadastroClientes.cs">
+    <Compile Include="TELAS\Cadastro e Consulta\Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TELAS\Cadastro\CadastroClientes.Designer.cs">
-      <DependentUpon>CadastroClientes.cs</DependentUpon>
+    <Compile Include="TELAS\Cadastro e Consulta\Cliente.Designer.cs">
+      <DependentUpon>Cliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="TELAS\Cadastro\CadastroEstoque.cs">
+    <Compile Include="TELAS\Cadastro e Consulta\Estoque.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TELAS\Cadastro\CadastroEstoque.Designer.cs">
-      <DependentUpon>CadastroEstoque.cs</DependentUpon>
+    <Compile Include="TELAS\Cadastro e Consulta\Estoque.Designer.cs">
+      <DependentUpon>Estoque.cs</DependentUpon>
     </Compile>
-    <Compile Include="TELAS\Cadastro\CadastroFuncionario.cs">
+    <Compile Include="TELAS\Cadastro e Consulta\Funcionário.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TELAS\Cadastro\CadastroFuncionario.Designer.cs">
-      <DependentUpon>CadastroFuncionario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TELAS\Consulta\ConsultarCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TELAS\Consulta\ConsultarCliente.Designer.cs">
-      <DependentUpon>ConsultarCliente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TELAS\Consulta\ConsultarEstoque.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TELAS\Consulta\ConsultarEstoque.Designer.cs">
-      <DependentUpon>ConsultarEstoque.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TELAS\Consulta\ConsultarFornecedor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TELAS\Consulta\ConsultarFornecedor.Designer.cs">
-      <DependentUpon>ConsultarFornecedor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TELAS\Consulta\ConsultarFuncionario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TELAS\Consulta\ConsultarFuncionario.Designer.cs">
-      <DependentUpon>ConsultarFuncionario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TELAS\Consulta\ConsultarPedido.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TELAS\Consulta\ConsultarPedido.Designer.cs">
-      <DependentUpon>ConsultarPedido.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TELAS\Consulta\ConsultarProduto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TELAS\Consulta\ConsultarProduto.Designer.cs">
-      <DependentUpon>ConsultarProduto.cs</DependentUpon>
+    <Compile Include="TELAS\Cadastro e Consulta\Funcionário.Designer.cs">
+      <DependentUpon>Funcionário.cs</DependentUpon>
     </Compile>
     <Compile Include="TELAS\Consulta\ControleDeVenda.cs">
       <SubType>Form</SubType>
@@ -161,48 +125,48 @@
     <Compile Include="TELAS\Consulta\ControleDeVenda.Designer.cs">
       <DependentUpon>ControleDeVenda.cs</DependentUpon>
     </Compile>
-    <Compile Include="TELAS\Fluxo de Caixa e Folha de Pagamento\Consulta de Fluxo de Caixa.cs">
+    <Compile Include="TELAS\Fluxo de Caixa\Consulta de Fluxo de Caixa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TELAS\Fluxo de Caixa e Folha de Pagamento\Consulta de Fluxo de Caixa.Designer.cs">
+    <Compile Include="TELAS\Fluxo de Caixa\Consulta de Fluxo de Caixa.Designer.cs">
       <DependentUpon>Consulta de Fluxo de Caixa.cs</DependentUpon>
     </Compile>
-    <Compile Include="TELAS\Fluxo de Caixa e Folha de Pagamento\Controle de Pagamento.cs">
+    <Compile Include="TELAS\Cadastro e Consulta\Folha Pagamento e Controle\Folha de Pagamento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TELAS\Fluxo de Caixa e Folha de Pagamento\Controle de Pagamento.Designer.cs">
-      <DependentUpon>Controle de Pagamento.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TELAS\Fluxo de Caixa e Folha de Pagamento\Folha de Pagamento.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TELAS\Fluxo de Caixa e Folha de Pagamento\Folha de Pagamento.Designer.cs">
+    <Compile Include="TELAS\Cadastro e Consulta\Folha Pagamento e Controle\Folha de Pagamento.Designer.cs">
       <DependentUpon>Folha de Pagamento.cs</DependentUpon>
     </Compile>
-    <Compile Include="TELAS\Login.cs">
+    <Compile Include="TELAS\Login\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TELAS\Login.Designer.cs">
+    <Compile Include="TELAS\Login\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="TELAS\MenuHistoriaSplash\Historia.cs">
+    <Compile Include="TELAS\MenuHistoriaSplashSobre\Historia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TELAS\MenuHistoriaSplash\Historia.Designer.cs">
+    <Compile Include="TELAS\MenuHistoriaSplashSobre\Historia.Designer.cs">
       <DependentUpon>Historia.cs</DependentUpon>
     </Compile>
-    <Compile Include="TELAS\MenuHistoriaSplash\Menu.cs">
+    <Compile Include="TELAS\MenuHistoriaSplashSobre\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TELAS\MenuHistoriaSplash\Menu.Designer.cs">
+    <Compile Include="TELAS\MenuHistoriaSplashSobre\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TELAS\MenuHistoriaSplash\Splashscreen.cs">
+    <Compile Include="TELAS\MenuHistoriaSplashSobre\Sobre.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TELAS\MenuHistoriaSplash\Splashscreen.Designer.cs">
+    <Compile Include="TELAS\MenuHistoriaSplashSobre\Sobre.Designer.cs">
+      <DependentUpon>Sobre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TELAS\MenuHistoriaSplashSobre\Splashscreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\MenuHistoriaSplashSobre\Splashscreen.Designer.cs">
       <DependentUpon>Splashscreen.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -215,64 +179,46 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="TELAS\Cadastro\CadastrarFornecedor.resx">
-      <DependentUpon>CadastrarFornecedor.cs</DependentUpon>
+    <EmbeddedResource Include="TELAS\Cadastro e Consulta\Fornecedor.resx">
+      <DependentUpon>Fornecedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TELAS\Cadastro\CadastrarPedido.resx">
-      <DependentUpon>CadastrarPedido.cs</DependentUpon>
+    <EmbeddedResource Include="TELAS\Cadastro e Consulta\Pedido.resx">
+      <DependentUpon>Pedido.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TELAS\Cadastro\CadastrarProduto.resx">
-      <DependentUpon>CadastrarProduto.cs</DependentUpon>
+    <EmbeddedResource Include="TELAS\Cadastro e Consulta\Produto.resx">
+      <DependentUpon>Produto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TELAS\Cadastro\CadastroClientes.resx">
-      <DependentUpon>CadastroClientes.cs</DependentUpon>
+    <EmbeddedResource Include="TELAS\Cadastro e Consulta\Cliente.resx">
+      <DependentUpon>Cliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TELAS\Cadastro\CadastroEstoque.resx">
-      <DependentUpon>CadastroEstoque.cs</DependentUpon>
+    <EmbeddedResource Include="TELAS\Cadastro e Consulta\Estoque.resx">
+      <DependentUpon>Estoque.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TELAS\Cadastro\CadastroFuncionario.resx">
-      <DependentUpon>CadastroFuncionario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TELAS\Consulta\ConsultarCliente.resx">
-      <DependentUpon>ConsultarCliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TELAS\Consulta\ConsultarEstoque.resx">
-      <DependentUpon>ConsultarEstoque.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TELAS\Consulta\ConsultarFornecedor.resx">
-      <DependentUpon>ConsultarFornecedor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TELAS\Consulta\ConsultarFuncionario.resx">
-      <DependentUpon>ConsultarFuncionario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TELAS\Consulta\ConsultarPedido.resx">
-      <DependentUpon>ConsultarPedido.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TELAS\Consulta\ConsultarProduto.resx">
-      <DependentUpon>ConsultarProduto.cs</DependentUpon>
+    <EmbeddedResource Include="TELAS\Cadastro e Consulta\Funcionário.resx">
+      <DependentUpon>Funcionário.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\Consulta\ControleDeVenda.resx">
       <DependentUpon>ControleDeVenda.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TELAS\Fluxo de Caixa e Folha de Pagamento\Consulta de Fluxo de Caixa.resx">
+    <EmbeddedResource Include="TELAS\Fluxo de Caixa\Consulta de Fluxo de Caixa.resx">
       <DependentUpon>Consulta de Fluxo de Caixa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TELAS\Fluxo de Caixa e Folha de Pagamento\Controle de Pagamento.resx">
-      <DependentUpon>Controle de Pagamento.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TELAS\Fluxo de Caixa e Folha de Pagamento\Folha de Pagamento.resx">
+    <EmbeddedResource Include="TELAS\Cadastro e Consulta\Folha Pagamento e Controle\Folha de Pagamento.resx">
       <DependentUpon>Folha de Pagamento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TELAS\Login.resx">
+    <EmbeddedResource Include="TELAS\Login\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TELAS\MenuHistoriaSplash\Historia.resx">
+    <EmbeddedResource Include="TELAS\MenuHistoriaSplashSobre\Historia.resx">
       <DependentUpon>Historia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TELAS\MenuHistoriaSplash\Menu.resx">
+    <EmbeddedResource Include="TELAS\MenuHistoriaSplashSobre\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TELAS\MenuHistoriaSplash\Splashscreen.resx">
+    <EmbeddedResource Include="TELAS\MenuHistoriaSplashSobre\Sobre.resx">
+      <DependentUpon>Sobre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TELAS\MenuHistoriaSplashSobre\Splashscreen.resx">
       <DependentUpon>Splashscreen.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
