@@ -71,7 +71,7 @@
             // 
             // txtValor
             // 
-            this.txtValor.Location = new System.Drawing.Point(202, 179);
+            this.txtValor.Location = new System.Drawing.Point(202, 158);
             this.txtValor.MaxLength = 50;
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(590, 32);
@@ -83,7 +83,7 @@
             this.lblValorFinal.BackColor = System.Drawing.Color.Transparent;
             this.lblValorFinal.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblValorFinal.ForeColor = System.Drawing.Color.Black;
-            this.lblValorFinal.Location = new System.Drawing.Point(40, 179);
+            this.lblValorFinal.Location = new System.Drawing.Point(40, 158);
             this.lblValorFinal.Name = "lblValorFinal";
             this.lblValorFinal.Size = new System.Drawing.Size(141, 28);
             this.lblValorFinal.TabIndex = 33;
@@ -140,7 +140,7 @@
             this.groupBox1.Controls.Add(this.lblValorFinal);
             this.groupBox1.Location = new System.Drawing.Point(130, 100);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(810, 229);
+            this.groupBox1.Size = new System.Drawing.Size(810, 201);
             this.groupBox1.TabIndex = 37;
             this.groupBox1.TabStop = false;
             // 

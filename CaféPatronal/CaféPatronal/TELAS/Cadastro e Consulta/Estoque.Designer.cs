@@ -60,7 +60,7 @@
             // 
             // dtpCompra
             // 
-            this.dtpCompra.Location = new System.Drawing.Point(186, 191);
+            this.dtpCompra.Location = new System.Drawing.Point(186, 179);
             this.dtpCompra.MaxDate = new System.DateTime(2050, 12, 31, 0, 0, 0, 0);
             this.dtpCompra.MinDate = new System.DateTime(1910, 1, 1, 0, 0, 0, 0);
             this.dtpCompra.Name = "dtpCompra";
@@ -73,7 +73,7 @@
             this.lblDataNascimento.BackColor = System.Drawing.Color.Transparent;
             this.lblDataNascimento.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDataNascimento.ForeColor = System.Drawing.Color.Black;
-            this.lblDataNascimento.Location = new System.Drawing.Point(16, 183);
+            this.lblDataNascimento.Location = new System.Drawing.Point(39, 183);
             this.lblDataNascimento.Name = "lblDataNascimento";
             this.lblDataNascimento.Size = new System.Drawing.Size(136, 28);
             this.lblDataNascimento.TabIndex = 26;
@@ -101,7 +101,7 @@
             // 
             // dtpValidade
             // 
-            this.dtpValidade.Location = new System.Drawing.Point(184, 271);
+            this.dtpValidade.Location = new System.Drawing.Point(184, 259);
             this.dtpValidade.MaxDate = new System.DateTime(2050, 12, 31, 0, 0, 0, 0);
             this.dtpValidade.MinDate = new System.DateTime(1910, 1, 1, 0, 0, 0, 0);
             this.dtpValidade.Name = "dtpValidade";
@@ -114,7 +114,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(14, 271);
+            this.label1.Location = new System.Drawing.Point(37, 259);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(138, 28);
             this.label1.TabIndex = 30;

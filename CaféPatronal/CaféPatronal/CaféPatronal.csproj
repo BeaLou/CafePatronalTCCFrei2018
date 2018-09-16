@@ -125,11 +125,11 @@
     <Compile Include="TELAS\Consulta\ControleDeVenda.Designer.cs">
       <DependentUpon>ControleDeVenda.cs</DependentUpon>
     </Compile>
-    <Compile Include="TELAS\Fluxo de Caixa\Consulta de Fluxo de Caixa.cs">
+    <Compile Include="TELAS\Fluxo de Caixa\Fluxodecaixa e Consultar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TELAS\Fluxo de Caixa\Consulta de Fluxo de Caixa.Designer.cs">
-      <DependentUpon>Consulta de Fluxo de Caixa.cs</DependentUpon>
+    <Compile Include="TELAS\Fluxo de Caixa\Fluxodecaixa e Consultar.Designer.cs">
+      <DependentUpon>Fluxodecaixa e Consultar.cs</DependentUpon>
     </Compile>
     <Compile Include="TELAS\Cadastro e Consulta\Folha Pagamento e Controle\Folha de Pagamento.cs">
       <SubType>Form</SubType>
@@ -200,8 +200,8 @@
     <EmbeddedResource Include="TELAS\Consulta\ControleDeVenda.resx">
       <DependentUpon>ControleDeVenda.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TELAS\Fluxo de Caixa\Consulta de Fluxo de Caixa.resx">
-      <DependentUpon>Consulta de Fluxo de Caixa.cs</DependentUpon>
+    <EmbeddedResource Include="TELAS\Fluxo de Caixa\Fluxodecaixa e Consultar.resx">
+      <DependentUpon>Fluxodecaixa e Consultar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\Cadastro e Consulta\Folha Pagamento e Controle\Folha de Pagamento.resx">
       <DependentUpon>Folha de Pagamento.cs</DependentUpon>
