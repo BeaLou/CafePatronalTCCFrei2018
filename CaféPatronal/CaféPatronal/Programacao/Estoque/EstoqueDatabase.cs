@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CaféPatronal.Programacao
+namespace CaféPatronal.Programacao.Estoque
 {
-    public class FolhadePontoDTO
+    public class EstoqueDatabase
     {
     }
 }

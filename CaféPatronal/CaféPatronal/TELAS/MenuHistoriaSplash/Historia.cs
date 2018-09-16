@@ -16,5 +16,12 @@ namespace CaféPatronal.TELAS
         {
             InitializeComponent();
         }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            Form1 tela = new Form1();
+            tela.Show();
+            this.Hide();
+        }
     }
 }

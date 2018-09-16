@@ -28,17 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cadastro_de_Clientes));
             this.btnVoltar = new System.Windows.Forms.PictureBox();
             this.btnSalvar = new System.Windows.Forms.PictureBox();
             this.lblCadastroCliente = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
             this.txtSobrenome = new System.Windows.Forms.TextBox();
             this.lblSobrenome = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblDataNascimento = new System.Windows.Forms.Label();
             this.mktCpf = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.mtbCpf = new System.Windows.Forms.MaskedTextBox();
             this.dtpDataNascimento = new System.Windows.Forms.DateTimePicker();
             this.lblNome = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
@@ -55,6 +56,7 @@
             this.btnVoltar.Size = new System.Drawing.Size(59, 57);
             this.btnVoltar.TabIndex = 3;
             this.btnVoltar.TabStop = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // btnSalvar
             // 
@@ -66,6 +68,7 @@
             this.btnSalvar.Size = new System.Drawing.Size(59, 57);
             this.btnSalvar.TabIndex = 2;
             this.btnSalvar.TabStop = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // lblCadastroCliente
             // 
@@ -78,19 +81,23 @@
             this.lblCadastroCliente.TabIndex = 4;
             this.lblCadastroCliente.Text = "CADASTRO DE CLIENTES";
             // 
-            // textBox1
+            // txtNome
             // 
-            this.textBox1.Location = new System.Drawing.Point(379, 179);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(456, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtNome.Location = new System.Drawing.Point(379, 179);
+            this.txtNome.MaxLength = 20;
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(456, 20);
+            this.txtNome.TabIndex = 1;
+            this.txtNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // txtSobrenome
             // 
             this.txtSobrenome.Location = new System.Drawing.Point(379, 241);
+            this.txtSobrenome.MaxLength = 20;
             this.txtSobrenome.Name = "txtSobrenome";
             this.txtSobrenome.Size = new System.Drawing.Size(456, 20);
             this.txtSobrenome.TabIndex = 2;
+            this.txtSobrenome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // lblSobrenome
             // 
@@ -147,17 +154,19 @@
             this.mktCpf.TabIndex = 11;
             this.mktCpf.Text = "CPF:";
             // 
-            // maskedTextBox1
+            // mtbCpf
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(379, 307);
-            this.maskedTextBox1.Mask = "000.000.000-00";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(456, 20);
-            this.maskedTextBox1.TabIndex = 3;
+            this.mtbCpf.Location = new System.Drawing.Point(379, 307);
+            this.mtbCpf.Mask = "000.000.000-00";
+            this.mtbCpf.Name = "mtbCpf";
+            this.mtbCpf.Size = new System.Drawing.Size(456, 20);
+            this.mtbCpf.TabIndex = 3;
             // 
             // dtpDataNascimento
             // 
             this.dtpDataNascimento.Location = new System.Drawing.Point(379, 372);
+            this.dtpDataNascimento.MaxDate = new System.DateTime(2050, 12, 31, 0, 0, 0, 0);
+            this.dtpDataNascimento.MinDate = new System.DateTime(1910, 1, 1, 0, 0, 0, 0);
             this.dtpDataNascimento.Name = "dtpDataNascimento";
             this.dtpDataNascimento.Size = new System.Drawing.Size(456, 20);
             this.dtpDataNascimento.TabIndex = 4;
@@ -182,18 +191,19 @@
             this.ClientSize = new System.Drawing.Size(1195, 574);
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.dtpDataNascimento);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.mtbCpf);
             this.Controls.Add(this.mktCpf);
             this.Controls.Add(this.lblDataNascimento);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.txtSobrenome);
             this.Controls.Add(this.lblSobrenome);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblCadastroCliente);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnSalvar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Cadastro_de_Clientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro_de_Clientes";
@@ -209,15 +219,15 @@
         private System.Windows.Forms.PictureBox btnVoltar;
         private System.Windows.Forms.PictureBox btnSalvar;
         private System.Windows.Forms.Label lblCadastroCliente;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox txtSobrenome;
         private System.Windows.Forms.Label lblSobrenome;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblDataNascimento;
         private System.Windows.Forms.Label mktCpf;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox mtbCpf;
         private System.Windows.Forms.DateTimePicker dtpDataNascimento;
         private System.Windows.Forms.Label lblNome;
+        private System.Windows.Forms.TextBox txtNome;
     }
 }

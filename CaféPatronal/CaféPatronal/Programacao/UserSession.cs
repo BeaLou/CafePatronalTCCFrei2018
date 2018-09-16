@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace CaféPatronal.Programacao
 {
-    public class FolhadePontoDTO
+   static class UserSession
     {
+      //   public static FuncionarioDTO UsuarioLogado { get; set; }
     }
 }

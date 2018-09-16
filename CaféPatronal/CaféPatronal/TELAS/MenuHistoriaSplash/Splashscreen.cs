@@ -15,6 +15,19 @@ namespace CaféPatronal.TELAS
         public Splashscreen()
         {
             InitializeComponent();
+            Task.Factory.StartNew(() =>
+            {
+                // Espera 2 segundos para iniciar o sistema
+                System.Threading.Thread.Sleep(6000);
+
+                Invoke(new Action(() =>
+                {
+                    // Abre a tela Inicial
+                    Login frm = new Login();
+                    frm.Show();
+                    Hide();
+                }));
+            });
         }
 
         private void label1_Click(object sender, EventArgs e)

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastrarProduto));
             this.lblNome = new System.Windows.Forms.Label();
             this.dtpDataNascimento = new System.Windows.Forms.DateTimePicker();
             this.lblDataValidade = new System.Windows.Forms.Label();
@@ -35,6 +36,10 @@
             this.lblQuantidade = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblCadastroProduto = new System.Windows.Forms.Label();
+            this.btnVoltar = new System.Windows.Forms.PictureBox();
+            this.btnSalvar = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalvar)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNome
@@ -51,9 +56,12 @@
             // dtpDataNascimento
             // 
             this.dtpDataNascimento.Location = new System.Drawing.Point(329, 285);
+            this.dtpDataNascimento.MaxDate = new System.DateTime(2050, 12, 31, 0, 0, 0, 0);
+            this.dtpDataNascimento.MinDate = new System.DateTime(1910, 1, 1, 0, 0, 0, 0);
             this.dtpDataNascimento.Name = "dtpDataNascimento";
             this.dtpDataNascimento.Size = new System.Drawing.Size(535, 20);
-            this.dtpDataNascimento.TabIndex = 27;
+            this.dtpDataNascimento.TabIndex = 3;
+            this.dtpDataNascimento.Value = new System.DateTime(1910, 12, 31, 0, 0, 0, 0);
             // 
             // lblDataValidade
             // 
@@ -70,9 +78,10 @@
             // txtSobrenome
             // 
             this.txtSobrenome.Location = new System.Drawing.Point(329, 239);
+            this.txtSobrenome.MaxLength = 20;
             this.txtSobrenome.Name = "txtSobrenome";
             this.txtSobrenome.Size = new System.Drawing.Size(535, 20);
-            this.txtSobrenome.TabIndex = 26;
+            this.txtSobrenome.TabIndex = 2;
             // 
             // lblQuantidade
             // 
@@ -88,10 +97,12 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(329, 190);
+            this.textBox1.MaxLength = 20;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(535, 20);
             this.textBox1.TabIndex = 1;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // lblCadastroProduto
             // 
@@ -105,6 +116,30 @@
             this.lblCadastroProduto.TabIndex = 31;
             this.lblCadastroProduto.Text = "CADASTRO DE PRODUTOS.";
             // 
+            // btnVoltar
+            // 
+            this.btnVoltar.BackColor = System.Drawing.Color.Transparent;
+            this.btnVoltar.BackgroundImage = global::CaféPatronal.Properties.Resources.icon3;
+            this.btnVoltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVoltar.Location = new System.Drawing.Point(1092, 12);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(59, 57);
+            this.btnVoltar.TabIndex = 33;
+            this.btnVoltar.TabStop = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.BackColor = System.Drawing.Color.Transparent;
+            this.btnSalvar.BackgroundImage = global::CaféPatronal.Properties.Resources.icon2;
+            this.btnSalvar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSalvar.Location = new System.Drawing.Point(1092, 98);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(59, 57);
+            this.btnSalvar.TabIndex = 32;
+            this.btnSalvar.TabStop = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
             // CadastrarProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -112,6 +147,8 @@
             this.BackgroundImage = global::CaféPatronal.Properties.Resources.cafe;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1163, 498);
+            this.Controls.Add(this.btnVoltar);
+            this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.lblCadastroProduto);
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.dtpDataNascimento);
@@ -120,9 +157,12 @@
             this.Controls.Add(this.lblQuantidade);
             this.Controls.Add(this.textBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CadastrarProduto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CadastrarProduto";
+            ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalvar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -137,5 +177,7 @@
         private System.Windows.Forms.Label lblQuantidade;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblCadastroProduto;
+        private System.Windows.Forms.PictureBox btnVoltar;
+        private System.Windows.Forms.PictureBox btnSalvar;
     }
 }

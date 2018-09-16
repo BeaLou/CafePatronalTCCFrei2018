@@ -21,5 +21,15 @@ namespace CaféPatronal.TELAS
         {
 
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Você quer mesmo sair?", "Café Patronal",
+MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+== DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
 }

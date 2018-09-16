@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CaféPatronal.Programacao;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace CaféPatronal.TELAS
 {
     public partial class Cadastro_de_Clientes : Form
     {
+        Validação V = new Validação();
         public Cadastro_de_Clientes()
         {
             InitializeComponent();
@@ -20,6 +22,23 @@ namespace CaféPatronal.TELAS
         private void lblEmail_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            Form1 tela = new Form1();
+            tela.Show();
+            this.Hide();
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            V.letras(e);
         }
     }
 }

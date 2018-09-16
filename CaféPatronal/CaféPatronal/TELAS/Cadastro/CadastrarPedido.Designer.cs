@@ -28,9 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastrarPedido));
             this.lblEstoque = new System.Windows.Forms.Label();
             this.txtValor = new System.Windows.Forms.TextBox();
             this.lblValorFinal = new System.Windows.Forms.Label();
+            this.btnVoltar = new System.Windows.Forms.PictureBox();
+            this.btnSalvar = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalvar)).BeginInit();
             this.SuspendLayout();
             // 
             // lblEstoque
@@ -47,6 +52,7 @@
             // txtValor
             // 
             this.txtValor.Location = new System.Drawing.Point(310, 238);
+            this.txtValor.MaxLength = 50;
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(590, 20);
             this.txtValor.TabIndex = 1;
@@ -62,6 +68,29 @@
             this.lblValorFinal.TabIndex = 33;
             this.lblValorFinal.Text = "Valor da Compra:";
             // 
+            // btnVoltar
+            // 
+            this.btnVoltar.BackColor = System.Drawing.Color.Transparent;
+            this.btnVoltar.BackgroundImage = global::CaféPatronal.Properties.Resources.icon3;
+            this.btnVoltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVoltar.Location = new System.Drawing.Point(1108, 12);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(59, 57);
+            this.btnVoltar.TabIndex = 36;
+            this.btnVoltar.TabStop = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.BackColor = System.Drawing.Color.Transparent;
+            this.btnSalvar.BackgroundImage = global::CaféPatronal.Properties.Resources.icon2;
+            this.btnSalvar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSalvar.Location = new System.Drawing.Point(1108, 98);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(59, 57);
+            this.btnSalvar.TabIndex = 35;
+            this.btnSalvar.TabStop = false;
+            // 
             // CadastrarPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -69,13 +98,18 @@
             this.BackgroundImage = global::CaféPatronal.Properties.Resources.cafe;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1179, 536);
+            this.Controls.Add(this.btnVoltar);
+            this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.lblEstoque);
             this.Controls.Add(this.txtValor);
             this.Controls.Add(this.lblValorFinal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CadastrarPedido";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CadastrarPedido";
+            ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalvar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -86,5 +120,7 @@
         private System.Windows.Forms.Label lblEstoque;
         private System.Windows.Forms.TextBox txtValor;
         private System.Windows.Forms.Label lblValorFinal;
+        private System.Windows.Forms.PictureBox btnVoltar;
+        private System.Windows.Forms.PictureBox btnSalvar;
     }
 }

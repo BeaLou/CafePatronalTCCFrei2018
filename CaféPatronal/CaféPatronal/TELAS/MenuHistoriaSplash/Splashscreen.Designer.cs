@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Splashscreen));
             this.lblCAfe = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -41,7 +42,7 @@
             this.lblCAfe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblCAfe.Font = new System.Drawing.Font("Agency FB", 60F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lblCAfe.ForeColor = System.Drawing.Color.Khaki;
-            this.lblCAfe.Location = new System.Drawing.Point(12, 109);
+            this.lblCAfe.Location = new System.Drawing.Point(12, 72);
             this.lblCAfe.Name = "lblCAfe";
             this.lblCAfe.Size = new System.Drawing.Size(848, 97);
             this.lblCAfe.TabIndex = 0;
@@ -54,7 +55,7 @@
             this.label1.BackColor = System.Drawing.Color.Green;
             this.label1.Font = new System.Drawing.Font("Agency FB", 50F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label1.ForeColor = System.Drawing.Color.Khaki;
-            this.label1.Location = new System.Drawing.Point(308, 460);
+            this.label1.Location = new System.Drawing.Point(308, 487);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(891, 80);
             this.label1.TabIndex = 1;
@@ -63,7 +64,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CaféPatronal.Properties.Resources.gif;
-            this.pictureBox1.Location = new System.Drawing.Point(417, 234);
+            this.pictureBox1.Location = new System.Drawing.Point(432, 250);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(314, 181);
             this.pictureBox1.TabIndex = 2;
@@ -81,6 +82,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblCAfe);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Splashscreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Splashscreen";

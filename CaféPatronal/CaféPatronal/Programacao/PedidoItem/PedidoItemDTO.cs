@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CaféPatronal.Programacao.PedidoItem
 {
-    class PedidoItemDTO
+    public class PedidoItemDTO
     {
     }
 }

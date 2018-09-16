@@ -28,23 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Folha_de_Pagamento));
             this.lblCadastroFuncionario = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtValeAlimentação = new System.Windows.Forms.TextBox();
             this.lblAlimentacao = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtValeRefeição = new System.Windows.Forms.TextBox();
             this.lblRefeicao = new System.Windows.Forms.Label();
             this.lblInss = new System.Windows.Forms.Label();
             this.txtSobrenome = new System.Windows.Forms.TextBox();
             this.lblConveio = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtInss = new System.Windows.Forms.TextBox();
+            this.txtValeTransporte = new System.Windows.Forms.TextBox();
             this.lblTransporte = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtTelefonnet = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtAgua = new System.Windows.Forms.TextBox();
+            this.txtLuz = new System.Windows.Forms.TextBox();
             this.lblLuz = new System.Windows.Forms.Label();
             this.lblAgua = new System.Windows.Forms.Label();
+            this.btnVoltar = new System.Windows.Forms.PictureBox();
+            this.btnSalvar = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalvar)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCadastroFuncionario
@@ -58,12 +63,14 @@
             this.lblCadastroFuncionario.TabIndex = 55;
             this.lblCadastroFuncionario.Text = "FOLHA DE PAGAMENTO";
             // 
-            // textBox3
+            // txtValeAlimentação
             // 
-            this.textBox3.Location = new System.Drawing.Point(683, 181);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(275, 20);
-            this.textBox3.TabIndex = 49;
+            this.txtValeAlimentação.Location = new System.Drawing.Point(683, 181);
+            this.txtValeAlimentação.MaxLength = 10;
+            this.txtValeAlimentação.Name = "txtValeAlimentação";
+            this.txtValeAlimentação.Size = new System.Drawing.Size(275, 20);
+            this.txtValeAlimentação.TabIndex = 6;
+            this.txtValeAlimentação.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInss_KeyPress);
             // 
             // lblAlimentacao
             // 
@@ -77,12 +84,14 @@
             this.lblAlimentacao.TabIndex = 54;
             this.lblAlimentacao.Text = "Vale Alimentação:";
             // 
-            // textBox5
+            // txtValeRefeição
             // 
-            this.textBox5.Location = new System.Drawing.Point(683, 229);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(275, 20);
-            this.textBox5.TabIndex = 50;
+            this.txtValeRefeição.Location = new System.Drawing.Point(683, 229);
+            this.txtValeRefeição.MaxLength = 10;
+            this.txtValeRefeição.Name = "txtValeRefeição";
+            this.txtValeRefeição.Size = new System.Drawing.Size(275, 20);
+            this.txtValeRefeição.TabIndex = 7;
+            this.txtValeRefeição.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInss_KeyPress);
             // 
             // lblRefeicao
             // 
@@ -110,9 +119,11 @@
             // txtSobrenome
             // 
             this.txtSobrenome.Location = new System.Drawing.Point(210, 229);
+            this.txtSobrenome.MaxLength = 20;
             this.txtSobrenome.Name = "txtSobrenome";
             this.txtSobrenome.Size = new System.Drawing.Size(275, 20);
-            this.txtSobrenome.TabIndex = 48;
+            this.txtSobrenome.TabIndex = 2;
+            this.txtSobrenome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInss_KeyPress);
             // 
             // lblConveio
             // 
@@ -125,19 +136,23 @@
             this.lblConveio.TabIndex = 51;
             this.lblConveio.Text = "Convênio:";
             // 
-            // textBox1
+            // txtInss
             // 
-            this.textBox1.Location = new System.Drawing.Point(210, 180);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(275, 20);
-            this.textBox1.TabIndex = 47;
+            this.txtInss.Location = new System.Drawing.Point(210, 180);
+            this.txtInss.MaxLength = 20;
+            this.txtInss.Name = "txtInss";
+            this.txtInss.Size = new System.Drawing.Size(275, 20);
+            this.txtInss.TabIndex = 1;
+            this.txtInss.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInss_KeyPress);
             // 
-            // textBox2
+            // txtValeTransporte
             // 
-            this.textBox2.Location = new System.Drawing.Point(683, 275);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(275, 20);
-            this.textBox2.TabIndex = 58;
+            this.txtValeTransporte.Location = new System.Drawing.Point(683, 275);
+            this.txtValeTransporte.MaxLength = 10;
+            this.txtValeTransporte.Name = "txtValeTransporte";
+            this.txtValeTransporte.Size = new System.Drawing.Size(275, 20);
+            this.txtValeTransporte.TabIndex = 8;
+            this.txtValeTransporte.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInss_KeyPress);
             // 
             // lblTransporte
             // 
@@ -151,12 +166,14 @@
             this.lblTransporte.TabIndex = 61;
             this.lblTransporte.Text = "Vale Transporte:";
             // 
-            // textBox4
+            // txtTelefonnet
             // 
-            this.textBox4.Location = new System.Drawing.Point(210, 398);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(275, 20);
-            this.textBox4.TabIndex = 59;
+            this.txtTelefonnet.Location = new System.Drawing.Point(210, 398);
+            this.txtTelefonnet.MaxLength = 10;
+            this.txtTelefonnet.Name = "txtTelefonnet";
+            this.txtTelefonnet.Size = new System.Drawing.Size(275, 20);
+            this.txtTelefonnet.TabIndex = 5;
+            this.txtTelefonnet.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInss_KeyPress);
             // 
             // label2
             // 
@@ -170,19 +187,23 @@
             this.label2.TabIndex = 60;
             this.label2.Text = "Telefone/Internet:";
             // 
-            // textBox6
+            // txtAgua
             // 
-            this.textBox6.Location = new System.Drawing.Point(210, 342);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(275, 20);
-            this.textBox6.TabIndex = 57;
+            this.txtAgua.Location = new System.Drawing.Point(210, 342);
+            this.txtAgua.MaxLength = 20;
+            this.txtAgua.Name = "txtAgua";
+            this.txtAgua.Size = new System.Drawing.Size(275, 20);
+            this.txtAgua.TabIndex = 4;
+            this.txtAgua.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInss_KeyPress);
             // 
-            // textBox7
+            // txtLuz
             // 
-            this.textBox7.Location = new System.Drawing.Point(210, 293);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(275, 20);
-            this.textBox7.TabIndex = 56;
+            this.txtLuz.Location = new System.Drawing.Point(210, 293);
+            this.txtLuz.MaxLength = 20;
+            this.txtLuz.Name = "txtLuz";
+            this.txtLuz.Size = new System.Drawing.Size(275, 20);
+            this.txtLuz.TabIndex = 3;
+            this.txtLuz.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInss_KeyPress);
             // 
             // lblLuz
             // 
@@ -207,6 +228,29 @@
             this.lblAgua.TabIndex = 62;
             this.lblAgua.Text = "Água:";
             // 
+            // btnVoltar
+            // 
+            this.btnVoltar.BackColor = System.Drawing.Color.Transparent;
+            this.btnVoltar.BackgroundImage = global::CaféPatronal.Properties.Resources.icon3;
+            this.btnVoltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVoltar.Location = new System.Drawing.Point(1108, 12);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(59, 57);
+            this.btnVoltar.TabIndex = 65;
+            this.btnVoltar.TabStop = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.BackColor = System.Drawing.Color.Transparent;
+            this.btnSalvar.BackgroundImage = global::CaféPatronal.Properties.Resources.icon2;
+            this.btnSalvar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSalvar.Location = new System.Drawing.Point(1108, 98);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(59, 57);
+            this.btnSalvar.TabIndex = 64;
+            this.btnSalvar.TabStop = false;
+            // 
             // Folha_de_Pagamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -214,27 +258,32 @@
             this.BackgroundImage = global::CaféPatronal.Properties.Resources.cafe;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1179, 536);
+            this.Controls.Add(this.btnVoltar);
+            this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.lblLuz);
             this.Controls.Add(this.lblAgua);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtValeTransporte);
             this.Controls.Add(this.lblTransporte);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtTelefonnet);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.txtAgua);
+            this.Controls.Add(this.txtLuz);
             this.Controls.Add(this.lblCadastroFuncionario);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtValeAlimentação);
             this.Controls.Add(this.lblAlimentacao);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtValeRefeição);
             this.Controls.Add(this.lblRefeicao);
             this.Controls.Add(this.lblInss);
             this.Controls.Add(this.txtSobrenome);
             this.Controls.Add(this.lblConveio);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtInss);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Folha_de_Pagamento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Folha_de_Pagamento";
+            ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalvar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -243,21 +292,23 @@
         #endregion
 
         private System.Windows.Forms.Label lblCadastroFuncionario;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtValeAlimentação;
         private System.Windows.Forms.Label lblAlimentacao;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtValeRefeição;
         private System.Windows.Forms.Label lblRefeicao;
         private System.Windows.Forms.Label lblInss;
         private System.Windows.Forms.TextBox txtSobrenome;
         private System.Windows.Forms.Label lblConveio;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtInss;
+        private System.Windows.Forms.TextBox txtValeTransporte;
         private System.Windows.Forms.Label lblTransporte;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtTelefonnet;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtAgua;
+        private System.Windows.Forms.TextBox txtLuz;
         private System.Windows.Forms.Label lblLuz;
         private System.Windows.Forms.Label lblAgua;
+        private System.Windows.Forms.PictureBox btnVoltar;
+        private System.Windows.Forms.PictureBox btnSalvar;
     }
 }

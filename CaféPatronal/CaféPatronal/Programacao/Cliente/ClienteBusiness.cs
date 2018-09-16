@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CaféPatronal.Programacao.Cliente
 {
-    class ClienteBusiness
+    public class ClienteBusiness
     {
     }
 }

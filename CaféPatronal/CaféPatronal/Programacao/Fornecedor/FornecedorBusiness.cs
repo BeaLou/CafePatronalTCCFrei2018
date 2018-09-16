@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CaféPatronal.Programacao.Estoque
 {
-    class FOrnecedorBusiness
+    public class FOrnecedorBusiness
     {
     }
 }

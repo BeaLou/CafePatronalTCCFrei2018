@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CaféPatronal.Programacao.FluxoCaixa
 {
-    class FluxoCaixaVw
+    public class FluxoCaixaVw
     {
     }
 }

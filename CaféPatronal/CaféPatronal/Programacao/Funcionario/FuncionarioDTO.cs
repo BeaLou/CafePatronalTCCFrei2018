@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CaféPatronal.Programacao.Funcionario
 {
-    class FuncionarioDTO
+    public class FuncionarioDTO
     {
     }
 }

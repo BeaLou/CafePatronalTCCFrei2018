@@ -55,6 +55,7 @@
     <Compile Include="Programacao\ControleDPonto\ControledePontoDatabase.cs" />
     <Compile Include="Programacao\ControleDPonto\ControledePontoDTO.cs" />
     <Compile Include="Programacao\Estoque\EstoqueBusiness.cs" />
+    <Compile Include="Programacao\Estoque\EstoqueDatabase.cs" />
     <Compile Include="Programacao\Estoque\EstoqueDTO.cs" />
     <Compile Include="Programacao\FolhaPagamento\FolhaPagamentoBusiness.cs" />
     <Compile Include="Programacao\FolhaPagamento\FolhaPagamentoDatabase.cs" />
@@ -80,6 +81,8 @@
     <Compile Include="Programacao\Produto\ProdutoBusiness.cs" />
     <Compile Include="Programacao\Produto\ProdutoDatabase.cs" />
     <Compile Include="Programacao\Produto\ProdutoDTO.cs" />
+    <Compile Include="Programacao\UserSession.cs" />
+    <Compile Include="Programacao\Validação.cs" />
     <Compile Include="TELAS\Cadastro\CadastrarFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,11 +119,11 @@
     <Compile Include="TELAS\Cadastro\CadastroFuncionario.Designer.cs">
       <DependentUpon>CadastroFuncionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="TELAS\Consulta\CadastrarCliente.cs">
+    <Compile Include="TELAS\Consulta\ConsultarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TELAS\Consulta\CadastrarCliente.Designer.cs">
-      <DependentUpon>CadastrarCliente.cs</DependentUpon>
+    <Compile Include="TELAS\Consulta\ConsultarCliente.Designer.cs">
+      <DependentUpon>ConsultarCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="TELAS\Consulta\ConsultarEstoque.cs">
       <SubType>Form</SubType>
@@ -151,6 +154,12 @@
     </Compile>
     <Compile Include="TELAS\Consulta\ConsultarProduto.Designer.cs">
       <DependentUpon>ConsultarProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TELAS\Consulta\ControleDeVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\Consulta\ControleDeVenda.Designer.cs">
+      <DependentUpon>ControleDeVenda.cs</DependentUpon>
     </Compile>
     <Compile Include="TELAS\Fluxo de Caixa e Folha de Pagamento\Consulta de Fluxo de Caixa.cs">
       <SubType>Form</SubType>
@@ -224,8 +233,8 @@
     <EmbeddedResource Include="TELAS\Cadastro\CadastroFuncionario.resx">
       <DependentUpon>CadastroFuncionario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TELAS\Consulta\CadastrarCliente.resx">
-      <DependentUpon>CadastrarCliente.cs</DependentUpon>
+    <EmbeddedResource Include="TELAS\Consulta\ConsultarCliente.resx">
+      <DependentUpon>ConsultarCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\Consulta\ConsultarEstoque.resx">
       <DependentUpon>ConsultarEstoque.cs</DependentUpon>
@@ -241,6 +250,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\Consulta\ConsultarProduto.resx">
       <DependentUpon>ConsultarProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TELAS\Consulta\ControleDeVenda.resx">
+      <DependentUpon>ControleDeVenda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\Fluxo de Caixa e Folha de Pagamento\Consulta de Fluxo de Caixa.resx">
       <DependentUpon>Consulta de Fluxo de Caixa.cs</DependentUpon>
@@ -303,8 +315,6 @@
   <ItemGroup>
     <None Include="Resources\2.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Programacao\Estoque\estoqueDatabase\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

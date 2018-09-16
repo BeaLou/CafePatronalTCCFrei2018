@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CaféPatronal.Programacao.FolhaPagamento
 {
-    class FolhaPagamentoDTO
+    public class FolhaPagamentoDTO
     {
     }
 }

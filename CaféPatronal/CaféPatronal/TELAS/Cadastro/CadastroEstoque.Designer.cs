@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Consulta_de_Estoque));
             this.dtpCompra = new System.Windows.Forms.DateTimePicker();
             this.lblDataNascimento = new System.Windows.Forms.Label();
             this.txtQuantidade = new System.Windows.Forms.TextBox();
@@ -37,11 +38,17 @@
             this.txtValor = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblEstoque = new System.Windows.Forms.Label();
+            this.btnVoltar = new System.Windows.Forms.PictureBox();
+            this.btnSalvar = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalvar)).BeginInit();
             this.SuspendLayout();
             // 
             // dtpCompra
             // 
             this.dtpCompra.Location = new System.Drawing.Point(311, 360);
+            this.dtpCompra.MaxDate = new System.DateTime(2050, 12, 31, 0, 0, 0, 0);
+            this.dtpCompra.MinDate = new System.DateTime(1910, 1, 1, 0, 0, 0, 0);
             this.dtpCompra.Name = "dtpCompra";
             this.dtpCompra.Size = new System.Drawing.Size(590, 20);
             this.dtpCompra.TabIndex = 3;
@@ -61,9 +68,11 @@
             // txtQuantidade
             // 
             this.txtQuantidade.Location = new System.Drawing.Point(311, 283);
+            this.txtQuantidade.MaxLength = 20;
             this.txtQuantidade.Name = "txtQuantidade";
             this.txtQuantidade.Size = new System.Drawing.Size(590, 20);
             this.txtQuantidade.TabIndex = 2;
+            this.txtQuantidade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValor_KeyPress);
             // 
             // lblSobrenome
             // 
@@ -79,6 +88,8 @@
             // dtpValidade
             // 
             this.dtpValidade.Location = new System.Drawing.Point(309, 440);
+            this.dtpValidade.MaxDate = new System.DateTime(2050, 12, 31, 0, 0, 0, 0);
+            this.dtpValidade.MinDate = new System.DateTime(1910, 1, 1, 0, 0, 0, 0);
             this.dtpValidade.Name = "dtpValidade";
             this.dtpValidade.Size = new System.Drawing.Size(590, 20);
             this.dtpValidade.TabIndex = 4;
@@ -98,9 +109,11 @@
             // txtValor
             // 
             this.txtValor.Location = new System.Drawing.Point(311, 218);
+            this.txtValor.MaxLength = 20;
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(590, 20);
             this.txtValor.TabIndex = 1;
+            this.txtValor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValor_KeyPress);
             // 
             // label2
             // 
@@ -124,6 +137,30 @@
             this.lblEstoque.TabIndex = 31;
             this.lblEstoque.Text = "ESTOQUE";
             // 
+            // btnVoltar
+            // 
+            this.btnVoltar.BackColor = System.Drawing.Color.Transparent;
+            this.btnVoltar.BackgroundImage = global::CaféPatronal.Properties.Resources.icon3;
+            this.btnVoltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVoltar.Location = new System.Drawing.Point(1124, 12);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(59, 57);
+            this.btnVoltar.TabIndex = 33;
+            this.btnVoltar.TabStop = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.BackColor = System.Drawing.Color.Transparent;
+            this.btnSalvar.BackgroundImage = global::CaféPatronal.Properties.Resources.icon2;
+            this.btnSalvar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSalvar.Location = new System.Drawing.Point(1124, 98);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(59, 57);
+            this.btnSalvar.TabIndex = 32;
+            this.btnSalvar.TabStop = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
             // Consulta_de_Estoque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -131,6 +168,8 @@
             this.BackgroundImage = global::CaféPatronal.Properties.Resources.cafe;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1195, 574);
+            this.Controls.Add(this.btnVoltar);
+            this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.lblEstoque);
             this.Controls.Add(this.dtpValidade);
             this.Controls.Add(this.label1);
@@ -141,10 +180,13 @@
             this.Controls.Add(this.txtQuantidade);
             this.Controls.Add(this.lblSobrenome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Consulta_de_Estoque";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta_de_Estoque";
             this.Load += new System.EventHandler(this.Consulta_de_Estoque_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalvar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,5 +203,7 @@
         private System.Windows.Forms.TextBox txtValor;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblEstoque;
+        private System.Windows.Forms.PictureBox btnVoltar;
+        private System.Windows.Forms.PictureBox btnSalvar;
     }
 }

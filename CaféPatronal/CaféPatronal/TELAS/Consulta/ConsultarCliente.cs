@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CaféPatronal.TELAS
+namespace CaféPatronal.TELAS.Consulta
 {
-    public partial class Folha_de_Pagamento : Form
+    public partial class ConsultarCliente : Form
     {
-        public Folha_de_Pagamento()
+        public ConsultarCliente()
         {
             InitializeComponent();
-        }
-
-        private void Folha_de_Pagamento_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -27,6 +22,11 @@ namespace CaféPatronal.TELAS
             Form1 tela = new Form1();
             tela.Show();
             this.Hide();
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

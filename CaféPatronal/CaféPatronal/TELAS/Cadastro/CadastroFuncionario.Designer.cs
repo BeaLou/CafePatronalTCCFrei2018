@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroFuncionario));
             this.lblNome = new System.Windows.Forms.Label();
             this.dtpDataNascimento = new System.Windows.Forms.DateTimePicker();
             this.mktCpf = new System.Windows.Forms.MaskedTextBox();
@@ -36,7 +37,7 @@
             this.lblDepartamento = new System.Windows.Forms.Label();
             this.txtSobrenome = new System.Windows.Forms.TextBox();
             this.lblSobrenome = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.lblsenha = new System.Windows.Forms.Label();
@@ -48,7 +49,6 @@
             this.lblCarteiraTrabalho = new System.Windows.Forms.Label();
             this.txtLogin = new System.Windows.Forms.TextBox();
             this.lblLogin = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.lblCep = new System.Windows.Forms.Label();
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -57,8 +57,13 @@
             this.lblTelefoneFixo = new System.Windows.Forms.Label();
             this.lblTelefoneMóvel = new System.Windows.Forms.Label();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.lblCadastroFuncionario = new System.Windows.Forms.Label();
+            this.mtbCepFuncionario = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.btnVoltar = new System.Windows.Forms.PictureBox();
+            this.btnSalvar = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalvar)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNome
@@ -75,6 +80,8 @@
             // dtpDataNascimento
             // 
             this.dtpDataNascimento.Location = new System.Drawing.Point(185, 232);
+            this.dtpDataNascimento.MaxDate = new System.DateTime(2050, 12, 31, 0, 0, 0, 0);
+            this.dtpDataNascimento.MinDate = new System.DateTime(1910, 1, 1, 0, 0, 0, 0);
             this.dtpDataNascimento.Name = "dtpDataNascimento";
             this.dtpDataNascimento.Size = new System.Drawing.Size(275, 20);
             this.dtpDataNascimento.TabIndex = 3;
@@ -86,6 +93,7 @@
             this.mktCpf.Name = "mktCpf";
             this.mktCpf.Size = new System.Drawing.Size(275, 20);
             this.mktCpf.TabIndex = 4;
+            this.mktCpf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mktCpf_KeyPress);
             // 
             // lblCpf
             // 
@@ -126,9 +134,11 @@
             // txtSobrenome
             // 
             this.txtSobrenome.Location = new System.Drawing.Point(185, 186);
+            this.txtSobrenome.MaxLength = 20;
             this.txtSobrenome.Name = "txtSobrenome";
             this.txtSobrenome.Size = new System.Drawing.Size(275, 20);
             this.txtSobrenome.TabIndex = 2;
+            this.txtSobrenome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNome_KeyPress);
             // 
             // lblSobrenome
             // 
@@ -141,28 +151,31 @@
             this.lblSobrenome.TabIndex = 20;
             this.lblSobrenome.Text = "Sobrenome:";
             // 
-            // textBox1
+            // txtNome
             // 
-            this.textBox1.Location = new System.Drawing.Point(185, 137);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(275, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtNome.Location = new System.Drawing.Point(185, 137);
+            this.txtNome.MaxLength = 20;
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(275, 20);
+            this.txtNome.TabIndex = 1;
+            this.txtNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNome_KeyPress);
             // 
             // txtSenha
             // 
             this.txtSenha.Location = new System.Drawing.Point(658, 436);
+            this.txtSenha.MaxLength = 20;
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(275, 20);
-            this.txtSenha.TabIndex = 28;
+            this.txtSenha.TabIndex = 15;
             this.txtSenha.UseSystemPasswordChar = true;
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(185, 444);
+            this.textBox2.MaxLength = 50;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(275, 20);
-            this.textBox2.TabIndex = 9;
+            this.textBox2.TabIndex = 8;
             // 
             // lblsenha
             // 
@@ -195,6 +208,7 @@
             this.cboDepartamento.Name = "cboDepartamento";
             this.cboDepartamento.Size = new System.Drawing.Size(275, 21);
             this.cboDepartamento.TabIndex = 7;
+            this.cboDepartamento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNome_KeyPress);
             // 
             // mktRg
             // 
@@ -203,6 +217,7 @@
             this.mktRg.Name = "mktRg";
             this.mktRg.Size = new System.Drawing.Size(275, 20);
             this.mktRg.TabIndex = 5;
+            this.mktRg.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mktCpf_KeyPress);
             // 
             // lblRg
             // 
@@ -223,6 +238,7 @@
             this.mktCarteiraTrabalho.Name = "mktCarteiraTrabalho";
             this.mktCarteiraTrabalho.Size = new System.Drawing.Size(275, 20);
             this.mktCarteiraTrabalho.TabIndex = 6;
+            this.mktCarteiraTrabalho.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mktCpf_KeyPress);
             // 
             // lblCarteiraTrabalho
             // 
@@ -239,9 +255,10 @@
             // txtLogin
             // 
             this.txtLogin.Location = new System.Drawing.Point(658, 387);
+            this.txtLogin.MaxLength = 20;
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(275, 20);
-            this.txtLogin.TabIndex = 10;
+            this.txtLogin.TabIndex = 14;
             // 
             // lblLogin
             // 
@@ -254,13 +271,6 @@
             this.lblLogin.Size = new System.Drawing.Size(54, 28);
             this.lblLogin.TabIndex = 34;
             this.lblLogin.Text = "Login:";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(658, 138);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(275, 20);
-            this.textBox3.TabIndex = 12;
             // 
             // lblCep
             // 
@@ -277,18 +287,21 @@
             // txtNumero
             // 
             this.txtNumero.Location = new System.Drawing.Point(658, 235);
+            this.txtNumero.MaxLength = 5;
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.PasswordChar = '*';
             this.txtNumero.Size = new System.Drawing.Size(275, 20);
-            this.txtNumero.TabIndex = 15;
+            this.txtNumero.TabIndex = 11;
             this.txtNumero.UseSystemPasswordChar = true;
+            this.txtNumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mktCpf_KeyPress);
             // 
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(658, 186);
+            this.textBox5.MaxLength = 20;
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(275, 20);
-            this.textBox5.TabIndex = 14;
+            this.textBox5.TabIndex = 10;
             // 
             // lblNumero
             // 
@@ -344,7 +357,30 @@
             this.maskedTextBox1.Mask = "(00)0000-0000";
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(275, 20);
-            this.maskedTextBox1.TabIndex = 16;
+            this.maskedTextBox1.TabIndex = 12;
+            this.maskedTextBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mktCpf_KeyPress);
+            // 
+            // lblCadastroFuncionario
+            // 
+            this.lblCadastroFuncionario.AutoSize = true;
+            this.lblCadastroFuncionario.BackColor = System.Drawing.Color.Transparent;
+            this.lblCadastroFuncionario.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadastroFuncionario.Location = new System.Drawing.Point(452, 54);
+            this.lblCadastroFuncionario.Name = "lblCadastroFuncionario";
+            this.lblCadastroFuncionario.Size = new System.Drawing.Size(223, 28);
+            this.lblCadastroFuncionario.TabIndex = 46;
+            this.lblCadastroFuncionario.Text = "CADASTRO DE FUNCIONÁRIOS";
+            // 
+            // mtbCepFuncionario
+            // 
+            this.mtbCepFuncionario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mtbCepFuncionario.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbCepFuncionario.Location = new System.Drawing.Point(658, 136);
+            this.mtbCepFuncionario.Mask = "00000-000";
+            this.mtbCepFuncionario.Name = "mtbCepFuncionario";
+            this.mtbCepFuncionario.Size = new System.Drawing.Size(275, 21);
+            this.mtbCepFuncionario.TabIndex = 47;
+            this.mtbCepFuncionario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mktCpf_KeyPress);
             // 
             // maskedTextBox2
             // 
@@ -352,19 +388,33 @@
             this.maskedTextBox2.Mask = "(00)00000-0000";
             this.maskedTextBox2.Name = "maskedTextBox2";
             this.maskedTextBox2.Size = new System.Drawing.Size(275, 20);
-            this.maskedTextBox2.TabIndex = 17;
+            this.maskedTextBox2.TabIndex = 13;
             this.maskedTextBox2.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox2_MaskInputRejected);
+            this.maskedTextBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mktCpf_KeyPress);
             // 
-            // lblCadastroFuncionario
+            // btnVoltar
             // 
-            this.lblCadastroFuncionario.AutoSize = true;
-            this.lblCadastroFuncionario.BackColor = System.Drawing.Color.Transparent;
-            this.lblCadastroFuncionario.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadastroFuncionario.Location = new System.Drawing.Point(468, 58);
-            this.lblCadastroFuncionario.Name = "lblCadastroFuncionario";
-            this.lblCadastroFuncionario.Size = new System.Drawing.Size(223, 28);
-            this.lblCadastroFuncionario.TabIndex = 46;
-            this.lblCadastroFuncionario.Text = "CADASTRO DE FUNCIONÁRIOS";
+            this.btnVoltar.BackColor = System.Drawing.Color.Transparent;
+            this.btnVoltar.BackgroundImage = global::CaféPatronal.Properties.Resources.icon3;
+            this.btnVoltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVoltar.Location = new System.Drawing.Point(1108, 12);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(59, 57);
+            this.btnVoltar.TabIndex = 49;
+            this.btnVoltar.TabStop = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.BackColor = System.Drawing.Color.Transparent;
+            this.btnSalvar.BackgroundImage = global::CaféPatronal.Properties.Resources.icon2;
+            this.btnSalvar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSalvar.Location = new System.Drawing.Point(1108, 98);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(59, 57);
+            this.btnSalvar.TabIndex = 48;
+            this.btnSalvar.TabStop = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // CadastroFuncionario
             // 
@@ -373,12 +423,14 @@
             this.BackgroundImage = global::CaféPatronal.Properties.Resources.cafe;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1179, 536);
+            this.Controls.Add(this.btnVoltar);
+            this.Controls.Add(this.btnSalvar);
+            this.Controls.Add(this.mtbCepFuncionario);
             this.Controls.Add(this.lblCadastroFuncionario);
             this.Controls.Add(this.maskedTextBox2);
             this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.lblTelefoneFixo);
             this.Controls.Add(this.lblTelefoneMóvel);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.lblCep);
             this.Controls.Add(this.txtNumero);
             this.Controls.Add(this.textBox5);
@@ -403,10 +455,13 @@
             this.Controls.Add(this.lblDepartamento);
             this.Controls.Add(this.txtSobrenome);
             this.Controls.Add(this.lblSobrenome);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CadastroFuncionario";
             this.Text = "CadastroFuncionario";
+            ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalvar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -422,7 +477,7 @@
         private System.Windows.Forms.Label lblDepartamento;
         private System.Windows.Forms.TextBox txtSobrenome;
         private System.Windows.Forms.Label lblSobrenome;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label lblsenha;
@@ -434,7 +489,6 @@
         private System.Windows.Forms.Label lblCarteiraTrabalho;
         private System.Windows.Forms.TextBox txtLogin;
         private System.Windows.Forms.Label lblLogin;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label lblCep;
         private System.Windows.Forms.TextBox txtNumero;
         private System.Windows.Forms.TextBox textBox5;
@@ -443,7 +497,10 @@
         private System.Windows.Forms.Label lblTelefoneFixo;
         private System.Windows.Forms.Label lblTelefoneMóvel;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
         private System.Windows.Forms.Label lblCadastroFuncionario;
+        private System.Windows.Forms.MaskedTextBox mtbCepFuncionario;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.PictureBox btnVoltar;
+        private System.Windows.Forms.PictureBox btnSalvar;
     }
 }

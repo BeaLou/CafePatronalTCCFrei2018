@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CaféPatronal.Programacao.ControleDPonto
 {
-    class ControledePontoDTO
+    public class ControledePontoDTO
     {
     }
 }

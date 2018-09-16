@@ -1,6 +1,6 @@
 ﻿namespace CaféPatronal.TELAS.Consulta
 {
-    partial class ConsultarPedido
+    partial class ControleDeVenda
     {
         /// <summary>
         /// Required designer variable.
@@ -28,71 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultarPedido));
-            this.lblconsultarpedidos = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ControleDeVenda));
             this.btnVoltar = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblconsultarpedidos
-            // 
-            this.lblconsultarpedidos.AutoSize = true;
-            this.lblconsultarpedidos.BackColor = System.Drawing.Color.Transparent;
-            this.lblconsultarpedidos.Font = new System.Drawing.Font("Agency FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblconsultarpedidos.Location = new System.Drawing.Point(482, 49);
-            this.lblconsultarpedidos.Name = "lblconsultarpedidos";
-            this.lblconsultarpedidos.Size = new System.Drawing.Size(196, 34);
-            this.lblconsultarpedidos.TabIndex = 3;
-            this.lblconsultarpedidos.Text = "CONSULTA DE PEDIDOS";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(131, 111);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(917, 394);
-            this.dataGridView1.TabIndex = 2;
             // 
             // btnVoltar
             // 
             this.btnVoltar.BackColor = System.Drawing.Color.Transparent;
             this.btnVoltar.BackgroundImage = global::CaféPatronal.Properties.Resources.icon3;
             this.btnVoltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnVoltar.Location = new System.Drawing.Point(1108, 12);
+            this.btnVoltar.Location = new System.Drawing.Point(1033, 12);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(59, 57);
             this.btnVoltar.TabIndex = 5;
             this.btnVoltar.TabStop = false;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
-            // ConsultarPedido
+            // ControleDeVenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::CaféPatronal.Properties.Resources.cafe;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1179, 536);
+            this.ClientSize = new System.Drawing.Size(1104, 551);
             this.Controls.Add(this.btnVoltar);
-            this.Controls.Add(this.lblconsultarpedidos);
-            this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "ConsultarPedido";
+            this.Name = "ControleDeVenda";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ConsultarPedido";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Text = "ControleDeVenda";
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label lblconsultarpedidos;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.PictureBox btnVoltar;
     }
 }
