@@ -69,9 +69,9 @@
             this.lblHoraextraE = new System.Windows.Forms.Label();
             this.lblHoraSaida = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.BtnSalvarControle = new System.Windows.Forms.PictureBox();
             this.lblconsultadclientre = new System.Windows.Forms.Label();
             this.btnSalvarFolhaPagamento = new System.Windows.Forms.Button();
+            this.btnSalvarControle = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -81,7 +81,6 @@
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BtnSalvarControle)).BeginInit();
             this.SuspendLayout();
             // 
             // txtValeAlimentação
@@ -334,10 +333,10 @@
             // tabPage2
             // 
             this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage2.Controls.Add(this.btnSalvarControle);
             this.tabPage2.Controls.Add(this.groupBox4);
             this.tabPage2.Controls.Add(this.groupBox3);
             this.tabPage2.Controls.Add(this.pictureBox1);
-            this.tabPage2.Controls.Add(this.BtnSalvarControle);
             this.tabPage2.Controls.Add(this.lblconsultadclientre);
             this.tabPage2.Location = new System.Drawing.Point(4, 34);
             this.tabPage2.Name = "tabPage2";
@@ -525,17 +524,6 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // BtnSalvarControle
-            // 
-            this.BtnSalvarControle.BackColor = System.Drawing.Color.Transparent;
-            this.BtnSalvarControle.BackgroundImage = global::CaféPatronal.Properties.Resources.icon2;
-            this.BtnSalvarControle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnSalvarControle.Location = new System.Drawing.Point(1033, 385);
-            this.BtnSalvarControle.Name = "BtnSalvarControle";
-            this.BtnSalvarControle.Size = new System.Drawing.Size(59, 57);
-            this.BtnSalvarControle.TabIndex = 28;
-            this.BtnSalvarControle.TabStop = false;
-            // 
             // lblconsultadclientre
             // 
             this.lblconsultadclientre.AutoSize = true;
@@ -562,6 +550,22 @@
             this.btnSalvarFolhaPagamento.Text = "Salvar";
             this.btnSalvarFolhaPagamento.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSalvarFolhaPagamento.UseVisualStyleBackColor = false;
+            // 
+            // btnSalvarControle
+            // 
+            this.btnSalvarControle.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSalvarControle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalvarControle.FlatAppearance.BorderSize = 0;
+            this.btnSalvarControle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSalvarControle.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvarControle.Image")));
+            this.btnSalvarControle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalvarControle.Location = new System.Drawing.Point(966, 406);
+            this.btnSalvarControle.Name = "btnSalvarControle";
+            this.btnSalvarControle.Size = new System.Drawing.Size(126, 36);
+            this.btnSalvarControle.TabIndex = 68;
+            this.btnSalvarControle.Text = "Salvar";
+            this.btnSalvarControle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSalvarControle.UseVisualStyleBackColor = false;
             // 
             // Folha_de_Pagamento
             // 
@@ -591,7 +595,6 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BtnSalvarControle)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -622,7 +625,6 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label lblconsultadclientre;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox BtnSalvarControle;
         private System.Windows.Forms.Label lblEntrada;
         private System.Windows.Forms.Label lblHoraSaida;
         private System.Windows.Forms.Label lblAlmocoE;
@@ -640,5 +642,6 @@
         private System.Windows.Forms.TextBox txtHrSaida;
         private System.Windows.Forms.TextBox txtHrEntrada;
         private System.Windows.Forms.Button btnSalvarFolhaPagamento;
+        private System.Windows.Forms.Button btnSalvarControle;
     }
 }
