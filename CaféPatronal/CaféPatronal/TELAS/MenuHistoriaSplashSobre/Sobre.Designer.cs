@@ -29,29 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sobre));
-            this.btnVoltar = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
+            this.btnVoltar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnVoltar
-            // 
-            this.btnVoltar.BackColor = System.Drawing.Color.Transparent;
-            this.btnVoltar.BackgroundImage = global::CaféPatronal.Properties.Resources.icon3;
-            this.btnVoltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVoltar.Location = new System.Drawing.Point(1124, 12);
-            this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(59, 57);
-            this.btnVoltar.TabIndex = 11;
-            this.btnVoltar.TabStop = false;
-            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // pictureBox1
             // 
@@ -125,39 +112,51 @@
             this.label4.TabIndex = 16;
             this.label4.Text = "Copyright - 2018 todos os direitos reservados\r\n";
             // 
+            // btnVoltar
+            // 
+            this.btnVoltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(84)))), ((int)(((byte)(55)))));
+            this.btnVoltar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVoltar.BackgroundImage")));
+            this.btnVoltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVoltar.Location = new System.Drawing.Point(1123, 12);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(60, 53);
+            this.btnVoltar.TabIndex = 18;
+            this.btnVoltar.TabStop = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click_1);
+            // 
             // Sobre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1195, 574);
+            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnVoltar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Sobre";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sobre";
-            ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox btnVoltar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox btnVoltar;
     }
 }

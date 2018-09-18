@@ -66,19 +66,21 @@
             // 
             // txtEmail
             // 
+            this.txtEmail.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(230, 222);
             this.txtEmail.MaxLength = 20;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(200, 20);
+            this.txtEmail.Size = new System.Drawing.Size(200, 30);
             this.txtEmail.TabIndex = 1;
             // 
             // txtSenha
             // 
+            this.txtSenha.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenha.Location = new System.Drawing.Point(230, 324);
             this.txtSenha.MaxLength = 20;
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
-            this.txtSenha.Size = new System.Drawing.Size(200, 20);
+            this.txtSenha.Size = new System.Drawing.Size(200, 30);
             this.txtSenha.TabIndex = 2;
             this.txtSenha.UseSystemPasswordChar = true;
             // 

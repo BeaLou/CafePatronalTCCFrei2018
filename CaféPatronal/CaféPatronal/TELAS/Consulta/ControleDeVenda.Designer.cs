@@ -121,7 +121,7 @@
             this.txtConsultarClientes.MaxLength = 50;
             this.txtConsultarClientes.Name = "txtConsultarClientes";
             this.txtConsultarClientes.Size = new System.Drawing.Size(456, 30);
-            this.txtConsultarClientes.TabIndex = 14;
+            this.txtConsultarClientes.TabIndex = 1;
             // 
             // ControleDeVenda
             // 

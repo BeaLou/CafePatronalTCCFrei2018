@@ -62,6 +62,7 @@
             this.btnVoltar = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnSalvarFuncionário = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblCadastroCliente = new System.Windows.Forms.Label();
@@ -71,7 +72,6 @@
             this.dgvConsultarFuncionarios = new System.Windows.Forms.DataGridView();
             this.btnConsultarClientes = new System.Windows.Forms.Button();
             this.txtConsultarFuncionários = new System.Windows.Forms.TextBox();
-            this.btnSalvarFuncionário = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -108,7 +108,7 @@
             this.mktCpf.Mask = "000.000.000-00";
             this.mktCpf.Name = "mktCpf";
             this.mktCpf.Size = new System.Drawing.Size(275, 32);
-            this.mktCpf.TabIndex = 4;
+            this.mktCpf.TabIndex = 5;
             this.mktCpf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mktCpf_KeyPress);
             // 
             // lblCpf
@@ -182,7 +182,7 @@
             this.txtSenha.MaxLength = 20;
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(275, 32);
-            this.txtSenha.TabIndex = 15;
+            this.txtSenha.TabIndex = 16;
             this.txtSenha.UseSystemPasswordChar = true;
             // 
             // textBox2
@@ -223,7 +223,7 @@
             this.cboDepartamento.Location = new System.Drawing.Point(135, 299);
             this.cboDepartamento.Name = "cboDepartamento";
             this.cboDepartamento.Size = new System.Drawing.Size(275, 33);
-            this.cboDepartamento.TabIndex = 7;
+            this.cboDepartamento.TabIndex = 6;
             this.cboDepartamento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNome_KeyPress);
             // 
             // mktRg
@@ -232,7 +232,7 @@
             this.mktRg.Mask = "00.000.000-00";
             this.mktRg.Name = "mktRg";
             this.mktRg.Size = new System.Drawing.Size(275, 32);
-            this.mktRg.TabIndex = 5;
+            this.mktRg.TabIndex = 14;
             this.mktRg.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mktCpf_KeyPress);
             // 
             // lblRg
@@ -254,7 +254,7 @@
             this.mktCarteiraTrabalho.Mask = "000.000.000-00";
             this.mktCarteiraTrabalho.Name = "mktCarteiraTrabalho";
             this.mktCarteiraTrabalho.Size = new System.Drawing.Size(275, 32);
-            this.mktCarteiraTrabalho.TabIndex = 6;
+            this.mktCarteiraTrabalho.TabIndex = 4;
             this.mktCarteiraTrabalho.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mktCpf_KeyPress);
             // 
             // lblCarteiraTrabalho
@@ -275,7 +275,7 @@
             this.txtLogin.MaxLength = 20;
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(275, 32);
-            this.txtLogin.TabIndex = 14;
+            this.txtLogin.TabIndex = 15;
             // 
             // lblLogin
             // 
@@ -379,13 +379,12 @@
             // 
             // mtbCepFuncionario
             // 
-            this.mtbCepFuncionario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.mtbCepFuncionario.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbCepFuncionario.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtbCepFuncionario.Location = new System.Drawing.Point(158, 23);
             this.mtbCepFuncionario.Mask = "00000-000";
             this.mtbCepFuncionario.Name = "mtbCepFuncionario";
-            this.mtbCepFuncionario.Size = new System.Drawing.Size(275, 21);
-            this.mtbCepFuncionario.TabIndex = 47;
+            this.mtbCepFuncionario.Size = new System.Drawing.Size(275, 32);
+            this.mtbCepFuncionario.TabIndex = 9;
             this.mtbCepFuncionario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mktCpf_KeyPress);
             // 
             // maskedTextBox2
@@ -436,6 +435,22 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cadastro";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // btnSalvarFuncionário
+            // 
+            this.btnSalvarFuncionário.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSalvarFuncionário.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalvarFuncionário.FlatAppearance.BorderSize = 0;
+            this.btnSalvarFuncionário.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSalvarFuncionário.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvarFuncionário.Image")));
+            this.btnSalvarFuncionário.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalvarFuncionário.Location = new System.Drawing.Point(973, 393);
+            this.btnSalvarFuncionário.Name = "btnSalvarFuncionário";
+            this.btnSalvarFuncionário.Size = new System.Drawing.Size(126, 36);
+            this.btnSalvarFuncionário.TabIndex = 68;
+            this.btnSalvarFuncionário.Text = "Salvar";
+            this.btnSalvarFuncionário.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSalvarFuncionário.UseVisualStyleBackColor = false;
             // 
             // groupBox1
             // 
@@ -562,22 +577,6 @@
             this.txtConsultarFuncionários.Name = "txtConsultarFuncionários";
             this.txtConsultarFuncionários.Size = new System.Drawing.Size(456, 32);
             this.txtConsultarFuncionários.TabIndex = 9;
-            // 
-            // btnSalvarFuncionário
-            // 
-            this.btnSalvarFuncionário.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnSalvarFuncionário.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalvarFuncionário.FlatAppearance.BorderSize = 0;
-            this.btnSalvarFuncionário.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSalvarFuncionário.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvarFuncionário.Image")));
-            this.btnSalvarFuncionário.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalvarFuncionário.Location = new System.Drawing.Point(973, 393);
-            this.btnSalvarFuncionário.Name = "btnSalvarFuncionário";
-            this.btnSalvarFuncionário.Size = new System.Drawing.Size(126, 36);
-            this.btnSalvarFuncionário.TabIndex = 68;
-            this.btnSalvarFuncionário.Text = "Salvar";
-            this.btnSalvarFuncionário.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalvarFuncionário.UseVisualStyleBackColor = false;
             // 
             // CadastroFuncionario
             // 

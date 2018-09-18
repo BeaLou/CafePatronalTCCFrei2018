@@ -1,0 +1,268 @@
+﻿drop database DBcafe;
+create database DBcafe;
+use DBcafe;
+
+CREATE TABLE `tb_cliente` (
+	`id_cliente` INT NOT NULL AUTO_INCREMENT,
+	`nm_nome` varchar(20) NOT NULL,
+	`nm_sobrenome` varchar(20) NOT NULL,
+	`dt_datanascimento` DATE NOT NULL,
+	`ds_cpf` varchar(15) NOT NULL,
+	`ds_email` varchar(50) NOT NULL,
+	PRIMARY KEY (`id_cliente`)
+);
+
+CREATE TABLE `tb_funcionario` (
+	`id_funcionario` INT NOT NULL AUTO_INCREMENT,
+	`Id_controleponto` INT ,
+	`nm_nome` varchar(20) NOT NULL,
+	`nm_sobrenome` varchar(20) NOT NULL,
+	`ds_carteiratrabalho` varchar(20) NOT NULL,
+	`ds_cpf` varchar(15) NOT NULL UNIQUE,
+	`ds_rg` varchar(15) NOT NULL UNIQUE,
+	`ds_dpto` varchar(20) NOT NULL,
+	`ds_email` varchar(50) NOT NULL,
+	`ds_telefone` varchar(20) NOT NULL,
+	`ds_telefonemovel` varchar(20) NOT NULL UNIQUE,
+	`ds_cep` varchar(10) NOT NULL,
+	`ds_complemento` varchar(20) NOT NULL,
+	`ds_ncasa` varchar(20) NOT NULL,
+	`dt_nascimento` DATE NOT NULL,
+	`ds_login` varchar(20) NOT NULL,
+	`ds_senha` varchar(20) NOT NULL,
+	PRIMARY KEY (`id_funcionario`)
+);
+
+CREATE TABLE `tb_fornecedor` (
+	`id_fornecedor` INT NOT NULL AUTO_INCREMENT,
+	`nm_nome` varchar(20) NOT NULL,
+	`ds_cnpj` varchar(20) NOT NULL,
+	`ds_telefone` varchar(20) NOT NULL,
+	`ds_cep` varchar(20) NOT NULL,
+	`ds_complemento` varchar(20) NOT NULL,
+	`ds_numerofornec` varchar(20) NOT NULL,
+	`ds_email` varchar(50) NOT NULL,
+	PRIMARY KEY (`id_fornecedor`)
+);
+
+CREATE TABLE `tb_estoque` (
+	`id_estoque` INT NOT NULL AUTO_INCREMENT,
+	`id_produto` INT NOT NULL,
+	`id_fornecedor` INT NOT NULL,
+	`vl_compra` DECIMAL NOT NULL,
+	`dt_datacompra` DATETIME NOT NULL,
+	`qtd_produtos` varchar(20) NOT NULL,
+	`dt_validade` DATE NOT NULL,
+	PRIMARY KEY (`id_estoque`)
+);
+
+CREATE TABLE `tb_pedido` (
+	`id_pedido` INT NOT NULL AUTO_INCREMENT,
+	`id_cliente` INT NOT NULL,
+	`id_funcionario` INT NOT NULL,
+	`vl_venda` DECIMAL NOT NULL,
+	PRIMARY KEY (`id_pedido`)
+);
+
+CREATE TABLE `tb_produto` (
+	`id_produto` INT NOT NULL AUTO_INCREMENT,
+	`nm_nome` varchar(50) NOT NULL,
+	`ds_unidade` varchar(20) NOT NULL,
+	`dt_validade` DATE NOT NULL,
+	PRIMARY KEY (`id_produto`)
+);
+
+CREATE TABLE `tb_produtoitem` (
+	`id_produtoitem` INT NOT NULL AUTO_INCREMENT,
+	`id_produto` INT NOT NULL,
+	`id_pedido` INT NOT NULL,
+	PRIMARY KEY (`id_produtoitem`)
+);
+
+CREATE TABLE `tb_folhapagamento` (
+	`id_folhapagamento` INT NOT NULL AUTO_INCREMENT,
+	`id_folhaproduto` INT NOT NULL,
+	`ds_inss` DECIMAL NOT NULL,
+	`ds_valealimentacao` DECIMAL NOT NULL,
+	`ds_valerefeicao` DECIMAL NOT NULL,
+	`ds_valetransporte` DECIMAL NOT NULL,
+	`ds_convenio` DECIMAL NOT NULL,
+	`ds_agua` DECIMAL NOT NULL,
+	`ds_luz` DECIMAL NOT NULL,
+	`ds_telefonnet` DECIMAL NOT NULL,
+	PRIMARY KEY (`id_folhapagamento`)
+);
+
+CREATE TABLE `tb_folhadeponto` (
+	`id_folhaponto` INT NOT NULL AUTO_INCREMENT,
+	`id_controledeponto` INT NOT NULL,
+	`dt_mes` DATE NOT NULL,
+	`hr_totalhoras` TIME NOT NULL,
+	PRIMARY KEY (`id_folhaponto`)
+);
+
+
+
+CREATE TABLE `tb_controledeponto` (
+	`id_controleponto` INT NOT NULL AUTO_INCREMENT,
+	`dt_dia` DATE NOT NULL,
+	`hr_entrada` TIME NOT NULL,
+	`hr_saidaalmoco` TIME NOT NULL,
+	`hr_retornoalmoco` TIME NOT NULL,
+	`hr_saida` TIME NOT NULL,
+	`hr_extra` TIME NOT NULL,
+	`hr_extrasaida` TIME NOT NULL,
+	PRIMARY KEY (`id_controleponto`)
+);
+
+ALTER TABLE `tb_funcionario` ADD CONSTRAINT 
+`tb_funcionario_fk0` FOREIGN KEY (`Id_controleponto`)
+ REFERENCES `tb_controledeponto`(`id_controleponto`);
+
+ALTER TABLE `tb_estoque` ADD CONSTRAINT 
+`tb_estoque_fk0` FOREIGN KEY (`id_produto`) 
+REFERENCES `tb_produto`(`id_produto`);
+
+ALTER TABLE `tb_estoque` ADD CONSTRAINT 
+`tb_estoque_fk1` FOREIGN KEY (`id_fornecedor`)
+ REFERENCES `tb_fornecedor`(`id_fornecedor`);
+
+ALTER TABLE `tb_pedido` ADD CONSTRAINT
+ `tb_pedido_fk0` FOREIGN KEY (`id_cliente`) 
+ REFERENCES `tb_cliente`(`id_cliente`);
+
+ALTER TABLE `tb_pedido` ADD CONSTRAINT 
+`tb_pedido_fk1` FOREIGN KEY (`id_funcionario`) 
+REFERENCES `tb_funcionario`(`id_funcionario`);
+
+ALTER TABLE `tb_produtoitem` ADD CONSTRAINT
+ `tb_produtoitem_fk0` FOREIGN KEY (`id_produto`) 
+ REFERENCES `tb_produto`(`id_produto`);
+
+ALTER TABLE `tb_produtoitem` ADD CONSTRAINT
+ `tb_produtoitem_fk1` FOREIGN KEY (`id_pedido`)
+  REFERENCES `tb_pedido`(`id_pedido`);
+
+ALTER TABLE `tb_folhapagamento` ADD CONSTRAINT 
+`tb_folhapagamento_fk0` FOREIGN KEY (`id_folhaproduto`)
+ REFERENCES `tb_folhadeponto`(`id_folhaponto`);
+
+ALTER TABLE `tb_folhadeponto` ADD CONSTRAINT
+ `tb_folhadeponto_fk0` FOREIGN KEY (`id_controledeponto`) 
+ REFERENCES `tb_controledeponto`(`id_controleponto`);
+
+
+insert into `tb_cliente`(nm_nome,nm_sobrenome,dt_datanascimento,ds_cpf,ds_email)
+ VALUES("João","Da Silva","1989/2/12","660.563.910-35","joãodasilva@gmail.com");
+insert into `tb_cliente`(nm_nome,nm_sobrenome,dt_datanascimento,ds_cpf,ds_email)
+ VALUES("Gabriel","Oliveira","1995/4/5","485.297.100-53","gabrieloliveira@gmail.com");
+insert into `tb_cliente`(nm_nome,nm_sobrenome,dt_datanascimento,ds_cpf,ds_email)
+ VALUES("Laura","Menezes","1997/5/6","777.215.340-62","lauramenezes@gmail.com");
+insert into `tb_cliente`(nm_nome,nm_sobrenome,dt_datanascimento,ds_cpf,ds_email)
+ VALUES("Vanessa","Aquino","1990/3/10","279.272.880-91","vanessaaquino@gmail.com");
+
+insert into `tb_funcionario`(nm_nome,nm_sobrenome,ds_carteiratrabalho,ds_cpf,ds_rg,
+ds_dpto,ds_email,ds_telefone,ds_telefonemovel
+,ds_cep,ds_complemento,ds_ncasa,dt_nascimento,
+ds_login,ds_senha) 
+VALUES("Edson","Moreira","014.49834.44-0","557.819.658-66","21.040.731-1","ADM"
+,"edsonfilipeandersonmoreira-71@hotmail.com.br","(11) 3870-7273","(11) 98668-5845"
+,"04763-020","Casa 1","563","1999/04/19","Edson Moreira71","1234");
+
+insert into `tb_funcionario`(nm_nome,nm_sobrenome,ds_carteiratrabalho,ds_cpf,ds_rg,ds_dpto,ds_email,
+ds_telefone,ds_telefonemovel,ds_cep,ds_complemento,ds_ncasa,dt_nascimento,ds_login,ds_senha) 
+VALUES("Carla","Cavalcanti","331.66699.42-6","772.480.108-80","17.284.238-4","T.I.",
+"carlateresinhamalucavalcanti-85@outlook.com.br",
+"(11) 2786-1154","(11) 99788-6151","04169-970","Casa 1","508","1999/11/15","Carla Cavalcanti","12345");
+
+insert into  `tb_pedido`(id_cliente,id_funcionario,vl_venda)VALUES("1","1","10.00");
+insert into  `tb_pedido`(id_cliente,id_funcionario,vl_venda)VALUES("2","1","20.00");
+insert into  `tb_pedido`(id_cliente,id_funcionario,vl_venda)VALUES("2","2","4");
+insert into  `tb_pedido`(id_cliente,id_funcionario,vl_venda)VALUES("2","2","5");
+insert into  `tb_pedido`(id_cliente,id_funcionario,vl_venda)VALUES("1","2","10.00");
+
+insert into`tb_produto`(nm_nome,ds_unidade,dt_validade) VALUES ("Pão","4","2019/10/4");
+insert into`tb_produto`(nm_nome,ds_unidade,dt_validade) VALUES ("Refrigerante Coca-cola","5","2019/11/5");
+insert into`tb_produto`(nm_nome,ds_unidade,dt_validade) VALUES ("Guardanapo","7","2028/12/3");
+insert into`tb_produto`(nm_nome,ds_unidade,dt_validade) VALUES ("Coxinha","10","2018/12/5");
+insert into`tb_produto`(nm_nome,ds_unidade,dt_validade) VALUES ("Suco","20","2019/5/8");
+insert into`tb_produto`(nm_nome,ds_unidade,dt_validade) VALUES ("Hambúrguer","4","2019/8/6");
+insert into`tb_produto`(nm_nome,ds_unidade,dt_validade) VALUES ("Alface","10","2019/1/1");
+insert into`tb_produto`(nm_nome,ds_unidade,dt_validade) VALUES ("Tomate","10","2019/2/3");
+
+
+insert into `tb_fornecedor`(nm_nome,ds_cnpj,ds_telefone,ds_cep,
+ds_complemento,ds_numerofornec,ds_email) 
+VALUES ("Márcio","94.143.921/0001-57","(11)3876-3684","14784-295","Casa 1","494"
+,"marcioalexandrenunes-97@gmail.com");
+insert into `tb_fornecedor`(nm_nome,ds_cnpj,ds_telefone,ds_cep,
+ds_complemento,ds_numerofornec,ds_email) 
+VALUES ("Giovana","90.871.350/0001-16","(11)2943-1179","74475-816","Casa 1","237",
+"giovanaeduardamarlenesilva_@outlook.ind.br");
+
+insert into `tb_estoque`(id_produto,id_fornecedor,vl_compra,
+dt_datacompra,qtd_produtos,dt_validade)
+ VALUES ("1","2","100","2018/09/16","5","2018/12/4");
+insert into `tb_estoque`(id_produto,id_fornecedor,
+vl_compra,dt_datacompra,qtd_produtos,dt_validade) 
+VALUES ("2","2","50","2018/09/16","4","2018/12/4");
+insert into `tb_estoque`(id_produto,id_fornecedor,vl_compra
+,dt_datacompra,qtd_produtos,dt_validade)
+ VALUES ("3","2","90","2018/09/16","10","2018/12/4");
+insert into `tb_estoque`(id_produto,id_fornecedor,
+vl_compra,dt_datacompra,qtd_produtos,dt_validade)
+ VALUES ("4","2","60","2018/09/16","1","2018/12/4");
+insert into `tb_estoque`(id_produto,id_fornecedor,vl_compra
+,dt_datacompra,qtd_produtos,dt_validade)
+ VALUES ("5","1","40","2018/09/17","9","2018/12/19");
+insert into `tb_estoque`(id_produto,id_fornecedor,
+vl_compra,dt_datacompra,qtd_produtos,dt_validade)
+ VALUES ("6","1","40","2018/09/17","1","2018/10/24");
+insert into `tb_estoque`(id_produto,id_fornecedor,
+vl_compra,dt_datacompra,qtd_produtos,dt_validade)
+ VALUES ("7","1","60","2018/09/17","10","2018/11/14");
+insert into `tb_estoque`(id_produto,id_fornecedor,
+vl_compra,dt_datacompra,qtd_produtos,dt_validade)
+ VALUES ("8","1","10","2018/09/17","15","2018/11/14");
+insert into `tb_estoque`(id_produto,id_fornecedor,
+vl_compra,dt_datacompra,qtd_produtos,dt_validade) 
+VALUES ("8","1","10","2018/07/23","5","2018/10/4");
+insert into `tb_estoque`(id_produto,id_fornecedor,
+vl_compra,dt_datacompra,qtd_produtos,dt_validade) 
+VALUES ("8","1","90","2018/07/23","2","2018/10/4");
+
+insert into tb_controledeponto (id_controleponto, dt_dia, hr_entrada, hr_saidaalmoco,hr_retornoalmoco,
+hr_saida, hr_extra,hr_extrasaida) values ('1','2018/09/17','8:00','12:00','13:00','17:00','0','0');
+insert into tb_controledeponto (id_controleponto, dt_dia, hr_entrada, hr_saidaalmoco,hr_retornoalmoco,
+hr_saida, hr_extra,hr_extrasaida) values ('2','2018/09/16','8:00','12:00','13:00','17:00','0','0');
+insert into tb_controledeponto (id_controleponto, dt_dia, hr_entrada, hr_saidaalmoco,hr_retornoalmoco,
+hr_saida, hr_extra,hr_extrasaida) values ('3','2018/09/15','8:00','12:00','13:00','17:00','0','0');
+insert into tb_controledeponto (id_controleponto, dt_dia, hr_entrada, hr_saidaalmoco,hr_retornoalmoco,
+hr_saida, hr_extra,hr_extrasaida) values ('4','2018/09/14','8:00','12:00','13:00','17:00','0','0');
+insert into tb_controledeponto (id_controleponto, dt_dia, hr_entrada, hr_saidaalmoco,hr_retornoalmoco,
+hr_saida, hr_extra,hr_extrasaida) values ('5','2018/09/17','8:00','12:00','13:00','17:00','18:00','20:00');
+insert into tb_controledeponto (id_controleponto, dt_dia, hr_entrada, hr_saidaalmoco,hr_retornoalmoco,
+hr_saida, hr_extra,hr_extrasaida) values ('6','2018/09/16','8:00','12:00','13:00','17:00','18:00','20:00');
+insert into tb_controledeponto (id_controleponto, dt_dia, hr_entrada, hr_saidaalmoco,hr_retornoalmoco,
+hr_saida, hr_extra,hr_extrasaida) values ('7','2018/09/15','8:00','12:00','13:00','17:00','0','0');
+insert into tb_controledeponto (id_controleponto, dt_dia, hr_entrada, hr_saidaalmoco,hr_retornoalmoco,
+hr_saida, hr_extra,hr_extrasaida) values ('8','2018/09/14','8:00','12:00','13:00','17:00','0','0');
+insert into tb_controledeponto (id_controleponto, dt_dia, hr_entrada, hr_saidaalmoco,hr_retornoalmoco,
+hr_saida, hr_extra,hr_extrasaida) values ('9','2018/09/13','8:00','12:00','13:00','17:00','0','0');
+insert into tb_controledeponto (id_controleponto, dt_dia, hr_entrada, hr_saidaalmoco,hr_retornoalmoco,
+hr_saida, hr_extra,hr_extrasaida) values ('10','2018/09/17','8:00','12:00','13:00','17:00','0','0');
+insert into tb_controledeponto (id_controleponto, dt_dia, hr_entrada, hr_saidaalmoco,hr_retornoalmoco,
+hr_saida, hr_extra,hr_extrasaida) values ('11','2018/09/16','8:00','12:00','13:00','17:00','0','0');
+insert into tb_controledeponto (id_controleponto, dt_dia, hr_entrada, hr_saidaalmoco,hr_retornoalmoco,
+hr_saida, hr_extra,hr_extrasaida) values ('12','2018/09/15','8:00','12:00','13:00','17:00','0','0');
+insert into tb_controledeponto (id_controleponto, dt_dia, hr_entrada, hr_saidaalmoco,hr_retornoalmoco,
+hr_saida, hr_extra,hr_extrasaida) values ('13
+','2018/09/14','8:00','12:00','13:00','17:00','0','0');
+insert into tb_controledeponto (id_controleponto, dt_dia, hr_entrada, hr_saidaalmoco,hr_retornoalmoco,
+hr_saida, hr_extra,hr_extrasaida) values ('14','2018/09/13','8:00','12:00','13:00','17:00','0','0');
+insert into tb_controledeponto (id_controleponto, dt_dia, hr_entrada, hr_saidaalmoco,hr_retornoalmoco,
+hr_saida, hr_extra,hr_extrasaida) values ('15','2018/09/11','8:00','12:00','13:00','17:00','0','0');
+
+insert into tb_folhadeponto(id_folhaponto,
+id_controledeponto,dt_mes,hr_totalhoras) 
+values ('1','1','2018/09/17','20:00');
