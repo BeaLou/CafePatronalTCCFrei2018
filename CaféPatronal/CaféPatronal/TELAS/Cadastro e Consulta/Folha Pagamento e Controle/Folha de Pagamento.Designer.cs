@@ -34,7 +34,7 @@
             this.txtValeRefeição = new System.Windows.Forms.TextBox();
             this.lblRefeicao = new System.Windows.Forms.Label();
             this.lblInss = new System.Windows.Forms.Label();
-            this.txtSobrenome = new System.Windows.Forms.TextBox();
+            this.txtConvênio = new System.Windows.Forms.TextBox();
             this.lblConveio = new System.Windows.Forms.Label();
             this.txtInss = new System.Windows.Forms.TextBox();
             this.txtValeTransporte = new System.Windows.Forms.TextBox();
@@ -48,10 +48,12 @@
             this.btnVoltar = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnSalvarFolhaPagamento = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblCadastroCliente = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnSalvarControle = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.txtretoralmoco = new System.Windows.Forms.TextBox();
             this.txthralmoco = new System.Windows.Forms.TextBox();
@@ -70,8 +72,6 @@
             this.lblHoraSaida = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblconsultadclientre = new System.Windows.Forms.Label();
-            this.btnSalvarFolhaPagamento = new System.Windows.Forms.Button();
-            this.btnSalvarControle = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -136,14 +136,14 @@
             this.lblInss.TabIndex = 52;
             this.lblInss.Text = "INSS:";
             // 
-            // txtSobrenome
+            // txtConvênio
             // 
-            this.txtSobrenome.Location = new System.Drawing.Point(153, 80);
-            this.txtSobrenome.MaxLength = 20;
-            this.txtSobrenome.Name = "txtSobrenome";
-            this.txtSobrenome.Size = new System.Drawing.Size(275, 32);
-            this.txtSobrenome.TabIndex = 2;
-            this.txtSobrenome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInss_KeyPress);
+            this.txtConvênio.Location = new System.Drawing.Point(153, 80);
+            this.txtConvênio.MaxLength = 20;
+            this.txtConvênio.Name = "txtConvênio";
+            this.txtConvênio.Size = new System.Drawing.Size(275, 32);
+            this.txtConvênio.TabIndex = 2;
+            this.txtConvênio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInss_KeyPress);
             // 
             // lblConveio
             // 
@@ -288,6 +288,22 @@
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
+            // btnSalvarFolhaPagamento
+            // 
+            this.btnSalvarFolhaPagamento.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSalvarFolhaPagamento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalvarFolhaPagamento.FlatAppearance.BorderSize = 0;
+            this.btnSalvarFolhaPagamento.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSalvarFolhaPagamento.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvarFolhaPagamento.Image")));
+            this.btnSalvarFolhaPagamento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalvarFolhaPagamento.Location = new System.Drawing.Point(968, 408);
+            this.btnSalvarFolhaPagamento.Name = "btnSalvarFolhaPagamento";
+            this.btnSalvarFolhaPagamento.Size = new System.Drawing.Size(126, 36);
+            this.btnSalvarFolhaPagamento.TabIndex = 67;
+            this.btnSalvarFolhaPagamento.Text = "Salvar";
+            this.btnSalvarFolhaPagamento.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSalvarFolhaPagamento.UseVisualStyleBackColor = false;
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txtValeAlimentação);
@@ -312,7 +328,7 @@
             this.groupBox2.Controls.Add(this.txtLuz);
             this.groupBox2.Controls.Add(this.lblInss);
             this.groupBox2.Controls.Add(this.txtInss);
-            this.groupBox2.Controls.Add(this.txtSobrenome);
+            this.groupBox2.Controls.Add(this.txtConvênio);
             this.groupBox2.Controls.Add(this.lblConveio);
             this.groupBox2.Location = new System.Drawing.Point(21, 49);
             this.groupBox2.Name = "groupBox2";
@@ -346,6 +362,22 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Controle";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // btnSalvarControle
+            // 
+            this.btnSalvarControle.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSalvarControle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalvarControle.FlatAppearance.BorderSize = 0;
+            this.btnSalvarControle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSalvarControle.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvarControle.Image")));
+            this.btnSalvarControle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalvarControle.Location = new System.Drawing.Point(966, 406);
+            this.btnSalvarControle.Name = "btnSalvarControle";
+            this.btnSalvarControle.Size = new System.Drawing.Size(126, 36);
+            this.btnSalvarControle.TabIndex = 68;
+            this.btnSalvarControle.Text = "Salvar";
+            this.btnSalvarControle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSalvarControle.UseVisualStyleBackColor = false;
             // 
             // groupBox4
             // 
@@ -536,38 +568,6 @@
             this.lblconsultadclientre.TabIndex = 12;
             this.lblconsultadclientre.Text = "CONTROLE\r\n";
             // 
-            // btnSalvarFolhaPagamento
-            // 
-            this.btnSalvarFolhaPagamento.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnSalvarFolhaPagamento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalvarFolhaPagamento.FlatAppearance.BorderSize = 0;
-            this.btnSalvarFolhaPagamento.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSalvarFolhaPagamento.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvarFolhaPagamento.Image")));
-            this.btnSalvarFolhaPagamento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalvarFolhaPagamento.Location = new System.Drawing.Point(968, 408);
-            this.btnSalvarFolhaPagamento.Name = "btnSalvarFolhaPagamento";
-            this.btnSalvarFolhaPagamento.Size = new System.Drawing.Size(126, 36);
-            this.btnSalvarFolhaPagamento.TabIndex = 67;
-            this.btnSalvarFolhaPagamento.Text = "Salvar";
-            this.btnSalvarFolhaPagamento.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalvarFolhaPagamento.UseVisualStyleBackColor = false;
-            // 
-            // btnSalvarControle
-            // 
-            this.btnSalvarControle.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnSalvarControle.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalvarControle.FlatAppearance.BorderSize = 0;
-            this.btnSalvarControle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSalvarControle.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvarControle.Image")));
-            this.btnSalvarControle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalvarControle.Location = new System.Drawing.Point(966, 406);
-            this.btnSalvarControle.Name = "btnSalvarControle";
-            this.btnSalvarControle.Size = new System.Drawing.Size(126, 36);
-            this.btnSalvarControle.TabIndex = 68;
-            this.btnSalvarControle.Text = "Salvar";
-            this.btnSalvarControle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalvarControle.UseVisualStyleBackColor = false;
-            // 
             // Folha_de_Pagamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -606,7 +606,7 @@
         private System.Windows.Forms.TextBox txtValeRefeição;
         private System.Windows.Forms.Label lblRefeicao;
         private System.Windows.Forms.Label lblInss;
-        private System.Windows.Forms.TextBox txtSobrenome;
+        private System.Windows.Forms.TextBox txtConvênio;
         private System.Windows.Forms.Label lblConveio;
         private System.Windows.Forms.TextBox txtInss;
         private System.Windows.Forms.TextBox txtValeTransporte;

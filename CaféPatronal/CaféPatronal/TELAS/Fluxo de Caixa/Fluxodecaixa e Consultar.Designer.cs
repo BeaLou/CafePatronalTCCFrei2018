@@ -47,14 +47,14 @@
             this.txtLuz = new System.Windows.Forms.TextBox();
             this.lblInss = new System.Windows.Forms.Label();
             this.txtInss = new System.Windows.Forms.TextBox();
-            this.txtSobrenome = new System.Windows.Forms.TextBox();
+            this.txtConvenio = new System.Windows.Forms.TextBox();
             this.lblConveio = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label4 = new System.Windows.Forms.Label();
             this.dgvFluxoCaixa = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnConsularFluxo = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtConsultarFluxo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             this.tbControleVendas.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -95,7 +95,7 @@
             this.tabPage1.Controls.Add(this.lblCadastroProduto);
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.btnVoltar);
-            this.tabPage1.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage1.Font = new System.Drawing.Font("Agency FB", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.Location = new System.Drawing.Point(4, 37);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -146,7 +146,7 @@
             this.groupBox2.Controls.Add(this.txtLuz);
             this.groupBox2.Controls.Add(this.lblInss);
             this.groupBox2.Controls.Add(this.txtInss);
-            this.groupBox2.Controls.Add(this.txtSobrenome);
+            this.groupBox2.Controls.Add(this.txtConvenio);
             this.groupBox2.Controls.Add(this.lblConveio);
             this.groupBox2.Location = new System.Drawing.Point(7, 37);
             this.groupBox2.Name = "groupBox2";
@@ -159,7 +159,7 @@
             this.txtValorCompra.Location = new System.Drawing.Point(140, 92);
             this.txtValorCompra.MaxLength = 20;
             this.txtValorCompra.Name = "txtValorCompra";
-            this.txtValorCompra.Size = new System.Drawing.Size(275, 30);
+            this.txtValorCompra.Size = new System.Drawing.Size(275, 39);
             this.txtValorCompra.TabIndex = 2;
             // 
             // label3
@@ -178,7 +178,7 @@
             this.txtValorVenda.Location = new System.Drawing.Point(140, 29);
             this.txtValorVenda.MaxLength = 20;
             this.txtValorVenda.Name = "txtValorVenda";
-            this.txtValorVenda.Size = new System.Drawing.Size(275, 30);
+            this.txtValorVenda.Size = new System.Drawing.Size(275, 39);
             this.txtValorVenda.TabIndex = 1;
             // 
             // label1
@@ -220,7 +220,7 @@
             this.txtTelefonnet.Location = new System.Drawing.Point(140, 392);
             this.txtTelefonnet.MaxLength = 10;
             this.txtTelefonnet.Name = "txtTelefonnet";
-            this.txtTelefonnet.Size = new System.Drawing.Size(275, 30);
+            this.txtTelefonnet.Size = new System.Drawing.Size(275, 39);
             this.txtTelefonnet.TabIndex = 7;
             // 
             // label2
@@ -240,7 +240,7 @@
             this.txtAgua.Location = new System.Drawing.Point(140, 336);
             this.txtAgua.MaxLength = 20;
             this.txtAgua.Name = "txtAgua";
-            this.txtAgua.Size = new System.Drawing.Size(275, 30);
+            this.txtAgua.Size = new System.Drawing.Size(275, 39);
             this.txtAgua.TabIndex = 6;
             // 
             // txtLuz
@@ -248,7 +248,7 @@
             this.txtLuz.Location = new System.Drawing.Point(140, 287);
             this.txtLuz.MaxLength = 20;
             this.txtLuz.Name = "txtLuz";
-            this.txtLuz.Size = new System.Drawing.Size(275, 30);
+            this.txtLuz.Size = new System.Drawing.Size(275, 39);
             this.txtLuz.TabIndex = 5;
             // 
             // lblInss
@@ -267,17 +267,17 @@
             this.txtInss.Location = new System.Drawing.Point(140, 174);
             this.txtInss.MaxLength = 20;
             this.txtInss.Name = "txtInss";
-            this.txtInss.Size = new System.Drawing.Size(275, 30);
+            this.txtInss.Size = new System.Drawing.Size(275, 39);
             this.txtInss.TabIndex = 3;
             // 
-            // txtSobrenome
+            // txtConvenio
             // 
-            this.txtSobrenome.Location = new System.Drawing.Point(140, 223);
-            this.txtSobrenome.MaxLength = 20;
-            this.txtSobrenome.Name = "txtSobrenome";
-            this.txtSobrenome.Size = new System.Drawing.Size(275, 30);
-            this.txtSobrenome.TabIndex = 4;
-            this.txtSobrenome.TextChanged += new System.EventHandler(this.txtSobrenome_TextChanged);
+            this.txtConvenio.Location = new System.Drawing.Point(140, 223);
+            this.txtConvenio.MaxLength = 20;
+            this.txtConvenio.Name = "txtConvenio";
+            this.txtConvenio.Size = new System.Drawing.Size(275, 39);
+            this.txtConvenio.TabIndex = 4;
+            this.txtConvenio.TextChanged += new System.EventHandler(this.txtSobrenome_TextChanged);
             // 
             // lblConveio
             // 
@@ -296,7 +296,7 @@
             this.tabPage2.Controls.Add(this.dgvFluxoCaixa);
             this.tabPage2.Controls.Add(this.pictureBox1);
             this.tabPage2.Controls.Add(this.btnConsularFluxo);
-            this.tabPage2.Controls.Add(this.textBox1);
+            this.tabPage2.Controls.Add(this.txtConsultarFluxo);
             this.tabPage2.Location = new System.Drawing.Point(4, 37);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Size = new System.Drawing.Size(1117, 491);
@@ -350,14 +350,14 @@
             this.btnConsularFluxo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnConsularFluxo.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txtConsultarFluxo
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Ivory;
-            this.textBox1.Location = new System.Drawing.Point(33, 55);
-            this.textBox1.MaxLength = 50;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(456, 36);
-            this.textBox1.TabIndex = 18;
+            this.txtConsultarFluxo.BackColor = System.Drawing.Color.Ivory;
+            this.txtConsultarFluxo.Location = new System.Drawing.Point(33, 55);
+            this.txtConsultarFluxo.MaxLength = 50;
+            this.txtConsultarFluxo.Name = "txtConsultarFluxo";
+            this.txtConsultarFluxo.Size = new System.Drawing.Size(456, 36);
+            this.txtConsultarFluxo.TabIndex = 18;
             // 
             // Consulta_de_Fluxo_de_Caixa
             // 
@@ -394,7 +394,7 @@
         private System.Windows.Forms.DataGridView dgvFluxoCaixa;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnConsularFluxo;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtConsultarFluxo;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtValorCompra;
         private System.Windows.Forms.Label label3;
@@ -408,7 +408,7 @@
         private System.Windows.Forms.TextBox txtLuz;
         private System.Windows.Forms.Label lblInss;
         private System.Windows.Forms.TextBox txtInss;
-        private System.Windows.Forms.TextBox txtSobrenome;
+        private System.Windows.Forms.TextBox txtConvenio;
         private System.Windows.Forms.Label lblConveio;
         private System.Windows.Forms.Label lblCadastroProduto;
         private System.Windows.Forms.Label label4;

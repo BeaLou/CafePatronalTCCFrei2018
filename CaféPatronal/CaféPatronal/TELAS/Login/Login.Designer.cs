@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblsenha = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtUsuarioLogin = new System.Windows.Forms.TextBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -64,14 +64,14 @@
             this.lblsenha.TabIndex = 1;
             this.lblsenha.Text = "Senha:";
             // 
-            // txtEmail
+            // txtUsuarioLogin
             // 
-            this.txtEmail.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(230, 222);
-            this.txtEmail.MaxLength = 20;
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(200, 30);
-            this.txtEmail.TabIndex = 1;
+            this.txtUsuarioLogin.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuarioLogin.Location = new System.Drawing.Point(230, 222);
+            this.txtUsuarioLogin.MaxLength = 20;
+            this.txtUsuarioLogin.Name = "txtUsuarioLogin";
+            this.txtUsuarioLogin.Size = new System.Drawing.Size(200, 30);
+            this.txtUsuarioLogin.TabIndex = 1;
             // 
             // txtSenha
             // 
@@ -146,7 +146,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtSenha);
-            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtUsuarioLogin);
             this.Controls.Add(this.lblsenha);
             this.Controls.Add(this.lblEmail);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -166,7 +166,7 @@
 
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblsenha;
-        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtUsuarioLogin;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
