@@ -23,5 +23,13 @@ namespace CaféPatronal.TELAS.MenuHistoriaSplash
             tela.Show();
             this.Hide();
         }
+
+        private void btnVoltar_Click_1(object sender, EventArgs e)
+        {
+
+            Form1 tela = new Form1();
+            tela.Show();
+            this.Hide();
+        }
     }
 }

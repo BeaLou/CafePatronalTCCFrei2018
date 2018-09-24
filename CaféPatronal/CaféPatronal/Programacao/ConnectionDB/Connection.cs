@@ -12,7 +12,7 @@ namespace CaféPatronal.Programacao.ConnectionDB
         
             public MySqlConnection Create()
             {
-                string connectionString = "server=localhost;database=CafePatronalDB;uid=root;password=1234;sslmode=none";
+                string connectionString = "server=localhost;database=DBcafe;uid=root;password=1234;sslmode=none";
 
                 MySqlConnection connection = new MySqlConnection(connectionString);
                 connection.Open();

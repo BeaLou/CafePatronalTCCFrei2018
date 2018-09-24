@@ -35,6 +35,7 @@
             this.btnVoltar = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.BtnSalvarPedido = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbFuncionarios = new System.Windows.Forms.ComboBox();
             this.cbClientes = new System.Windows.Forms.ComboBox();
@@ -46,7 +47,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblconsultarpedidos = new System.Windows.Forms.Label();
             this.dgvConsultarPedidos = new System.Windows.Forms.DataGridView();
-            this.BtnSalvarPedido = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -75,7 +75,7 @@
             this.txtValor.MaxLength = 50;
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(590, 32);
-            this.txtValor.TabIndex = 1;
+            this.txtValor.TabIndex = 3;
             // 
             // lblValorFinal
             // 
@@ -127,6 +127,22 @@
             this.tabPage1.Text = "Cadastro";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // BtnSalvarPedido
+            // 
+            this.BtnSalvarPedido.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnSalvarPedido.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnSalvarPedido.FlatAppearance.BorderSize = 0;
+            this.BtnSalvarPedido.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnSalvarPedido.Image = ((System.Drawing.Image)(resources.GetObject("BtnSalvarPedido.Image")));
+            this.BtnSalvarPedido.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnSalvarPedido.Location = new System.Drawing.Point(974, 392);
+            this.BtnSalvarPedido.Name = "BtnSalvarPedido";
+            this.BtnSalvarPedido.Size = new System.Drawing.Size(126, 36);
+            this.BtnSalvarPedido.TabIndex = 68;
+            this.BtnSalvarPedido.Text = "Salvar";
+            this.BtnSalvarPedido.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnSalvarPedido.UseVisualStyleBackColor = false;
+            // 
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -150,7 +166,7 @@
             this.cbFuncionarios.Location = new System.Drawing.Point(202, 98);
             this.cbFuncionarios.Name = "cbFuncionarios";
             this.cbFuncionarios.Size = new System.Drawing.Size(590, 33);
-            this.cbFuncionarios.TabIndex = 39;
+            this.cbFuncionarios.TabIndex = 2;
             // 
             // cbClientes
             // 
@@ -158,7 +174,7 @@
             this.cbClientes.Location = new System.Drawing.Point(202, 37);
             this.cbClientes.Name = "cbClientes";
             this.cbClientes.Size = new System.Drawing.Size(590, 33);
-            this.cbClientes.TabIndex = 38;
+            this.cbClientes.TabIndex = 1;
             // 
             // label2
             // 
@@ -253,22 +269,6 @@
             this.dgvConsultarPedidos.Name = "dgvConsultarPedidos";
             this.dgvConsultarPedidos.Size = new System.Drawing.Size(910, 313);
             this.dgvConsultarPedidos.TabIndex = 6;
-            // 
-            // BtnSalvarPedido
-            // 
-            this.BtnSalvarPedido.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.BtnSalvarPedido.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnSalvarPedido.FlatAppearance.BorderSize = 0;
-            this.BtnSalvarPedido.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnSalvarPedido.Image = ((System.Drawing.Image)(resources.GetObject("BtnSalvarPedido.Image")));
-            this.BtnSalvarPedido.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnSalvarPedido.Location = new System.Drawing.Point(974, 392);
-            this.BtnSalvarPedido.Name = "BtnSalvarPedido";
-            this.BtnSalvarPedido.Size = new System.Drawing.Size(126, 36);
-            this.BtnSalvarPedido.TabIndex = 68;
-            this.BtnSalvarPedido.Text = "Salvar";
-            this.BtnSalvarPedido.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnSalvarPedido.UseVisualStyleBackColor = false;
             // 
             // CadastrarPedido
             // 

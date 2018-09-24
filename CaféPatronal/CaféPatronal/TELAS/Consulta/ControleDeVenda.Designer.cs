@@ -35,7 +35,7 @@
             this.lblconsultaproduto = new System.Windows.Forms.Label();
             this.dgvControleVendas = new System.Windows.Forms.DataGridView();
             this.btnConsultarVendas = new System.Windows.Forms.Button();
-            this.txtConsultarClientes = new System.Windows.Forms.TextBox();
+            this.txtConsultarVendas = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             this.tbControleVendas.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -71,7 +71,7 @@
             this.tabPage1.Controls.Add(this.lblconsultaproduto);
             this.tabPage1.Controls.Add(this.dgvControleVendas);
             this.tabPage1.Controls.Add(this.btnConsultarVendas);
-            this.tabPage1.Controls.Add(this.txtConsultarClientes);
+            this.tabPage1.Controls.Add(this.txtConsultarVendas);
             this.tabPage1.Controls.Add(this.btnVoltar);
             this.tabPage1.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.Location = new System.Drawing.Point(4, 41);
@@ -114,14 +114,14 @@
             this.btnConsultarVendas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnConsultarVendas.UseVisualStyleBackColor = true;
             // 
-            // txtConsultarClientes
+            // txtConsultarVendas
             // 
-            this.txtConsultarClientes.BackColor = System.Drawing.Color.Ivory;
-            this.txtConsultarClientes.Location = new System.Drawing.Point(59, 58);
-            this.txtConsultarClientes.MaxLength = 50;
-            this.txtConsultarClientes.Name = "txtConsultarClientes";
-            this.txtConsultarClientes.Size = new System.Drawing.Size(456, 30);
-            this.txtConsultarClientes.TabIndex = 14;
+            this.txtConsultarVendas.BackColor = System.Drawing.Color.Ivory;
+            this.txtConsultarVendas.Location = new System.Drawing.Point(59, 58);
+            this.txtConsultarVendas.MaxLength = 50;
+            this.txtConsultarVendas.Name = "txtConsultarVendas";
+            this.txtConsultarVendas.Size = new System.Drawing.Size(456, 30);
+            this.txtConsultarVendas.TabIndex = 1;
             // 
             // ControleDeVenda
             // 
@@ -151,7 +151,7 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.DataGridView dgvControleVendas;
         private System.Windows.Forms.Button btnConsultarVendas;
-        private System.Windows.Forms.TextBox txtConsultarClientes;
+        private System.Windows.Forms.TextBox txtConsultarVendas;
         private System.Windows.Forms.Label lblconsultaproduto;
     }
 }

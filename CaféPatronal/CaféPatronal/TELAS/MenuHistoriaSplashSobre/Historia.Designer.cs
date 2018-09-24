@@ -50,13 +50,13 @@
             // 
             // btnVoltar
             // 
-            this.btnVoltar.BackColor = System.Drawing.Color.Transparent;
-            this.btnVoltar.BackgroundImage = global::CaféPatronal.Properties.Resources.icon3;
+            this.btnVoltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(84)))), ((int)(((byte)(55)))));
+            this.btnVoltar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVoltar.BackgroundImage")));
             this.btnVoltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVoltar.Location = new System.Drawing.Point(1124, 12);
+            this.btnVoltar.Location = new System.Drawing.Point(1123, 12);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(59, 57);
+            this.btnVoltar.Size = new System.Drawing.Size(60, 53);
             this.btnVoltar.TabIndex = 10;
             this.btnVoltar.TabStop = false;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);

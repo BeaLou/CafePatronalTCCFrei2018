@@ -47,15 +47,15 @@
             this.btnVoltar = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnSalvarFornecedores = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnConsultarFornece = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtConsultarFornecedor = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvFornecedor = new System.Windows.Forms.DataGridView();
-            this.btnSalvarFornecedores = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -220,7 +220,7 @@
             this.mtbCep.Mask = "0:0000-000";
             this.mtbCep.Name = "mtbCep";
             this.mtbCep.Size = new System.Drawing.Size(275, 32);
-            this.mtbCep.TabIndex = 56;
+            this.mtbCep.TabIndex = 5;
             // 
             // btnVoltar
             // 
@@ -261,6 +261,22 @@
             this.tabPage1.Text = "Cadastro";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // btnSalvarFornecedores
+            // 
+            this.btnSalvarFornecedores.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSalvarFornecedores.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalvarFornecedores.FlatAppearance.BorderSize = 0;
+            this.btnSalvarFornecedores.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSalvarFornecedores.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvarFornecedores.Image")));
+            this.btnSalvarFornecedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalvarFornecedores.Location = new System.Drawing.Point(928, 385);
+            this.btnSalvarFornecedores.Name = "btnSalvarFornecedores";
+            this.btnSalvarFornecedores.Size = new System.Drawing.Size(126, 36);
+            this.btnSalvarFornecedores.TabIndex = 68;
+            this.btnSalvarFornecedores.Text = "Salvar";
+            this.btnSalvarFornecedores.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSalvarFornecedores.UseVisualStyleBackColor = false;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.mtbCep);
@@ -295,7 +311,7 @@
             // 
             this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage2.Controls.Add(this.btnConsultarFornece);
-            this.tabPage2.Controls.Add(this.textBox1);
+            this.tabPage2.Controls.Add(this.txtConsultarFornecedor);
             this.tabPage2.Controls.Add(this.pictureBox1);
             this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.dgvFornecedor);
@@ -320,14 +336,14 @@
             this.btnConsultarFornece.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnConsultarFornece.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txtConsultarFornecedor
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Ivory;
-            this.textBox1.Location = new System.Drawing.Point(66, 45);
-            this.textBox1.MaxLength = 50;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(456, 32);
-            this.textBox1.TabIndex = 9;
+            this.txtConsultarFornecedor.BackColor = System.Drawing.Color.Ivory;
+            this.txtConsultarFornecedor.Location = new System.Drawing.Point(66, 45);
+            this.txtConsultarFornecedor.MaxLength = 50;
+            this.txtConsultarFornecedor.Name = "txtConsultarFornecedor";
+            this.txtConsultarFornecedor.Size = new System.Drawing.Size(456, 32);
+            this.txtConsultarFornecedor.TabIndex = 9;
             // 
             // pictureBox1
             // 
@@ -360,22 +376,6 @@
             this.dgvFornecedor.Name = "dgvFornecedor";
             this.dgvFornecedor.Size = new System.Drawing.Size(910, 322);
             this.dgvFornecedor.TabIndex = 6;
-            // 
-            // btnSalvarFornecedores
-            // 
-            this.btnSalvarFornecedores.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnSalvarFornecedores.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalvarFornecedores.FlatAppearance.BorderSize = 0;
-            this.btnSalvarFornecedores.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSalvarFornecedores.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvarFornecedores.Image")));
-            this.btnSalvarFornecedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalvarFornecedores.Location = new System.Drawing.Point(928, 385);
-            this.btnSalvarFornecedores.Name = "btnSalvarFornecedores";
-            this.btnSalvarFornecedores.Size = new System.Drawing.Size(126, 36);
-            this.btnSalvarFornecedores.TabIndex = 68;
-            this.btnSalvarFornecedores.Text = "Salvar";
-            this.btnSalvarFornecedores.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalvarFornecedores.UseVisualStyleBackColor = false;
             // 
             // CadastrarFornecedor
             // 
@@ -430,7 +430,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgvFornecedor;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtConsultarFornecedor;
         private System.Windows.Forms.Button btnConsultarFornece;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;

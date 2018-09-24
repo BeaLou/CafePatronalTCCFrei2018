@@ -35,5 +35,10 @@ namespace CaféPatronal.TELAS
             tela.Show();
             this.Hide();
         }
+
+        private void txtSobrenome_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
