@@ -62,7 +62,7 @@
     <Compile Include="Programacao\FolhaPagamento\FolhaPagamentoDTO.cs" />
     <Compile Include="Programacao\Fornecedor\FornecedorBusiness.cs" />
     <Compile Include="Programacao\Fornecedor\FornecedorDTO.cs" />
-    <Compile Include="Programacao\Fornecedor\FornecedroDatabase.cs" />
+    <Compile Include="Programacao\Fornecedor\FornecedorDatabase.cs" />
     <Compile Include="Programacao\FluxoCaixa\FluxoCaixaBusiness.cs" />
     <Compile Include="Programacao\FluxoCaixa\FluxoCaixaDatabase.cs" />
     <Compile Include="Programacao\FluxoCaixa\FluxoCaixaVw.cs" />

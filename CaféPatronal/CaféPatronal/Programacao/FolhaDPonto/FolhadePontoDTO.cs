@@ -8,5 +8,9 @@ namespace CaféPatronal.Programacao
 {
     public class FolhadePontoDTO
     {
+        public int id_folhaponto { get; set; }
+        public int id_controledeponto { get; set; }
+        public DateTime dt_mes { get; set; }
+        public TimeSpan hr_totalhoras { get; set; }
     }
 }
