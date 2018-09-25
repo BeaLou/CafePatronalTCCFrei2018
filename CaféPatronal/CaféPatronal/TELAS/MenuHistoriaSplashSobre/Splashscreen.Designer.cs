@@ -44,9 +44,9 @@
             this.lblCAfe.ForeColor = System.Drawing.Color.Khaki;
             this.lblCAfe.Location = new System.Drawing.Point(12, 34);
             this.lblCAfe.Name = "lblCAfe";
-            this.lblCAfe.Size = new System.Drawing.Size(848, 97);
+            this.lblCAfe.Size = new System.Drawing.Size(797, 97);
             this.lblCAfe.TabIndex = 0;
-            this.lblCAfe.Text = "Bem-Vindo ao Café Patronal...";
+            this.lblCAfe.Text = "Bem-Vindo ao Café Patronal";
             this.lblCAfe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
@@ -55,11 +55,11 @@
             this.label1.BackColor = System.Drawing.Color.Green;
             this.label1.Font = new System.Drawing.Font("Agency FB", 50F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label1.ForeColor = System.Drawing.Color.Khaki;
-            this.label1.Location = new System.Drawing.Point(308, 504);
+            this.label1.Location = new System.Drawing.Point(364, 505);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(891, 80);
+            this.label1.Size = new System.Drawing.Size(821, 80);
             this.label1.TabIndex = 1;
-            this.label1.Text = "... o  melhor café você encontra aqui!!";
+            this.label1.Text = "o  melhor café você encontra aqui!";
             // 
             // pictureBox1
             // 

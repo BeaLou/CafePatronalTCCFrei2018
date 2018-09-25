@@ -49,12 +49,14 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -84,7 +86,7 @@
             this.BtnHistoria.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnHistoria.FlatAppearance.BorderSize = 0;
             this.BtnHistoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnHistoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnHistoria.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnHistoria.ForeColor = System.Drawing.Color.Yellow;
             this.BtnHistoria.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnHistoria.Location = new System.Drawing.Point(3, 144);
@@ -101,7 +103,7 @@
             this.BtnSobre.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnSobre.FlatAppearance.BorderSize = 0;
             this.BtnSobre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSobre.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSobre.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSobre.ForeColor = System.Drawing.Color.Yellow;
             this.BtnSobre.Image = ((System.Drawing.Image)(resources.GetObject("BtnSobre.Image")));
             this.BtnSobre.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -119,7 +121,7 @@
             this.BtnVenda.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnVenda.FlatAppearance.BorderSize = 0;
             this.BtnVenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnVenda.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnVenda.ForeColor = System.Drawing.Color.Yellow;
             this.BtnVenda.Image = ((System.Drawing.Image)(resources.GetObject("BtnVenda.Image")));
             this.BtnVenda.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -137,7 +139,7 @@
             this.BtnFluxoCaixa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnFluxoCaixa.FlatAppearance.BorderSize = 0;
             this.BtnFluxoCaixa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnFluxoCaixa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnFluxoCaixa.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnFluxoCaixa.ForeColor = System.Drawing.Color.Yellow;
             this.BtnFluxoCaixa.Image = ((System.Drawing.Image)(resources.GetObject("BtnFluxoCaixa.Image")));
             this.BtnFluxoCaixa.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -156,7 +158,7 @@
             this.BtnFolhaPagamento.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnFolhaPagamento.FlatAppearance.BorderSize = 0;
             this.BtnFolhaPagamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnFolhaPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnFolhaPagamento.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnFolhaPagamento.ForeColor = System.Drawing.Color.Yellow;
             this.BtnFolhaPagamento.Image = ((System.Drawing.Image)(resources.GetObject("BtnFolhaPagamento.Image")));
             this.BtnFolhaPagamento.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -185,11 +187,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.MediumSeaGreen;
             this.label1.Location = new System.Drawing.Point(43, 113);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(158, 29);
+            this.label1.Size = new System.Drawing.Size(112, 28);
             this.label1.TabIndex = 1;
             this.label1.Text = "Café Patronal";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -209,7 +211,7 @@
             this.BtnEstoque.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnEstoque.FlatAppearance.BorderSize = 0;
             this.BtnEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEstoque.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEstoque.ForeColor = System.Drawing.Color.Yellow;
             this.BtnEstoque.Image = ((System.Drawing.Image)(resources.GetObject("BtnEstoque.Image")));
             this.BtnEstoque.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -227,7 +229,7 @@
             this.BtnFornecedor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnFornecedor.FlatAppearance.BorderSize = 0;
             this.BtnFornecedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnFornecedor.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnFornecedor.ForeColor = System.Drawing.Color.Yellow;
             this.BtnFornecedor.Image = ((System.Drawing.Image)(resources.GetObject("BtnFornecedor.Image")));
             this.BtnFornecedor.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -245,7 +247,7 @@
             this.BtnProduto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnProduto.FlatAppearance.BorderSize = 0;
             this.BtnProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnProduto.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnProduto.ForeColor = System.Drawing.Color.Yellow;
             this.BtnProduto.Image = ((System.Drawing.Image)(resources.GetObject("BtnProduto.Image")));
             this.BtnProduto.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -263,7 +265,7 @@
             this.BtnPedido.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnPedido.FlatAppearance.BorderSize = 0;
             this.BtnPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnPedido.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnPedido.ForeColor = System.Drawing.Color.Yellow;
             this.BtnPedido.Image = ((System.Drawing.Image)(resources.GetObject("BtnPedido.Image")));
             this.BtnPedido.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -281,7 +283,7 @@
             this.BtnFuncionario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnFuncionario.FlatAppearance.BorderSize = 0;
             this.BtnFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnFuncionario.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnFuncionario.ForeColor = System.Drawing.Color.Yellow;
             this.BtnFuncionario.Image = ((System.Drawing.Image)(resources.GetObject("BtnFuncionario.Image")));
             this.BtnFuncionario.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -299,7 +301,7 @@
             this.BtnCliente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnCliente.FlatAppearance.BorderSize = 0;
             this.BtnCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCliente.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCliente.ForeColor = System.Drawing.Color.Yellow;
             this.BtnCliente.Image = ((System.Drawing.Image)(resources.GetObject("BtnCliente.Image")));
             this.BtnCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -324,6 +326,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.pictureBox3);
             this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
@@ -345,24 +348,35 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Agency FB", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label3.Location = new System.Drawing.Point(246, 52);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(107, 39);
+            this.label3.Size = new System.Drawing.Size(80, 42);
             this.label3.TabIndex = 22;
             this.label3.Text = "Menu";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Agency FB", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label2.Location = new System.Drawing.Point(239, 115);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(438, 73);
+            this.label2.Size = new System.Drawing.Size(340, 77);
             this.label2.TabIndex = 21;
             this.label2.Text = "Café Patronal";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(935, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(46, 35);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 23;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // Form1
             // 
@@ -390,6 +404,7 @@
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -417,6 +432,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button BtnHistoria;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
 

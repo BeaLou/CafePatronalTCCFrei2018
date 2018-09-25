@@ -75,7 +75,7 @@
             this.txtValor.MaxLength = 50;
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(590, 32);
-            this.txtValor.TabIndex = 3;
+            this.txtValor.TabIndex = 1;
             // 
             // lblValorFinal
             // 
@@ -166,7 +166,7 @@
             this.cbFuncionarios.Location = new System.Drawing.Point(202, 98);
             this.cbFuncionarios.Name = "cbFuncionarios";
             this.cbFuncionarios.Size = new System.Drawing.Size(590, 33);
-            this.cbFuncionarios.TabIndex = 2;
+            this.cbFuncionarios.TabIndex = 39;
             // 
             // cbClientes
             // 
@@ -174,7 +174,7 @@
             this.cbClientes.Location = new System.Drawing.Point(202, 37);
             this.cbClientes.Name = "cbClientes";
             this.cbClientes.Size = new System.Drawing.Size(590, 33);
-            this.cbClientes.TabIndex = 1;
+            this.cbClientes.TabIndex = 38;
             // 
             // label2
             // 

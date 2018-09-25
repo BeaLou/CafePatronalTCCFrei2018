@@ -52,7 +52,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnConsultarFornece = new System.Windows.Forms.Button();
-            this.txtConsultarFornecedor = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvFornecedor = new System.Windows.Forms.DataGridView();
@@ -220,7 +220,7 @@
             this.mtbCep.Mask = "0:0000-000";
             this.mtbCep.Name = "mtbCep";
             this.mtbCep.Size = new System.Drawing.Size(275, 32);
-            this.mtbCep.TabIndex = 5;
+            this.mtbCep.TabIndex = 56;
             // 
             // btnVoltar
             // 
@@ -311,7 +311,7 @@
             // 
             this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage2.Controls.Add(this.btnConsultarFornece);
-            this.tabPage2.Controls.Add(this.txtConsultarFornecedor);
+            this.tabPage2.Controls.Add(this.textBox1);
             this.tabPage2.Controls.Add(this.pictureBox1);
             this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.dgvFornecedor);
@@ -336,14 +336,14 @@
             this.btnConsultarFornece.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnConsultarFornece.UseVisualStyleBackColor = true;
             // 
-            // txtConsultarFornecedor
+            // textBox1
             // 
-            this.txtConsultarFornecedor.BackColor = System.Drawing.Color.Ivory;
-            this.txtConsultarFornecedor.Location = new System.Drawing.Point(66, 45);
-            this.txtConsultarFornecedor.MaxLength = 50;
-            this.txtConsultarFornecedor.Name = "txtConsultarFornecedor";
-            this.txtConsultarFornecedor.Size = new System.Drawing.Size(456, 32);
-            this.txtConsultarFornecedor.TabIndex = 9;
+            this.textBox1.BackColor = System.Drawing.Color.Ivory;
+            this.textBox1.Location = new System.Drawing.Point(66, 45);
+            this.textBox1.MaxLength = 50;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(456, 32);
+            this.textBox1.TabIndex = 9;
             // 
             // pictureBox1
             // 
@@ -430,7 +430,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgvFornecedor;
-        private System.Windows.Forms.TextBox txtConsultarFornecedor;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnConsultarFornece;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;

@@ -132,5 +132,12 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Question)
             tela.Show();
             this.Hide();
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Login tela = new Login();
+            tela.Show();
+            this.Hide();
+        }
     }
 }
