@@ -45,10 +45,10 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.BackColor = System.Drawing.Color.Transparent;
-            this.lblEmail.Font = new System.Drawing.Font("Agency FB", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.Location = new System.Drawing.Point(101, 210);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(118, 44);
+            this.lblEmail.Size = new System.Drawing.Size(165, 42);
             this.lblEmail.TabIndex = 0;
             this.lblEmail.Text = "Usuário:";
             // 
@@ -56,31 +56,31 @@
             // 
             this.lblsenha.AutoSize = true;
             this.lblsenha.BackColor = System.Drawing.Color.Transparent;
-            this.lblsenha.Font = new System.Drawing.Font("Agency FB", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblsenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblsenha.ForeColor = System.Drawing.Color.Black;
             this.lblsenha.Location = new System.Drawing.Point(101, 311);
             this.lblsenha.Name = "lblsenha";
-            this.lblsenha.Size = new System.Drawing.Size(99, 44);
+            this.lblsenha.Size = new System.Drawing.Size(143, 42);
             this.lblsenha.TabIndex = 1;
             this.lblsenha.Text = "Senha:";
             // 
             // txtUsuarioLogin
             // 
-            this.txtUsuarioLogin.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuarioLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuarioLogin.Location = new System.Drawing.Point(230, 222);
             this.txtUsuarioLogin.MaxLength = 20;
             this.txtUsuarioLogin.Name = "txtUsuarioLogin";
-            this.txtUsuarioLogin.Size = new System.Drawing.Size(200, 30);
+            this.txtUsuarioLogin.Size = new System.Drawing.Size(200, 29);
             this.txtUsuarioLogin.TabIndex = 1;
             // 
             // txtSenha
             // 
-            this.txtSenha.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenha.Location = new System.Drawing.Point(230, 324);
             this.txtSenha.MaxLength = 20;
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
-            this.txtSenha.Size = new System.Drawing.Size(200, 30);
+            this.txtSenha.Size = new System.Drawing.Size(200, 29);
             this.txtSenha.TabIndex = 2;
             this.txtSenha.UseSystemPasswordChar = true;
             // 
@@ -88,10 +88,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Agency FB", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(269, 52);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 58);
+            this.label1.Size = new System.Drawing.Size(173, 55);
             this.label1.TabIndex = 3;
             this.label1.Text = "LOGIN";
             // 
@@ -126,13 +126,14 @@
             this.btnLogar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogar.FlatAppearance.BorderSize = 0;
             this.btnLogar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogar.Font = new System.Drawing.Font("Agency FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogar.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogar.Location = new System.Drawing.Point(230, 396);
             this.btnLogar.Name = "btnLogar";
             this.btnLogar.Size = new System.Drawing.Size(200, 42);
             this.btnLogar.TabIndex = 5;
             this.btnLogar.Text = "Login";
             this.btnLogar.UseVisualStyleBackColor = false;
+            this.btnLogar.Click += new System.EventHandler(this.btnLogar_Click);
             // 
             // Login
             // 

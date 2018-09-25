@@ -30,20 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.BtnHistoria = new System.Windows.Forms.Button();
+            this.BtnSobre = new System.Windows.Forms.Button();
+            this.BtnVenda = new System.Windows.Forms.Button();
+            this.BtnFluxoCaixa = new System.Windows.Forms.Button();
+            this.BtnFolhaPagamento = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnEstoque = new System.Windows.Forms.Button();
+            this.BtnFornecedor = new System.Windows.Forms.Button();
+            this.BtnProduto = new System.Windows.Forms.Button();
+            this.BtnPedido = new System.Windows.Forms.Button();
+            this.BtnFuncionario = new System.Windows.Forms.Button();
+            this.BtnCliente = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -60,18 +60,18 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.panel1.Controls.Add(this.button16);
-            this.panel1.Controls.Add(this.button10);
-            this.panel1.Controls.Add(this.button9);
-            this.panel1.Controls.Add(this.button8);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.BtnHistoria);
+            this.panel1.Controls.Add(this.BtnSobre);
+            this.panel1.Controls.Add(this.BtnVenda);
+            this.panel1.Controls.Add(this.BtnFluxoCaixa);
+            this.panel1.Controls.Add(this.BtnFolhaPagamento);
             this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.button7);
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.BtnEstoque);
+            this.panel1.Controls.Add(this.BtnFornecedor);
+            this.panel1.Controls.Add(this.BtnProduto);
+            this.panel1.Controls.Add(this.BtnPedido);
+            this.panel1.Controls.Add(this.BtnFuncionario);
+            this.panel1.Controls.Add(this.BtnCliente);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -79,76 +79,95 @@
             this.panel1.Size = new System.Drawing.Size(194, 650);
             this.panel1.TabIndex = 0;
             // 
-            // button16
+            // BtnHistoria
             // 
-            this.button16.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button16.FlatAppearance.BorderSize = 0;
-            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button16.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button16.ForeColor = System.Drawing.Color.Yellow;
-            this.button16.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button16.Location = new System.Drawing.Point(3, 144);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(188, 44);
-            this.button16.TabIndex = 10;
-            this.button16.Text = "Conheça nossa história!";
-            this.button16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button16.UseVisualStyleBackColor = true;
-            this.button16.Click += new System.EventHandler(this.button16_Click);
+            this.BtnHistoria.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnHistoria.FlatAppearance.BorderSize = 0;
+            this.BtnHistoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnHistoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnHistoria.ForeColor = System.Drawing.Color.Yellow;
+            this.BtnHistoria.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnHistoria.Location = new System.Drawing.Point(3, 144);
+            this.BtnHistoria.Name = "BtnHistoria";
+            this.BtnHistoria.Size = new System.Drawing.Size(188, 44);
+            this.BtnHistoria.TabIndex = 10;
+            this.BtnHistoria.Text = "Conheça nossa história!";
+            this.BtnHistoria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnHistoria.UseVisualStyleBackColor = true;
+            this.BtnHistoria.Click += new System.EventHandler(this.button16_Click);
             // 
-            // button10
+            // BtnSobre
             // 
-            this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.Color.Yellow;
-            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
-            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button10.Location = new System.Drawing.Point(0, 182);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(194, 44);
-            this.button10.TabIndex = 9;
-            this.button10.Text = "Sobre";
-            this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            this.BtnSobre.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnSobre.FlatAppearance.BorderSize = 0;
+            this.BtnSobre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSobre.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSobre.ForeColor = System.Drawing.Color.Yellow;
+            this.BtnSobre.Image = ((System.Drawing.Image)(resources.GetObject("BtnSobre.Image")));
+            this.BtnSobre.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnSobre.Location = new System.Drawing.Point(0, 182);
+            this.BtnSobre.Name = "BtnSobre";
+            this.BtnSobre.Size = new System.Drawing.Size(194, 44);
+            this.BtnSobre.TabIndex = 9;
+            this.BtnSobre.Text = "Sobre";
+            this.BtnSobre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnSobre.UseVisualStyleBackColor = true;
+            this.BtnSobre.Click += new System.EventHandler(this.button10_Click);
             // 
-            // button9
+            // BtnVenda
             // 
-            this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.Yellow;
-            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
-            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button9.Location = new System.Drawing.Point(-6, 588);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(194, 36);
-            this.button9.TabIndex = 8;
-            this.button9.Text = "Controle de Venda";
-            this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.BtnVenda.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnVenda.FlatAppearance.BorderSize = 0;
+            this.BtnVenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnVenda.ForeColor = System.Drawing.Color.Yellow;
+            this.BtnVenda.Image = ((System.Drawing.Image)(resources.GetObject("BtnVenda.Image")));
+            this.BtnVenda.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnVenda.Location = new System.Drawing.Point(-6, 588);
+            this.BtnVenda.Name = "BtnVenda";
+            this.BtnVenda.Size = new System.Drawing.Size(194, 36);
+            this.BtnVenda.TabIndex = 8;
+            this.BtnVenda.Text = "Controle de Venda";
+            this.BtnVenda.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnVenda.UseVisualStyleBackColor = true;
+            this.BtnVenda.Click += new System.EventHandler(this.button9_Click);
             // 
-            // button8
+            // BtnFluxoCaixa
             // 
-            this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.Yellow;
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button8.Location = new System.Drawing.Point(-3, 546);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(194, 36);
-            this.button8.TabIndex = 7;
-            this.button8.Text = "Fluxo de Caixa";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.BtnFluxoCaixa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnFluxoCaixa.FlatAppearance.BorderSize = 0;
+            this.BtnFluxoCaixa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnFluxoCaixa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnFluxoCaixa.ForeColor = System.Drawing.Color.Yellow;
+            this.BtnFluxoCaixa.Image = ((System.Drawing.Image)(resources.GetObject("BtnFluxoCaixa.Image")));
+            this.BtnFluxoCaixa.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnFluxoCaixa.Location = new System.Drawing.Point(-3, 546);
+            this.BtnFluxoCaixa.Name = "BtnFluxoCaixa";
+            this.BtnFluxoCaixa.Size = new System.Drawing.Size(194, 36);
+            this.BtnFluxoCaixa.TabIndex = 7;
+            this.BtnFluxoCaixa.Text = "Fluxo de Caixa";
+            this.BtnFluxoCaixa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnFluxoCaixa.UseVisualStyleBackColor = true;
+            this.BtnFluxoCaixa.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // BtnFolhaPagamento
+            // 
+            this.BtnFolhaPagamento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnFolhaPagamento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnFolhaPagamento.FlatAppearance.BorderSize = 0;
+            this.BtnFolhaPagamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnFolhaPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnFolhaPagamento.ForeColor = System.Drawing.Color.Yellow;
+            this.BtnFolhaPagamento.Image = ((System.Drawing.Image)(resources.GetObject("BtnFolhaPagamento.Image")));
+            this.BtnFolhaPagamento.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnFolhaPagamento.Location = new System.Drawing.Point(-6, 462);
+            this.BtnFolhaPagamento.Name = "BtnFolhaPagamento";
+            this.BtnFolhaPagamento.Size = new System.Drawing.Size(194, 36);
+            this.BtnFolhaPagamento.TabIndex = 0;
+            this.BtnFolhaPagamento.Text = "Folha de Pagamento";
+            this.BtnFolhaPagamento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnFolhaPagamento.UseVisualStyleBackColor = true;
+            this.BtnFolhaPagamento.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel4
             // 
@@ -166,11 +185,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.MediumSeaGreen;
             this.label1.Location = new System.Drawing.Point(43, 113);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 28);
+            this.label1.Size = new System.Drawing.Size(158, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "Café Patronal";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -185,132 +204,113 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // button7
+            // BtnEstoque
             // 
-            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.Yellow;
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button7.Location = new System.Drawing.Point(0, 504);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(194, 36);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "Estoque";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.BtnEstoque.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnEstoque.FlatAppearance.BorderSize = 0;
+            this.BtnEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEstoque.ForeColor = System.Drawing.Color.Yellow;
+            this.BtnEstoque.Image = ((System.Drawing.Image)(resources.GetObject("BtnEstoque.Image")));
+            this.BtnEstoque.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnEstoque.Location = new System.Drawing.Point(0, 504);
+            this.BtnEstoque.Name = "BtnEstoque";
+            this.BtnEstoque.Size = new System.Drawing.Size(194, 36);
+            this.BtnEstoque.TabIndex = 6;
+            this.BtnEstoque.Text = "Estoque";
+            this.BtnEstoque.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnEstoque.UseVisualStyleBackColor = true;
+            this.BtnEstoque.Click += new System.EventHandler(this.button7_Click);
             // 
-            // button6
+            // BtnFornecedor
             // 
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.Yellow;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button6.Location = new System.Drawing.Point(-3, 420);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(194, 36);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Fornecedor";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.BtnFornecedor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnFornecedor.FlatAppearance.BorderSize = 0;
+            this.BtnFornecedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnFornecedor.ForeColor = System.Drawing.Color.Yellow;
+            this.BtnFornecedor.Image = ((System.Drawing.Image)(resources.GetObject("BtnFornecedor.Image")));
+            this.BtnFornecedor.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnFornecedor.Location = new System.Drawing.Point(-3, 420);
+            this.BtnFornecedor.Name = "BtnFornecedor";
+            this.BtnFornecedor.Size = new System.Drawing.Size(194, 36);
+            this.BtnFornecedor.TabIndex = 5;
+            this.BtnFornecedor.Text = "Fornecedor";
+            this.BtnFornecedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnFornecedor.UseVisualStyleBackColor = true;
+            this.BtnFornecedor.Click += new System.EventHandler(this.button6_Click);
             // 
-            // button5
+            // BtnProduto
             // 
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.Yellow;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.Location = new System.Drawing.Point(-3, 378);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(194, 36);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Produto";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.BtnProduto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnProduto.FlatAppearance.BorderSize = 0;
+            this.BtnProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnProduto.ForeColor = System.Drawing.Color.Yellow;
+            this.BtnProduto.Image = ((System.Drawing.Image)(resources.GetObject("BtnProduto.Image")));
+            this.BtnProduto.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnProduto.Location = new System.Drawing.Point(-3, 378);
+            this.BtnProduto.Name = "BtnProduto";
+            this.BtnProduto.Size = new System.Drawing.Size(194, 36);
+            this.BtnProduto.TabIndex = 4;
+            this.BtnProduto.Text = "Produto";
+            this.BtnProduto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnProduto.UseVisualStyleBackColor = true;
+            this.BtnProduto.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button4
+            // BtnPedido
             // 
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.Yellow;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.Location = new System.Drawing.Point(-3, 336);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(194, 36);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Pedido";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.BtnPedido.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnPedido.FlatAppearance.BorderSize = 0;
+            this.BtnPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnPedido.ForeColor = System.Drawing.Color.Yellow;
+            this.BtnPedido.Image = ((System.Drawing.Image)(resources.GetObject("BtnPedido.Image")));
+            this.BtnPedido.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnPedido.Location = new System.Drawing.Point(-3, 336);
+            this.BtnPedido.Name = "BtnPedido";
+            this.BtnPedido.Size = new System.Drawing.Size(194, 36);
+            this.BtnPedido.TabIndex = 3;
+            this.BtnPedido.Text = "Pedido";
+            this.BtnPedido.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnPedido.UseVisualStyleBackColor = true;
+            this.BtnPedido.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button3
+            // BtnFuncionario
             // 
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Yellow;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.Location = new System.Drawing.Point(0, 294);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(194, 36);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Funcionário";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.BtnFuncionario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnFuncionario.FlatAppearance.BorderSize = 0;
+            this.BtnFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnFuncionario.ForeColor = System.Drawing.Color.Yellow;
+            this.BtnFuncionario.Image = ((System.Drawing.Image)(resources.GetObject("BtnFuncionario.Image")));
+            this.BtnFuncionario.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnFuncionario.Location = new System.Drawing.Point(0, 294);
+            this.BtnFuncionario.Name = "BtnFuncionario";
+            this.BtnFuncionario.Size = new System.Drawing.Size(194, 36);
+            this.BtnFuncionario.TabIndex = 2;
+            this.BtnFuncionario.Text = "Funcionário";
+            this.BtnFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnFuncionario.UseVisualStyleBackColor = true;
+            this.BtnFuncionario.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
+            // BtnCliente
             // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Yellow;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.Location = new System.Drawing.Point(-3, 252);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(194, 36);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Cliente";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Yellow;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(-6, 462);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(194, 36);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Folha de Pagamento";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.BtnCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCliente.FlatAppearance.BorderSize = 0;
+            this.BtnCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCliente.ForeColor = System.Drawing.Color.Yellow;
+            this.BtnCliente.Image = ((System.Drawing.Image)(resources.GetObject("BtnCliente.Image")));
+            this.BtnCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnCliente.Location = new System.Drawing.Point(-3, 252);
+            this.BtnCliente.Name = "BtnCliente";
+            this.BtnCliente.Size = new System.Drawing.Size(194, 36);
+            this.BtnCliente.TabIndex = 1;
+            this.BtnCliente.Text = "Cliente";
+            this.BtnCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnCliente.UseVisualStyleBackColor = true;
+            this.BtnCliente.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel2
             // 
@@ -345,22 +345,22 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Agency FB", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label3.Location = new System.Drawing.Point(246, 52);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 42);
+            this.label3.Size = new System.Drawing.Size(107, 39);
             this.label3.TabIndex = 22;
             this.label3.Text = "Menu";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Elephant", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label2.Location = new System.Drawing.Point(239, 115);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(494, 83);
+            this.label2.Size = new System.Drawing.Size(438, 73);
             this.label2.TabIndex = 21;
             this.label2.Text = "Café Patronal";
             // 
@@ -400,23 +400,23 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button BtnEstoque;
+        private System.Windows.Forms.Button BtnFornecedor;
+        private System.Windows.Forms.Button BtnProduto;
+        private System.Windows.Forms.Button BtnPedido;
+        private System.Windows.Forms.Button BtnFuncionario;
+        private System.Windows.Forms.Button BtnCliente;
+        private System.Windows.Forms.Button BtnFolhaPagamento;
+        private System.Windows.Forms.Button BtnVenda;
+        private System.Windows.Forms.Button BtnFluxoCaixa;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button BtnSobre;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button BtnHistoria;
     }
 }
 

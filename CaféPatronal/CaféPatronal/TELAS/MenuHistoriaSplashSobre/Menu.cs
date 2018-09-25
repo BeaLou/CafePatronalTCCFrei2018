@@ -1,4 +1,5 @@
 ﻿
+using CaféPatronal.Programacao;
 using CaféPatronal.TELAS;
 using CaféPatronal.TELAS.Cadastro_e_Consulta;
 using CaféPatronal.TELAS.Consulta;
@@ -14,7 +15,29 @@ namespace CaféPatronal
         public Form1()
         {
             InitializeComponent();
+            VerificarPermissoes();
         }
+        void VerificarPermissoes()
+        {
+            if (UserSession.UsuarioLogado.bt_permissaoadm == false)
+            {
+                if (UserSession.UsuarioLogado.bt_permissaofuncionario == true)
+                {
+                    BtnFolhaPagamento.Enabled = false;
+                    BtnFornecedor.Enabled = false;
+                    BtnVenda.Enabled = false;
+                    BtnEstoque.Enabled = false;
+                    BtnFluxoCaixa.Enabled = false;
+
+
+                }
+            }
+        }
+
+
+
+
+
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {

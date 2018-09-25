@@ -25,5 +25,9 @@ namespace CaféPatronal.Programacao.Funcionario
         public DateTime dt_nascimento { get; set; }
         public string ds_login { get; set; }
         public string ds_senha { get; set; }
+
+        public bool bt_permissaoadm { get; set; }
+        public bool bt_permissaorh { get; set; }
+        public bool bt_permissaofuncionario { get; set; }
     }
 }

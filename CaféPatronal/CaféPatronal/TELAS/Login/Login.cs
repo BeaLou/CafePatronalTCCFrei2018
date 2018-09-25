@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CaféPatronal.Programacao;
+using CaféPatronal.Programacao.Funcionario;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,6 +31,33 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 == DialogResult.Yes)
             {
                 Application.Exit();
+            }
+        }
+
+        private void btnLogar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FuncionarioBusiness business = new FuncionarioBusiness();
+                FuncionarioDTO funcionario = business.Logar(txtUsuarioLogin.Text, txtSenha.Text);
+
+                if (funcionario != null)
+                {
+                    UserSession.UsuarioLogado = funcionario;
+
+                    Form1 menu = new Form1();
+                    menu.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Credenciais inválidas.", "Michael Pop`s", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro" + ex.Message);
+
             }
         }
     }
