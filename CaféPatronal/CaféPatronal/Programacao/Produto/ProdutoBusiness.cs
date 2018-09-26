@@ -8,5 +8,58 @@ namespace CaféPatronal.Programacao.Produto
 {
     public class ProdutoBusiness
     {
+        ProdutoDatabase db = new ProdutoDatabase();
+
+        public int Salvar(ProdutoDTO produto)
+        {
+            if (produto.nm_nome == string.Empty)
+            {
+                throw new ArgumentException("Nome é obrigatório.");
+            }
+            if (produto.ds_unidade == string.Empty)
+            {
+                throw new ArgumentException("Unidade é obrigatório.");
+            }
+            if (produto.dt_validade > DateTime.Now)
+            {
+                throw new ArgumentException("Data de Validade é inválida.");
+            }
+
+            return db.Salvar(produto);
+
+        }
+
+        public void Alterar(ProdutoDTO produto)
+        {
+            if (produto.nm_nome == string.Empty)
+            {
+                throw new ArgumentException("Nome é obrigatório.");
+            }
+            if (produto.ds_unidade == string.Empty)
+            {
+                throw new ArgumentException("Unidade é obrigatório.");
+            }
+            if (produto.dt_validade > DateTime.Now)
+            {
+                throw new ArgumentException("Data de Validade é inválida.");
+            }
+
+            db.Alterar(produto);
+        }
+
+        public List<ProdutoDTO> Consultar(string produto)
+        {
+            return db.Consultar(produto);
+        }
+
+        public List<ProdutoDTO> Listar()
+        {
+            return db.Listar();
+        }
+
+        public void Remover(int id)
+        {
+            db.Remover(id);
+        }
     }
 }
