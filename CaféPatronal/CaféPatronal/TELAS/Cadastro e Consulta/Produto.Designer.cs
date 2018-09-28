@@ -32,9 +32,8 @@
             this.lblNome = new System.Windows.Forms.Label();
             this.dtpDataValidade = new System.Windows.Forms.DateTimePicker();
             this.lblDataValidade = new System.Windows.Forms.Label();
-            this.txtQtdpedido = new System.Windows.Forms.TextBox();
             this.lblQuantidade = new System.Windows.Forms.Label();
-            this.TxtNomepedido = new System.Windows.Forms.TextBox();
+            this.TxtNomeProduto = new System.Windows.Forms.TextBox();
             this.lblCadastroProduto = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -42,14 +41,18 @@
             this.BtnSalvarProdutos = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.txtConsultaProdutos = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblconsultaproduto = new System.Windows.Forms.Label();
             this.dgvconsultaproduto = new System.Windows.Forms.DataGridView();
             this.btnConsultarFornece = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.cboUnidade = new System.Windows.Forms.ComboBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -64,10 +67,10 @@
             // 
             this.lblNome.AutoSize = true;
             this.lblNome.BackColor = System.Drawing.Color.Transparent;
-            this.lblNome.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNome.Location = new System.Drawing.Point(100, 33);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(58, 28);
+            this.lblNome.Size = new System.Drawing.Size(85, 29);
             this.lblNome.TabIndex = 30;
             this.lblNome.Text = "Nome:";
             // 
@@ -77,7 +80,7 @@
             this.dtpDataValidade.MaxDate = new System.DateTime(2050, 12, 31, 0, 0, 0, 0);
             this.dtpDataValidade.MinDate = new System.DateTime(1910, 1, 1, 0, 0, 0, 0);
             this.dtpDataValidade.Name = "dtpDataValidade";
-            this.dtpDataValidade.Size = new System.Drawing.Size(535, 32);
+            this.dtpDataValidade.Size = new System.Drawing.Size(535, 31);
             this.dtpDataValidade.TabIndex = 3;
             this.dtpDataValidade.Value = new System.DateTime(1910, 12, 31, 0, 0, 0, 0);
             // 
@@ -85,52 +88,44 @@
             // 
             this.lblDataValidade.AutoSize = true;
             this.lblDataValidade.BackColor = System.Drawing.Color.Transparent;
-            this.lblDataValidade.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDataValidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDataValidade.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblDataValidade.Location = new System.Drawing.Point(20, 132);
             this.lblDataValidade.Name = "lblDataValidade";
-            this.lblDataValidade.Size = new System.Drawing.Size(138, 28);
+            this.lblDataValidade.Size = new System.Drawing.Size(203, 29);
             this.lblDataValidade.TabIndex = 3;
             this.lblDataValidade.Text = "Data de Validade:";
-            // 
-            // txtQtdpedido
-            // 
-            this.txtQtdpedido.Location = new System.Drawing.Point(164, 82);
-            this.txtQtdpedido.MaxLength = 20;
-            this.txtQtdpedido.Name = "txtQtdpedido";
-            this.txtQtdpedido.Size = new System.Drawing.Size(535, 32);
-            this.txtQtdpedido.TabIndex = 2;
             // 
             // lblQuantidade
             // 
             this.lblQuantidade.AutoSize = true;
             this.lblQuantidade.BackColor = System.Drawing.Color.Transparent;
-            this.lblQuantidade.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuantidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuantidade.Location = new System.Drawing.Point(56, 74);
             this.lblQuantidade.Name = "lblQuantidade";
-            this.lblQuantidade.Size = new System.Drawing.Size(98, 28);
+            this.lblQuantidade.Size = new System.Drawing.Size(110, 29);
             this.lblQuantidade.TabIndex = 2;
-            this.lblQuantidade.Text = "Quantidade:";
+            this.lblQuantidade.Text = "Unidade:";
             // 
-            // TxtNomepedido
+            // TxtNomeProduto
             // 
-            this.TxtNomepedido.Location = new System.Drawing.Point(164, 33);
-            this.TxtNomepedido.MaxLength = 20;
-            this.TxtNomepedido.Name = "TxtNomepedido";
-            this.TxtNomepedido.Size = new System.Drawing.Size(535, 32);
-            this.TxtNomepedido.TabIndex = 1;
-            this.TxtNomepedido.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            this.TxtNomepedido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            this.TxtNomeProduto.Location = new System.Drawing.Point(164, 33);
+            this.TxtNomeProduto.MaxLength = 20;
+            this.TxtNomeProduto.Name = "TxtNomeProduto";
+            this.TxtNomeProduto.Size = new System.Drawing.Size(535, 31);
+            this.TxtNomeProduto.TabIndex = 1;
+            this.TxtNomeProduto.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.TxtNomeProduto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // lblCadastroProduto
             // 
             this.lblCadastroProduto.AutoSize = true;
             this.lblCadastroProduto.BackColor = System.Drawing.Color.Transparent;
-            this.lblCadastroProduto.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadastroProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadastroProduto.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblCadastroProduto.Location = new System.Drawing.Point(6, 6);
             this.lblCadastroProduto.Name = "lblCadastroProduto";
-            this.lblCadastroProduto.Size = new System.Drawing.Size(196, 28);
+            this.lblCadastroProduto.Size = new System.Drawing.Size(327, 29);
             this.lblCadastroProduto.TabIndex = 31;
             this.lblCadastroProduto.Text = "CADASTRO DE PRODUTOS";
             // 
@@ -151,7 +146,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(49, 18);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -187,13 +182,14 @@
             this.BtnSalvarProdutos.Text = "Salvar";
             this.BtnSalvarProdutos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnSalvarProdutos.UseVisualStyleBackColor = false;
+            this.BtnSalvarProdutos.Click += new System.EventHandler(this.BtnSalvarProdutos_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.TxtNomepedido);
+            this.groupBox1.Controls.Add(this.cboUnidade);
+            this.groupBox1.Controls.Add(this.TxtNomeProduto);
             this.groupBox1.Controls.Add(this.lblDataValidade);
             this.groupBox1.Controls.Add(this.lblNome);
-            this.groupBox1.Controls.Add(this.txtQtdpedido);
             this.groupBox1.Controls.Add(this.dtpDataValidade);
             this.groupBox1.Controls.Add(this.lblQuantidade);
             this.groupBox1.Location = new System.Drawing.Point(168, 104);
@@ -221,13 +217,39 @@
             this.tabPage2.Text = "Consulta";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // button2
+            // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(759, 42);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(103, 33);
+            this.button2.TabIndex = 17;
+            this.button2.Text = "Alterar";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(650, 42);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(103, 33);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Apagar";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // txtConsultaProdutos
             // 
             this.txtConsultaProdutos.BackColor = System.Drawing.Color.Ivory;
             this.txtConsultaProdutos.Location = new System.Drawing.Point(58, 42);
             this.txtConsultaProdutos.MaxLength = 50;
             this.txtConsultaProdutos.Name = "txtConsultaProdutos";
-            this.txtConsultaProdutos.Size = new System.Drawing.Size(456, 32);
+            this.txtConsultaProdutos.Size = new System.Drawing.Size(456, 31);
             this.txtConsultaProdutos.TabIndex = 15;
             // 
             // pictureBox2
@@ -257,18 +279,25 @@
             // 
             this.lblconsultaproduto.AutoSize = true;
             this.lblconsultaproduto.BackColor = System.Drawing.Color.Transparent;
-            this.lblconsultaproduto.Font = new System.Drawing.Font("Agency FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblconsultaproduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblconsultaproduto.Location = new System.Drawing.Point(2, 3);
             this.lblconsultaproduto.Name = "lblconsultaproduto";
-            this.lblconsultaproduto.Size = new System.Drawing.Size(213, 34);
+            this.lblconsultaproduto.Size = new System.Drawing.Size(394, 33);
             this.lblconsultaproduto.TabIndex = 12;
             this.lblconsultaproduto.Text = "CONSULTA DE PRODUTOS";
             // 
             // dgvconsultaproduto
             // 
+            this.dgvconsultaproduto.AllowUserToAddRows = false;
+            this.dgvconsultaproduto.AllowUserToDeleteRows = false;
             this.dgvconsultaproduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvconsultaproduto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
             this.dgvconsultaproduto.Location = new System.Drawing.Point(58, 80);
             this.dgvconsultaproduto.Name = "dgvconsultaproduto";
+            this.dgvconsultaproduto.ReadOnly = true;
             this.dgvconsultaproduto.Size = new System.Drawing.Size(910, 308);
             this.dgvconsultaproduto.TabIndex = 11;
             // 
@@ -284,32 +313,40 @@
             this.btnConsultarFornece.Text = "Consultar";
             this.btnConsultarFornece.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnConsultarFornece.UseVisualStyleBackColor = true;
+            this.btnConsultarFornece.Click += new System.EventHandler(this.btnConsultarFornece_Click);
             // 
-            // button2
+            // cboUnidade
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(759, 42);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(103, 33);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "Alterar";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.button2.UseVisualStyleBackColor = true;
+            this.cboUnidade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboUnidade.FormattingEnabled = true;
+            this.cboUnidade.Location = new System.Drawing.Point(164, 81);
+            this.cboUnidade.Name = "cboUnidade";
+            this.cboUnidade.Size = new System.Drawing.Size(535, 33);
+            this.cboUnidade.TabIndex = 31;
             // 
-            // button1
+            // Column1
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(650, 42);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 33);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Apagar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.button1.UseVisualStyleBackColor = true;
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.DataPropertyName = "nm_nome";
+            this.Column1.HeaderText = "Nome";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.DataPropertyName = "ds_unidade";
+            this.Column2.HeaderText = "Unidade";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.DataPropertyName = "dt_validade";
+            this.Column3.HeaderText = "Validade";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // CadastrarProduto
             // 
@@ -344,9 +381,8 @@
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.DateTimePicker dtpDataValidade;
         private System.Windows.Forms.Label lblDataValidade;
-        private System.Windows.Forms.TextBox txtQtdpedido;
         private System.Windows.Forms.Label lblQuantidade;
-        private System.Windows.Forms.TextBox TxtNomepedido;
+        private System.Windows.Forms.TextBox TxtNomeProduto;
         private System.Windows.Forms.Label lblCadastroProduto;
         private System.Windows.Forms.PictureBox btnVoltar;
         private System.Windows.Forms.TabControl tabControl1;
@@ -362,5 +398,9 @@
         private System.Windows.Forms.Button BtnSalvarProdutos;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox cboUnidade;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }
