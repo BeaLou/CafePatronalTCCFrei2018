@@ -55,6 +55,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnConsularFluxo = new System.Windows.Forms.Button();
             this.txtConsultarFluxo = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             this.tbControleVendas.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -292,6 +294,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.button2);
+            this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.dgvFluxoCaixa);
             this.tabPage2.Controls.Add(this.pictureBox1);
@@ -359,6 +363,32 @@
             this.txtConsultarFluxo.Size = new System.Drawing.Size(456, 36);
             this.txtConsultarFluxo.TabIndex = 18;
             // 
+            // button2
+            // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(750, 54);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(103, 40);
+            this.button2.TabIndex = 71;
+            this.button2.Text = "Alterar";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(641, 54);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(103, 40);
+            this.button1.TabIndex = 70;
+            this.button1.Text = "Apagar";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Consulta_de_Fluxo_de_Caixa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -413,5 +443,7 @@
         private System.Windows.Forms.Label lblCadastroProduto;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button BtnFluxoCaixa;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }

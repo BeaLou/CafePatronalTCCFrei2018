@@ -40,6 +40,7 @@
             this.btnVoltar = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnSalvarEstoque = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblCadastroCliente = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -48,7 +49,8 @@
             this.lblconsultadclientre = new System.Windows.Forms.Label();
             this.btnConsultarestoque = new System.Windows.Forms.Button();
             this.txtConsultarEstoque = new System.Windows.Forms.TextBox();
-            this.btnSalvarEstoque = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -178,6 +180,22 @@
             this.tabPage1.Text = "Cadastro";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // btnSalvarEstoque
+            // 
+            this.btnSalvarEstoque.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSalvarEstoque.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalvarEstoque.FlatAppearance.BorderSize = 0;
+            this.btnSalvarEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSalvarEstoque.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvarEstoque.Image")));
+            this.btnSalvarEstoque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalvarEstoque.Location = new System.Drawing.Point(948, 427);
+            this.btnSalvarEstoque.Name = "btnSalvarEstoque";
+            this.btnSalvarEstoque.Size = new System.Drawing.Size(126, 36);
+            this.btnSalvarEstoque.TabIndex = 68;
+            this.btnSalvarEstoque.Text = "Salvar";
+            this.btnSalvarEstoque.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSalvarEstoque.UseVisualStyleBackColor = false;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.txtValor);
@@ -208,6 +226,8 @@
             // tabPage2
             // 
             this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage2.Controls.Add(this.button2);
+            this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Controls.Add(this.pictureBox1);
             this.tabPage2.Controls.Add(this.dgvconsultaestoq);
             this.tabPage2.Controls.Add(this.lblconsultadclientre);
@@ -274,21 +294,31 @@
             this.txtConsultarEstoque.Size = new System.Drawing.Size(456, 32);
             this.txtConsultarEstoque.TabIndex = 9;
             // 
-            // btnSalvarEstoque
+            // button2
             // 
-            this.btnSalvarEstoque.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnSalvarEstoque.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalvarEstoque.FlatAppearance.BorderSize = 0;
-            this.btnSalvarEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSalvarEstoque.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvarEstoque.Image")));
-            this.btnSalvarEstoque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalvarEstoque.Location = new System.Drawing.Point(948, 427);
-            this.btnSalvarEstoque.Name = "btnSalvarEstoque";
-            this.btnSalvarEstoque.Size = new System.Drawing.Size(126, 36);
-            this.btnSalvarEstoque.TabIndex = 68;
-            this.btnSalvarEstoque.Text = "Salvar";
-            this.btnSalvarEstoque.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalvarEstoque.UseVisualStyleBackColor = false;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(747, 80);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(103, 33);
+            this.button2.TabIndex = 17;
+            this.button2.Text = "Alterar";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(638, 80);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(103, 33);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Apagar";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Consulta_de_Estoque
             // 
@@ -340,5 +370,7 @@
         private System.Windows.Forms.DataGridView dgvconsultaestoq;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnSalvarEstoque;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }

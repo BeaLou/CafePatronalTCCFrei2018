@@ -1,4 +1,5 @@
 ﻿using CaféPatronal.Programacao;
+using CaféPatronal.Programacao.Cliente;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -51,6 +52,39 @@ namespace CaféPatronal.TELAS
             Form1 tela = new Form1();
             tela.Show();
             this.Hide();
+        }
+
+        private void btnSalvarClientes_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ClienteDTO dto = new ClienteDTO();
+                dto.nm_nome = txtNome.Text;
+                dto.nm_sobrenome = txtSobrenome.Text;
+                dto.ds_cpf = mtbCpf.Text;
+                dto.dt_datanascimento = dtpDataNascimento.Value;
+                dto.ds_email = txtEmail.Text;
+
+                ClienteBusiness business = new ClienteBusiness();
+                business.Salvar(dto);
+
+                MessageBox.Show("Cliente salvo com sucesso.");
+
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Occoreu um erro " + ex.Message);
+            }
+
+        }
+
+        private void btnConsultarClientes_Click(object sender, EventArgs e)
+        {
+            ClienteBusiness business = new ClienteBusiness();
+            List<ClienteDTO> a = business.Consultar(txtConsultarClientes.Text);
+            dgvConsultarCliente.AutoGenerateColumns = false;
+            dgvConsultarCliente.DataSource = a;
         }
     }
 }

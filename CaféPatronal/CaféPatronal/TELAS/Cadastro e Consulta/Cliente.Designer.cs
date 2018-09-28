@@ -43,14 +43,21 @@
             this.lblNome = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnSalvarClientes = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblconsultadclientre = new System.Windows.Forms.Label();
             this.dgvConsultarCliente = new System.Windows.Forms.DataGridView();
             this.btnConsultarClientes = new System.Windows.Forms.Button();
             this.txtConsultarClientes = new System.Windows.Forms.TextBox();
-            this.btnSalvarClientes = new System.Windows.Forms.Button();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sobrenome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Datanascimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -210,6 +217,23 @@
             this.tabPage1.Text = "Cadastro";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // btnSalvarClientes
+            // 
+            this.btnSalvarClientes.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSalvarClientes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalvarClientes.FlatAppearance.BorderSize = 0;
+            this.btnSalvarClientes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSalvarClientes.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvarClientes.Image")));
+            this.btnSalvarClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalvarClientes.Location = new System.Drawing.Point(944, 419);
+            this.btnSalvarClientes.Name = "btnSalvarClientes";
+            this.btnSalvarClientes.Size = new System.Drawing.Size(126, 36);
+            this.btnSalvarClientes.TabIndex = 68;
+            this.btnSalvarClientes.Text = "Salvar";
+            this.btnSalvarClientes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSalvarClientes.UseVisualStyleBackColor = false;
+            this.btnSalvarClientes.Click += new System.EventHandler(this.btnSalvarClientes_Click);
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.txtNome);
@@ -231,6 +255,8 @@
             // tabPage2
             // 
             this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage2.Controls.Add(this.button2);
+            this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Controls.Add(this.pictureBox1);
             this.tabPage2.Controls.Add(this.lblconsultadclientre);
             this.tabPage2.Controls.Add(this.dgvConsultarCliente);
@@ -244,6 +270,32 @@
             this.tabPage2.Text = "Consulta";
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // button2
+            // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(747, 79);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(103, 33);
+            this.button2.TabIndex = 15;
+            this.button2.Text = "Alterar";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(638, 79);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(103, 33);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Apagar";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -270,9 +322,18 @@
             // 
             // dgvConsultarCliente
             // 
+            this.dgvConsultarCliente.AllowUserToAddRows = false;
+            this.dgvConsultarCliente.AllowUserToDeleteRows = false;
             this.dgvConsultarCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvConsultarCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Nome,
+            this.Sobrenome,
+            this.Datanascimento,
+            this.Cpf,
+            this.Email});
             this.dgvConsultarCliente.Location = new System.Drawing.Point(65, 117);
             this.dgvConsultarCliente.Name = "dgvConsultarCliente";
+            this.dgvConsultarCliente.ReadOnly = true;
             this.dgvConsultarCliente.Size = new System.Drawing.Size(910, 322);
             this.dgvConsultarCliente.TabIndex = 11;
             // 
@@ -288,6 +349,7 @@
             this.btnConsultarClientes.Text = "Consultar";
             this.btnConsultarClientes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnConsultarClientes.UseVisualStyleBackColor = true;
+            this.btnConsultarClientes.Click += new System.EventHandler(this.btnConsultarClientes_Click);
             // 
             // txtConsultarClientes
             // 
@@ -298,21 +360,45 @@
             this.txtConsultarClientes.Size = new System.Drawing.Size(456, 32);
             this.txtConsultarClientes.TabIndex = 9;
             // 
-            // btnSalvarClientes
+            // Nome
             // 
-            this.btnSalvarClientes.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnSalvarClientes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalvarClientes.FlatAppearance.BorderSize = 0;
-            this.btnSalvarClientes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSalvarClientes.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvarClientes.Image")));
-            this.btnSalvarClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalvarClientes.Location = new System.Drawing.Point(944, 419);
-            this.btnSalvarClientes.Name = "btnSalvarClientes";
-            this.btnSalvarClientes.Size = new System.Drawing.Size(126, 36);
-            this.btnSalvarClientes.TabIndex = 68;
-            this.btnSalvarClientes.Text = "Salvar";
-            this.btnSalvarClientes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalvarClientes.UseVisualStyleBackColor = false;
+            this.Nome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nome.DataPropertyName = "nm_nome";
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            this.Nome.ReadOnly = true;
+            // 
+            // Sobrenome
+            // 
+            this.Sobrenome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Sobrenome.DataPropertyName = "nm_sobrenome";
+            this.Sobrenome.HeaderText = "Sobrenome";
+            this.Sobrenome.Name = "Sobrenome";
+            this.Sobrenome.ReadOnly = true;
+            // 
+            // Datanascimento
+            // 
+            this.Datanascimento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Datanascimento.DataPropertyName = "dt_datanascimento";
+            this.Datanascimento.HeaderText = "Data de nascimento";
+            this.Datanascimento.Name = "Datanascimento";
+            this.Datanascimento.ReadOnly = true;
+            // 
+            // Cpf
+            // 
+            this.Cpf.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Cpf.DataPropertyName = "ds_cpf";
+            this.Cpf.HeaderText = "Cpf";
+            this.Cpf.Name = "Cpf";
+            this.Cpf.ReadOnly = true;
+            // 
+            // Email
+            // 
+            this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Email.DataPropertyName = "ds_email";
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
             // 
             // Cadastro_de_Clientes
             // 
@@ -365,5 +451,12 @@
         private System.Windows.Forms.Label lblconsultadclientre;
         private System.Windows.Forms.DataGridView dgvConsultarCliente;
         private System.Windows.Forms.Button btnSalvarClientes;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Sobrenome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Datanascimento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cpf;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
     }
 }

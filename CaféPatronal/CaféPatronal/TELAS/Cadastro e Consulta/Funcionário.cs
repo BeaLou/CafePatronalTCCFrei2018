@@ -1,4 +1,5 @@
 ﻿using CaféPatronal.Programacao;
+using CaféPatronal.Programacao.Funcionario;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -56,6 +57,47 @@ namespace CaféPatronal.TELAS.Cadastro_e_Consulta
             Form1 tela = new Form1();
             tela.Show();
             this.Hide();
+        }
+
+        private void btnSalvarFuncionário_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FuncionarioDTO dto = new FuncionarioDTO();
+                dto.nm_nome = txtNome.Text;
+                dto.nm_sobrenome = txtSobrenome.Text;
+                dto.ds_cpf = mbtCpf.Text;
+                dto.ds_rg = mbtRg.Text;
+                dto.dt_nascimento = dtpDataNascimento.Value;
+                dto.ds_email = txtEmail.Text;
+                dto.ds_login = txtLogin.Text;
+                dto.ds_senha = txtSenha.Text;
+                dto.ds_dpto = cboDepartamento.Text;
+                dto.ds_carteiratrabalho = mbtCarteiraTrabalho.Text;
+                dto.ds_telefone = mtbTelefoneFixo.Text;
+                dto.ds_telefonemovel = mtbTelefoneMovel.Text;
+                dto.ds_cep = mtbCep.Text;
+                dto.ds_complemento = txtComplemento.Text;
+                dto.ds_ncasa = txtNumero.Text;
+
+                FuncionarioBusiness business = new FuncionarioBusiness();
+                business.Salvar(dto);
+                MessageBox.Show("Funcionário salvo com sucesso!");
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro " + ex.Message);
+            }
+
+        }
+
+        private void btnConsultarClientes_Click(object sender, EventArgs e)
+        {
+            FuncionarioBusiness business = new FuncionarioBusiness();
+            List<FuncionarioDTO> a = business.Consultar(txtConsultarFuncionários.Text);
+            dgvConsultarFuncionarios.AutoGenerateColumns = false;
+            dgvConsultarFuncionarios.DataSource = a;
         }
     }
 }

@@ -67,11 +67,18 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblCadastroCliente = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblconsultadclientre = new System.Windows.Forms.Label();
             this.dgvConsultarFuncionarios = new System.Windows.Forms.DataGridView();
             this.btnConsultarClientes = new System.Windows.Forms.Button();
             this.txtConsultarFuncionários = new System.Windows.Forms.TextBox();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sobrenome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Departamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TelefoneMóvel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -451,6 +458,7 @@
             this.btnSalvarFuncionário.Text = "Salvar";
             this.btnSalvarFuncionário.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSalvarFuncionário.UseVisualStyleBackColor = false;
+            this.btnSalvarFuncionário.Click += new System.EventHandler(this.btnSalvarFuncionário_Click);
             // 
             // groupBox1
             // 
@@ -512,6 +520,8 @@
             // tabPage2
             // 
             this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage2.Controls.Add(this.button2);
+            this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Controls.Add(this.pictureBox3);
             this.tabPage2.Controls.Add(this.lblconsultadclientre);
             this.tabPage2.Controls.Add(this.dgvConsultarFuncionarios);
@@ -524,6 +534,32 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Consulta";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(742, 62);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(103, 33);
+            this.button2.TabIndex = 17;
+            this.button2.Text = "Alterar";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(633, 62);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(103, 33);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Apagar";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // pictureBox3
             // 
@@ -550,9 +586,18 @@
             // 
             // dgvConsultarFuncionarios
             // 
+            this.dgvConsultarFuncionarios.AllowUserToAddRows = false;
+            this.dgvConsultarFuncionarios.AllowUserToDeleteRows = false;
             this.dgvConsultarFuncionarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvConsultarFuncionarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Nome,
+            this.Sobrenome,
+            this.Departamento,
+            this.Email,
+            this.TelefoneMóvel});
             this.dgvConsultarFuncionarios.Location = new System.Drawing.Point(60, 101);
             this.dgvConsultarFuncionarios.Name = "dgvConsultarFuncionarios";
+            this.dgvConsultarFuncionarios.ReadOnly = true;
             this.dgvConsultarFuncionarios.Size = new System.Drawing.Size(910, 322);
             this.dgvConsultarFuncionarios.TabIndex = 11;
             // 
@@ -568,15 +613,57 @@
             this.btnConsultarClientes.Text = "Consultar";
             this.btnConsultarClientes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnConsultarClientes.UseVisualStyleBackColor = true;
+            this.btnConsultarClientes.Click += new System.EventHandler(this.btnConsultarClientes_Click);
             // 
             // txtConsultarFuncionários
             // 
             this.txtConsultarFuncionários.BackColor = System.Drawing.Color.Ivory;
+            this.txtConsultarFuncionários.ForeColor = System.Drawing.SystemColors.Info;
             this.txtConsultarFuncionários.Location = new System.Drawing.Point(58, 64);
             this.txtConsultarFuncionários.MaxLength = 50;
             this.txtConsultarFuncionários.Name = "txtConsultarFuncionários";
             this.txtConsultarFuncionários.Size = new System.Drawing.Size(456, 32);
             this.txtConsultarFuncionários.TabIndex = 9;
+            // 
+            // Nome
+            // 
+            this.Nome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nome.DataPropertyName = "nm_nome";
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            this.Nome.ReadOnly = true;
+            // 
+            // Sobrenome
+            // 
+            this.Sobrenome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Sobrenome.DataPropertyName = "nm_sobrenome";
+            this.Sobrenome.HeaderText = "Sobrenome";
+            this.Sobrenome.Name = "Sobrenome";
+            this.Sobrenome.ReadOnly = true;
+            // 
+            // Departamento
+            // 
+            this.Departamento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Departamento.DataPropertyName = "ds_dpto";
+            this.Departamento.HeaderText = "Departamento";
+            this.Departamento.Name = "Departamento";
+            this.Departamento.ReadOnly = true;
+            // 
+            // Email
+            // 
+            this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Email.DataPropertyName = "ds_email";
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            // 
+            // TelefoneMóvel
+            // 
+            this.TelefoneMóvel.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TelefoneMóvel.DataPropertyName = "ds_telefonemovel";
+            this.TelefoneMóvel.HeaderText = "Telefone Móvel";
+            this.TelefoneMóvel.Name = "TelefoneMóvel";
+            this.TelefoneMóvel.ReadOnly = true;
             // 
             // CadastroFuncionario
             // 
@@ -652,5 +739,12 @@
         private System.Windows.Forms.TextBox txtConsultarFuncionários;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnSalvarFuncionário;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Sobrenome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Departamento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TelefoneMóvel;
     }
 }
