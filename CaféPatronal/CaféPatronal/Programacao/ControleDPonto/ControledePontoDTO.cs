@@ -9,6 +9,7 @@ namespace CaféPatronal.Programacao.ControleDPonto
     public class ControledePontoDTO
     {
         public int id_controleponto { get; set; }
+        public int id_funcionario { get; set; }
         public DateTime dt_dia { get; set; }
         public TimeSpan hr_entrada { get; set; }
         public TimeSpan hr_saidaalmoco { get; set; }

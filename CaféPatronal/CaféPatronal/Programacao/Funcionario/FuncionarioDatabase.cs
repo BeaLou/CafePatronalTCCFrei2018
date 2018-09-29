@@ -26,7 +26,6 @@ namespace CaféPatronal.Programacao.Funcionario
             {
                 funcionario = new FuncionarioDTO();
                 funcionario.id_funcionario = reader.GetInt32("id_funcionario");
-                funcionario.id_controleponto = reader.GetInt32("Id_controleponto");
                 funcionario.nm_nome = reader.GetString("nm_nome");
                 funcionario.nm_sobrenome = reader.GetString("nm_sobrenome");
                 funcionario.ds_carteiratrabalho = reader.GetString("ds_carteiratrabalho");
@@ -54,7 +53,6 @@ namespace CaféPatronal.Programacao.Funcionario
                 @"INSERT INTO tb_funcionario
                 (
                  id_funcionario,
-                 Id_controleponto,
                  nm_nome,
                  nm_sobrenome,
                  ds_carteiratrabalho,
@@ -77,7 +75,6 @@ namespace CaféPatronal.Programacao.Funcionario
                 VALUES
                 (
                  @id_funcionario,
-                 @Id_controleponto,
                  @nm_nome,
                  @nm_sobrenome,
                  @ds_carteiratrabalho,
@@ -100,7 +97,6 @@ namespace CaféPatronal.Programacao.Funcionario
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("id_funcionario", funcionario.id_funcionario));
-            parms.Add(new MySqlParameter("Id_controleponto", funcionario.id_controleponto));
             parms.Add(new MySqlParameter("nm_nome", funcionario.nm_nome));
             parms.Add(new MySqlParameter("nm_sobrenome", funcionario.nm_sobrenome));
             parms.Add(new MySqlParameter("ds_carteiratrabalho", funcionario.ds_carteiratrabalho));
@@ -130,7 +126,6 @@ namespace CaféPatronal.Programacao.Funcionario
             @"UPDATE tb_funcionario
                  SET id_funcionario = @id_funcionario,
                  id_funcionario = @id_funcionario,
-                 Id_controleponto = @Id_controleponto,
                  nm_nome = @nm_nome,
                  nm_sobrenome = @nm_sobrenome,
                  ds_carteiratrabalho = @ds_carteiratrabalho,
@@ -153,7 +148,6 @@ namespace CaféPatronal.Programacao.Funcionario
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("id_funcionario", funcionario.id_funcionario));
-            parms.Add(new MySqlParameter("Id_controleponto", funcionario.id_controleponto));
             parms.Add(new MySqlParameter("nm_nome", funcionario.nm_nome));
             parms.Add(new MySqlParameter("nm_sobrenome", funcionario.nm_sobrenome));
             parms.Add(new MySqlParameter("ds_carteiratrabalho", funcionario.ds_carteiratrabalho));
@@ -205,7 +199,6 @@ namespace CaféPatronal.Programacao.Funcionario
 
                 FuncionarioDTO novofuncionario = new FuncionarioDTO();
                 novofuncionario.id_funcionario = reader.GetInt32("id_funcionario");
-                novofuncionario.id_controleponto = reader.GetInt32("Id_controleponto");
                 novofuncionario.nm_nome = reader.GetString("nm_nome");
                 novofuncionario.nm_sobrenome = reader.GetString("nm_sobrenome");
                 novofuncionario.ds_carteiratrabalho = reader.GetString("ds_carteiratrabalho");
@@ -247,7 +240,6 @@ namespace CaféPatronal.Programacao.Funcionario
 
                 FuncionarioDTO novofuncionario = new FuncionarioDTO();
                 novofuncionario.id_funcionario = reader.GetInt32("id_funcionario");
-                novofuncionario.id_controleponto = reader.GetInt32("Id_controleponto");
                 novofuncionario.nm_nome = reader.GetString("nm_nome");
                 novofuncionario.nm_sobrenome = reader.GetString("nm_sobrenome");
                 novofuncionario.ds_carteiratrabalho = reader.GetString("ds_carteiratrabalho");

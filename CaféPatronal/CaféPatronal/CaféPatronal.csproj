@@ -84,40 +84,40 @@
     <Compile Include="Programacao\Produto\ProdutoDTO.cs" />
     <Compile Include="Programacao\UserSession.cs" />
     <Compile Include="Programacao\Validação.cs" />
-    <Compile Include="TELAS\Cadastro e Consulta\Fornecedor.cs">
+    <Compile Include="TELAS\CRUD\Fornec\Fornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TELAS\Cadastro e Consulta\Fornecedor.Designer.cs">
+    <Compile Include="TELAS\CRUD\Fornec\Fornecedor.Designer.cs">
       <DependentUpon>Fornecedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="TELAS\Cadastro e Consulta\Pedido.cs">
+    <Compile Include="TELAS\CRUD\Ped\Pedido.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TELAS\Cadastro e Consulta\Pedido.Designer.cs">
+    <Compile Include="TELAS\CRUD\Ped\Pedido.Designer.cs">
       <DependentUpon>Pedido.cs</DependentUpon>
     </Compile>
-    <Compile Include="TELAS\Cadastro e Consulta\Produto.cs">
+    <Compile Include="TELAS\CRUD\Produ\Produto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TELAS\Cadastro e Consulta\Produto.Designer.cs">
+    <Compile Include="TELAS\CRUD\Produ\Produto.Designer.cs">
       <DependentUpon>Produto.cs</DependentUpon>
     </Compile>
-    <Compile Include="TELAS\Cadastro e Consulta\Cliente.cs">
+    <Compile Include="TELAS\CRUD\Clientesss\Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TELAS\Cadastro e Consulta\Cliente.Designer.cs">
+    <Compile Include="TELAS\CRUD\Clientesss\Cliente.Designer.cs">
       <DependentUpon>Cliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="TELAS\Cadastro e Consulta\Estoque.cs">
+    <Compile Include="TELAS\CRUD\Estoqueeee\Estoque.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TELAS\Cadastro e Consulta\Estoque.Designer.cs">
+    <Compile Include="TELAS\CRUD\Estoqueeee\Estoque.Designer.cs">
       <DependentUpon>Estoque.cs</DependentUpon>
     </Compile>
-    <Compile Include="TELAS\Cadastro e Consulta\Funcionário.cs">
+    <Compile Include="TELAS\CRUD\Func\Funcionário.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TELAS\Cadastro e Consulta\Funcionário.Designer.cs">
+    <Compile Include="TELAS\CRUD\Func\Funcionário.Designer.cs">
       <DependentUpon>Funcionário.cs</DependentUpon>
     </Compile>
     <Compile Include="TELAS\Consulta\ControleDeVenda.cs">
@@ -132,10 +132,10 @@
     <Compile Include="TELAS\Fluxo de Caixa\Fluxodecaixa e Consultar.Designer.cs">
       <DependentUpon>Fluxodecaixa e Consultar.cs</DependentUpon>
     </Compile>
-    <Compile Include="TELAS\Cadastro e Consulta\Folha Pagamento e Controle\Folha de Pagamento.cs">
+    <Compile Include="TELAS\CRUD\Folha Pagamento e Controle\Folha de Pagamento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TELAS\Cadastro e Consulta\Folha Pagamento e Controle\Folha de Pagamento.Designer.cs">
+    <Compile Include="TELAS\CRUD\Folha Pagamento e Controle\Folha de Pagamento.Designer.cs">
       <DependentUpon>Folha de Pagamento.cs</DependentUpon>
     </Compile>
     <Compile Include="TELAS\Login\Login.cs">
@@ -180,22 +180,22 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="TELAS\Cadastro e Consulta\Fornecedor.resx">
+    <EmbeddedResource Include="TELAS\CRUD\Fornec\Fornecedor.resx">
       <DependentUpon>Fornecedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TELAS\Cadastro e Consulta\Pedido.resx">
+    <EmbeddedResource Include="TELAS\CRUD\Ped\Pedido.resx">
       <DependentUpon>Pedido.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TELAS\Cadastro e Consulta\Produto.resx">
+    <EmbeddedResource Include="TELAS\CRUD\Produ\Produto.resx">
       <DependentUpon>Produto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TELAS\Cadastro e Consulta\Cliente.resx">
+    <EmbeddedResource Include="TELAS\CRUD\Clientesss\Cliente.resx">
       <DependentUpon>Cliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TELAS\Cadastro e Consulta\Estoque.resx">
+    <EmbeddedResource Include="TELAS\CRUD\Estoqueeee\Estoque.resx">
       <DependentUpon>Estoque.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TELAS\Cadastro e Consulta\Funcionário.resx">
+    <EmbeddedResource Include="TELAS\CRUD\Func\Funcionário.resx">
       <DependentUpon>Funcionário.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\Consulta\ControleDeVenda.resx">
@@ -204,7 +204,7 @@
     <EmbeddedResource Include="TELAS\Fluxo de Caixa\Fluxodecaixa e Consultar.resx">
       <DependentUpon>Fluxodecaixa e Consultar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TELAS\Cadastro e Consulta\Folha Pagamento e Controle\Folha de Pagamento.resx">
+    <EmbeddedResource Include="TELAS\CRUD\Folha Pagamento e Controle\Folha de Pagamento.resx">
       <DependentUpon>Folha de Pagamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\Login\Login.resx">

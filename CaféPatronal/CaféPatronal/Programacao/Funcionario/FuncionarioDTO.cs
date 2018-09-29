@@ -9,7 +9,6 @@ namespace CaféPatronal.Programacao.Funcionario
     public class FuncionarioDTO
     {
         public int id_funcionario { get; set; }
-        public int id_controleponto { get; set; }
         public string nm_nome { get; set; }
         public string nm_sobrenome { get; set; }
         public string ds_carteiratrabalho { get; set; }
