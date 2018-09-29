@@ -52,5 +52,10 @@ namespace CaféPatronal.TELAS.Cadastro_e_Consulta
             tela.Show();
             this.Hide();
         }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

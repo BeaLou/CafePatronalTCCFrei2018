@@ -51,13 +51,27 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblconsultadclientre = new System.Windows.Forms.Label();
             this.dgvConsultarCliente = new System.Windows.Forms.DataGridView();
-            this.btnConsultarClientes = new System.Windows.Forms.Button();
-            this.txtConsultarClientes = new System.Windows.Forms.TextBox();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sobrenome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Datanascimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnConsultarClientes = new System.Windows.Forms.Button();
+            this.txtConsultarClientes = new System.Windows.Forms.TextBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -65,6 +79,8 @@
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarCliente)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnVoltar
@@ -87,9 +103,9 @@
             this.lblCadastroCliente.Font = new System.Drawing.Font("Agency FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadastroCliente.Location = new System.Drawing.Point(6, 3);
             this.lblCadastroCliente.Name = "lblCadastroCliente";
-            this.lblCadastroCliente.Size = new System.Drawing.Size(201, 34);
+            this.lblCadastroCliente.Size = new System.Drawing.Size(190, 34);
             this.lblCadastroCliente.TabIndex = 4;
-            this.lblCadastroCliente.Text = "CADASTRO DE CLIENTES";
+            this.lblCadastroCliente.Text = "CADASTRO DE CLIENTE";
             // 
             // txtNome
             // 
@@ -196,6 +212,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(41, 12);
             this.tabControl1.Name = "tabControl1";
@@ -267,7 +284,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1076, 461);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Consulta";
+            this.tabPage2.Text = "Consulta/Apagar/Alterar";
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
@@ -316,9 +333,9 @@
             this.lblconsultadclientre.Font = new System.Drawing.Font("Agency FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblconsultadclientre.Location = new System.Drawing.Point(2, 8);
             this.lblconsultadclientre.Name = "lblconsultadclientre";
-            this.lblconsultadclientre.Size = new System.Drawing.Size(184, 34);
+            this.lblconsultadclientre.Size = new System.Drawing.Size(75, 34);
             this.lblconsultadclientre.TabIndex = 12;
-            this.lblconsultadclientre.Text = "CONSULTAR CLIENTES";
+            this.lblconsultadclientre.Text = "CLIENTE";
             // 
             // dgvConsultarCliente
             // 
@@ -336,29 +353,6 @@
             this.dgvConsultarCliente.ReadOnly = true;
             this.dgvConsultarCliente.Size = new System.Drawing.Size(910, 322);
             this.dgvConsultarCliente.TabIndex = 11;
-            // 
-            // btnConsultarClientes
-            // 
-            this.btnConsultarClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultarClientes.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultarClientes.Image")));
-            this.btnConsultarClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultarClientes.Location = new System.Drawing.Point(525, 79);
-            this.btnConsultarClientes.Name = "btnConsultarClientes";
-            this.btnConsultarClientes.Size = new System.Drawing.Size(107, 32);
-            this.btnConsultarClientes.TabIndex = 10;
-            this.btnConsultarClientes.Text = "Consultar";
-            this.btnConsultarClientes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnConsultarClientes.UseVisualStyleBackColor = true;
-            this.btnConsultarClientes.Click += new System.EventHandler(this.btnConsultarClientes_Click);
-            // 
-            // txtConsultarClientes
-            // 
-            this.txtConsultarClientes.BackColor = System.Drawing.Color.Ivory;
-            this.txtConsultarClientes.Location = new System.Drawing.Point(63, 80);
-            this.txtConsultarClientes.MaxLength = 50;
-            this.txtConsultarClientes.Name = "txtConsultarClientes";
-            this.txtConsultarClientes.Size = new System.Drawing.Size(456, 32);
-            this.txtConsultarClientes.TabIndex = 9;
             // 
             // Nome
             // 
@@ -400,6 +394,182 @@
             this.Email.Name = "Email";
             this.Email.ReadOnly = true;
             // 
+            // btnConsultarClientes
+            // 
+            this.btnConsultarClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarClientes.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultarClientes.Image")));
+            this.btnConsultarClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsultarClientes.Location = new System.Drawing.Point(525, 79);
+            this.btnConsultarClientes.Name = "btnConsultarClientes";
+            this.btnConsultarClientes.Size = new System.Drawing.Size(107, 32);
+            this.btnConsultarClientes.TabIndex = 10;
+            this.btnConsultarClientes.Text = "Consultar";
+            this.btnConsultarClientes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnConsultarClientes.UseVisualStyleBackColor = true;
+            this.btnConsultarClientes.Click += new System.EventHandler(this.btnConsultarClientes_Click);
+            // 
+            // txtConsultarClientes
+            // 
+            this.txtConsultarClientes.BackColor = System.Drawing.Color.Ivory;
+            this.txtConsultarClientes.Location = new System.Drawing.Point(63, 80);
+            this.txtConsultarClientes.MaxLength = 50;
+            this.txtConsultarClientes.Name = "txtConsultarClientes";
+            this.txtConsultarClientes.Size = new System.Drawing.Size(456, 32);
+            this.txtConsultarClientes.TabIndex = 9;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.button3);
+            this.tabPage3.Controls.Add(this.label6);
+            this.tabPage3.Controls.Add(this.groupBox1);
+            this.tabPage3.Location = new System.Drawing.Point(4, 34);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1076, 461);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Alterar";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.maskedTextBox1);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Location = new System.Drawing.Point(6, 42);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(611, 337);
+            this.groupBox1.TabIndex = 61;
+            this.groupBox1.TabStop = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(140, 31);
+            this.textBox1.MaxLength = 20;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(456, 32);
+            this.textBox1.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(35, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 28);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Nome:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(35, 283);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(55, 28);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Email:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(144, 283);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(456, 32);
+            this.textBox2.TabIndex = 5;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(140, 224);
+            this.dateTimePicker1.MaxDate = new System.DateTime(2050, 12, 31, 0, 0, 0, 0);
+            this.dateTimePicker1.MinDate = new System.DateTime(1910, 1, 1, 0, 0, 0, 0);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(456, 32);
+            this.dateTimePicker1.TabIndex = 4;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(140, 93);
+            this.textBox3.MaxLength = 20;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(456, 32);
+            this.textBox3.TabIndex = 2;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(27, 220);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(103, 56);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Data de \r\nNascimento:";
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(140, 159);
+            this.maskedTextBox1.Mask = "000.000.000-00";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(456, 32);
+            this.maskedTextBox1.TabIndex = 3;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(28, 93);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(102, 28);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Sobrenome:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label5.Location = new System.Drawing.Point(35, 163);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(43, 28);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "CPF:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Agency FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(0, 5);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(75, 34);
+            this.label6.TabIndex = 62;
+            this.label6.Text = "CLIENTE";
+            // 
+            // button3
+            // 
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(967, 422);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(103, 33);
+            this.button3.TabIndex = 63;
+            this.button3.Text = "Alterar";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // Cadastro_de_Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -423,6 +593,10 @@
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarCliente)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -458,5 +632,19 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Datanascimento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cpf;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }

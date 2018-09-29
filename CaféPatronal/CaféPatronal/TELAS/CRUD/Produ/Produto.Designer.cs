@@ -32,24 +32,37 @@
             this.lblNome = new System.Windows.Forms.Label();
             this.dtpDataValidade = new System.Windows.Forms.DateTimePicker();
             this.lblDataValidade = new System.Windows.Forms.Label();
-            this.txtQtdpedido = new System.Windows.Forms.TextBox();
             this.lblQuantidade = new System.Windows.Forms.Label();
-            this.TxtNomepedido = new System.Windows.Forms.TextBox();
+            this.TxtNomeProduto = new System.Windows.Forms.TextBox();
             this.lblCadastroProduto = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.BtnSalvarProdutos = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cboUnidade = new System.Windows.Forms.ComboBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.txtConsultaProdutos = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblconsultaproduto = new System.Windows.Forms.Label();
             this.dgvconsultaproduto = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnConsultarFornece = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -58,6 +71,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvconsultaproduto)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblNome
@@ -73,6 +88,7 @@
             // 
             // dtpDataValidade
             // 
+            this.dtpDataValidade.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDataValidade.Location = new System.Drawing.Point(164, 128);
             this.dtpDataValidade.MaxDate = new System.DateTime(2050, 12, 31, 0, 0, 0, 0);
             this.dtpDataValidade.MinDate = new System.DateTime(1910, 1, 1, 0, 0, 0, 0);
@@ -93,14 +109,6 @@
             this.lblDataValidade.TabIndex = 3;
             this.lblDataValidade.Text = "Data de Validade:";
             // 
-            // txtQtdpedido
-            // 
-            this.txtQtdpedido.Location = new System.Drawing.Point(164, 82);
-            this.txtQtdpedido.MaxLength = 20;
-            this.txtQtdpedido.Name = "txtQtdpedido";
-            this.txtQtdpedido.Size = new System.Drawing.Size(535, 32);
-            this.txtQtdpedido.TabIndex = 2;
-            // 
             // lblQuantidade
             // 
             this.lblQuantidade.AutoSize = true;
@@ -108,19 +116,20 @@
             this.lblQuantidade.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuantidade.Location = new System.Drawing.Point(56, 74);
             this.lblQuantidade.Name = "lblQuantidade";
-            this.lblQuantidade.Size = new System.Drawing.Size(98, 28);
+            this.lblQuantidade.Size = new System.Drawing.Size(75, 28);
             this.lblQuantidade.TabIndex = 2;
-            this.lblQuantidade.Text = "Quantidade:";
+            this.lblQuantidade.Text = "Unidade:";
             // 
-            // TxtNomepedido
+            // TxtNomeProduto
             // 
-            this.TxtNomepedido.Location = new System.Drawing.Point(164, 33);
-            this.TxtNomepedido.MaxLength = 20;
-            this.TxtNomepedido.Name = "TxtNomepedido";
-            this.TxtNomepedido.Size = new System.Drawing.Size(535, 32);
-            this.TxtNomepedido.TabIndex = 1;
-            this.TxtNomepedido.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            this.TxtNomepedido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            this.TxtNomeProduto.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNomeProduto.Location = new System.Drawing.Point(164, 33);
+            this.TxtNomeProduto.MaxLength = 20;
+            this.TxtNomeProduto.Name = "TxtNomeProduto";
+            this.TxtNomeProduto.Size = new System.Drawing.Size(535, 32);
+            this.TxtNomeProduto.TabIndex = 1;
+            this.TxtNomeProduto.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.TxtNomeProduto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // lblCadastroProduto
             // 
@@ -130,9 +139,9 @@
             this.lblCadastroProduto.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblCadastroProduto.Location = new System.Drawing.Point(6, 6);
             this.lblCadastroProduto.Name = "lblCadastroProduto";
-            this.lblCadastroProduto.Size = new System.Drawing.Size(196, 28);
+            this.lblCadastroProduto.Size = new System.Drawing.Size(186, 28);
             this.lblCadastroProduto.TabIndex = 31;
-            this.lblCadastroProduto.Text = "CADASTRO DE PRODUTOS";
+            this.lblCadastroProduto.Text = "CADASTRO DE PRODUTO\r\n";
             // 
             // btnVoltar
             // 
@@ -151,6 +160,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(49, 18);
             this.tabControl1.Name = "tabControl1";
@@ -164,6 +174,7 @@
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Controls.Add(this.lblCadastroProduto);
             this.tabPage1.Controls.Add(this.btnVoltar);
+            this.tabPage1.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -187,13 +198,14 @@
             this.BtnSalvarProdutos.Text = "Salvar";
             this.BtnSalvarProdutos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnSalvarProdutos.UseVisualStyleBackColor = false;
+            this.BtnSalvarProdutos.Click += new System.EventHandler(this.BtnSalvarProdutos_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.TxtNomepedido);
+            this.groupBox1.Controls.Add(this.cboUnidade);
+            this.groupBox1.Controls.Add(this.TxtNomeProduto);
             this.groupBox1.Controls.Add(this.lblDataValidade);
             this.groupBox1.Controls.Add(this.lblNome);
-            this.groupBox1.Controls.Add(this.txtQtdpedido);
             this.groupBox1.Controls.Add(this.dtpDataValidade);
             this.groupBox1.Controls.Add(this.lblQuantidade);
             this.groupBox1.Location = new System.Drawing.Point(168, 104);
@@ -201,6 +213,16 @@
             this.groupBox1.Size = new System.Drawing.Size(720, 183);
             this.groupBox1.TabIndex = 34;
             this.groupBox1.TabStop = false;
+            // 
+            // cboUnidade
+            // 
+            this.cboUnidade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboUnidade.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboUnidade.FormattingEnabled = true;
+            this.cboUnidade.Location = new System.Drawing.Point(164, 81);
+            this.cboUnidade.Name = "cboUnidade";
+            this.cboUnidade.Size = new System.Drawing.Size(535, 33);
+            this.cboUnidade.TabIndex = 31;
             // 
             // tabPage2
             // 
@@ -220,6 +242,32 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Consulta";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(759, 42);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(103, 33);
+            this.button2.TabIndex = 17;
+            this.button2.Text = "Alterar";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(650, 42);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(103, 33);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Apagar";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // txtConsultaProdutos
             // 
@@ -260,17 +308,48 @@
             this.lblconsultaproduto.Font = new System.Drawing.Font("Agency FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblconsultaproduto.Location = new System.Drawing.Point(2, 3);
             this.lblconsultaproduto.Name = "lblconsultaproduto";
-            this.lblconsultaproduto.Size = new System.Drawing.Size(213, 34);
+            this.lblconsultaproduto.Size = new System.Drawing.Size(89, 34);
             this.lblconsultaproduto.TabIndex = 12;
-            this.lblconsultaproduto.Text = "CONSULTA DE PRODUTOS";
+            this.lblconsultaproduto.Text = "PRODUTO";
             // 
             // dgvconsultaproduto
             // 
+            this.dgvconsultaproduto.AllowUserToAddRows = false;
+            this.dgvconsultaproduto.AllowUserToDeleteRows = false;
             this.dgvconsultaproduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvconsultaproduto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
             this.dgvconsultaproduto.Location = new System.Drawing.Point(58, 80);
             this.dgvconsultaproduto.Name = "dgvconsultaproduto";
+            this.dgvconsultaproduto.ReadOnly = true;
             this.dgvconsultaproduto.Size = new System.Drawing.Size(910, 308);
             this.dgvconsultaproduto.TabIndex = 11;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.DataPropertyName = "nm_nome";
+            this.Column1.HeaderText = "Nome";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.DataPropertyName = "ds_unidade";
+            this.Column2.HeaderText = "Unidade";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.DataPropertyName = "dt_validade";
+            this.Column3.HeaderText = "Validade";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // btnConsultarFornece
             // 
@@ -284,32 +363,122 @@
             this.btnConsultarFornece.Text = "Consultar";
             this.btnConsultarFornece.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnConsultarFornece.UseVisualStyleBackColor = true;
+            this.btnConsultarFornece.Click += new System.EventHandler(this.btnConsultarFornece_Click);
             // 
-            // button2
+            // tabPage3
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(759, 42);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(103, 33);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "Alterar";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.button2.UseVisualStyleBackColor = true;
+            this.tabPage3.Controls.Add(this.button3);
+            this.tabPage3.Controls.Add(this.label4);
+            this.tabPage3.Controls.Add(this.groupBox2);
+            this.tabPage3.Location = new System.Drawing.Point(4, 34);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1056, 410);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Alterar";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // groupBox2
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(650, 42);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 33);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Apagar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.button1.UseVisualStyleBackColor = true;
+            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.dateTimePicker1);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Location = new System.Drawing.Point(6, 40);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(720, 183);
+            this.groupBox2.TabIndex = 35;
+            this.groupBox2.TabStop = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(164, 81);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(535, 33);
+            this.comboBox1.TabIndex = 31;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(164, 33);
+            this.textBox1.MaxLength = 20;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(535, 32);
+            this.textBox1.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(20, 132);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(138, 28);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Data de Validade:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(100, 33);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(58, 28);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "Nome:";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(164, 128);
+            this.dateTimePicker1.MaxDate = new System.DateTime(2050, 12, 31, 0, 0, 0, 0);
+            this.dateTimePicker1.MinDate = new System.DateTime(1910, 1, 1, 0, 0, 0, 0);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(535, 32);
+            this.dateTimePicker1.TabIndex = 3;
+            this.dateTimePicker1.Value = new System.DateTime(1910, 12, 31, 0, 0, 0, 0);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(56, 74);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(75, 28);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Unidade:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Agency FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(6, 3);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(89, 34);
+            this.label4.TabIndex = 36;
+            this.label4.Text = "PRODUTO";
+            // 
+            // button3
+            // 
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(947, 371);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(103, 33);
+            this.button3.TabIndex = 37;
+            this.button3.Text = "Alterar";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // CadastrarProduto
             // 
@@ -335,6 +504,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvconsultaproduto)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -344,9 +517,8 @@
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.DateTimePicker dtpDataValidade;
         private System.Windows.Forms.Label lblDataValidade;
-        private System.Windows.Forms.TextBox txtQtdpedido;
         private System.Windows.Forms.Label lblQuantidade;
-        private System.Windows.Forms.TextBox TxtNomepedido;
+        private System.Windows.Forms.TextBox TxtNomeProduto;
         private System.Windows.Forms.Label lblCadastroProduto;
         private System.Windows.Forms.PictureBox btnVoltar;
         private System.Windows.Forms.TabControl tabControl1;
@@ -362,5 +534,19 @@
         private System.Windows.Forms.Button BtnSalvarProdutos;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox cboUnidade;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label3;
     }
 }
