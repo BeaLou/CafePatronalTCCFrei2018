@@ -1,5 +1,6 @@
 ﻿using CaféPatronal.Programacao;
 using CaféPatronal.Programacao.Funcionario;
+using CaféPatronal.TELAS.CRUD.Func;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -98,6 +99,13 @@ namespace CaféPatronal.TELAS.Cadastro_e_Consulta
             List<FuncionarioDTO> a = business.Consultar(txtConsultarFuncionários.Text);
             dgvConsultarFuncionarios.AutoGenerateColumns = false;
             dgvConsultarFuncionarios.DataSource = a;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AlterarFuncionario tela = new AlterarFuncionario();
+            tela.Show();
+            this.Hide();
         }
     }
 }

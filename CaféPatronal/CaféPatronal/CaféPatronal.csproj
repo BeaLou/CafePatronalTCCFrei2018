@@ -84,17 +84,53 @@
     <Compile Include="Programacao\Produto\ProdutoDTO.cs" />
     <Compile Include="Programacao\UserSession.cs" />
     <Compile Include="Programacao\Validação.cs" />
+    <Compile Include="TELAS\CRUD\Clientesss\AlterarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\CRUD\Clientesss\AlterarCliente.Designer.cs">
+      <DependentUpon>AlterarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TELAS\CRUD\Estoqueeee\AlterarEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\CRUD\Estoqueeee\AlterarEstoque.Designer.cs">
+      <DependentUpon>AlterarEstoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TELAS\CRUD\Fornec\AlterarFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\CRUD\Fornec\AlterarFornecedor.Designer.cs">
+      <DependentUpon>AlterarFornecedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="TELAS\CRUD\Fornec\Fornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TELAS\CRUD\Fornec\Fornecedor.Designer.cs">
       <DependentUpon>Fornecedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="TELAS\CRUD\Func\AlterarFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\CRUD\Func\AlterarFuncionario.Designer.cs">
+      <DependentUpon>AlterarFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TELAS\CRUD\Ped\AlterarPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\CRUD\Ped\AlterarPedido.Designer.cs">
+      <DependentUpon>AlterarPedido.cs</DependentUpon>
+    </Compile>
     <Compile Include="TELAS\CRUD\Ped\Pedido.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TELAS\CRUD\Ped\Pedido.Designer.cs">
       <DependentUpon>Pedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TELAS\CRUD\Produ\AlterarProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\CRUD\Produ\AlterarProduto.Designer.cs">
+      <DependentUpon>AlterarProduto.cs</DependentUpon>
     </Compile>
     <Compile Include="TELAS\CRUD\Produ\Produto.cs">
       <SubType>Form</SubType>
@@ -180,11 +216,29 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="TELAS\CRUD\Clientesss\AlterarCliente.resx">
+      <DependentUpon>AlterarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TELAS\CRUD\Estoqueeee\AlterarEstoque.resx">
+      <DependentUpon>AlterarEstoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TELAS\CRUD\Fornec\AlterarFornecedor.resx">
+      <DependentUpon>AlterarFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TELAS\CRUD\Fornec\Fornecedor.resx">
       <DependentUpon>Fornecedor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TELAS\CRUD\Func\AlterarFuncionario.resx">
+      <DependentUpon>AlterarFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TELAS\CRUD\Ped\AlterarPedido.resx">
+      <DependentUpon>AlterarPedido.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TELAS\CRUD\Ped\Pedido.resx">
       <DependentUpon>Pedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TELAS\CRUD\Produ\AlterarProduto.resx">
+      <DependentUpon>AlterarProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\CRUD\Produ\Produto.resx">
       <DependentUpon>Produto.cs</DependentUpon>

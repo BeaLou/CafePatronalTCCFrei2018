@@ -82,7 +82,7 @@
             // 
             this.tbControleVendas.Controls.Add(this.tabPage1);
             this.tbControleVendas.Controls.Add(this.tabPage2);
-            this.tbControleVendas.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbControleVendas.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbControleVendas.Location = new System.Drawing.Point(30, 12);
             this.tbControleVendas.Name = "tbControleVendas";
             this.tbControleVendas.SelectedIndex = 0;
@@ -97,10 +97,10 @@
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.btnVoltar);
             this.tabPage1.Font = new System.Drawing.Font("Agency FB", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage1.Location = new System.Drawing.Point(4, 37);
+            this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1117, 491);
+            this.tabPage1.Size = new System.Drawing.Size(1117, 494);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Fluxo de Caixa";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -111,9 +111,10 @@
             this.BtnFluxoCaixa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnFluxoCaixa.FlatAppearance.BorderSize = 0;
             this.BtnFluxoCaixa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnFluxoCaixa.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnFluxoCaixa.Image = ((System.Drawing.Image)(resources.GetObject("BtnFluxoCaixa.Image")));
             this.BtnFluxoCaixa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnFluxoCaixa.Location = new System.Drawing.Point(983, 443);
+            this.BtnFluxoCaixa.Location = new System.Drawing.Point(983, 450);
             this.BtnFluxoCaixa.Name = "BtnFluxoCaixa";
             this.BtnFluxoCaixa.Size = new System.Drawing.Size(126, 36);
             this.BtnFluxoCaixa.TabIndex = 69;
@@ -299,9 +300,9 @@
             this.tabPage2.Controls.Add(this.pictureBox1);
             this.tabPage2.Controls.Add(this.btnConsularFluxo);
             this.tabPage2.Controls.Add(this.txtConsultarFluxo);
-            this.tabPage2.Location = new System.Drawing.Point(4, 37);
+            this.tabPage2.Location = new System.Drawing.Point(4, 34);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(1117, 491);
+            this.tabPage2.Size = new System.Drawing.Size(1117, 494);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Consultar";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -311,7 +312,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(641, 54);
+            this.button1.Location = new System.Drawing.Point(609, 54);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(103, 40);
             this.button1.TabIndex = 70;
@@ -359,7 +360,7 @@
             this.btnConsularFluxo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConsularFluxo.Location = new System.Drawing.Point(495, 54);
             this.btnConsularFluxo.Name = "btnConsularFluxo";
-            this.btnConsularFluxo.Size = new System.Drawing.Size(140, 40);
+            this.btnConsularFluxo.Size = new System.Drawing.Size(108, 40);
             this.btnConsularFluxo.TabIndex = 19;
             this.btnConsularFluxo.Text = "Consultar";
             this.btnConsularFluxo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -371,7 +372,7 @@
             this.txtConsultarFluxo.Location = new System.Drawing.Point(33, 55);
             this.txtConsultarFluxo.MaxLength = 50;
             this.txtConsultarFluxo.Name = "txtConsultarFluxo";
-            this.txtConsultarFluxo.Size = new System.Drawing.Size(456, 36);
+            this.txtConsultarFluxo.Size = new System.Drawing.Size(456, 32);
             this.txtConsultarFluxo.TabIndex = 18;
             // 
             // Consulta_de_Fluxo_de_Caixa

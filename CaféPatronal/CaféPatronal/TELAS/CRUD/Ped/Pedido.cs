@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CaféPatronal.TELAS.CRUD.Ped;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,6 +29,13 @@ namespace CaféPatronal.TELAS.Cadastro_e_Consulta
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Form1 tela = new Form1();
+            tela.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AlterarPedido tela = new AlterarPedido();
             tela.Show();
             this.Hide();
         }

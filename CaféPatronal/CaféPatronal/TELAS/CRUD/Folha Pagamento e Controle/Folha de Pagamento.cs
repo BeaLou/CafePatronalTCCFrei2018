@@ -43,5 +43,12 @@ namespace CaféPatronal.TELAS.Fluxo_de_Caixa_e_Folha_de_Pagamento
         {
 
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Form1 tela = new Form1();
+            tela.Show();
+            this.Hide();
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using CaféPatronal.Programacao;
 using CaféPatronal.Programacao.Cliente;
+using CaféPatronal.TELAS.CRUD.Clientesss;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -85,6 +86,13 @@ namespace CaféPatronal.TELAS
             List<ClienteDTO> a = business.Consultar(txtConsultarClientes.Text);
             dgvConsultarCliente.AutoGenerateColumns = false;
             dgvConsultarCliente.DataSource = a;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AlterarCliente tela = new AlterarCliente();
+            tela.Show();
+            this.Hide();
         }
     }
 }

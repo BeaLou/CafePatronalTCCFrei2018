@@ -1,5 +1,6 @@
 ﻿using CaféPatronal.Programacao;
 using CaféPatronal.Programacao.Produto;
+using CaféPatronal.TELAS.CRUD.Produ;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -76,6 +77,13 @@ namespace CaféPatronal.TELAS.Cadastro_e_Consulta
             List<ProdutoDTO> a = Business.Consultar(txtConsultaProdutos.Text);
             dgvconsultaproduto.AutoGenerateColumns = false;
             dgvconsultaproduto.DataSource = a;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AlterarProduto tela = new AlterarProduto();
+            tela.Show();
+            this.Hide();
         }
     }
 }

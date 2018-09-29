@@ -1,4 +1,5 @@
 ﻿using CaféPatronal.Programacao;
+using CaféPatronal.TELAS.CRUD.Fornec;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -56,6 +57,13 @@ namespace CaféPatronal.TELAS.Cadastro_e_Consulta
         private void tabPage3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AlterarFornecedor tela = new AlterarFornecedor();
+            tela.Show();
+            this.Hide();
         }
     }
 }

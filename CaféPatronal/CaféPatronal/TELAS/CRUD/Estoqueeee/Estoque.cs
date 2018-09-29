@@ -1,4 +1,5 @@
 ﻿using CaféPatronal.Programacao;
+using CaféPatronal.TELAS.CRUD.Estoqueeee;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -44,6 +45,13 @@ namespace CaféPatronal.TELAS
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Form1 tela = new Form1();
+            tela.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AlterarEstoque tela = new AlterarEstoque();
             tela.Show();
             this.Hide();
         }
