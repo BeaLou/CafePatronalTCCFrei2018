@@ -90,9 +90,45 @@ namespace CaféPatronal.TELAS
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AlterarCliente tela = new AlterarCliente();
-            tela.Show();
-            this.Hide();
+            try
+            {
+                ClienteDTO cliente = dgvConsultarCliente.CurrentRow.DataBoundItem as ClienteDTO;
+
+                AlterarCliente tela = new AlterarCliente();
+                tela.LoadScreen(cliente);
+                tela.Show();
+                this.Hide();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro: " + ex.Message);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ClienteDTO cliente = dgvConsultarCliente.CurrentRow.DataBoundItem as ClienteDTO;
+                DialogResult r = MessageBox.Show("Deseja excluir esse cliente?", "Michael Pop`s",
+                                       MessageBoxButtons.YesNo,
+                                       MessageBoxIcon.Question);
+                if (r == DialogResult.Yes)
+                {
+                    ClienteBusiness business = new ClienteBusiness();
+                    business.Remover(cliente.id_cliente);
+
+                    List<ClienteDTO> a = business.Consultar(txtConsultarClientes.Text);
+                    dgvConsultarCliente.AutoGenerateColumns = false;
+                    dgvConsultarCliente.DataSource = a;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro: " + ex.Message);
+            }
         }
     }
 }

@@ -83,9 +83,9 @@ namespace CaféPatronal.Programacao.Cliente
             return db.Listar();
         }
 
-        //  public void Remover(int id)
-        //  {
-        //   db.Remover(id);
-        // }
+        public void Remover(int id)
+        {
+            db.Remover(id);
+        }
     }
 }

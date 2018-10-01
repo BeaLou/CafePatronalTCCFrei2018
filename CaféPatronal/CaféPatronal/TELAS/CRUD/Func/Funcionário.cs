@@ -103,9 +103,50 @@ namespace CaféPatronal.TELAS.Cadastro_e_Consulta
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AlterarFuncionario tela = new AlterarFuncionario();
-            tela.Show();
-            this.Hide();
+            try
+            {
+
+                FuncionarioDTO funcionario = dgvConsultarFuncionarios.CurrentRow.DataBoundItem as FuncionarioDTO;
+
+                AlterarFuncionario tela = new AlterarFuncionario();
+                tela.LoadScreen(funcionario);
+                tela.Show();
+                this.Hide();
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Ocorreu um erro: " + ex.Message);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FuncionarioDTO funcionario = dgvConsultarFuncionarios.CurrentRow.DataBoundItem as FuncionarioDTO;
+                DialogResult r = MessageBox.Show("Deseja excluir esse funcionário?", "Michael Pop`s",
+                                       MessageBoxButtons.YesNo,
+                                       MessageBoxIcon.Question);
+                if (r == DialogResult.Yes)
+                {
+                    FuncionarioBusiness business = new FuncionarioBusiness();
+                    business.Remover(funcionario.id_funcionario);
+
+                    List<FuncionarioDTO> a = business.Consultar(txtConsultarFuncionários.Text);
+                    dgvConsultarFuncionarios.AutoGenerateColumns = false;
+                    dgvConsultarFuncionarios.DataSource = a;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro: " + ex.Message);
+            }
+
         }
     }
 }

@@ -70,17 +70,17 @@ namespace CaféPatronal.Programacao.Cliente
         }
 
 
-        // public void Remover(int id)
-        // {
-        //  string script =
-        //  @"DELETE FROM tb_produto WHERE id_produto = @id_produto";
+        public void Remover(int id)
+        {
+            string script =
+            @"DELETE FROM tb_cliente WHERE id_cliente = @id_cliente";
 
-        //  List<MySqlParameter> parms = new List<MySqlParameter>();
-        //  parms.Add(new MySqlParameter("id_produto", id));
+            List<MySqlParameter> parms = new List<MySqlParameter>();
+            parms.Add(new MySqlParameter("id_cliente", id));
 
-        //   Database db = new Database();
-        //   db.ExecuteInsertScript(script, parms);
-        //  }
+            Database db = new Database();
+            db.ExecuteInsertScript(script, parms);
+        }
 
         public List<ClienteDTO> Listar()
         {
