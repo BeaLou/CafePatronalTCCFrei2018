@@ -29,9 +29,9 @@ CREATE TABLE `tb_funcionario` (
 	`dt_nascimento` DATE NOT NULL,
 	`ds_login` varchar(20) NOT NULL,
 	`ds_senha` varchar(20) NOT NULL,
-	`bt_permissaoadm` BOOLEAN NOT NULL,
-	`bt_permissaorh` BOOLEAN NOT NULL,
-	`bt_permissaofuncionario` BOOLEAN NOT NULL,
+	`bt_permissaoadm` BOOLEAN ,
+	`bt_permissaorh` BOOLEAN ,
+	`bt_permissaofuncionario` BOOLEAN ,
 	PRIMARY KEY (`id_funcionario`)
 );
 
@@ -61,7 +61,6 @@ CREATE TABLE `tb_estoque` (
 CREATE TABLE `tb_pedido` (
 	`id_pedido` INT NOT NULL AUTO_INCREMENT,
 	`id_cliente` INT NOT NULL,
-	`id_funcionario` INT NOT NULL,
 	`vl_venda` DECIMAL NOT NULL,
 	PRIMARY KEY (`id_pedido`)
 );
@@ -123,12 +122,7 @@ ALTER TABLE `tb_estoque` ADD CONSTRAINT `tb_estoque_fk1` FOREIGN KEY (`id_fornec
 ALTER TABLE `tb_pedido` ADD CONSTRAINT
  `tb_pedido_fk0` FOREIGN KEY (`id_cliente`) 
  REFERENCES `tb_cliente`(`id_cliente`);
-
-ALTER TABLE `tb_pedido` ADD CONSTRAINT 
-`tb_pedido_fk1` FOREIGN KEY (`id_funcionario`) 
-REFERENCES `tb_funcionario`(`id_funcionario`);
-
-
+ 
 ALTER TABLE `tb_produtoitem` ADD CONSTRAINT `tb_produtoitem_fk0` FOREIGN KEY (`id_produto`) REFERENCES `tb_produto`(`id_produto`);
 
 ALTER TABLE `tb_produtoitem` ADD CONSTRAINT `tb_produtoitem_fk1` FOREIGN KEY (`id_pedido`) REFERENCES `tb_pedido`(`id_pedido`);
@@ -161,7 +155,7 @@ insert into `tb_funcionario`(nm_nome,nm_sobrenome,ds_carteiratrabalho,ds_cpf,ds_
 ds_telefone,ds_telefonemovel,ds_cep,ds_complemento,ds_ncasa,dt_nascimento,ds_login,ds_senha, bt_permissaoadm , bt_permissaorh , bt_permissaofuncionario) 
 VALUES("Carla","Cavalcanti","331.66699.42-6","772.480.108-80","17.284.238-4","T.I.",
 "carlateresinhamalucavalcanti-85@outlook.com.br",
-"(11) 2786-1154","(11) 99788-6151","04169-970","Casa 1","508","1999/11/15","Carla Cavalcanti","12345", false ,false , true);
+"(11) 2786-1154","(11) 99788-6151","04169-970","Casa 1","508","1999/11/15","fun","12345", false ,false , true);
 
  
  insert into tb_controledeponto (id_controleponto,id_funcionario, dt_dia, hr_entrada, hr_saidaalmoco,hr_retornoalmoco,
@@ -200,13 +194,13 @@ insert into tb_folhadeponto(id_folhaponto,
 id_controledeponto,dt_mes,hr_totalhoras) 
 values ('1','1','2018/09/17','20:00');
  
+insert into  `tb_pedido`(id_cliente,vl_venda)VALUES("1","10.00");
+insert into  `tb_pedido`(id_cliente,vl_venda)VALUES("2","20.00");
+insert into  `tb_pedido`(id_cliente,vl_venda)VALUES("2","4");
+insert into  `tb_pedido`(id_cliente,vl_venda)VALUES("2","5");
+insert into  `tb_pedido`(id_cliente,vl_venda)VALUES("1","10.00");
 
 
-insert into  `tb_pedido`(id_cliente,id_funcionario,vl_venda)VALUES("1","1","10.00");
-insert into  `tb_pedido`(id_cliente,id_funcionario,vl_venda)VALUES("2","1","20.00");
-insert into  `tb_pedido`(id_cliente,id_funcionario,vl_venda)VALUES("2","2","4");
-insert into  `tb_pedido`(id_cliente,id_funcionario,vl_venda)VALUES("2","2","5");
-insert into  `tb_pedido`(id_cliente,id_funcionario,vl_venda)VALUES("1","2","10.00");
 
 insert into`tb_produto`(nm_nome,ds_unidade,dt_validade) VALUES ("Pão","4","2019/10/4");
 insert into`tb_produto`(nm_nome,ds_unidade,dt_validade) VALUES ("Refrigerante Coca-cola","5","2019/11/5");
@@ -258,3 +252,5 @@ insert into `tb_estoque`(id_produto,id_fornecedor,
 vl_compra,dt_datacompra,qtd_produtos,dt_validade) 
 VALUES ("8","1","90","2018/07/23","2","2018/10/4");
 
+
+select *  from tb_funcionario;
