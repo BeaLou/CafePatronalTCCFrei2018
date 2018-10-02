@@ -60,7 +60,7 @@ CREATE TABLE `tb_estoque` (
 
 CREATE TABLE `tb_pedido` (
 	`id_pedido` INT NOT NULL AUTO_INCREMENT,
-	`id_cliente` INT NOT NULL,
+	`id_cliente` INT NULL,
 	`vl_venda` DECIMAL NOT NULL,
 	PRIMARY KEY (`id_pedido`)
 );
@@ -102,6 +102,7 @@ CREATE TABLE `tb_folhadeponto` (
 	PRIMARY KEY (`id_folhaponto`)
 );
 
+
 CREATE TABLE `tb_controledeponto` (
 	`id_controleponto` INT NOT NULL AUTO_INCREMENT,
 	`id_funcionario` INT NOT NULL,
@@ -121,7 +122,7 @@ ALTER TABLE `tb_estoque` ADD CONSTRAINT `tb_estoque_fk1` FOREIGN KEY (`id_fornec
 
 ALTER TABLE `tb_pedido` ADD CONSTRAINT
  `tb_pedido_fk0` FOREIGN KEY (`id_cliente`) 
- REFERENCES `tb_cliente`(`id_cliente`);
+ REFERENCES `tb_cliente`(`id_cliente`) ON UPDATE cascade;
  
 ALTER TABLE `tb_produtoitem` ADD CONSTRAINT `tb_produtoitem_fk0` FOREIGN KEY (`id_produto`) REFERENCES `tb_produto`(`id_produto`);
 
