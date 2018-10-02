@@ -116,6 +116,11 @@ CREATE TABLE `tb_controledeponto` (
 	PRIMARY KEY (`id_controleponto`)
 );
 
+create table `tb_dpto`(
+`nm_nome` varchar(30)
+);
+
+
 ALTER TABLE `tb_estoque` ADD CONSTRAINT `tb_estoque_fk0` FOREIGN KEY (`id_produto`) REFERENCES `tb_produto`(`id_produto`);
 
 ALTER TABLE `tb_estoque` ADD CONSTRAINT `tb_estoque_fk1` FOREIGN KEY (`id_fornecedor`) REFERENCES `tb_fornecedor`(`id_fornecedor`);
@@ -134,6 +139,17 @@ ALTER TABLE `tb_folhadeponto` ADD CONSTRAINT `tb_folhadeponto_fk0` FOREIGN KEY (
 
 ALTER TABLE `tb_controledeponto` ADD CONSTRAINT `tb_controledeponto_fk0` FOREIGN KEY (`id_funcionario`) REFERENCES `tb_funcionario`(`id_funcionario`);
 
+
+insert into `tb_dpto`(nm_nome) values ("T.I.");
+insert into `tb_dpto`(nm_nome) values ("RH");
+insert into `tb_dpto`(nm_nome) values ("Cozinha");
+insert into `tb_dpto`(nm_nome) values ("Garçom/Garçonete");
+insert into `tb_dpto`(nm_nome) values ("Aux. Caixa");
+insert into `tb_dpto`(nm_nome) values ("Motoboy");
+insert into `tb_dpto`(nm_nome) values ("Aux. Cozinha");
+insert into `tb_dpto`(nm_nome) values ("Aux. Financeiro");
+insert into `tb_dpto`(nm_nome) values ("Chefe de Cozinha");
+insert into `tb_dpto`(nm_nome) values ("Recepcionista");
 
 insert into `tb_cliente`(nm_nome,nm_sobrenome,dt_datanascimento,ds_cpf,ds_email)
  VALUES("João","Da Silva","1989/2/12","660.563.910-35","joãodasilva@gmail.com");
@@ -252,6 +268,7 @@ VALUES ("8","1","10","2018/07/23","5","2018/10/4");
 insert into `tb_estoque`(id_produto,id_fornecedor,
 vl_compra,dt_datacompra,qtd_produtos,dt_validade) 
 VALUES ("8","1","90","2018/07/23","2","2018/10/4");
+
 
 
 select *  from tb_funcionario;

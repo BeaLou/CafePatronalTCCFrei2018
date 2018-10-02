@@ -111,7 +111,7 @@ namespace CaféPatronal.TELAS
             try
             {
                 ClienteDTO cliente = dgvConsultarCliente.CurrentRow.DataBoundItem as ClienteDTO;
-                DialogResult r = MessageBox.Show("Deseja excluir esse cliente?", "Michael Pop`s",
+                DialogResult r = MessageBox.Show("Deseja excluir esse cliente?", "Café Patronal",
                                        MessageBoxButtons.YesNo,
                                        MessageBoxIcon.Question);
                 if (r == DialogResult.Yes)
@@ -129,6 +129,7 @@ namespace CaféPatronal.TELAS
             {
                 MessageBox.Show("Ocorreu um erro: " + ex.Message);
             }
+            
         }
     }
 }
