@@ -55,6 +55,9 @@
     <Compile Include="Programacao\ControleDPonto\ControledePontoBusiness.cs" />
     <Compile Include="Programacao\ControleDPonto\ControledePontoDatabase.cs" />
     <Compile Include="Programacao\ControleDPonto\ControledePontoDTO.cs" />
+    <Compile Include="Programacao\ControlePagamento\CpBusiness.cs" />
+    <Compile Include="Programacao\ControlePagamento\CpDatabase.cs" />
+    <Compile Include="Programacao\ControlePagamento\CpDTO.cs" />
     <Compile Include="Programacao\Dpto\DptoBusiness.cs" />
     <Compile Include="Programacao\Dpto\DptoDatabase.cs" />
     <Compile Include="Programacao\Dpto\DptoDTO.cs" />

@@ -1,4 +1,5 @@
 ﻿using CaféPatronal.Programacao;
+using CaféPatronal.Programacao.ControlePagamento;
 using CaféPatronal.Programacao.FolhaPagamento;
 using System;
 using System.Collections.Generic;
@@ -84,7 +85,32 @@ namespace CaféPatronal.TELAS.Fluxo_de_Caixa_e_Folha_de_Pagamento
 
         private void btnSalvarControle_Click(object sender, EventArgs e)
         {
+            try
+            {
+                CpDTO dto = new CpDTO();
+                dto.dia = dtpDia.Value;
+                dto.horaentrada = Convert.ToDateTime(txtHrEntrada.Text);
+                dto.horasaida = Convert.ToDateTime(txtHrSaida.Text);
+                dto.horaalmoco = Convert.ToDateTime(txthralmoco.Text);
+                dto.horaretornoalmoco = Convert.ToDateTime(txtretoralmoco.Text);
+                dto.horaextra = Convert.ToDateTime(txtHrExtra.Text);
+                dto.horasaidahoraextra = Convert.ToDateTime(txthrex.Text);
 
+                CpBusiness business = new CpBusiness();
+                business.Salvar(dto);
+                MessageBox.Show("Controle de pagamento salvo.");
+                txtHrEntrada.Text = "";
+                txtHrSaida.Text = "";
+                txthralmoco.Text = "";
+                txtretoralmoco.Text = "";
+                txtHrExtra.Text = "";
+                txthrex.Text = "";
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro " + ex.Message);
+            }
         }
     }
 }
