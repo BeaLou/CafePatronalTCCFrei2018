@@ -272,3 +272,4 @@ VALUES ("8","1","90","2018/07/23","2","2018/10/4");
 
 
 select *  from tb_funcionario;
+

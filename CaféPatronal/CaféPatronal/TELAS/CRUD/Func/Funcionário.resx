@@ -137,10 +137,10 @@
         lZJQWemT5uae/DxG0TLcKXp7O5jHUyr/AJVAfKnxiUcNAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnAlterar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAAW5JREFUSEvt1TErRWEcx/GHEAZJMclClE2yWGRh4trsYjMwyZtg4hWwU5KZichr
+        vQAADr0BR/uQrQAAAW5JREFUSEvt1TErRWEcx/GHEAZJMclClE2yWGRh4trsYjMwyZtg4hWwU5KZichr
         kAEDkTIgfL9Hj27XOXJv52z3V5/bOffW/3me//Occ0M9RaYVXd+X+acP21hO7nJMM0q4wCfWkVt6sYkn
         WFz7mMMw2lFTWjCDM3wgFo/ecIsjLKEbVcXZXaKycJp3nGAC/04DRmE7XlFe8Bl3eMAL4gqvMIkkTbBI
         VuxtIzqwimvEATYwiBFYcBE7uMcxehCmMeBFRhawhs7kLoQxHMDZpp0iJzyOQ8z7hR/e+KU/VsYiFrOo
@@ -152,7 +152,7 @@
   <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAAwtJREFUSEutll1IU2EYx3fe92wn972p5bRtF7nRh0gQktCNiVrKlpWRmiDV5mDT
+        vQAADr0BR/uQrQAAAwtJREFUSEutll1IU2EYx3fe92wn972p5bRtF7nRh0gQktCNiVrKlpWRmiDV5mDT
         MUKki9iFF0FddFFBwSTwQgwJ1PlVUWA3XXQTRFB0kTdSUF1IH1QX5fo/h22dze0wxcFve897nvf5v8/H
         ec80LS1NYiF8vuNidXVVmSiKzZyzC5zzfPokSVfb3X2aF1qfoajAysorAU7OCYLwBfwA3/P4CZ7q9XpH
         JBJkhXwQskBr61Gxv7+XuVw1mlQqpYFjDX3gIAFWcX0GkbSA1jTNjLEbuPcNNALZPpG4LdPZ2ZGNSkPO
@@ -168,6 +168,21 @@
         5vAmaxsbu6UQaBL/ATOOlySuxBnbAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="Nome.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Sobrenome.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Departamento.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Email.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="TelefoneMóvel.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="Nome.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

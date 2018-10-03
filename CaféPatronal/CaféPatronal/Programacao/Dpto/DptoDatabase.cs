@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CaféPatronal.Programacao.Dpto
 {
- public   class DptoDatabase
+    public class DptoDatabase
     {
         public List<DptoDTO> Listar()
         {
@@ -31,4 +31,5 @@ namespace CaféPatronal.Programacao.Dpto
             reader.Close();
             return lista;
         }
+    }
 }

@@ -33,7 +33,7 @@ namespace CaféPatronal.Programacao
                 }
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
 
@@ -63,7 +63,7 @@ namespace CaféPatronal.Programacao
                 }
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
 

@@ -1,4 +1,5 @@
 ﻿using CaféPatronal.Programacao;
+using CaféPatronal.Programacao.Dpto;
 using CaféPatronal.Programacao.Funcionario;
 using CaféPatronal.TELAS.CRUD.Func;
 using System;
@@ -19,7 +20,27 @@ namespace CaféPatronal.TELAS.Cadastro_e_Consulta
         public CadastroFuncionario()
         {
             InitializeComponent();
+            VerificarPermissoes();
+            CarregarCombos();
         }
+
+        void CarregarCombos()
+        {
+            DptoBusiness bus = new DptoBusiness();
+            List<DptoDTO> lista = bus.Listar();
+            cboDepartamento.DisplayMember = nameof(DptoDTO.nm_nome);
+            cboDepartamento.DataSource = lista;
+        }
+        void VerificarPermissoes()
+        {
+            if (UserSession.UsuarioLogado.bt_permissaoadm == false)
+            {
+                btnAlterar.Enabled = false;
+
+
+            }
+        }
+
 
         private void maskedTextBox2_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
@@ -81,9 +102,24 @@ namespace CaféPatronal.TELAS.Cadastro_e_Consulta
                 dto.ds_complemento = txtComplemento.Text;
                 dto.ds_ncasa = txtNumero.Text;
 
+
                 FuncionarioBusiness business = new FuncionarioBusiness();
                 business.Salvar(dto);
                 MessageBox.Show("Funcionário salvo com sucesso!");
+                txtNome.Text = "";
+                txtSobrenome.Text = "";
+                mbtCpf.Text = "";
+                mbtRg.Text = "";
+                txtEmail.Text = "";
+                txtLogin.Text = "";
+                txtSenha.Text = "";
+                cboDepartamento.Text = "";
+                mbtCarteiraTrabalho.Text = "";
+                mtbTelefoneFixo.Text = "";
+                mtbTelefoneMovel.Text = "";
+                mtbCep.Text = "";
+                txtComplemento.Text = "";
+                txtNumero.Text = "";
             }
 
             catch (Exception ex)
@@ -146,7 +182,6 @@ namespace CaféPatronal.TELAS.Cadastro_e_Consulta
             {
                 MessageBox.Show("Ocorreu um erro: " + ex.Message);
             }
-
         }
     }
 }

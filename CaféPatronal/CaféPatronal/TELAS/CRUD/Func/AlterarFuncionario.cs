@@ -102,5 +102,10 @@ namespace CaféPatronal.TELAS.CRUD.Func
                 MessageBox.Show("Ocorreu um erro: " + ex.Message);
             }
         }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

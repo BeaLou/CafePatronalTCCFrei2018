@@ -1,4 +1,5 @@
 ﻿using CaféPatronal.Programacao;
+using CaféPatronal.Programacao.FolhaPagamento;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -49,6 +50,41 @@ namespace CaféPatronal.TELAS.Fluxo_de_Caixa_e_Folha_de_Pagamento
             Form1 tela = new Form1();
             tela.Show();
             this.Hide();
+        }
+
+        private void btnSalvarFolhaPagamento_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FolhaPagamentoDTO dto = new FolhaPagamentoDTO();
+                dto.ds_inss = Convert.ToDecimal(txtInss.Text);
+                dto.ds_valealimentacao = Convert.ToDecimal(txtValeAlimentação.Text);
+                dto.ds_valerefeicao = Convert.ToDecimal(txtValeRefeição.Text);
+                dto.ds_valetransporte = Convert.ToDecimal(txtValeTransporte.Text);
+                dto.ds_convenio = Convert.ToDecimal(txtConvênio.Text);
+                dto.ds_agua = Convert.ToDecimal(txtAgua.Text);
+                dto.ds_luz = Convert.ToDecimal(txtLuz.Text);
+
+                FolhaPagamentoBusiness business = new FolhaPagamentoBusiness();
+                business.Salvar(dto);
+                MessageBox.Show("Folha de pagamento salva.");
+                txtInss.Text = "";
+                txtValeAlimentação.Text = "";
+                txtValeRefeição.Text = "";
+                txtValeTransporte.Text = "";
+                txtConvênio.Text = "";
+                txtAgua.Text = "";
+                txtLuz.Text = "";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro " + ex.Message);
+            }
+        }
+
+        private void btnSalvarControle_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
