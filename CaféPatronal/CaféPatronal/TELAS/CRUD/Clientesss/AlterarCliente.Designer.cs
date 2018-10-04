@@ -54,7 +54,7 @@
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(46, 14);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -107,10 +107,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Agency FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(0, 5);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(137, 33);
+            this.label6.Size = new System.Drawing.Size(75, 34);
             this.label6.TabIndex = 62;
             this.label6.Text = "CLIENTE";
             // 
@@ -137,7 +137,7 @@
             this.txtnome.Location = new System.Drawing.Point(140, 31);
             this.txtnome.MaxLength = 20;
             this.txtnome.Name = "txtnome";
-            this.txtnome.Size = new System.Drawing.Size(456, 31);
+            this.txtnome.Size = new System.Drawing.Size(456, 32);
             this.txtnome.TabIndex = 1;
             this.txtnome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
@@ -145,10 +145,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(35, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 29);
+            this.label1.Size = new System.Drawing.Size(58, 28);
             this.label1.TabIndex = 14;
             this.label1.Text = "Nome:";
             // 
@@ -156,11 +156,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(35, 283);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 29);
+            this.label2.Size = new System.Drawing.Size(55, 28);
             this.label2.TabIndex = 8;
             this.label2.Text = "Email:";
             // 
@@ -168,7 +168,7 @@
             // 
             this.txtemail.Location = new System.Drawing.Point(144, 283);
             this.txtemail.Name = "txtemail";
-            this.txtemail.Size = new System.Drawing.Size(456, 31);
+            this.txtemail.Size = new System.Drawing.Size(456, 32);
             this.txtemail.TabIndex = 5;
             // 
             // dtpnascimento
@@ -177,7 +177,7 @@
             this.dtpnascimento.MaxDate = new System.DateTime(2050, 12, 31, 0, 0, 0, 0);
             this.dtpnascimento.MinDate = new System.DateTime(1910, 1, 1, 0, 0, 0, 0);
             this.dtpnascimento.Name = "dtpnascimento";
-            this.dtpnascimento.Size = new System.Drawing.Size(456, 31);
+            this.dtpnascimento.Size = new System.Drawing.Size(456, 32);
             this.dtpnascimento.TabIndex = 4;
             // 
             // txtsobrenome
@@ -185,7 +185,7 @@
             this.txtsobrenome.Location = new System.Drawing.Point(140, 93);
             this.txtsobrenome.MaxLength = 20;
             this.txtsobrenome.Name = "txtsobrenome";
-            this.txtsobrenome.Size = new System.Drawing.Size(456, 31);
+            this.txtsobrenome.Size = new System.Drawing.Size(456, 32);
             this.txtsobrenome.TabIndex = 2;
             this.txtsobrenome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
@@ -193,11 +193,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(27, 220);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(147, 58);
+            this.label3.Size = new System.Drawing.Size(103, 56);
             this.label3.TabIndex = 10;
             this.label3.Text = "Data de \r\nNascimento:";
             // 
@@ -206,17 +206,17 @@
             this.txtcpf.Location = new System.Drawing.Point(140, 159);
             this.txtcpf.Mask = "000.000.000-00";
             this.txtcpf.Name = "txtcpf";
-            this.txtcpf.Size = new System.Drawing.Size(456, 31);
+            this.txtcpf.Size = new System.Drawing.Size(456, 32);
             this.txtcpf.TabIndex = 3;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(28, 93);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(146, 29);
+            this.label4.Size = new System.Drawing.Size(102, 28);
             this.label4.TabIndex = 6;
             this.label4.Text = "Sobrenome:";
             // 
@@ -224,11 +224,11 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label5.Location = new System.Drawing.Point(35, 163);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 29);
+            this.label5.Size = new System.Drawing.Size(43, 28);
             this.label5.TabIndex = 11;
             this.label5.Text = "CPF:";
             // 

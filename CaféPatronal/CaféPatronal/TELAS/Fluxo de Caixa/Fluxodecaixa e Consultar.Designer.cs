@@ -304,7 +304,7 @@
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Size = new System.Drawing.Size(1117, 494);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Consultar";
+            this.tabPage2.Text = "Consultar/Apagar";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // button1

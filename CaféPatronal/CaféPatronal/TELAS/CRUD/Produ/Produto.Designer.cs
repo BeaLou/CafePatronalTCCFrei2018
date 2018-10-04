@@ -195,7 +195,7 @@
             this.groupBox1.Controls.Add(this.lblNome);
             this.groupBox1.Controls.Add(this.dtpDataValidade);
             this.groupBox1.Controls.Add(this.lblQuantidade);
-            this.groupBox1.Location = new System.Drawing.Point(168, 104);
+            this.groupBox1.Location = new System.Drawing.Point(144, 103);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(720, 183);
             this.groupBox1.TabIndex = 34;
@@ -227,7 +227,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1056, 410);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Consulta";
+            this.tabPage2.Text = "Consulta/Apagar/Alterar";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // button2
