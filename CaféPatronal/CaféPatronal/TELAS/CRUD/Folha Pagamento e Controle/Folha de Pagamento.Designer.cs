@@ -32,6 +32,8 @@
             this.btnVoltar = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.cbmes = new System.Windows.Forms.ComboBox();
+            this.label24 = new System.Windows.Forms.Label();
             this.btnSalvarFolhaPagamento = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnCalcular = new System.Windows.Forms.Button();
@@ -59,6 +61,10 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label23 = new System.Windows.Forms.Label();
             this.dgvConsultarFolha = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.txtConsultarFolha = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -93,12 +99,6 @@
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.cbmes = new System.Windows.Forms.ComboBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -128,7 +128,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(25, 22);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -153,12 +153,50 @@
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
+            // cbmes
+            // 
+            this.cbmes.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbmes.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbmes.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbmes.FormattingEnabled = true;
+            this.cbmes.Items.AddRange(new object[] {
+            "Janeiro",
+            "Fevereiro",
+            "Março",
+            "Abril",
+            "Maio",
+            "Junho",
+            "Julho",
+            "Agosto",
+            "Setembro",
+            "Outubro",
+            "Novembro",
+            "Dezembro"});
+            this.cbmes.Location = new System.Drawing.Point(780, 74);
+            this.cbmes.Name = "cbmes";
+            this.cbmes.Size = new System.Drawing.Size(188, 33);
+            this.cbmes.TabIndex = 68;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.BackColor = System.Drawing.Color.Transparent;
+            this.label24.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.Black;
+            this.label24.Location = new System.Drawing.Point(691, 74);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(43, 25);
+            this.label24.TabIndex = 61;
+            this.label24.Text = "Mês :";
+            // 
             // btnSalvarFolhaPagamento
             // 
             this.btnSalvarFolhaPagamento.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnSalvarFolhaPagamento.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalvarFolhaPagamento.FlatAppearance.BorderSize = 0;
             this.btnSalvarFolhaPagamento.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSalvarFolhaPagamento.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvarFolhaPagamento.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvarFolhaPagamento.Image")));
             this.btnSalvarFolhaPagamento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalvarFolhaPagamento.Location = new System.Drawing.Point(968, 408);
@@ -203,6 +241,7 @@
             // 
             this.btnCalcular.BackColor = System.Drawing.Color.Transparent;
             this.btnCalcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCalcular.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCalcular.ForeColor = System.Drawing.Color.Black;
             this.btnCalcular.Location = new System.Drawing.Point(406, 295);
             this.btnCalcular.Margin = new System.Windows.Forms.Padding(4);
@@ -217,17 +256,19 @@
             // 
             this.lblSalarioLiquido.AutoSize = true;
             this.lblSalarioLiquido.BackColor = System.Drawing.Color.Transparent;
+            this.lblSalarioLiquido.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSalarioLiquido.ForeColor = System.Drawing.Color.Black;
-            this.lblSalarioLiquido.Location = new System.Drawing.Point(530, 353);
+            this.lblSalarioLiquido.Location = new System.Drawing.Point(477, 351);
             this.lblSalarioLiquido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSalarioLiquido.Name = "lblSalarioLiquido";
-            this.lblSalarioLiquido.Size = new System.Drawing.Size(19, 25);
+            this.lblSalarioLiquido.Size = new System.Drawing.Size(18, 25);
             this.lblSalarioLiquido.TabIndex = 59;
             this.lblSalarioLiquido.Text = "-";
             // 
             // nudHorasTrabalhadas
             // 
             this.nudHorasTrabalhadas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nudHorasTrabalhadas.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudHorasTrabalhadas.Location = new System.Drawing.Point(185, 57);
             this.nudHorasTrabalhadas.Margin = new System.Windows.Forms.Padding(4);
             this.nudHorasTrabalhadas.Maximum = new decimal(new int[] {
@@ -236,18 +277,19 @@
             0,
             0});
             this.nudHorasTrabalhadas.Name = "nudHorasTrabalhadas";
-            this.nudHorasTrabalhadas.Size = new System.Drawing.Size(191, 31);
+            this.nudHorasTrabalhadas.Size = new System.Drawing.Size(191, 32);
             this.nudHorasTrabalhadas.TabIndex = 41;
             // 
             // label21
             // 
             this.label21.AutoSize = true;
             this.label21.BackColor = System.Drawing.Color.Transparent;
+            this.label21.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.Black;
             this.label21.Location = new System.Drawing.Point(17, 58);
             this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(207, 25);
+            this.label21.Size = new System.Drawing.Size(130, 25);
             this.label21.TabIndex = 52;
             this.label21.Text = "Horas Trabalhadas :";
             // 
@@ -255,11 +297,12 @@
             // 
             this.lblText.AutoSize = true;
             this.lblText.BackColor = System.Drawing.Color.Transparent;
+            this.lblText.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblText.ForeColor = System.Drawing.Color.Black;
-            this.lblText.Location = new System.Drawing.Point(417, 353);
+            this.lblText.Location = new System.Drawing.Point(364, 351);
             this.lblText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblText.Name = "lblText";
-            this.lblText.Size = new System.Drawing.Size(167, 25);
+            this.lblText.Size = new System.Drawing.Size(105, 25);
             this.lblText.TabIndex = 58;
             this.lblText.Text = "Salário Líquido :";
             // 
@@ -268,6 +311,7 @@
             this.cboFuncionario.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cboFuncionario.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cboFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboFuncionario.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboFuncionario.FormattingEnabled = true;
             this.cboFuncionario.Location = new System.Drawing.Point(185, 16);
             this.cboFuncionario.Margin = new System.Windows.Forms.Padding(4);
@@ -278,21 +322,23 @@
             // txtFaltasPriSemana
             // 
             this.txtFaltasPriSemana.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtFaltasPriSemana.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFaltasPriSemana.Location = new System.Drawing.Point(185, 93);
             this.txtFaltasPriSemana.Margin = new System.Windows.Forms.Padding(4);
             this.txtFaltasPriSemana.Name = "txtFaltasPriSemana";
-            this.txtFaltasPriSemana.Size = new System.Drawing.Size(190, 31);
+            this.txtFaltasPriSemana.Size = new System.Drawing.Size(190, 32);
             this.txtFaltasPriSemana.TabIndex = 42;
             // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.BackColor = System.Drawing.Color.Transparent;
+            this.label22.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.Black;
             this.label22.Location = new System.Drawing.Point(38, 24);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(137, 25);
+            this.label22.Size = new System.Drawing.Size(88, 25);
             this.label22.TabIndex = 50;
             this.label22.Text = "Funcionário :";
             // 
@@ -300,21 +346,23 @@
             // 
             this.label20.AutoSize = true;
             this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.Black;
             this.label20.Location = new System.Drawing.Point(-6, 93);
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(278, 25);
+            this.label20.Size = new System.Drawing.Size(177, 25);
             this.label20.TabIndex = 54;
             this.label20.Text = "Faltas na primeira semana :";
             // 
             // txtFaltaQuarSemana
             // 
             this.txtFaltaQuarSemana.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtFaltaQuarSemana.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFaltaQuarSemana.Location = new System.Drawing.Point(185, 215);
             this.txtFaltaQuarSemana.Margin = new System.Windows.Forms.Padding(4);
             this.txtFaltaQuarSemana.Name = "txtFaltaQuarSemana";
-            this.txtFaltaQuarSemana.Size = new System.Drawing.Size(191, 31);
+            this.txtFaltaQuarSemana.Size = new System.Drawing.Size(191, 32);
             this.txtFaltaQuarSemana.TabIndex = 45;
             // 
             // chkVT
@@ -322,11 +370,12 @@
             this.chkVT.AutoSize = true;
             this.chkVT.BackColor = System.Drawing.Color.Transparent;
             this.chkVT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.chkVT.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkVT.ForeColor = System.Drawing.Color.Black;
             this.chkVT.Location = new System.Drawing.Point(39, 349);
             this.chkVT.Margin = new System.Windows.Forms.Padding(4);
             this.chkVT.Name = "chkVT";
-            this.chkVT.Size = new System.Drawing.Size(174, 29);
+            this.chkVT.Size = new System.Drawing.Size(119, 29);
             this.chkVT.TabIndex = 46;
             this.chkVT.Text = "Vale transporte";
             this.chkVT.UseVisualStyleBackColor = false;
@@ -335,11 +384,12 @@
             // 
             this.lblPorcentagem.AutoSize = true;
             this.lblPorcentagem.BackColor = System.Drawing.Color.Transparent;
+            this.lblPorcentagem.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPorcentagem.ForeColor = System.Drawing.Color.Black;
             this.lblPorcentagem.Location = new System.Drawing.Point(33, 292);
             this.lblPorcentagem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPorcentagem.Name = "lblPorcentagem";
-            this.lblPorcentagem.Size = new System.Drawing.Size(151, 25);
+            this.lblPorcentagem.Size = new System.Drawing.Size(98, 25);
             this.lblPorcentagem.TabIndex = 53;
             this.lblPorcentagem.Text = "Porcentagem :";
             // 
@@ -348,11 +398,12 @@
             this.chkHoraExtra.AutoSize = true;
             this.chkHoraExtra.BackColor = System.Drawing.Color.Transparent;
             this.chkHoraExtra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.chkHoraExtra.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkHoraExtra.ForeColor = System.Drawing.Color.Black;
             this.chkHoraExtra.Location = new System.Drawing.Point(209, 349);
             this.chkHoraExtra.Margin = new System.Windows.Forms.Padding(4);
             this.chkHoraExtra.Name = "chkHoraExtra";
-            this.chkHoraExtra.Size = new System.Drawing.Size(128, 29);
+            this.chkHoraExtra.Size = new System.Drawing.Size(91, 29);
             this.chkHoraExtra.TabIndex = 47;
             this.chkHoraExtra.Text = "Hora extra";
             this.chkHoraExtra.UseVisualStyleBackColor = false;
@@ -361,31 +412,34 @@
             // nudHorasExtras
             // 
             this.nudHorasExtras.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nudHorasExtras.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudHorasExtras.Location = new System.Drawing.Point(184, 255);
             this.nudHorasExtras.Margin = new System.Windows.Forms.Padding(4);
             this.nudHorasExtras.Name = "nudHorasExtras";
-            this.nudHorasExtras.Size = new System.Drawing.Size(191, 31);
+            this.nudHorasExtras.Size = new System.Drawing.Size(191, 32);
             this.nudHorasExtras.TabIndex = 48;
             // 
             // nudPorcentagem
             // 
             this.nudPorcentagem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nudPorcentagem.DecimalPlaces = 2;
+            this.nudPorcentagem.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudPorcentagem.Location = new System.Drawing.Point(185, 295);
             this.nudPorcentagem.Margin = new System.Windows.Forms.Padding(4);
             this.nudPorcentagem.Name = "nudPorcentagem";
-            this.nudPorcentagem.Size = new System.Drawing.Size(191, 31);
+            this.nudPorcentagem.Size = new System.Drawing.Size(191, 32);
             this.nudPorcentagem.TabIndex = 49;
             // 
             // lblHoraExtra
             // 
             this.lblHoraExtra.AutoSize = true;
             this.lblHoraExtra.BackColor = System.Drawing.Color.Transparent;
+            this.lblHoraExtra.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHoraExtra.ForeColor = System.Drawing.Color.Black;
             this.lblHoraExtra.Location = new System.Drawing.Point(34, 261);
             this.lblHoraExtra.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHoraExtra.Name = "lblHoraExtra";
-            this.lblHoraExtra.Size = new System.Drawing.Size(148, 25);
+            this.lblHoraExtra.Size = new System.Drawing.Size(97, 25);
             this.lblHoraExtra.TabIndex = 51;
             this.lblHoraExtra.Text = "Horas Extras :";
             // 
@@ -393,53 +447,58 @@
             // 
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.Color.Transparent;
+            this.label19.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.Black;
             this.label19.Location = new System.Drawing.Point(1, 135);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(284, 25);
+            this.label19.Size = new System.Drawing.Size(176, 25);
             this.label19.TabIndex = 55;
             this.label19.Text = "Faltas na segunda semana :";
             // 
             // txtFaltaTerSemana
             // 
             this.txtFaltaTerSemana.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtFaltaTerSemana.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFaltaTerSemana.Location = new System.Drawing.Point(184, 173);
             this.txtFaltaTerSemana.Margin = new System.Windows.Forms.Padding(4);
             this.txtFaltaTerSemana.Name = "txtFaltaTerSemana";
-            this.txtFaltaTerSemana.Size = new System.Drawing.Size(191, 31);
+            this.txtFaltaTerSemana.Size = new System.Drawing.Size(191, 32);
             this.txtFaltaTerSemana.TabIndex = 44;
             // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.Black;
             this.label18.Location = new System.Drawing.Point(2, 180);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(273, 25);
+            this.label18.Size = new System.Drawing.Size(174, 25);
             this.label18.TabIndex = 56;
             this.label18.Text = "Faltas na terceira semana :";
             // 
             // txtFaltaSegSemana
             // 
             this.txtFaltaSegSemana.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtFaltaSegSemana.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFaltaSegSemana.Location = new System.Drawing.Point(185, 133);
             this.txtFaltaSegSemana.Margin = new System.Windows.Forms.Padding(4);
             this.txtFaltaSegSemana.Name = "txtFaltaSegSemana";
-            this.txtFaltaSegSemana.Size = new System.Drawing.Size(191, 31);
+            this.txtFaltaSegSemana.Size = new System.Drawing.Size(191, 32);
             this.txtFaltaSegSemana.TabIndex = 43;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(7, 215);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(262, 25);
+            this.label2.Size = new System.Drawing.Size(165, 25);
             this.label2.TabIndex = 57;
             this.label2.Text = "Faltas na quarta semana :";
             // 
@@ -447,10 +506,10 @@
             // 
             this.lblCadastroCliente.AutoSize = true;
             this.lblCadastroCliente.BackColor = System.Drawing.Color.Transparent;
-            this.lblCadastroCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadastroCliente.Font = new System.Drawing.Font("Agency FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadastroCliente.Location = new System.Drawing.Point(6, 3);
             this.lblCadastroCliente.Name = "lblCadastroCliente";
-            this.lblCadastroCliente.Size = new System.Drawing.Size(353, 33);
+            this.lblCadastroCliente.Size = new System.Drawing.Size(189, 34);
             this.lblCadastroCliente.TabIndex = 4;
             this.lblCadastroCliente.Text = "FOLHA DE PAGAMENTO";
             // 
@@ -474,10 +533,10 @@
             // 
             this.label23.AutoSize = true;
             this.label23.BackColor = System.Drawing.Color.Transparent;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Font = new System.Drawing.Font("Agency FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.Location = new System.Drawing.Point(12, 6);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(353, 33);
+            this.label23.Size = new System.Drawing.Size(189, 34);
             this.label23.TabIndex = 79;
             this.label23.Text = "FOLHA DE PAGAMENTO";
             // 
@@ -497,16 +556,48 @@
             this.dgvConsultarFolha.Size = new System.Drawing.Size(910, 322);
             this.dgvConsultarFolha.TabIndex = 77;
             // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.DataPropertyName = "Nome";
+            this.Column1.HeaderText = "Nome";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.DataPropertyName = "Departamento";
+            this.Column2.HeaderText = "Departamento";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.DataPropertyName = "Mês";
+            this.Column3.HeaderText = "Mês";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column4.DataPropertyName = "SalarioLiquido";
+            this.Column4.HeaderText = "Salário Líquido";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
             // btnConsultar
             // 
             this.btnConsultar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultar.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultar.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultar.Image")));
             this.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConsultar.Location = new System.Drawing.Point(528, 66);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(106, 32);
+            this.btnConsultar.Size = new System.Drawing.Size(104, 32);
             this.btnConsultar.TabIndex = 76;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -516,11 +607,12 @@
             // txtConsultarFolha
             // 
             this.txtConsultarFolha.BackColor = System.Drawing.Color.Ivory;
+            this.txtConsultarFolha.Font = new System.Drawing.Font("Agency FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConsultarFolha.ForeColor = System.Drawing.SystemColors.Info;
             this.txtConsultarFolha.Location = new System.Drawing.Point(66, 67);
             this.txtConsultarFolha.MaxLength = 50;
             this.txtConsultarFolha.Name = "txtConsultarFolha";
-            this.txtConsultarFolha.Size = new System.Drawing.Size(456, 31);
+            this.txtConsultarFolha.Size = new System.Drawing.Size(456, 42);
             this.txtConsultarFolha.TabIndex = 75;
             // 
             // pictureBox2
@@ -837,74 +929,6 @@
             this.textBox10.Size = new System.Drawing.Size(208, 20);
             this.textBox10.TabIndex = 28;
             this.textBox10.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInss_KeyPress);
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.BackColor = System.Drawing.Color.Transparent;
-            this.label24.ForeColor = System.Drawing.Color.Black;
-            this.label24.Location = new System.Drawing.Point(691, 74);
-            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(65, 25);
-            this.label24.TabIndex = 61;
-            this.label24.Text = "Mês :";
-            // 
-            // cbmes
-            // 
-            this.cbmes.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cbmes.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbmes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbmes.FormattingEnabled = true;
-            this.cbmes.Items.AddRange(new object[] {
-            "Janeiro",
-            "Fevereiro",
-            "Março",
-            "Abril",
-            "Maio",
-            "Junho",
-            "Julho",
-            "Agosto",
-            "Setembro",
-            "Outubro",
-            "Novembro",
-            "Dezembro"});
-            this.cbmes.Location = new System.Drawing.Point(780, 74);
-            this.cbmes.Name = "cbmes";
-            this.cbmes.Size = new System.Drawing.Size(188, 24);
-            this.cbmes.TabIndex = 68;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.DataPropertyName = "Nome";
-            this.Column1.HeaderText = "Nome";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.DataPropertyName = "Departamento";
-            this.Column2.HeaderText = "Departamento";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.DataPropertyName = "Mês";
-            this.Column3.HeaderText = "Mês";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.DataPropertyName = "SalarioLiquido";
-            this.Column4.HeaderText = "Salário Líquido";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
             // 
             // Folha_de_Pagamento
             // 

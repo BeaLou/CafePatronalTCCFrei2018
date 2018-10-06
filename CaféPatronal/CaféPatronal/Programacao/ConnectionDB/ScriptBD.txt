@@ -154,14 +154,14 @@ insert into `tb_cliente`(nm_nome,nm_sobrenome,dt_datanascimento,ds_cpf,ds_email)
 ds_dpto,ds_email,ds_telefone,ds_telefonemovel
 ,ds_cep,ds_complemento,ds_ncasa,dt_nascimento,
 ds_login,ds_senha, bt_permissaoadm , bt_permissaorh , bt_permissaofuncionario,vl_salariobruto) 
-VALUES("Edson","Moreira","014.49834.44-0","557.819.658-66","21.040.731-1","ADM"
-,"edsonfilipeandersonmoreira-71@hotmail.com.br","(11) 3870-7273","(11) 98668-5845"
+VALUES("Barbara","Florêncio","014.49834.44-0","557.819.658-66","21.040.731-1","ADM"
+,"barbaflorencio@hotmail.com.br","(11) 3870-7273","(11) 98668-5845"
 ,"04763-020","Casa 1","563","1999/04/19","adm","1234", true , true , true,"901");
 
 insert into `tb_funcionario`(nm_nome,nm_sobrenome,ds_carteiratrabalho,ds_cpf,ds_rg,ds_dpto,ds_email,
 ds_telefone,ds_telefonemovel,ds_cep,ds_complemento,ds_ncasa,dt_nascimento,ds_login,ds_senha, bt_permissaoadm , bt_permissaorh , bt_permissaofuncionario,vl_salariobruto) 
-VALUES("Carla","Cavalcanti","331.66699.42-6","772.480.108-80","17.284.238-4","T.I.",
-"carlateresinhamalucavalcanti-85@outlook.com.br",
+VALUES("Bia","Damasceno","331.66699.42-6","772.480.108-80","17.284.238-4","T.I.",
+"biadamasceno@outlook.com.br",
 "(11) 2786-1154","(11) 99788-6151","04169-970","Casa 1","508","1999/11/15","fun","12345", false ,false , true,"982");
 
  
