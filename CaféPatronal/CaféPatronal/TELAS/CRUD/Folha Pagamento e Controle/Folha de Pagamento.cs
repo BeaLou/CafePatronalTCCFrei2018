@@ -87,7 +87,7 @@ namespace CaféPatronal.TELAS.Fluxo_de_Caixa_e_Folha_de_Pagamento
                 FolhaPagamentoDTO dto = new FolhaPagamentoDTO();
                 FuncionarioDTO funcionario = cboFuncionario.SelectedItem as FuncionarioDTO;
 
-
+                dto.ds_mes = cbmes.Text;
                 dto.bt_valetransporte = chkVT.Checked;
                 dto.vl_fgts = FGTS;
                 dto.hr_horasextras = Convert.ToInt32(nudHorasExtras.Value);
@@ -402,6 +402,12 @@ namespace CaféPatronal.TELAS.Fluxo_de_Caixa_e_Folha_de_Pagamento
 
         }
 
-
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            FolhaPagamentoBusiness business = new FolhaPagamentoBusiness();
+            List<VwConsultarFolhapagamento> a = business.Consultarmes(txtConsultarFolha.Text);
+            dgvConsultarFolha.AutoGenerateColumns = false;
+            dgvConsultarFolha.DataSource = a;
+        }
     }
 }

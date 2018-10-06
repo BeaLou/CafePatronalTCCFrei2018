@@ -2,7 +2,6 @@
 create database DBcafe;
 use DBcafe;
 
-
 CREATE TABLE `tb_cliente` (
 	`id_cliente` INT NOT NULL AUTO_INCREMENT,
 	`nm_nome` varchar(20) NOT NULL,
@@ -83,23 +82,25 @@ CREATE TABLE `tb_produtoitem` (
 	PRIMARY KEY (`id_produtoitem`)
 );
 
-
-CREATE TABLE `tb_folhapagamento` (
-	`id_folhapagamento` INT NOT NULL AUTO_INCREMENT,
-	`id_funcionario` INT NOT NULL,
-	`hr_horasextras` INT NOT NULL,
-    `bt_valetransporte` BOOLEAN NOT NULL,
-    `vl_inss` DECIMAL NOT NULL,
-    `vl_ir` DECIMAL NOT NULL,
-    `vl_fgts` DECIMAL NOT NULL,
-    `vl_ValeTransporte` DECIMAL NOT NULL,
-    `vl_salarioliquido` DECIMAL NOT NULL,
-	PRIMARY KEY (`id_folhapagamento`)
+CREATE TABLE tb_folhapagamento (
+    id_folhapagamento INT NOT NULL AUTO_INCREMENT,
+    id_funcionario INT NOT NULL,
+    hr_horasextras INT NOT NULL,
+    bt_valetransporte BOOLEAN NOT NULL,
+    vl_inss DECIMAL NOT NULL,
+    vl_ir DECIMAL NOT NULL,
+    vl_fgts DECIMAL NOT NULL,
+    vl_ValeTransporte DECIMAL NOT NULL,
+    vl_salarioliquido DECIMAL NOT NULL,
+    ds_mes VARCHAR(100) NOT NULL,
+    PRIMARY KEY (id_folhapagamento)
 );
+
 
 create table `tb_dpto`(
 `nm_nome` varchar(30)
 );
+
 
 
 
@@ -117,6 +118,15 @@ ALTER TABLE `tb_produtoitem` ADD CONSTRAINT `tb_produtoitem_fk1` FOREIGN KEY (`i
 
 ALTER TABLE `tb_folhapagamento` ADD CONSTRAINT `tb_folhapagamento_fk0` FOREIGN KEY (`id_funcionario`) REFERENCES `tb_funcionario`(`id_funcionario`);
 
+
+Create view vw_consultar_folhapagamento as select
+tb_funcionario.nm_nome,
+tb_funcionario.ds_dpto,
+tb_folhapagamento.ds_mes,
+tb_folhapagamento.vl_salarioliquido
+from tb_funcionario
+JOIN tb_folhapagamento
+ON tb_folhapagamento.id_funcionario = tb_funcionario.id_funcionario;
 
 
 
@@ -143,18 +153,16 @@ insert into `tb_cliente`(nm_nome,nm_sobrenome,dt_datanascimento,ds_cpf,ds_email)
  insert into `tb_funcionario`(nm_nome,nm_sobrenome,ds_carteiratrabalho,ds_cpf,ds_rg,
 ds_dpto,ds_email,ds_telefone,ds_telefonemovel
 ,ds_cep,ds_complemento,ds_ncasa,dt_nascimento,
-ds_login,ds_senha, bt_permissaoadm , bt_permissaorh , bt_permissaofuncionario) 
+ds_login,ds_senha, bt_permissaoadm , bt_permissaorh , bt_permissaofuncionario,vl_salariobruto) 
 VALUES("Edson","Moreira","014.49834.44-0","557.819.658-66","21.040.731-1","ADM"
 ,"edsonfilipeandersonmoreira-71@hotmail.com.br","(11) 3870-7273","(11) 98668-5845"
-,"04763-020","Casa 1","563","1999/04/19","adm","1234", true , true , true);
+,"04763-020","Casa 1","563","1999/04/19","adm","1234", true , true , true,"901");
 
 insert into `tb_funcionario`(nm_nome,nm_sobrenome,ds_carteiratrabalho,ds_cpf,ds_rg,ds_dpto,ds_email,
-ds_telefone,ds_telefonemovel,ds_cep,ds_complemento,ds_ncasa,dt_nascimento,ds_login,ds_senha, bt_permissaoadm , bt_permissaorh , bt_permissaofuncionario) 
+ds_telefone,ds_telefonemovel,ds_cep,ds_complemento,ds_ncasa,dt_nascimento,ds_login,ds_senha, bt_permissaoadm , bt_permissaorh , bt_permissaofuncionario,vl_salariobruto) 
 VALUES("Carla","Cavalcanti","331.66699.42-6","772.480.108-80","17.284.238-4","T.I.",
 "carlateresinhamalucavalcanti-85@outlook.com.br",
-"(11) 2786-1154","(11) 99788-6151","04169-970","Casa 1","508","1999/11/15","fun","12345", false ,false , true);
-
- 
+"(11) 2786-1154","(11) 99788-6151","04169-970","Casa 1","508","1999/11/15","fun","12345", false ,false , true,"982");
 
  
 insert into  `tb_pedido`(id_cliente,vl_venda)VALUES("1","10.00");
@@ -215,4 +223,6 @@ insert into `tb_estoque`(id_produto,id_fornecedor,
 vl_compra,dt_datacompra,qtd_produtos,dt_validade) 
 VALUES ("8","1","90","2018/07/23","2","2018/10/4");
 
-select *  from tb_funcionario;
+
+
+select *  from tb_folhapagamento;

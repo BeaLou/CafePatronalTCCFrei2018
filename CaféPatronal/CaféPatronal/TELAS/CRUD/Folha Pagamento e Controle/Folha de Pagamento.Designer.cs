@@ -56,26 +56,12 @@
             this.txtFaltaSegSemana = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblCadastroCliente = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.btnSalvarControle = new System.Windows.Forms.Button();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.txtretoralmoco = new System.Windows.Forms.TextBox();
-            this.txthralmoco = new System.Windows.Forms.TextBox();
-            this.lblAlmocoE = new System.Windows.Forms.Label();
-            this.lblAlocoV = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txthrex = new System.Windows.Forms.TextBox();
-            this.txtHrExtra = new System.Windows.Forms.TextBox();
-            this.txtHrSaida = new System.Windows.Forms.TextBox();
-            this.txtHrEntrada = new System.Windows.Forms.TextBox();
-            this.dtpDia = new System.Windows.Forms.DateTimePicker();
-            this.lblDia = new System.Windows.Forms.Label();
-            this.lblHoraextraS = new System.Windows.Forms.Label();
-            this.lblEntrada = new System.Windows.Forms.Label();
-            this.lblHoraextraE = new System.Windows.Forms.Label();
-            this.lblHoraSaida = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblconsultadclientre = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label23 = new System.Windows.Forms.Label();
+            this.dgvConsultarFolha = new System.Windows.Forms.DataGridView();
+            this.btnConsultar = new System.Windows.Forms.Button();
+            this.txtConsultarFolha = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
@@ -107,13 +93,12 @@
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.btnApagar = new System.Windows.Forms.Button();
-            this.dgvConsultarFolha = new System.Windows.Forms.DataGridView();
-            this.btnConsultar = new System.Windows.Forms.Button();
-            this.txtConsultarFolha = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.cbmes = new System.Windows.Forms.ComboBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -121,13 +106,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudHorasTrabalhadas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHorasExtras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPorcentagem)).BeginInit();
-            this.tabPage2.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarFolha)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnVoltar
@@ -146,9 +127,8 @@
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(25, 22);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -157,11 +137,13 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.cbmes);
+            this.tabPage1.Controls.Add(this.label24);
             this.tabPage1.Controls.Add(this.btnSalvarFolhaPagamento);
             this.tabPage1.Controls.Add(this.btnVoltar);
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.lblCadastroCliente);
-            this.tabPage1.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -239,7 +221,7 @@
             this.lblSalarioLiquido.Location = new System.Drawing.Point(530, 353);
             this.lblSalarioLiquido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSalarioLiquido.Name = "lblSalarioLiquido";
-            this.lblSalarioLiquido.Size = new System.Drawing.Size(18, 25);
+            this.lblSalarioLiquido.Size = new System.Drawing.Size(19, 25);
             this.lblSalarioLiquido.TabIndex = 59;
             this.lblSalarioLiquido.Text = "-";
             // 
@@ -254,7 +236,7 @@
             0,
             0});
             this.nudHorasTrabalhadas.Name = "nudHorasTrabalhadas";
-            this.nudHorasTrabalhadas.Size = new System.Drawing.Size(191, 32);
+            this.nudHorasTrabalhadas.Size = new System.Drawing.Size(191, 31);
             this.nudHorasTrabalhadas.TabIndex = 41;
             // 
             // label21
@@ -265,7 +247,7 @@
             this.label21.Location = new System.Drawing.Point(17, 58);
             this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(130, 25);
+            this.label21.Size = new System.Drawing.Size(207, 25);
             this.label21.TabIndex = 52;
             this.label21.Text = "Horas Trabalhadas :";
             // 
@@ -277,7 +259,7 @@
             this.lblText.Location = new System.Drawing.Point(417, 353);
             this.lblText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblText.Name = "lblText";
-            this.lblText.Size = new System.Drawing.Size(105, 25);
+            this.lblText.Size = new System.Drawing.Size(167, 25);
             this.lblText.TabIndex = 58;
             this.lblText.Text = "Salário Líquido :";
             // 
@@ -299,7 +281,7 @@
             this.txtFaltasPriSemana.Location = new System.Drawing.Point(185, 93);
             this.txtFaltasPriSemana.Margin = new System.Windows.Forms.Padding(4);
             this.txtFaltasPriSemana.Name = "txtFaltasPriSemana";
-            this.txtFaltasPriSemana.Size = new System.Drawing.Size(190, 32);
+            this.txtFaltasPriSemana.Size = new System.Drawing.Size(190, 31);
             this.txtFaltasPriSemana.TabIndex = 42;
             // 
             // label22
@@ -310,7 +292,7 @@
             this.label22.Location = new System.Drawing.Point(38, 24);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(88, 25);
+            this.label22.Size = new System.Drawing.Size(137, 25);
             this.label22.TabIndex = 50;
             this.label22.Text = "Funcionário :";
             // 
@@ -322,7 +304,7 @@
             this.label20.Location = new System.Drawing.Point(-6, 93);
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(177, 25);
+            this.label20.Size = new System.Drawing.Size(278, 25);
             this.label20.TabIndex = 54;
             this.label20.Text = "Faltas na primeira semana :";
             // 
@@ -332,7 +314,7 @@
             this.txtFaltaQuarSemana.Location = new System.Drawing.Point(185, 215);
             this.txtFaltaQuarSemana.Margin = new System.Windows.Forms.Padding(4);
             this.txtFaltaQuarSemana.Name = "txtFaltaQuarSemana";
-            this.txtFaltaQuarSemana.Size = new System.Drawing.Size(191, 32);
+            this.txtFaltaQuarSemana.Size = new System.Drawing.Size(191, 31);
             this.txtFaltaQuarSemana.TabIndex = 45;
             // 
             // chkVT
@@ -344,7 +326,7 @@
             this.chkVT.Location = new System.Drawing.Point(39, 349);
             this.chkVT.Margin = new System.Windows.Forms.Padding(4);
             this.chkVT.Name = "chkVT";
-            this.chkVT.Size = new System.Drawing.Size(119, 29);
+            this.chkVT.Size = new System.Drawing.Size(174, 29);
             this.chkVT.TabIndex = 46;
             this.chkVT.Text = "Vale transporte";
             this.chkVT.UseVisualStyleBackColor = false;
@@ -357,7 +339,7 @@
             this.lblPorcentagem.Location = new System.Drawing.Point(33, 292);
             this.lblPorcentagem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPorcentagem.Name = "lblPorcentagem";
-            this.lblPorcentagem.Size = new System.Drawing.Size(98, 25);
+            this.lblPorcentagem.Size = new System.Drawing.Size(151, 25);
             this.lblPorcentagem.TabIndex = 53;
             this.lblPorcentagem.Text = "Porcentagem :";
             // 
@@ -370,7 +352,7 @@
             this.chkHoraExtra.Location = new System.Drawing.Point(209, 349);
             this.chkHoraExtra.Margin = new System.Windows.Forms.Padding(4);
             this.chkHoraExtra.Name = "chkHoraExtra";
-            this.chkHoraExtra.Size = new System.Drawing.Size(91, 29);
+            this.chkHoraExtra.Size = new System.Drawing.Size(128, 29);
             this.chkHoraExtra.TabIndex = 47;
             this.chkHoraExtra.Text = "Hora extra";
             this.chkHoraExtra.UseVisualStyleBackColor = false;
@@ -382,7 +364,7 @@
             this.nudHorasExtras.Location = new System.Drawing.Point(184, 255);
             this.nudHorasExtras.Margin = new System.Windows.Forms.Padding(4);
             this.nudHorasExtras.Name = "nudHorasExtras";
-            this.nudHorasExtras.Size = new System.Drawing.Size(191, 32);
+            this.nudHorasExtras.Size = new System.Drawing.Size(191, 31);
             this.nudHorasExtras.TabIndex = 48;
             // 
             // nudPorcentagem
@@ -392,7 +374,7 @@
             this.nudPorcentagem.Location = new System.Drawing.Point(185, 295);
             this.nudPorcentagem.Margin = new System.Windows.Forms.Padding(4);
             this.nudPorcentagem.Name = "nudPorcentagem";
-            this.nudPorcentagem.Size = new System.Drawing.Size(191, 32);
+            this.nudPorcentagem.Size = new System.Drawing.Size(191, 31);
             this.nudPorcentagem.TabIndex = 49;
             // 
             // lblHoraExtra
@@ -403,7 +385,7 @@
             this.lblHoraExtra.Location = new System.Drawing.Point(34, 261);
             this.lblHoraExtra.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHoraExtra.Name = "lblHoraExtra";
-            this.lblHoraExtra.Size = new System.Drawing.Size(97, 25);
+            this.lblHoraExtra.Size = new System.Drawing.Size(148, 25);
             this.lblHoraExtra.TabIndex = 51;
             this.lblHoraExtra.Text = "Horas Extras :";
             // 
@@ -415,7 +397,7 @@
             this.label19.Location = new System.Drawing.Point(1, 135);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(176, 25);
+            this.label19.Size = new System.Drawing.Size(284, 25);
             this.label19.TabIndex = 55;
             this.label19.Text = "Faltas na segunda semana :";
             // 
@@ -425,7 +407,7 @@
             this.txtFaltaTerSemana.Location = new System.Drawing.Point(184, 173);
             this.txtFaltaTerSemana.Margin = new System.Windows.Forms.Padding(4);
             this.txtFaltaTerSemana.Name = "txtFaltaTerSemana";
-            this.txtFaltaTerSemana.Size = new System.Drawing.Size(191, 32);
+            this.txtFaltaTerSemana.Size = new System.Drawing.Size(191, 31);
             this.txtFaltaTerSemana.TabIndex = 44;
             // 
             // label18
@@ -436,7 +418,7 @@
             this.label18.Location = new System.Drawing.Point(2, 180);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(174, 25);
+            this.label18.Size = new System.Drawing.Size(273, 25);
             this.label18.TabIndex = 56;
             this.label18.Text = "Faltas na terceira semana :";
             // 
@@ -446,7 +428,7 @@
             this.txtFaltaSegSemana.Location = new System.Drawing.Point(185, 133);
             this.txtFaltaSegSemana.Margin = new System.Windows.Forms.Padding(4);
             this.txtFaltaSegSemana.Name = "txtFaltaSegSemana";
-            this.txtFaltaSegSemana.Size = new System.Drawing.Size(191, 32);
+            this.txtFaltaSegSemana.Size = new System.Drawing.Size(191, 31);
             this.txtFaltaSegSemana.TabIndex = 43;
             // 
             // label2
@@ -457,7 +439,7 @@
             this.label2.Location = new System.Drawing.Point(7, 215);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(165, 25);
+            this.label2.Size = new System.Drawing.Size(262, 25);
             this.label2.TabIndex = 57;
             this.label2.Text = "Faltas na quarta semana :";
             // 
@@ -465,235 +447,94 @@
             // 
             this.lblCadastroCliente.AutoSize = true;
             this.lblCadastroCliente.BackColor = System.Drawing.Color.Transparent;
-            this.lblCadastroCliente.Font = new System.Drawing.Font("Agency FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadastroCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadastroCliente.Location = new System.Drawing.Point(6, 3);
             this.lblCadastroCliente.Name = "lblCadastroCliente";
-            this.lblCadastroCliente.Size = new System.Drawing.Size(189, 34);
+            this.lblCadastroCliente.Size = new System.Drawing.Size(353, 33);
             this.lblCadastroCliente.TabIndex = 4;
             this.lblCadastroCliente.Text = "FOLHA DE PAGAMENTO";
             // 
-            // tabPage2
+            // tabPage3
             // 
-            this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage2.Controls.Add(this.btnSalvarControle);
-            this.tabPage2.Controls.Add(this.groupBox4);
-            this.tabPage2.Controls.Add(this.groupBox3);
-            this.tabPage2.Controls.Add(this.pictureBox1);
-            this.tabPage2.Controls.Add(this.lblconsultadclientre);
-            this.tabPage2.Location = new System.Drawing.Point(4, 34);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1100, 450);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Controle";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage3.Controls.Add(this.label23);
+            this.tabPage3.Controls.Add(this.dgvConsultarFolha);
+            this.tabPage3.Controls.Add(this.btnConsultar);
+            this.tabPage3.Controls.Add(this.txtConsultarFolha);
+            this.tabPage3.Controls.Add(this.pictureBox2);
+            this.tabPage3.Controls.Add(this.label10);
+            this.tabPage3.Location = new System.Drawing.Point(4, 34);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1100, 450);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Consultar";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // btnSalvarControle
+            // label23
             // 
-            this.btnSalvarControle.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnSalvarControle.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalvarControle.FlatAppearance.BorderSize = 0;
-            this.btnSalvarControle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSalvarControle.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvarControle.Image")));
-            this.btnSalvarControle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalvarControle.Location = new System.Drawing.Point(966, 406);
-            this.btnSalvarControle.Name = "btnSalvarControle";
-            this.btnSalvarControle.Size = new System.Drawing.Size(126, 36);
-            this.btnSalvarControle.TabIndex = 68;
-            this.btnSalvarControle.Text = "Salvar";
-            this.btnSalvarControle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalvarControle.UseVisualStyleBackColor = false;
-            this.btnSalvarControle.Click += new System.EventHandler(this.btnSalvarControle_Click);
+            this.label23.AutoSize = true;
+            this.label23.BackColor = System.Drawing.Color.Transparent;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(12, 6);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(353, 33);
+            this.label23.TabIndex = 79;
+            this.label23.Text = "FOLHA DE PAGAMENTO";
             // 
-            // groupBox4
+            // dgvConsultarFolha
             // 
-            this.groupBox4.Controls.Add(this.txtretoralmoco);
-            this.groupBox4.Controls.Add(this.txthralmoco);
-            this.groupBox4.Controls.Add(this.lblAlmocoE);
-            this.groupBox4.Controls.Add(this.lblAlocoV);
-            this.groupBox4.Location = new System.Drawing.Point(462, 59);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(410, 125);
-            this.groupBox4.TabIndex = 62;
-            this.groupBox4.TabStop = false;
+            this.dgvConsultarFolha.AllowUserToAddRows = false;
+            this.dgvConsultarFolha.AllowUserToDeleteRows = false;
+            this.dgvConsultarFolha.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvConsultarFolha.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4});
+            this.dgvConsultarFolha.Location = new System.Drawing.Point(68, 104);
+            this.dgvConsultarFolha.Name = "dgvConsultarFolha";
+            this.dgvConsultarFolha.ReadOnly = true;
+            this.dgvConsultarFolha.Size = new System.Drawing.Size(910, 322);
+            this.dgvConsultarFolha.TabIndex = 77;
             // 
-            // txtretoralmoco
+            // btnConsultar
             // 
-            this.txtretoralmoco.Location = new System.Drawing.Point(177, 77);
-            this.txtretoralmoco.MaxLength = 20;
-            this.txtretoralmoco.Name = "txtretoralmoco";
-            this.txtretoralmoco.Size = new System.Drawing.Size(208, 32);
-            this.txtretoralmoco.TabIndex = 29;
+            this.btnConsultar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultar.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultar.Image")));
+            this.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsultar.Location = new System.Drawing.Point(528, 66);
+            this.btnConsultar.Name = "btnConsultar";
+            this.btnConsultar.Size = new System.Drawing.Size(106, 32);
+            this.btnConsultar.TabIndex = 76;
+            this.btnConsultar.Text = "Consultar";
+            this.btnConsultar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
-            // txthralmoco
+            // txtConsultarFolha
             // 
-            this.txthralmoco.Location = new System.Drawing.Point(177, 31);
-            this.txthralmoco.MaxLength = 20;
-            this.txthralmoco.Name = "txthralmoco";
-            this.txthralmoco.Size = new System.Drawing.Size(208, 32);
-            this.txthralmoco.TabIndex = 28;
+            this.txtConsultarFolha.BackColor = System.Drawing.Color.Ivory;
+            this.txtConsultarFolha.ForeColor = System.Drawing.SystemColors.Info;
+            this.txtConsultarFolha.Location = new System.Drawing.Point(66, 67);
+            this.txtConsultarFolha.MaxLength = 50;
+            this.txtConsultarFolha.Name = "txtConsultarFolha";
+            this.txtConsultarFolha.Size = new System.Drawing.Size(456, 31);
+            this.txtConsultarFolha.TabIndex = 75;
             // 
-            // lblAlmocoE
+            // pictureBox2
             // 
-            this.lblAlmocoE.AutoSize = true;
-            this.lblAlmocoE.BackColor = System.Drawing.Color.Transparent;
-            this.lblAlmocoE.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAlmocoE.Location = new System.Drawing.Point(15, 28);
-            this.lblAlmocoE.Name = "lblAlmocoE";
-            this.lblAlmocoE.Size = new System.Drawing.Size(156, 28);
-            this.lblAlmocoE.TabIndex = 20;
-            this.lblAlmocoE.Text = "Horário de Almoço:";
-            // 
-            // lblAlocoV
-            // 
-            this.lblAlocoV.AutoSize = true;
-            this.lblAlocoV.BackColor = System.Drawing.Color.Transparent;
-            this.lblAlocoV.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAlocoV.Location = new System.Drawing.Point(13, 81);
-            this.lblAlocoV.Name = "lblAlocoV";
-            this.lblAlocoV.Size = new System.Drawing.Size(158, 28);
-            this.lblAlocoV.TabIndex = 22;
-            this.lblAlocoV.Text = "Retorno do Almoço:";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.txthrex);
-            this.groupBox3.Controls.Add(this.txtHrExtra);
-            this.groupBox3.Controls.Add(this.txtHrSaida);
-            this.groupBox3.Controls.Add(this.txtHrEntrada);
-            this.groupBox3.Controls.Add(this.dtpDia);
-            this.groupBox3.Controls.Add(this.lblDia);
-            this.groupBox3.Controls.Add(this.lblHoraextraS);
-            this.groupBox3.Controls.Add(this.lblEntrada);
-            this.groupBox3.Controls.Add(this.lblHoraextraE);
-            this.groupBox3.Controls.Add(this.lblHoraSaida);
-            this.groupBox3.Location = new System.Drawing.Point(29, 59);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(398, 316);
-            this.groupBox3.TabIndex = 61;
-            this.groupBox3.TabStop = false;
-            // 
-            // txthrex
-            // 
-            this.txthrex.Location = new System.Drawing.Point(160, 255);
-            this.txthrex.MaxLength = 20;
-            this.txthrex.Name = "txthrex";
-            this.txthrex.Size = new System.Drawing.Size(208, 32);
-            this.txthrex.TabIndex = 30;
-            // 
-            // txtHrExtra
-            // 
-            this.txtHrExtra.Location = new System.Drawing.Point(160, 198);
-            this.txtHrExtra.MaxLength = 20;
-            this.txtHrExtra.Name = "txtHrExtra";
-            this.txtHrExtra.Size = new System.Drawing.Size(208, 32);
-            this.txtHrExtra.TabIndex = 29;
-            // 
-            // txtHrSaida
-            // 
-            this.txtHrSaida.Location = new System.Drawing.Point(160, 147);
-            this.txtHrSaida.MaxLength = 20;
-            this.txtHrSaida.Name = "txtHrSaida";
-            this.txtHrSaida.Size = new System.Drawing.Size(208, 32);
-            this.txtHrSaida.TabIndex = 28;
-            // 
-            // txtHrEntrada
-            // 
-            this.txtHrEntrada.Location = new System.Drawing.Point(160, 93);
-            this.txtHrEntrada.MaxLength = 20;
-            this.txtHrEntrada.Name = "txtHrEntrada";
-            this.txtHrEntrada.Size = new System.Drawing.Size(208, 32);
-            this.txtHrEntrada.TabIndex = 27;
-            // 
-            // dtpDia
-            // 
-            this.dtpDia.Location = new System.Drawing.Point(160, 46);
-            this.dtpDia.MaxDate = new System.DateTime(2050, 12, 31, 0, 0, 0, 0);
-            this.dtpDia.MinDate = new System.DateTime(1997, 1, 1, 0, 0, 0, 0);
-            this.dtpDia.Name = "dtpDia";
-            this.dtpDia.Size = new System.Drawing.Size(200, 32);
-            this.dtpDia.TabIndex = 14;
-            // 
-            // lblDia
-            // 
-            this.lblDia.AutoSize = true;
-            this.lblDia.BackColor = System.Drawing.Color.Transparent;
-            this.lblDia.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDia.Location = new System.Drawing.Point(92, 38);
-            this.lblDia.Name = "lblDia";
-            this.lblDia.Size = new System.Drawing.Size(39, 28);
-            this.lblDia.TabIndex = 13;
-            this.lblDia.Text = "Dia:";
-            // 
-            // lblHoraextraS
-            // 
-            this.lblHoraextraS.AutoSize = true;
-            this.lblHoraextraS.BackColor = System.Drawing.Color.Transparent;
-            this.lblHoraextraS.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHoraextraS.ForeColor = System.Drawing.Color.Black;
-            this.lblHoraextraS.Location = new System.Drawing.Point(21, 255);
-            this.lblHoraextraS.Name = "lblHoraextraS";
-            this.lblHoraextraS.Size = new System.Drawing.Size(140, 28);
-            this.lblHoraextraS.TabIndex = 26;
-            this.lblHoraextraS.Text = "Saída Hora Extra:";
-            // 
-            // lblEntrada
-            // 
-            this.lblEntrada.AutoSize = true;
-            this.lblEntrada.BackColor = System.Drawing.Color.Transparent;
-            this.lblEntrada.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEntrada.Location = new System.Drawing.Point(17, 87);
-            this.lblEntrada.Name = "lblEntrada";
-            this.lblEntrada.Size = new System.Drawing.Size(137, 28);
-            this.lblEntrada.TabIndex = 16;
-            this.lblEntrada.Text = "Hora de Entrada:";
-            // 
-            // lblHoraextraE
-            // 
-            this.lblHoraextraE.AutoSize = true;
-            this.lblHoraextraE.BackColor = System.Drawing.Color.Transparent;
-            this.lblHoraextraE.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHoraextraE.Location = new System.Drawing.Point(42, 202);
-            this.lblHoraextraE.Name = "lblHoraextraE";
-            this.lblHoraextraE.Size = new System.Drawing.Size(94, 28);
-            this.lblHoraextraE.TabIndex = 24;
-            this.lblHoraextraE.Text = "Hora Extra:";
-            // 
-            // lblHoraSaida
-            // 
-            this.lblHoraSaida.AutoSize = true;
-            this.lblHoraSaida.BackColor = System.Drawing.Color.Transparent;
-            this.lblHoraSaida.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHoraSaida.ForeColor = System.Drawing.Color.Black;
-            this.lblHoraSaida.Location = new System.Drawing.Point(33, 148);
-            this.lblHoraSaida.Name = "lblHoraSaida";
-            this.lblHoraSaida.Size = new System.Drawing.Size(121, 28);
-            this.lblHoraSaida.TabIndex = 18;
-            this.lblHoraSaida.Text = "Hora de Saída:";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::CaféPatronal.Properties.Resources.icon3;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Location = new System.Drawing.Point(1033, 8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(59, 57);
-            this.pictureBox1.TabIndex = 29;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // lblconsultadclientre
-            // 
-            this.lblconsultadclientre.AutoSize = true;
-            this.lblconsultadclientre.BackColor = System.Drawing.Color.Transparent;
-            this.lblconsultadclientre.Font = new System.Drawing.Font("Agency FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblconsultadclientre.Location = new System.Drawing.Point(2, 8);
-            this.lblconsultadclientre.Name = "lblconsultadclientre";
-            this.lblconsultadclientre.Size = new System.Drawing.Size(95, 34);
-            this.lblconsultadclientre.TabIndex = 12;
-            this.lblconsultadclientre.Text = "CONTROLE\r\n";
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImage = global::CaféPatronal.Properties.Resources.icon3;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Location = new System.Drawing.Point(1035, 6);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(59, 57);
+            this.pictureBox2.TabIndex = 74;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label10
             // 
@@ -997,97 +838,73 @@
             this.textBox10.TabIndex = 28;
             this.textBox10.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInss_KeyPress);
             // 
-            // pictureBox2
+            // label24
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BackgroundImage = global::CaféPatronal.Properties.Resources.icon3;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Location = new System.Drawing.Point(1035, 6);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(59, 57);
-            this.pictureBox2.TabIndex = 74;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.label24.AutoSize = true;
+            this.label24.BackColor = System.Drawing.Color.Transparent;
+            this.label24.ForeColor = System.Drawing.Color.Black;
+            this.label24.Location = new System.Drawing.Point(691, 74);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(65, 25);
+            this.label24.TabIndex = 61;
+            this.label24.Text = "Mês :";
             // 
-            // tabPage3
+            // cbmes
             // 
-            this.tabPage3.Controls.Add(this.label23);
-            this.tabPage3.Controls.Add(this.btnApagar);
-            this.tabPage3.Controls.Add(this.dgvConsultarFolha);
-            this.tabPage3.Controls.Add(this.btnConsultar);
-            this.tabPage3.Controls.Add(this.txtConsultarFolha);
-            this.tabPage3.Controls.Add(this.pictureBox2);
-            this.tabPage3.Controls.Add(this.label10);
-            this.tabPage3.Location = new System.Drawing.Point(4, 34);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1100, 450);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Consultar";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.cbmes.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbmes.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbmes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbmes.FormattingEnabled = true;
+            this.cbmes.Items.AddRange(new object[] {
+            "Janeiro",
+            "Fevereiro",
+            "Março",
+            "Abril",
+            "Maio",
+            "Junho",
+            "Julho",
+            "Agosto",
+            "Setembro",
+            "Outubro",
+            "Novembro",
+            "Dezembro"});
+            this.cbmes.Location = new System.Drawing.Point(780, 74);
+            this.cbmes.Name = "cbmes";
+            this.cbmes.Size = new System.Drawing.Size(188, 24);
+            this.cbmes.TabIndex = 68;
             // 
-            // btnApagar
+            // Column1
             // 
-            this.btnApagar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnApagar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnApagar.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnApagar.Image = ((System.Drawing.Image)(resources.GetObject("btnApagar.Image")));
-            this.btnApagar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnApagar.Location = new System.Drawing.Point(641, 65);
-            this.btnApagar.Name = "btnApagar";
-            this.btnApagar.Size = new System.Drawing.Size(104, 33);
-            this.btnApagar.TabIndex = 78;
-            this.btnApagar.Text = "Apagar";
-            this.btnApagar.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.btnApagar.UseVisualStyleBackColor = true;
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.DataPropertyName = "Nome";
+            this.Column1.HeaderText = "Nome";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
-            // dgvConsultarFolha
+            // Column2
             // 
-            this.dgvConsultarFolha.AllowUserToAddRows = false;
-            this.dgvConsultarFolha.AllowUserToDeleteRows = false;
-            this.dgvConsultarFolha.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvConsultarFolha.Location = new System.Drawing.Point(68, 104);
-            this.dgvConsultarFolha.Name = "dgvConsultarFolha";
-            this.dgvConsultarFolha.ReadOnly = true;
-            this.dgvConsultarFolha.Size = new System.Drawing.Size(910, 322);
-            this.dgvConsultarFolha.TabIndex = 77;
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.DataPropertyName = "Departamento";
+            this.Column2.HeaderText = "Departamento";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
-            // btnConsultar
+            // Column3
             // 
-            this.btnConsultar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultar.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultar.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultar.Image")));
-            this.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultar.Location = new System.Drawing.Point(528, 66);
-            this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(106, 32);
-            this.btnConsultar.TabIndex = 76;
-            this.btnConsultar.Text = "Consultar";
-            this.btnConsultar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnConsultar.UseVisualStyleBackColor = true;
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.DataPropertyName = "Mês";
+            this.Column3.HeaderText = "Mês";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
-            // txtConsultarFolha
+            // Column4
             // 
-            this.txtConsultarFolha.BackColor = System.Drawing.Color.Ivory;
-            this.txtConsultarFolha.ForeColor = System.Drawing.SystemColors.Info;
-            this.txtConsultarFolha.Location = new System.Drawing.Point(66, 67);
-            this.txtConsultarFolha.MaxLength = 50;
-            this.txtConsultarFolha.Name = "txtConsultarFolha";
-            this.txtConsultarFolha.Size = new System.Drawing.Size(456, 32);
-            this.txtConsultarFolha.TabIndex = 75;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.BackColor = System.Drawing.Color.Transparent;
-            this.label23.Font = new System.Drawing.Font("Agency FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(12, 6);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(189, 34);
-            this.label23.TabIndex = 79;
-            this.label23.Text = "FOLHA DE PAGAMENTO";
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column4.DataPropertyName = "SalarioLiquido";
+            this.Column4.HeaderText = "Salário Líquido";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // Folha_de_Pagamento
             // 
@@ -1111,17 +928,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudHorasTrabalhadas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHorasExtras)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPorcentagem)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarFolha)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1132,27 +942,7 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label lblCadastroCliente;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Label lblconsultadclientre;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblEntrada;
-        private System.Windows.Forms.Label lblHoraSaida;
-        private System.Windows.Forms.Label lblAlmocoE;
-        private System.Windows.Forms.Label lblAlocoV;
-        private System.Windows.Forms.Label lblHoraextraE;
-        private System.Windows.Forms.Label lblHoraextraS;
-        private System.Windows.Forms.DateTimePicker dtpDia;
-        private System.Windows.Forms.Label lblDia;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox txtretoralmoco;
-        private System.Windows.Forms.TextBox txthralmoco;
-        private System.Windows.Forms.TextBox txthrex;
-        private System.Windows.Forms.TextBox txtHrExtra;
-        private System.Windows.Forms.TextBox txtHrSaida;
-        private System.Windows.Forms.TextBox txtHrEntrada;
         private System.Windows.Forms.Button btnSalvarFolhaPagamento;
-        private System.Windows.Forms.Button btnSalvarControle;
         private System.Windows.Forms.Button btnCalcular;
         private System.Windows.Forms.Label lblSalarioLiquido;
         private System.Windows.Forms.Label lblText;
@@ -1208,9 +998,14 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Button btnApagar;
         private System.Windows.Forms.DataGridView dgvConsultarFolha;
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.TextBox txtConsultarFolha;
+        private System.Windows.Forms.ComboBox cbmes;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }

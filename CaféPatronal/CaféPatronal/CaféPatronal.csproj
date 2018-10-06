@@ -67,6 +67,7 @@
     <Compile Include="Programacao\FolhaPagamento\FolhaPagamentoBusiness.cs" />
     <Compile Include="Programacao\FolhaPagamento\FolhaPagamentoDatabase.cs" />
     <Compile Include="Programacao\FolhaPagamento\FolhaPagamentoDTO.cs" />
+    <Compile Include="Programacao\FolhaPagamento\VwConsultarFolhapagamento.cs" />
     <Compile Include="Programacao\Fornecedor\FornecedorBusiness.cs" />
     <Compile Include="Programacao\Fornecedor\FornecedorDTO.cs" />
     <Compile Include="Programacao\Fornecedor\FornecedorDatabase.cs" />

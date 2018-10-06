@@ -25,5 +25,6 @@ namespace CaféPatronal.Programacao.FolhaPagamento
         public decimal vl_ValeTransporte { get; set; }
 
         public decimal vl_salarioliquido { get; set; }
+        public string ds_mes { get; set; }
     }
 }
