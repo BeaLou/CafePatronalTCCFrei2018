@@ -28,5 +28,7 @@ namespace CaféPatronal.Programacao.Funcionario
         public bool bt_permissaoadm { get; set; }
         public bool bt_permissaorh { get; set; }
         public bool bt_permissaofuncionario { get; set; }
+
+        public decimal vl_salariobruto { get; set; }
     }
 }

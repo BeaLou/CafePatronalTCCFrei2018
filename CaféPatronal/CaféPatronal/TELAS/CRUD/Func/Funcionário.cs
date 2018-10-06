@@ -101,6 +101,7 @@ namespace CaféPatronal.TELAS.Cadastro_e_Consulta
                 dto.ds_cep = mtbCep.Text;
                 dto.ds_complemento = txtComplemento.Text;
                 dto.ds_ncasa = txtNumero.Text;
+                dto.vl_salariobruto = Convert.ToDecimal(txtsalariobruto.Text);
 
 
                 FuncionarioBusiness business = new FuncionarioBusiness();
@@ -120,6 +121,7 @@ namespace CaféPatronal.TELAS.Cadastro_e_Consulta
                 mtbCep.Text = "";
                 txtComplemento.Text = "";
                 txtNumero.Text = "";
+                txtsalariobruto.Clear();
             }
 
             catch (Exception ex)

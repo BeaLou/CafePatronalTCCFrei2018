@@ -33,6 +33,8 @@ CREATE TABLE `tb_funcionario` (
 	`bt_permissaoadm` BOOLEAN ,
 	`bt_permissaorh` BOOLEAN ,
 	`bt_permissaofuncionario` BOOLEAN ,
+    `vl_salariobruto` DECIMAL ,
+    
 	PRIMARY KEY (`id_funcionario`)
 );
 
@@ -81,52 +83,18 @@ CREATE TABLE `tb_produtoitem` (
 	PRIMARY KEY (`id_produtoitem`)
 );
 
+
 CREATE TABLE `tb_folhapagamento` (
 	`id_folhapagamento` INT NOT NULL AUTO_INCREMENT,
-	`id_folhaproduto` INT NOT NULL,
-	`ds_inss` DECIMAL NOT NULL,
-	`ds_valealimentacao` DECIMAL NOT NULL,
-	`ds_valerefeicao` DECIMAL NOT NULL,
-	`ds_valetransporte` DECIMAL NOT NULL,
-	`ds_convenio` DECIMAL NOT NULL,
-	`ds_agua` DECIMAL NOT NULL,
-	`ds_luz` DECIMAL NOT NULL,
-	`ds_telefonnet` DECIMAL NOT NULL,
-	PRIMARY KEY (`id_folhapagamento`)
-);
-
-create table `tb_controlefolhapagamento` ( 
-`id_controlefolhapagamento` int not null auto_increment,
-`dt_dia` datetime not null,
-`hr_entrada` datetime not null,
-`hr_saida` datetime not null,
-`hr_almoco` datetime not null,
-`hr_retornoalmoco` datetime not null,
-`hr_horaextra` datetime not null,
-`hr_saidahoraextra` datetime not null,
-primary key (`id_controlefolhapagamento`)
-);
-
-CREATE TABLE `tb_folhadeponto` (
-	`id_folhaponto` INT NOT NULL AUTO_INCREMENT,
-	`id_controledeponto` INT NOT NULL,
-	`dt_mes` DATE NOT NULL,
-	`hr_totalhoras` TIME NOT NULL,
-	PRIMARY KEY (`id_folhaponto`)
-);
-
-
-CREATE TABLE `tb_controledeponto` (
-	`id_controleponto` INT NOT NULL AUTO_INCREMENT,
 	`id_funcionario` INT NOT NULL,
-	`dt_dia` DATE NOT NULL,
-	`hr_entrada` TIME NOT NULL,
-	`hr_saidaalmoco` TIME NOT NULL,
-	`hr_retornoalmoco` TIME NOT NULL,
-	`hr_saida` TIME NOT NULL,
-	`hr_extra` TIME NOT NULL,
-	`hr_extrasaida` TIME NOT NULL,
-	PRIMARY KEY (`id_controleponto`)
+	`hr_horasextras` INT NOT NULL,
+    `bt_valetransporte` BOOLEAN NOT NULL,
+    `vl_inss` DECIMAL NOT NULL,
+    `vl_ir` DECIMAL NOT NULL,
+    `vl_fgts` DECIMAL NOT NULL,
+    `vl_ValeTransporte` DECIMAL NOT NULL,
+    `vl_salarioliquido` DECIMAL NOT NULL,
+	PRIMARY KEY (`id_folhapagamento`)
 );
 
 create table `tb_dpto`(
@@ -147,11 +115,9 @@ ALTER TABLE `tb_produtoitem` ADD CONSTRAINT `tb_produtoitem_fk0` FOREIGN KEY (`i
 
 ALTER TABLE `tb_produtoitem` ADD CONSTRAINT `tb_produtoitem_fk1` FOREIGN KEY (`id_pedido`) REFERENCES `tb_pedido`(`id_pedido`);
 
-ALTER TABLE `tb_folhapagamento` ADD CONSTRAINT `tb_folhapagamento_fk0` FOREIGN KEY (`id_folhaproduto`) REFERENCES `tb_folhadeponto`(`id_folhaponto`);
+ALTER TABLE `tb_folhapagamento` ADD CONSTRAINT `tb_folhapagamento_fk0` FOREIGN KEY (`id_funcionario`) REFERENCES `tb_funcionario`(`id_funcionario`);
 
-ALTER TABLE `tb_folhadeponto` ADD CONSTRAINT `tb_folhadeponto_fk0` FOREIGN KEY (`id_controledeponto`) REFERENCES `tb_controledeponto`(`id_controleponto`);
 
-ALTER TABLE `tb_controledeponto` ADD CONSTRAINT `tb_controledeponto_fk0` FOREIGN KEY (`id_funcionario`) REFERENCES `tb_funcionario`(`id_funcionario`);
 
 
 insert into `tb_dpto`(nm_nome) values ("T.I.");
@@ -189,41 +155,7 @@ VALUES("Carla","Cavalcanti","331.66699.42-6","772.480.108-80","17.284.238-4","T.
 "(11) 2786-1154","(11) 99788-6151","04169-970","Casa 1","508","1999/11/15","fun","12345", false ,false , true);
 
  
- insert into tb_controledeponto (id_controleponto,id_funcionario, dt_dia, hr_entrada, hr_saidaalmoco,hr_retornoalmoco,
-hr_saida, hr_extra,hr_extrasaida) values ('1','1','2018/09/17','8:00','12:00','13:00','17:00','0','0');
-insert into tb_controledeponto (id_controleponto,id_funcionario, dt_dia, hr_entrada, hr_saidaalmoco,hr_retornoalmoco,
-hr_saida, hr_extra,hr_extrasaida) values ('2','1','2018/09/16','8:00','12:00','13:00','17:00','0','0');
-insert into tb_controledeponto (id_controleponto,id_funcionario, dt_dia, hr_entrada, hr_saidaalmoco,hr_retornoalmoco,
-hr_saida, hr_extra,hr_extrasaida) values ('3','1','2018/09/15','8:00','12:00','13:00','17:00','0','0');
-insert into tb_controledeponto (id_controleponto,id_funcionario, dt_dia, hr_entrada, hr_saidaalmoco,hr_retornoalmoco,
-hr_saida, hr_extra,hr_extrasaida) values ('4','1','2018/09/14','8:00','12:00','13:00','17:00','0','0');
-insert into tb_controledeponto (id_controleponto,id_funcionario, dt_dia, hr_entrada, hr_saidaalmoco,hr_retornoalmoco,
-hr_saida, hr_extra,hr_extrasaida) values ('5','1','2018/09/17','8:00','12:00','13:00','17:00','18:00','20:00');
-insert into tb_controledeponto (id_controleponto,id_funcionario, dt_dia, hr_entrada, hr_saidaalmoco,hr_retornoalmoco,
-hr_saida, hr_extra,hr_extrasaida) values ('6','1','2018/09/16','8:00','12:00','13:00','17:00','18:00','20:00');
-insert into tb_controledeponto (id_controleponto,id_funcionario, dt_dia, hr_entrada, hr_saidaalmoco,hr_retornoalmoco,
-hr_saida, hr_extra,hr_extrasaida) values ('7','1','2018/09/15','8:00','12:00','13:00','17:00','0','0');
-insert into tb_controledeponto (id_controleponto,id_funcionario, dt_dia, hr_entrada, hr_saidaalmoco,hr_retornoalmoco,
-hr_saida, hr_extra,hr_extrasaida) values ('8','1','2018/09/14','8:00','12:00','13:00','17:00','0','0');
-insert into tb_controledeponto (id_controleponto,id_funcionario, dt_dia, hr_entrada, hr_saidaalmoco,hr_retornoalmoco,
-hr_saida, hr_extra,hr_extrasaida) values ('9','1','2018/09/13','8:00','12:00','13:00','17:00','0','0');
-insert into tb_controledeponto (id_controleponto,id_funcionario, dt_dia, hr_entrada, hr_saidaalmoco,hr_retornoalmoco,
-hr_saida, hr_extra,hr_extrasaida) values ('10','1','2018/09/17','8:00','12:00','13:00','17:00','0','0');
-insert into tb_controledeponto (id_controleponto,id_funcionario, dt_dia, hr_entrada, hr_saidaalmoco,hr_retornoalmoco,
-hr_saida, hr_extra,hr_extrasaida) values ('11','1','2018/09/16','8:00','12:00','13:00','17:00','0','0');
-insert into tb_controledeponto (id_controleponto,id_funcionario, dt_dia, hr_entrada, hr_saidaalmoco,hr_retornoalmoco,
-hr_saida, hr_extra,hr_extrasaida) values ('12','1','2018/09/15','8:00','12:00','13:00','17:00','0','0');
-insert into tb_controledeponto (id_controleponto,id_funcionario, dt_dia, hr_entrada, hr_saidaalmoco,hr_retornoalmoco,
-hr_saida, hr_extra,hr_extrasaida) values ('13
-','1','2018/09/14','8:00','12:00','13:00','17:00','0','0');
-insert into tb_controledeponto (id_controleponto,id_funcionario, dt_dia, hr_entrada, hr_saidaalmoco,hr_retornoalmoco,
-hr_saida, hr_extra,hr_extrasaida) values ('14','1','2018/09/13','8:00','12:00','13:00','17:00','0','0');
-insert into tb_controledeponto (id_controleponto,id_funcionario, dt_dia, hr_entrada, hr_saidaalmoco,hr_retornoalmoco,
-hr_saida, hr_extra,hr_extrasaida) values ('15','1','2018/09/11','8:00','12:00','13:00','17:00','0','0');
 
-insert into tb_folhadeponto(id_folhaponto,
-id_controledeponto,dt_mes,hr_totalhoras) 
-values ('1','1','2018/09/17','20:00');
  
 insert into  `tb_pedido`(id_cliente,vl_venda)VALUES("1","10.00");
 insert into  `tb_pedido`(id_cliente,vl_venda)VALUES("2","20.00");

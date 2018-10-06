@@ -43,6 +43,7 @@ namespace CaféPatronal.Programacao.Funcionario
                 funcionario.bt_permissaoadm = reader.GetBoolean("bt_permissaoadm");
                 funcionario.bt_permissaorh = reader.GetBoolean("bt_permissaorh");
                 funcionario.bt_permissaofuncionario = reader.GetBoolean("bt_permissaofuncionario");
+                funcionario.vl_salariobruto = reader.GetDecimal("vl_salariobruto");
 
             }
             reader.Close();
@@ -52,7 +53,7 @@ namespace CaféPatronal.Programacao.Funcionario
         public int Salvar(FuncionarioDTO funcionario)
         {
             string script =
-                @"INSERT INTO tb_funcionario
+                 @"INSERT INTO tb_funcionario
                 (
                  id_funcionario,
                  
@@ -73,7 +74,8 @@ namespace CaféPatronal.Programacao.Funcionario
                  ds_senha,
                  bt_permissaoadm,
                  bt_permissaorh,
-                 bt_permissaofuncionario
+                 bt_permissaofuncionario,
+                 vl_salariobruto
                 )
                 VALUES
                 (
@@ -96,7 +98,8 @@ namespace CaféPatronal.Programacao.Funcionario
                  @ds_senha,
                  @bt_permissaoadm,
                  @bt_permissaorh,
-                 @bt_permissaofuncionario
+                 @bt_permissaofuncionario,
+                 @vl_salariobruto 
                 )";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
@@ -120,6 +123,7 @@ namespace CaféPatronal.Programacao.Funcionario
             parms.Add(new MySqlParameter("bt_permissaoadm", funcionario.bt_permissaoadm));
             parms.Add(new MySqlParameter("bt_permissaorh", funcionario.bt_permissaorh));
             parms.Add(new MySqlParameter("bt_permissaofuncionario", funcionario.bt_permissaofuncionario));
+            parms.Add(new MySqlParameter("vl_salariobruto", funcionario.vl_salariobruto));
             Database db = new Database();
             int pk = db.ExecuteInsertScriptWithPk(script, parms);
             return pk;
@@ -128,7 +132,7 @@ namespace CaféPatronal.Programacao.Funcionario
         public void Alterar(FuncionarioDTO funcionario)
         {
             string script =
-            @"UPDATE tb_funcionario
+           @"UPDATE tb_funcionario
                  SET
                  nm_nome = @nm_nome,
                  nm_sobrenome = @nm_sobrenome,
@@ -147,7 +151,8 @@ namespace CaféPatronal.Programacao.Funcionario
                  ds_senha = @ds_senha,
                  bt_permissaoadm = @bt_permissaoadm,
                  bt_permissaorh = @bt_permissaorh,
-                 bt_permissaofuncionario = @bt_permissaofuncionario
+                 bt_permissaofuncionario = @bt_permissaofuncionario,
+                 vl_salariobruto = @vl_salariobruto
                  WHERE id_funcionario = @id_funcionario";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
@@ -171,6 +176,8 @@ namespace CaféPatronal.Programacao.Funcionario
             parms.Add(new MySqlParameter("bt_permissaoadm", funcionario.bt_permissaoadm));
             parms.Add(new MySqlParameter("bt_permissaorh", funcionario.bt_permissaorh));
             parms.Add(new MySqlParameter("bt_permissaofuncionario", funcionario.bt_permissaofuncionario));
+            parms.Add(new MySqlParameter("vl_salariobruto", funcionario.vl_salariobruto));
+
 
             Database db = new Database();
             db.ExecuteInsertScript(script, parms);
@@ -223,6 +230,7 @@ namespace CaféPatronal.Programacao.Funcionario
                 novofuncionario.bt_permissaoadm = reader.GetBoolean("bt_permissaoadm");
                 novofuncionario.bt_permissaorh = reader.GetBoolean("bt_permissaorh");
                 novofuncionario.bt_permissaofuncionario = reader.GetBoolean("bt_permissaofuncionario");
+                novofuncionario.vl_salariobruto = reader.GetDecimal("vl_salariobruto");
 
                 funcionarios.Add(novofuncionario);
 
@@ -265,6 +273,7 @@ namespace CaféPatronal.Programacao.Funcionario
                 novofuncionario.bt_permissaoadm = reader.GetBoolean("bt_permissaoadm");
                 novofuncionario.bt_permissaorh = reader.GetBoolean("bt_permissaorh");
                 novofuncionario.bt_permissaofuncionario = reader.GetBoolean("bt_permissaofuncionario");
+                novofuncionario.vl_salariobruto = reader.GetDecimal("vl_salariobruto");
 
                 funcionarios.Add(novofuncionario);
 
