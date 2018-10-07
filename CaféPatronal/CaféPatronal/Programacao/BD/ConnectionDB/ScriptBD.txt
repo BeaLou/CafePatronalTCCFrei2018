@@ -24,7 +24,7 @@ CREATE TABLE `tb_funcionario` (
 	`ds_telefone` varchar(20) NOT NULL,
 	`ds_telefonemovel` varchar(20) NOT NULL UNIQUE,
 	`ds_cep` varchar(10) NOT NULL,
-	`ds_complemento` varchar(20) NOT NULL,
+	`ds_complemento` varchar(20),
 	`ds_ncasa` varchar(20) NOT NULL,
 	`dt_nascimento` DATE NOT NULL,
 	`ds_login` varchar(20) NOT NULL,
@@ -32,7 +32,7 @@ CREATE TABLE `tb_funcionario` (
 	`bt_permissaoadm` BOOLEAN ,
 	`bt_permissaorh` BOOLEAN ,
 	`bt_permissaofuncionario` BOOLEAN ,
-    `vl_salariobruto` DECIMAL ,
+    `vl_salariobruto` DECIMAL(10,2),
     
 	PRIMARY KEY (`id_funcionario`)
 );
@@ -83,19 +83,18 @@ CREATE TABLE `tb_produtoitem` (
 );
 
 CREATE TABLE tb_folhapagamento (
-    id_folhapagamento INT NOT NULL AUTO_INCREMENT,
-    id_funcionario INT NOT NULL,
-    hr_horasextras INT NOT NULL,
-    bt_valetransporte BOOLEAN NOT NULL,
-    vl_inss DECIMAL NOT NULL,
-    vl_ir DECIMAL NOT NULL,
-    vl_fgts DECIMAL NOT NULL,
-    vl_ValeTransporte DECIMAL NOT NULL,
-    vl_salarioliquido DECIMAL NOT NULL,
-    ds_mes VARCHAR(100) NOT NULL,
+    `id_folhapagamento` INT NOT NULL AUTO_INCREMENT,
+    `id_funcionario` INT NOT NULL,
+    `hr_horasextras` INT NOT NULL,
+    `bt_valetransporte` BOOLEAN NOT NULL,
+    `vl_inss` DECIMAL NOT NULL,
+    `vl_ir` DECIMAL NOT NULL,
+    `vl_fgts` DECIMAL NOT NULL,
+    `vl_ValeTransporte` DECIMAL NOT NULL,
+    `vl_salarioliquido` DECIMAL NOT NULL,
+    `ds_mes` varchar (20) NOT NULL,
     PRIMARY KEY (id_folhapagamento)
 );
-
 
 create table `tb_dpto`(
 `nm_nome` varchar(30)
@@ -154,15 +153,15 @@ insert into `tb_cliente`(nm_nome,nm_sobrenome,dt_datanascimento,ds_cpf,ds_email)
 ds_dpto,ds_email,ds_telefone,ds_telefonemovel
 ,ds_cep,ds_complemento,ds_ncasa,dt_nascimento,
 ds_login,ds_senha, bt_permissaoadm , bt_permissaorh , bt_permissaofuncionario,vl_salariobruto) 
-VALUES("Barbara","Florêncio","014.49834.44-0","557.819.658-66","21.040.731-1","ADM"
-,"barbaflorencio@hotmail.com.br","(11) 3870-7273","(11) 98668-5845"
-,"04763-020","Casa 1","563","1999/04/19","adm","1234", true , true , true,"901");
+VALUES("Ana","Carolina","014.49834.44-0","557.819.658-66","21.040.731-1","ADM"
+,"anacarolina@hotmail.com.br","(11) 3870-7273","(11) 98668-5845"
+,"04763-020","Casa 1","563","1999/04/19","adm","1234", true , true , true,'901.32');
 
 insert into `tb_funcionario`(nm_nome,nm_sobrenome,ds_carteiratrabalho,ds_cpf,ds_rg,ds_dpto,ds_email,
 ds_telefone,ds_telefonemovel,ds_cep,ds_complemento,ds_ncasa,dt_nascimento,ds_login,ds_senha, bt_permissaoadm , bt_permissaorh , bt_permissaofuncionario,vl_salariobruto) 
-VALUES("Bia","Damasceno","331.66699.42-6","772.480.108-80","17.284.238-4","T.I.",
-"biadamasceno@outlook.com.br",
-"(11) 2786-1154","(11) 99788-6151","04169-970","Casa 1","508","1999/11/15","fun","12345", false ,false , true,"982");
+VALUES("Samira","Dias","331.66699.42-6","772.480.108-80","17.284.238-4","T.I.",
+"samiradias@outlook.com.br",
+"(11) 2786-1154","(11) 99788-6151","04169-970","Casa 1","508","1999/11/15","Funcionario","12345", false ,false , true,"2400.64");
 
  
 insert into  `tb_pedido`(id_cliente,vl_venda)VALUES("1","10.00");
@@ -225,4 +224,4 @@ VALUES ("8","1","90","2018/07/23","2","2018/10/4");
 
 
 
-select *  from tb_folhapagamento;
+select *  from tb_funcionario;

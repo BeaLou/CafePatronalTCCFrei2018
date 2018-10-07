@@ -95,6 +95,7 @@
     <Compile Include="Programacao\Entregável 2\Produto\ProdutoBusiness.cs" />
     <Compile Include="Programacao\Entregável 2\Produto\ProdutoDatabase.cs" />
     <Compile Include="Programacao\Entregável 2\Produto\ProdutoDTO.cs" />
+    <Compile Include="Programacao\Objetos\FolhaPagamento.cs" />
     <Compile Include="Programacao\Objetos\UserSession.cs" />
     <Compile Include="Programacao\Objetos\Validação.cs" />
     <Compile Include="TELAS\CRUD\Clientesss\AlterarCliente.cs">

@@ -2,6 +2,7 @@
 using CaféPatronal.Programacao.ControlePagamento;
 using CaféPatronal.Programacao.FolhaPagamento;
 using CaféPatronal.Programacao.Funcionario;
+using CaféPatronal.Programacao.Objetos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,7 @@ namespace CaféPatronal.TELAS.Fluxo_de_Caixa_e_Folha_de_Pagamento
     public partial class Folha_de_Pagamento : Form
     {
         Validação V = new Validação();
+        FolhaPagamento folhapagamento = new FolhaPagamento();
         public Folha_de_Pagamento()
         {
             InitializeComponent();
@@ -29,7 +31,7 @@ namespace CaféPatronal.TELAS.Fluxo_de_Caixa_e_Folha_de_Pagamento
             nudHorasExtras.Visible = false;
             CarregarCombo();
         }
-        decimal ValordeDesconto;
+        
         void CarregarCombo()
         {
             FuncionarioBusiness business = new FuncionarioBusiness();
@@ -116,7 +118,7 @@ namespace CaféPatronal.TELAS.Fluxo_de_Caixa_e_Folha_de_Pagamento
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ocorreu um erro " + ex.Message);
+                MessageBox.Show("Ocorreu um erro: " + ex.Message);
             }
         }
 
@@ -125,28 +127,28 @@ namespace CaféPatronal.TELAS.Fluxo_de_Caixa_e_Folha_de_Pagamento
             int ht = Convert.ToInt32(nudHorasTrabalhadas.Value);
             int he = Convert.ToInt32(nudHorasExtras.Value);
             decimal porcentagem = nudPorcentagem.Value;
-            int diastrabalhados = CalcularDiasTrabalhados(Convert.ToInt32(txtFaltasPriSemana.Text), Convert.ToInt32(txtFaltaSegSemana.Text), Convert.ToInt32(txtFaltaTerSemana.Text), Convert.ToInt32(txtFaltaQuarSemana.Text));
-            int finaisdesemana = CalcularFinaisdeSemanas(Convert.ToInt32(txtFaltasPriSemana.Text), Convert.ToInt32(txtFaltaSegSemana.Text), Convert.ToInt32(txtFaltaTerSemana.Text), Convert.ToInt32(txtFaltaQuarSemana.Text));
-            int totaldefaltas = CalcularTotalDeFaltas(Convert.ToInt32(txtFaltasPriSemana.Text), Convert.ToInt32(txtFaltaSegSemana.Text), Convert.ToInt32(txtFaltaTerSemana.Text), Convert.ToInt32(txtFaltaQuarSemana.Text));
+            int diastrabalhados = folhapagamento.CalcularDiasTrabalhados(Convert.ToInt32(txtFaltasPriSemana.Text), Convert.ToInt32(txtFaltaSegSemana.Text), Convert.ToInt32(txtFaltaTerSemana.Text), Convert.ToInt32(txtFaltaQuarSemana.Text));
+            int finaisdesemana = folhapagamento.CalcularFinaisdeSemanas(Convert.ToInt32(txtFaltasPriSemana.Text), Convert.ToInt32(txtFaltaSegSemana.Text), Convert.ToInt32(txtFaltaTerSemana.Text), Convert.ToInt32(txtFaltaQuarSemana.Text));
+            int totaldefaltas = folhapagamento.CalcularTotalDeFaltas(Convert.ToInt32(txtFaltasPriSemana.Text), Convert.ToInt32(txtFaltaSegSemana.Text), Convert.ToInt32(txtFaltaTerSemana.Text), Convert.ToInt32(txtFaltaQuarSemana.Text));
 
             FuncionarioDTO funcionario = cboFuncionario.SelectedItem as FuncionarioDTO;
             SalarioBruto = funcionario.vl_salariobruto;
 
             if (nudHorasExtras.Value > 0 && chkVT.Checked == true)
             {
-                decimal valorporhora = CalcularValorPorHora(SalarioBruto, ht);
-                decimal totalhorasextras = CalcularValorHoraExtra(valorporhora, porcentagem, he);
-                DSR = CalcularDSR(totalhorasextras, diastrabalhados, finaisdesemana);
+                decimal valorporhora = folhapagamento.CalcularValorPorHora(SalarioBruto, ht);
+                decimal totalhorasextras = folhapagamento.CalcularValorHoraExtra(valorporhora, porcentagem, he);
+                DSR = folhapagamento.CalcularDSR(totalhorasextras, diastrabalhados, finaisdesemana);
                 decimal TotalSalarioBruto = SalarioBruto + totalhorasextras + DSR;
 
 
 
-                INSS = CalcularINSS(SalarioBruto, TotalSalarioBruto);
-                IR = CalcularIR(TotalSalarioBruto, INSS);
-                FGTS = CalcularFGTS(TotalSalarioBruto);
+                INSS = folhapagamento.CalcularINSS(SalarioBruto, TotalSalarioBruto);
+                IR = folhapagamento.CalcularIR(TotalSalarioBruto, INSS);
+                FGTS = folhapagamento.CalcularFGTS(TotalSalarioBruto);
                 VT = SalarioBruto * 0.06m;
 
-                SalarioLiquido = SalarioBruto + totalhorasextras + DSR - INSS - ValordeDesconto - VT;
+                SalarioLiquido = SalarioBruto + totalhorasextras + DSR - INSS - folhapagamento.ValordeDesconto - VT;
 
                 lblText.Visible = true;
                 lblSalarioLiquido.Visible = true;
@@ -155,19 +157,19 @@ namespace CaféPatronal.TELAS.Fluxo_de_Caixa_e_Folha_de_Pagamento
             }
             else if (nudHorasExtras.Value > 0 && chkVT.Checked == false)
             {
-                decimal valorporhora = CalcularValorPorHora(SalarioBruto, ht);
-                decimal totalhorasextras = CalcularValorHoraExtra(valorporhora, porcentagem, he);
-                DSR = CalcularDSR(totalhorasextras, diastrabalhados, finaisdesemana);
+                decimal valorporhora = folhapagamento.CalcularValorPorHora(SalarioBruto, ht);
+                decimal totalhorasextras = folhapagamento.CalcularValorHoraExtra(valorporhora, porcentagem, he);
+                DSR = folhapagamento.CalcularDSR(totalhorasextras, diastrabalhados, finaisdesemana);
                 decimal TotalSalarioBruto = SalarioBruto + totalhorasextras + DSR;
 
 
 
-                INSS = CalcularINSS(SalarioBruto, TotalSalarioBruto);
-                IR = CalcularIR(TotalSalarioBruto, INSS);
-                FGTS = CalcularFGTS(TotalSalarioBruto);
+                INSS = folhapagamento.CalcularINSS(SalarioBruto, TotalSalarioBruto);
+                IR = folhapagamento.CalcularIR(TotalSalarioBruto, INSS);
+                FGTS = folhapagamento.CalcularFGTS(TotalSalarioBruto);
 
 
-                decimal SalarioLiquido = SalarioBruto + totalhorasextras + DSR - INSS - ValordeDesconto - VT;
+                decimal SalarioLiquido = SalarioBruto + totalhorasextras + DSR - INSS - folhapagamento.ValordeDesconto - VT;
 
                 lblText.Visible = true;
                 lblSalarioLiquido.Visible = true;
@@ -179,14 +181,14 @@ namespace CaféPatronal.TELAS.Fluxo_de_Caixa_e_Folha_de_Pagamento
                 decimal descontodosalariobruto = SalarioBruto / 30 * totaldefaltas;
                 SalarioBruto = SalarioBruto - descontodosalariobruto;
 
-                decimal valorporhora = CalcularValorPorHora(SalarioBruto, ht);
+                decimal valorporhora = folhapagamento.CalcularValorPorHora(SalarioBruto, ht);
 
-                INSS = CalcularINSS(SalarioBruto, SalarioBruto);
-                IR = CalcularIR(SalarioBruto, INSS);
-                FGTS = CalcularFGTS(SalarioBruto);
+                INSS = folhapagamento.CalcularINSS(SalarioBruto, SalarioBruto);
+                IR = folhapagamento.CalcularIR(SalarioBruto, INSS);
+                FGTS = folhapagamento.CalcularFGTS(SalarioBruto);
                 VT = SalarioBruto * 0.06m;
 
-                SalarioLiquido = SalarioBruto - INSS - ValordeDesconto - VT;
+                SalarioLiquido = SalarioBruto - INSS - folhapagamento.ValordeDesconto - VT;
 
                 lblText.Visible = true;
                 lblSalarioLiquido.Visible = true;
@@ -198,13 +200,13 @@ namespace CaféPatronal.TELAS.Fluxo_de_Caixa_e_Folha_de_Pagamento
                 decimal descontodosalariobruto = SalarioBruto / 30 * totaldefaltas;
                 SalarioBruto = SalarioBruto - descontodosalariobruto;
 
-                decimal valorporhora = CalcularValorPorHora(SalarioBruto, ht);
+                decimal valorporhora = folhapagamento.CalcularValorPorHora(SalarioBruto, ht);
 
-                INSS = CalcularINSS(SalarioBruto, SalarioBruto);
-                IR = CalcularIR(SalarioBruto, INSS);
-                FGTS = CalcularFGTS(SalarioBruto);
+                INSS = folhapagamento.CalcularINSS(SalarioBruto, SalarioBruto);
+                IR = folhapagamento.CalcularIR(SalarioBruto, INSS);
+                FGTS = folhapagamento.CalcularFGTS(SalarioBruto);
 
-                SalarioLiquido = SalarioBruto - INSS - ValordeDesconto - VT;
+                SalarioLiquido = SalarioBruto - INSS - folhapagamento.ValordeDesconto - VT;
 
                 lblText.Visible = true;
                 lblSalarioLiquido.Visible = true;
@@ -230,167 +232,7 @@ namespace CaféPatronal.TELAS.Fluxo_de_Caixa_e_Folha_de_Pagamento
                 nudHorasExtras.Visible = false;
             }
         }
-        decimal CalcularValorPorHora(decimal SalarioBruto, int HorasTrabalhadas)
-        {
-            decimal resposta = SalarioBruto / HorasTrabalhadas;
-
-            return resposta;
-        }
-
-        decimal CalcularValorHoraExtra(decimal ValorDaHora, decimal Porcentagem, int horasextras)
-        {
-            decimal Horaextra = (ValorDaHora * (Porcentagem / 100)) + ValorDaHora;
-
-            Horaextra = horasextras * Horaextra;
-
-            return Horaextra;
-        }
-
-        int CalcularDiasTrabalhados(int Faltas1semana, int faltas2semana, int Faltas3semana, int Faltas4semana)
-        {
-            if (Faltas1semana > 0)
-            {
-                Faltas1semana = Faltas1semana + 1;
-            }
-            if (faltas2semana > 0)
-            {
-                faltas2semana = faltas2semana + 1;
-            }
-            if (Faltas3semana > 0)
-            {
-                Faltas3semana = Faltas3semana + 1;
-            }
-            if (Faltas4semana > 0)
-            {
-                Faltas4semana = Faltas4semana + 1;
-            }
-
-
-            int totaldefaltas = Faltas1semana + faltas2semana + Faltas3semana + Faltas4semana;
-            int diastrabalhados = 26 - totaldefaltas;
-
-            return diastrabalhados;
-        }
-
-        int CalcularFinaisdeSemanas(int Faltas1semana, int faltas2semana, int Faltas3semana, int Faltas4semana)
-        {
-            int finaisdesemanaperdido = 0;
-
-
-            if (Faltas1semana == 0)
-            {
-                finaisdesemanaperdido = finaisdesemanaperdido + 1;
-            }
-            if (faltas2semana == 0)
-            {
-                finaisdesemanaperdido = finaisdesemanaperdido + 1;
-            }
-            if (Faltas3semana == 0)
-            {
-                finaisdesemanaperdido = finaisdesemanaperdido + 1;
-            }
-            if (Faltas4semana == 0)
-            {
-                finaisdesemanaperdido = finaisdesemanaperdido + 1;
-            }
-
-            return finaisdesemanaperdido;
-        }
-
-
-        decimal CalcularDSR(decimal TotalHorasExtras, int DiasTrabalhados, int FinaisDeSemana)
-        {
-            decimal DSR = TotalHorasExtras / DiasTrabalhados * FinaisDeSemana;
-
-            return DSR;
-        }
-
-        decimal CalcularINSS(decimal SalarioBruto, decimal TotalSalarioBruto)
-        {
-            decimal PorcentagemINSS = 0;
-            if (SalarioBruto <= 1693.72m)
-            {
-                PorcentagemINSS = 8;
-            }
-            if (SalarioBruto >= 1693.73m && SalarioBruto <= 2822.90m)
-            {
-                PorcentagemINSS = 9;
-            }
-            if (SalarioBruto >= 2822.91m && SalarioBruto <= 5645.80m)
-            {
-                PorcentagemINSS = 11;
-            }
-
-            decimal INSS = TotalSalarioBruto * (PorcentagemINSS / 100);
-
-            return INSS;
-        }
-
-        decimal CalcularIR(decimal TotalSalarioBruto, decimal ValorINSS)
-        {
-            decimal PorcentagemIR = 0;
-
-            TotalSalarioBruto = TotalSalarioBruto - ValorINSS;
-
-            if (TotalSalarioBruto >= 1903.99m && TotalSalarioBruto <= 2826.65m)
-            {
-                PorcentagemIR = 7.5m;
-                ValordeDesconto = 142.80m;
-            }
-            if (TotalSalarioBruto >= 2826.66m && TotalSalarioBruto <= 3751.05m)
-            {
-                PorcentagemIR = 15;
-                ValordeDesconto = 354.80m;
-            }
-            if (TotalSalarioBruto >= 3751.06m && TotalSalarioBruto <= 4664.68m)
-            {
-                PorcentagemIR = 22.5m;
-                ValordeDesconto = 636.13m;
-            }
-            if (TotalSalarioBruto > 4664.69m)
-            {
-                PorcentagemIR = 27.5m;
-                ValordeDesconto = 869.36m;
-            }
-
-            decimal valordescontado = TotalSalarioBruto * (PorcentagemIR / 100);
-            decimal IR = valordescontado - ValordeDesconto;
-
-            return IR;
-        }
-
-        decimal CalcularFGTS(decimal SalarioBrutoTotal)
-        {
-            decimal FGTS = SalarioBrutoTotal * 0.08m;
-            return FGTS;
-        }
-
-        int CalcularTotalDeFaltas(int Faltas1semana, int faltas2semana, int Faltas3semana, int Faltas4semana)
-        {
-            int finaisdesemanaperdido = 0;
-
-
-            if (Faltas1semana > 0)
-            {
-                finaisdesemanaperdido = finaisdesemanaperdido + 1;
-            }
-            if (faltas2semana > 0)
-            {
-                finaisdesemanaperdido = finaisdesemanaperdido + 1;
-            }
-            if (Faltas3semana > 0)
-            {
-                finaisdesemanaperdido = finaisdesemanaperdido + 1;
-            }
-            if (Faltas4semana > 0)
-            {
-                finaisdesemanaperdido = finaisdesemanaperdido + 1;
-            }
-
-            int totalfaltas = Faltas1semana + faltas2semana + Faltas3semana + Faltas4semana + finaisdesemanaperdido;
-            return totalfaltas;
-
-        }
+        
 
         private void lblSalarioLiquido_Click(object sender, EventArgs e)
         {
