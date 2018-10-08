@@ -36,7 +36,6 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txtcep = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtnumero = new System.Windows.Forms.TextBox();
             this.txtcomplemento = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -50,6 +49,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txttelefone = new System.Windows.Forms.MaskedTextBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.txtnumero = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -109,9 +109,9 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.txtnumero);
             this.groupBox3.Controls.Add(this.txtcep);
             this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.txtnumero);
             this.groupBox3.Controls.Add(this.txtcomplemento);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.label6);
@@ -141,16 +141,6 @@
             this.label4.Size = new System.Drawing.Size(68, 29);
             this.label4.TabIndex = 46;
             this.label4.Text = "CEP:";
-            // 
-            // txtnumero
-            // 
-            this.txtnumero.Location = new System.Drawing.Point(129, 176);
-            this.txtnumero.MaxLength = 5;
-            this.txtnumero.Name = "txtnumero";
-            this.txtnumero.Size = new System.Drawing.Size(275, 31);
-            this.txtnumero.TabIndex = 7;
-            this.txtnumero.UseSystemPasswordChar = true;
-            this.txtnumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.maskedTextBox2_KeyPress);
             // 
             // txtcomplemento
             // 
@@ -297,6 +287,14 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // txtnumero
+            // 
+            this.txtnumero.Location = new System.Drawing.Point(129, 173);
+            this.txtnumero.MaxLength = 20;
+            this.txtnumero.Name = "txtnumero";
+            this.txtnumero.Size = new System.Drawing.Size(275, 31);
+            this.txtnumero.TabIndex = 57;
+            // 
             // AlterarFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -332,7 +330,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.MaskedTextBox txtcep;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtnumero;
         private System.Windows.Forms.TextBox txtcomplemento;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -346,5 +343,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.MaskedTextBox txttelefone;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox txtnumero;
     }
 }
