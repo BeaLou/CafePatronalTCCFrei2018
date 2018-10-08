@@ -1,4 +1,5 @@
 ﻿using CaféPatronal.Programacao;
+using CaféPatronal.Programacao.Estoque;
 using CaféPatronal.TELAS.CRUD.Fornec;
 using System;
 using System.Collections.Generic;
@@ -61,9 +62,93 @@ namespace CaféPatronal.TELAS.Cadastro_e_Consulta
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AlterarFornecedor tela = new AlterarFornecedor();
-            tela.Show();
-            this.Hide();
+            try
+            {
+                if (dgvConsultarFornecedor.CurrentRow != null)
+                {
+                    FornecedorDTO fornecedor = dgvConsultarFornecedor.CurrentRow.DataBoundItem as FornecedorDTO;
+
+                    AlterarFornecedor tela = new AlterarFornecedor();
+                    tela.LoadScreen(fornecedor);
+                    tela.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Selecione um Fornecedor");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro: " + ex.Message);
+            }
+        }
+
+        private void btnSalvarFornecedores_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FornecedorDTO dto = new FornecedorDTO();
+                dto.nm_nome = txtNomeFornec.Text;
+                dto.ds_cnpj = mktCnpj.Text;
+                dto.ds_telefone = mktTelefoneFixo.Text;
+                dto.ds_cep = mtbCep.Text;
+                dto.ds_complemento = txtComplemento.Text;
+                dto.ds_numerofornecedor = txtNumero.Text;
+                dto.ds_email = txtemail.Text;
+
+                FOrnecedorBusiness business = new FOrnecedorBusiness();
+                business.Salvar(dto);
+                MessageBox.Show("Fornecedor salvo com sucesso.");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro " + ex.Message);
+            }
+        }
+
+        private void btnConsultarFornece_Click(object sender, EventArgs e)
+        {
+            FOrnecedorBusiness business = new FOrnecedorBusiness();
+            List<FornecedorDTO> a = business.Consultar(txtconsultar.Text);
+            dgvConsultarFornecedor.AutoGenerateColumns = false;
+            dgvConsultarFornecedor.DataSource = a;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dgvConsultarFornecedor.CurrentRow != null)
+                {
+                    FornecedorDTO fornecedor = dgvConsultarFornecedor.CurrentRow.DataBoundItem as FornecedorDTO;
+                    DialogResult r = MessageBox.Show("Deseja excluir esse fornecedor?", "Michael Pop`s",
+                                           MessageBoxButtons.YesNo,
+                                           MessageBoxIcon.Question);
+                    if (r == DialogResult.Yes)
+                    {
+                        FOrnecedorBusiness business = new FOrnecedorBusiness();
+                        business.Remover(fornecedor.id_fornecedor);
+
+                        List<FornecedorDTO> a = business.Consultar(txtconsultar.Text);
+                        dgvConsultarFornecedor.AutoGenerateColumns = false;
+                        dgvConsultarFornecedor.DataSource = a;
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Selecione um cliente");
+                    }
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro: " + ex.Message);
+            }
         }
     }
 }

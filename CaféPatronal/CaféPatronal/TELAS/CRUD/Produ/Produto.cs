@@ -81,9 +81,60 @@ namespace CaféPatronal.TELAS.Cadastro_e_Consulta
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AlterarProduto tela = new AlterarProduto();
-            tela.Show();
-            this.Hide();
+            try
+            {
+                if (dgvconsultaproduto.CurrentRow != null)
+                {
+                    ProdutoDTO fornecedor = dgvconsultaproduto.CurrentRow.DataBoundItem as ProdutoDTO;
+
+                    AlterarProduto tela = new AlterarProduto();
+                    tela.LoadScreen(fornecedor);
+                    tela.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Selecione um Produto");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro: " + ex.Message);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dgvconsultaproduto.CurrentRow != null)
+                {
+                    ProdutoDTO produto = dgvconsultaproduto.CurrentRow.DataBoundItem as ProdutoDTO;
+                    DialogResult r = MessageBox.Show("Deseja excluir esse Produto?", "Michael Pop`s",
+                                           MessageBoxButtons.YesNo,
+                                           MessageBoxIcon.Question);
+                    if (r == DialogResult.Yes)
+                    {
+                        ProdutoBusiness business = new ProdutoBusiness();
+                        business.Remover(produto.id_produto);
+
+                        List<ProdutoDTO> a = business.Consultar(txtConsultaProdutos.Text);
+                        dgvconsultaproduto.AutoGenerateColumns = false;
+                        dgvconsultaproduto.DataSource = a;
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Selecione um cliente");
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro: " + ex.Message);
+            }
         }
     }
 }

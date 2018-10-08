@@ -54,10 +54,17 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnConsultarFornece = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtconsultar = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.dgvFornecedor = new System.Windows.Forms.DataGridView();
+            this.dgvConsultarFornecedor = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -65,18 +72,18 @@
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFornecedor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarFornecedor)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCep
             // 
             this.lblCep.AutoSize = true;
             this.lblCep.BackColor = System.Drawing.Color.Transparent;
-            this.lblCep.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCep.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCep.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblCep.Location = new System.Drawing.Point(33, 39);
             this.lblCep.Name = "lblCep";
-            this.lblCep.Size = new System.Drawing.Size(44, 28);
+            this.lblCep.Size = new System.Drawing.Size(68, 29);
             this.lblCep.TabIndex = 46;
             this.lblCep.Text = "CEP:";
             // 
@@ -85,7 +92,7 @@
             this.txtNumero.Location = new System.Drawing.Point(129, 176);
             this.txtNumero.MaxLength = 5;
             this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(275, 32);
+            this.txtNumero.Size = new System.Drawing.Size(275, 31);
             this.txtNumero.TabIndex = 7;
             this.txtNumero.UseSystemPasswordChar = true;
             this.txtNumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mktCpf_KeyPress);
@@ -95,18 +102,18 @@
             this.txtComplemento.Location = new System.Drawing.Point(129, 107);
             this.txtComplemento.MaxLength = 20;
             this.txtComplemento.Name = "txtComplemento";
-            this.txtComplemento.Size = new System.Drawing.Size(275, 32);
+            this.txtComplemento.Size = new System.Drawing.Size(275, 31);
             this.txtComplemento.TabIndex = 6;
             // 
             // lblNumero
             // 
             this.lblNumero.AutoSize = true;
             this.lblNumero.BackColor = System.Drawing.Color.Transparent;
-            this.lblNumero.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumero.ForeColor = System.Drawing.Color.Black;
             this.lblNumero.Location = new System.Drawing.Point(25, 176);
             this.lblNumero.Name = "lblNumero";
-            this.lblNumero.Size = new System.Drawing.Size(71, 28);
+            this.lblNumero.Size = new System.Drawing.Size(100, 29);
             this.lblNumero.TabIndex = 45;
             this.lblNumero.Text = "Número";
             // 
@@ -114,11 +121,11 @@
             // 
             this.lblComplemento.AutoSize = true;
             this.lblComplemento.BackColor = System.Drawing.Color.Transparent;
-            this.lblComplemento.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblComplemento.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblComplemento.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblComplemento.Location = new System.Drawing.Point(6, 107);
             this.lblComplemento.Name = "lblComplemento";
-            this.lblComplemento.Size = new System.Drawing.Size(117, 28);
+            this.lblComplemento.Size = new System.Drawing.Size(171, 29);
             this.lblComplemento.TabIndex = 44;
             this.lblComplemento.Text = "Complemento:";
             // 
@@ -127,7 +134,7 @@
             this.mktCnpj.Location = new System.Drawing.Point(127, 107);
             this.mktCnpj.Mask = "000.000.000-00";
             this.mktCnpj.Name = "mktCnpj";
-            this.mktCnpj.Size = new System.Drawing.Size(275, 32);
+            this.mktCnpj.Size = new System.Drawing.Size(275, 31);
             this.mktCnpj.TabIndex = 2;
             this.mktCnpj.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mktCpf_KeyPress);
             // 
@@ -135,11 +142,11 @@
             // 
             this.lblCnpj.AutoSize = true;
             this.lblCnpj.BackColor = System.Drawing.Color.Transparent;
-            this.lblCnpj.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCnpj.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblCnpj.Location = new System.Drawing.Point(39, 114);
             this.lblCnpj.Name = "lblCnpj";
-            this.lblCnpj.Size = new System.Drawing.Size(55, 28);
+            this.lblCnpj.Size = new System.Drawing.Size(82, 29);
             this.lblCnpj.TabIndex = 48;
             this.lblCnpj.Text = "CNPJ:";
             // 
@@ -147,10 +154,10 @@
             // 
             this.lblNome.AutoSize = true;
             this.lblNome.BackColor = System.Drawing.Color.Transparent;
-            this.lblNome.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNome.Location = new System.Drawing.Point(37, 39);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(58, 28);
+            this.lblNome.Size = new System.Drawing.Size(85, 29);
             this.lblNome.TabIndex = 50;
             this.lblNome.Text = "Nome:";
             // 
@@ -159,7 +166,7 @@
             this.txtNomeFornec.Location = new System.Drawing.Point(127, 39);
             this.txtNomeFornec.MaxLength = 20;
             this.txtNomeFornec.Name = "txtNomeFornec";
-            this.txtNomeFornec.Size = new System.Drawing.Size(275, 32);
+            this.txtNomeFornec.Size = new System.Drawing.Size(275, 31);
             this.txtNomeFornec.TabIndex = 1;
             this.txtNomeFornec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
@@ -168,18 +175,18 @@
             this.txtemail.Location = new System.Drawing.Point(127, 176);
             this.txtemail.MaxLength = 50;
             this.txtemail.Name = "txtemail";
-            this.txtemail.Size = new System.Drawing.Size(275, 32);
+            this.txtemail.Size = new System.Drawing.Size(275, 31);
             this.txtemail.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(39, 175);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 28);
+            this.label1.Size = new System.Drawing.Size(80, 29);
             this.label1.TabIndex = 52;
             this.label1.Text = "Email:";
             // 
@@ -188,18 +195,18 @@
             this.mktTelefoneFixo.Location = new System.Drawing.Point(127, 251);
             this.mktTelefoneFixo.Mask = "(00)0000-0000";
             this.mktTelefoneFixo.Name = "mktTelefoneFixo";
-            this.mktTelefoneFixo.Size = new System.Drawing.Size(275, 32);
+            this.mktTelefoneFixo.Size = new System.Drawing.Size(275, 31);
             this.mktTelefoneFixo.TabIndex = 4;
             // 
             // lblTelefoneFixo
             // 
             this.lblTelefoneFixo.AutoSize = true;
             this.lblTelefoneFixo.BackColor = System.Drawing.Color.Transparent;
-            this.lblTelefoneFixo.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelefoneFixo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTelefoneFixo.ForeColor = System.Drawing.Color.Black;
             this.lblTelefoneFixo.Location = new System.Drawing.Point(12, 251);
             this.lblTelefoneFixo.Name = "lblTelefoneFixo";
-            this.lblTelefoneFixo.Size = new System.Drawing.Size(109, 28);
+            this.lblTelefoneFixo.Size = new System.Drawing.Size(168, 29);
             this.lblTelefoneFixo.TabIndex = 54;
             this.lblTelefoneFixo.Text = "Telefone Fixo:";
             // 
@@ -208,11 +215,11 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Font = new System.Drawing.Font("Agency FB", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Location = new System.Drawing.Point(3, 3);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(231, 32);
+            this.label2.Size = new System.Drawing.Size(413, 31);
             this.label2.TabIndex = 55;
             this.label2.Text = "CADASTRO DE FORNECEDOR\r\n";
             // 
@@ -221,7 +228,7 @@
             this.mtbCep.Location = new System.Drawing.Point(129, 40);
             this.mtbCep.Mask = "0:0000-000";
             this.mtbCep.Name = "mtbCep";
-            this.mtbCep.Size = new System.Drawing.Size(275, 32);
+            this.mtbCep.Size = new System.Drawing.Size(275, 31);
             this.mtbCep.TabIndex = 56;
             // 
             // btnVoltar
@@ -241,7 +248,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(49, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -278,6 +285,7 @@
             this.btnSalvarFornecedores.Text = "Salvar";
             this.btnSalvarFornecedores.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSalvarFornecedores.UseVisualStyleBackColor = false;
+            this.btnSalvarFornecedores.Click += new System.EventHandler(this.btnSalvarFornecedores_Click);
             // 
             // groupBox2
             // 
@@ -312,13 +320,13 @@
             // tabPage2
             // 
             this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage2.Controls.Add(this.dgvConsultarFornecedor);
             this.tabPage2.Controls.Add(this.button2);
             this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Controls.Add(this.btnConsultarFornece);
-            this.tabPage2.Controls.Add(this.textBox1);
+            this.tabPage2.Controls.Add(this.txtconsultar);
             this.tabPage2.Controls.Add(this.pictureBox1);
             this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Controls.Add(this.dgvFornecedor);
             this.tabPage2.Location = new System.Drawing.Point(4, 34);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -355,6 +363,7 @@
             this.button1.Text = "Apagar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnConsultarFornece
             // 
@@ -369,15 +378,16 @@
             this.btnConsultarFornece.Text = "Consultar";
             this.btnConsultarFornece.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnConsultarFornece.UseVisualStyleBackColor = true;
+            this.btnConsultarFornece.Click += new System.EventHandler(this.btnConsultarFornece_Click);
             // 
-            // textBox1
+            // txtconsultar
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Ivory;
-            this.textBox1.Location = new System.Drawing.Point(66, 45);
-            this.textBox1.MaxLength = 50;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(456, 32);
-            this.textBox1.TabIndex = 9;
+            this.txtconsultar.BackColor = System.Drawing.Color.Ivory;
+            this.txtconsultar.Location = new System.Drawing.Point(66, 45);
+            this.txtconsultar.MaxLength = 50;
+            this.txtconsultar.Name = "txtconsultar";
+            this.txtconsultar.Size = new System.Drawing.Size(456, 31);
+            this.txtconsultar.TabIndex = 9;
             // 
             // pictureBox1
             // 
@@ -397,20 +407,87 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label3.Font = new System.Drawing.Font("Agency FB", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(3, 3);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(118, 32);
+            this.label3.Size = new System.Drawing.Size(209, 31);
             this.label3.TabIndex = 7;
             this.label3.Text = "FORNECEDOR";
             // 
-            // dgvFornecedor
+            // dgvConsultarFornecedor
             // 
-            this.dgvFornecedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFornecedor.Location = new System.Drawing.Point(66, 83);
-            this.dgvFornecedor.Name = "dgvFornecedor";
-            this.dgvFornecedor.Size = new System.Drawing.Size(910, 322);
-            this.dgvFornecedor.TabIndex = 6;
+            this.dgvConsultarFornecedor.AllowUserToAddRows = false;
+            this.dgvConsultarFornecedor.AllowUserToDeleteRows = false;
+            this.dgvConsultarFornecedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvConsultarFornecedor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7});
+            this.dgvConsultarFornecedor.Location = new System.Drawing.Point(66, 84);
+            this.dgvConsultarFornecedor.Name = "dgvConsultarFornecedor";
+            this.dgvConsultarFornecedor.ReadOnly = true;
+            this.dgvConsultarFornecedor.Size = new System.Drawing.Size(905, 332);
+            this.dgvConsultarFornecedor.TabIndex = 21;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.DataPropertyName = "nm_nome";
+            this.Column1.HeaderText = "Nome";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.DataPropertyName = "ds_cnpj";
+            this.Column2.HeaderText = "Cnpj";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.DataPropertyName = "ds_telefone";
+            this.Column3.HeaderText = "Telefone";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column4.DataPropertyName = "ds_cep";
+            this.Column4.HeaderText = "CEP";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column5.DataPropertyName = "ds_complemento";
+            this.Column5.HeaderText = "Complemento";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column6.DataPropertyName = "ds_numerofornec";
+            this.Column6.HeaderText = "Número";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column7.DataPropertyName = "ds_email";
+            this.Column7.HeaderText = "Email";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
             // 
             // CadastrarFornecedor
             // 
@@ -437,7 +514,7 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFornecedor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarFornecedor)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -464,13 +541,20 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dgvFornecedor;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtconsultar;
         private System.Windows.Forms.Button btnConsultarFornece;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnSalvarFornecedores;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dgvConsultarFornecedor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
     }
 }
