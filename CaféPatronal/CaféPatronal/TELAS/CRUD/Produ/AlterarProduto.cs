@@ -48,6 +48,7 @@ namespace CaféPatronal.TELAS.CRUD.Produ
             {
                 produto.nm_nome = txtnome.Text;
                 produto.ds_unidade = cmbunidade.Text;
+                produto.vl_unidade = txtUnidade.Text;
                 produto.dt_validade = dtpvalidade.Value;
 
 

@@ -58,6 +58,7 @@ namespace CaféPatronal.TELAS.Cadastro_e_Consulta
                 ProdutoDTO dto = new ProdutoDTO();
                 dto.nm_nome = TxtNomeProduto.Text;
                 dto.ds_unidade = cboUnidade.Text;
+                dto.vl_unidade = txtUnidade.Text;
                 dto.dt_validade = dtpDataValidade.Value;
 
                 ProdutoBusiness business = new ProdutoBusiness();

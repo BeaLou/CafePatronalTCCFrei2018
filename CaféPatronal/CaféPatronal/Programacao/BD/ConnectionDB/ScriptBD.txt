@@ -71,9 +71,11 @@ CREATE TABLE `tb_produto` (
 	`id_produto` INT NOT NULL AUTO_INCREMENT,
 	`nm_nome` varchar(50) NOT NULL,
 	`ds_unidade` varchar(20) NOT NULL,
+    `vl_unidade` varchar (10) not null,
 	`dt_validade` DATE NOT NULL,
 	PRIMARY KEY (`id_produto`)
 );
+
 
 CREATE TABLE `tb_produtoitem` (
 	`id_produtoitem` INT NOT NULL AUTO_INCREMENT,
@@ -153,14 +155,14 @@ insert into `tb_cliente`(nm_nome,nm_sobrenome,dt_datanascimento,ds_cpf,ds_email)
 ds_dpto,ds_email,ds_telefone,ds_telefonemovel
 ,ds_cep,ds_complemento,ds_ncasa,dt_nascimento,
 ds_login,ds_senha, bt_permissaoadm , bt_permissaorh , bt_permissaofuncionario,vl_salariobruto) 
-VALUES("Ana","Carolina","014.49834.44-0","557.819.658-66","21.040.731-1","ADM"
-,"anacarolina@hotmail.com.br","(11) 3870-7273","(11) 98668-5845"
+VALUES("Barbara","Florencio","014.49834.44-0","557.819.658-66","21.040.731-1","ADM"
+,"barbaraflorencio@hotmail.com.br","(11) 3870-7273","(11) 98668-5845"
 ,"04763-020","Casa 1","563","1999/04/19","adm","1234", true , true , true,'901.32');
 
 insert into `tb_funcionario`(nm_nome,nm_sobrenome,ds_carteiratrabalho,ds_cpf,ds_rg,ds_dpto,ds_email,
 ds_telefone,ds_telefonemovel,ds_cep,ds_complemento,ds_ncasa,dt_nascimento,ds_login,ds_senha, bt_permissaoadm , bt_permissaorh , bt_permissaofuncionario,vl_salariobruto) 
-VALUES("Samira","Dias","331.66699.42-6","772.480.108-80","17.284.238-4","T.I.",
-"samiradias@outlook.com.br",
+VALUES("Fernanda","Gomes","331.66699.42-6","772.480.108-80","17.284.238-4","T.I.",
+"fernandagomes@outlook.com.br",
 "(11) 2786-1154","(11) 99788-6151","04169-970","Casa 1","508","1999/11/15","Funcionario","12345", false ,false , true,"2400.64");
 
  
@@ -172,14 +174,14 @@ insert into  `tb_pedido`(id_cliente,vl_venda)VALUES("1","10.00");
 
 
 
-insert into`tb_produto`(nm_nome,ds_unidade,dt_validade) VALUES ("Pão","4","2019/10/4");
-insert into`tb_produto`(nm_nome,ds_unidade,dt_validade) VALUES ("Refrigerante Coca-cola","5","2019/11/5");
-insert into`tb_produto`(nm_nome,ds_unidade,dt_validade) VALUES ("Guardanapo","7","2028/12/3");
-insert into`tb_produto`(nm_nome,ds_unidade,dt_validade) VALUES ("Coxinha","10","2018/12/5");
-insert into`tb_produto`(nm_nome,ds_unidade,dt_validade) VALUES ("Suco","20","2019/5/8");
-insert into`tb_produto`(nm_nome,ds_unidade,dt_validade) VALUES ("Hambúrguer","4","2019/8/6");
-insert into`tb_produto`(nm_nome,ds_unidade,dt_validade) VALUES ("Alface","10","2019/1/1");
-insert into`tb_produto`(nm_nome,ds_unidade,dt_validade) VALUES ("Tomate","10","2019/2/3");
+insert into`tb_produto`(nm_nome,ds_unidade,dt_validade,vl_unidade) VALUES ("Pão","KG","2019/10/4","4");
+insert into`tb_produto`(nm_nome,ds_unidade,dt_validade,vl_unidade) VALUES ("Refrigerante Coca-cola","L","2019/11/5","5");
+insert into`tb_produto`(nm_nome,ds_unidade,dt_validade,vl_unidade) VALUES ("Guardanapo","QTD","2028/12/3","7");
+insert into`tb_produto`(nm_nome,ds_unidade,dt_validade,vl_unidade) VALUES ("Coxinha","G","2018/12/5","10");
+insert into`tb_produto`(nm_nome,ds_unidade,dt_validade,vl_unidade) VALUES ("Suco","L","2019/5/8","20");
+insert into`tb_produto`(nm_nome,ds_unidade,dt_validade,vl_unidade) VALUES ("Hambúrguer","G","2019/8/6","4");
+insert into`tb_produto`(nm_nome,ds_unidade,dt_validade,vl_unidade) VALUES ("Alface","KG","2019/1/1","10");
+insert into`tb_produto`(nm_nome,ds_unidade,dt_validade,vl_unidade) VALUES ("Tomate","KG","2019/2/3","10");
 
 
 insert into `tb_fornecedor`(nm_nome,ds_cnpj,ds_telefone,ds_cep,
@@ -222,6 +224,6 @@ insert into `tb_estoque`(id_produto,id_fornecedor,
 vl_compra,dt_datacompra,qtd_produtos,dt_validade) 
 VALUES ("8","1","90","2018/07/23","2","2018/10/4");
 
-
+select*from tb_produto;
 
 select *  from tb_funcionario;

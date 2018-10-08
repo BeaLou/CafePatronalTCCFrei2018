@@ -84,10 +84,10 @@
             // 
             this.lblCadastroCliente.AutoSize = true;
             this.lblCadastroCliente.BackColor = System.Drawing.Color.Transparent;
-            this.lblCadastroCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadastroCliente.Font = new System.Drawing.Font("Agency FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadastroCliente.Location = new System.Drawing.Point(6, 3);
             this.lblCadastroCliente.Name = "lblCadastroCliente";
-            this.lblCadastroCliente.Size = new System.Drawing.Size(354, 33);
+            this.lblCadastroCliente.Size = new System.Drawing.Size(190, 34);
             this.lblCadastroCliente.TabIndex = 4;
             this.lblCadastroCliente.Text = "CADASTRO DE CLIENTE";
             // 
@@ -96,7 +96,7 @@
             this.txtNome.Location = new System.Drawing.Point(140, 31);
             this.txtNome.MaxLength = 20;
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(456, 31);
+            this.txtNome.Size = new System.Drawing.Size(456, 32);
             this.txtNome.TabIndex = 1;
             this.txtNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
@@ -105,7 +105,7 @@
             this.txtSobrenome.Location = new System.Drawing.Point(140, 93);
             this.txtSobrenome.MaxLength = 20;
             this.txtSobrenome.Name = "txtSobrenome";
-            this.txtSobrenome.Size = new System.Drawing.Size(456, 31);
+            this.txtSobrenome.Size = new System.Drawing.Size(456, 32);
             this.txtSobrenome.TabIndex = 2;
             this.txtSobrenome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
@@ -113,10 +113,10 @@
             // 
             this.lblSobrenome.AutoSize = true;
             this.lblSobrenome.BackColor = System.Drawing.Color.Transparent;
-            this.lblSobrenome.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSobrenome.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSobrenome.Location = new System.Drawing.Point(28, 93);
             this.lblSobrenome.Name = "lblSobrenome";
-            this.lblSobrenome.Size = new System.Drawing.Size(146, 29);
+            this.lblSobrenome.Size = new System.Drawing.Size(102, 28);
             this.lblSobrenome.TabIndex = 6;
             this.lblSobrenome.Text = "Sobrenome:";
             // 
@@ -124,18 +124,18 @@
             // 
             this.txtEmail.Location = new System.Drawing.Point(144, 283);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(456, 31);
+            this.txtEmail.Size = new System.Drawing.Size(456, 32);
             this.txtEmail.TabIndex = 5;
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.BackColor = System.Drawing.Color.Transparent;
-            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.Color.Black;
             this.lblEmail.Location = new System.Drawing.Point(35, 283);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(80, 29);
+            this.lblEmail.Size = new System.Drawing.Size(55, 28);
             this.lblEmail.TabIndex = 8;
             this.lblEmail.Text = "Email:";
             this.lblEmail.Click += new System.EventHandler(this.lblEmail_Click);
@@ -144,11 +144,11 @@
             // 
             this.lblDataNascimento.AutoSize = true;
             this.lblDataNascimento.BackColor = System.Drawing.Color.Transparent;
-            this.lblDataNascimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDataNascimento.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDataNascimento.ForeColor = System.Drawing.Color.Black;
             this.lblDataNascimento.Location = new System.Drawing.Point(27, 220);
             this.lblDataNascimento.Name = "lblDataNascimento";
-            this.lblDataNascimento.Size = new System.Drawing.Size(147, 58);
+            this.lblDataNascimento.Size = new System.Drawing.Size(103, 56);
             this.lblDataNascimento.TabIndex = 10;
             this.lblDataNascimento.Text = "Data de \r\nNascimento:";
             // 
@@ -156,11 +156,11 @@
             // 
             this.mktCpf.AutoSize = true;
             this.mktCpf.BackColor = System.Drawing.Color.Transparent;
-            this.mktCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mktCpf.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mktCpf.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.mktCpf.Location = new System.Drawing.Point(35, 163);
             this.mktCpf.Name = "mktCpf";
-            this.mktCpf.Size = new System.Drawing.Size(67, 29);
+            this.mktCpf.Size = new System.Drawing.Size(43, 28);
             this.mktCpf.TabIndex = 11;
             this.mktCpf.Text = "CPF:";
             // 
@@ -169,7 +169,7 @@
             this.mtbCpf.Location = new System.Drawing.Point(140, 159);
             this.mtbCpf.Mask = "000.000.000-00";
             this.mtbCpf.Name = "mtbCpf";
-            this.mtbCpf.Size = new System.Drawing.Size(456, 31);
+            this.mtbCpf.Size = new System.Drawing.Size(456, 32);
             this.mtbCpf.TabIndex = 3;
             // 
             // dtpDataNascimento
@@ -178,17 +178,17 @@
             this.dtpDataNascimento.MaxDate = new System.DateTime(2050, 12, 31, 0, 0, 0, 0);
             this.dtpDataNascimento.MinDate = new System.DateTime(1910, 1, 1, 0, 0, 0, 0);
             this.dtpDataNascimento.Name = "dtpDataNascimento";
-            this.dtpDataNascimento.Size = new System.Drawing.Size(456, 31);
+            this.dtpDataNascimento.Size = new System.Drawing.Size(456, 32);
             this.dtpDataNascimento.TabIndex = 4;
             // 
             // lblNome
             // 
             this.lblNome.AutoSize = true;
             this.lblNome.BackColor = System.Drawing.Color.Transparent;
-            this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.Location = new System.Drawing.Point(35, 35);
+            this.lblNome.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.Location = new System.Drawing.Point(35, 34);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(85, 29);
+            this.lblNome.Size = new System.Drawing.Size(58, 28);
             this.lblNome.TabIndex = 14;
             this.lblNome.Text = "Nome:";
             // 
@@ -196,7 +196,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(41, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -209,6 +209,7 @@
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.btnVoltar);
             this.tabPage1.Controls.Add(this.lblCadastroCliente);
+            this.tabPage1.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -318,10 +319,10 @@
             // 
             this.lblconsultadclientre.AutoSize = true;
             this.lblconsultadclientre.BackColor = System.Drawing.Color.Transparent;
-            this.lblconsultadclientre.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblconsultadclientre.Font = new System.Drawing.Font("Agency FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblconsultadclientre.Location = new System.Drawing.Point(2, 8);
             this.lblconsultadclientre.Name = "lblconsultadclientre";
-            this.lblconsultadclientre.Size = new System.Drawing.Size(137, 33);
+            this.lblconsultadclientre.Size = new System.Drawing.Size(75, 34);
             this.lblconsultadclientre.TabIndex = 12;
             this.lblconsultadclientre.Text = "CLIENTE";
             // 
@@ -403,7 +404,7 @@
             this.txtConsultarClientes.Location = new System.Drawing.Point(63, 80);
             this.txtConsultarClientes.MaxLength = 50;
             this.txtConsultarClientes.Name = "txtConsultarClientes";
-            this.txtConsultarClientes.Size = new System.Drawing.Size(456, 31);
+            this.txtConsultarClientes.Size = new System.Drawing.Size(456, 32);
             this.txtConsultarClientes.TabIndex = 9;
             // 
             // Cadastro_de_Clientes

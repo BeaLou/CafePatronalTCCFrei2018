@@ -46,14 +46,15 @@ namespace CaféPatronal.Programacao.Cliente
 
         public void Alterar(ClienteDTO cliente)
         {
+
             string script =
             @"UPDATE tb_cliente
-                 SET id_cliente = @id_cliente,
-                  nm_nome= @nm_nome,
+                 SET
+                  nm_nome = @nm_nome,
                   nm_sobrenome = @nm_sobrenome,
-                  dt_datanascimento= @dt_datanascimento,
-                  ds_cpf= @ds_cpf,
-                  ds_email= @ds_email,
+                  dt_datanascimento = @dt_datanascimento,
+                  ds_cpf = @ds_cpf,
+                  ds_email = @ds_email
                   WHERE id_cliente = @id_cliente";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();

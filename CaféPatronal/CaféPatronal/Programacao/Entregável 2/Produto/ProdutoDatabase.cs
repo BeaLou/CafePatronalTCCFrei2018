@@ -13,23 +13,26 @@ namespace CaféPatronal.Programacao.Produto
         public int Salvar(ProdutoDTO produto)
         {
             string script =
-                @"INSERT INTO tb_produto
+              @"INSERT INTO tb_produto
                 (
                 id_produto,
                 nm_nome,   
+                vl_unidade,
                 ds_unidade,
                 dt_validade
                 )
                 VALUES
                 (
                 @id_produto,
-                @nm_nome,   
+                @nm_nome, 
+                @vl_unidade,  
                 @ds_unidade,
                 @dt_validade
                 )";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("id_produto", produto.id_produto));
+            parms.Add(new MySqlParameter("vl_unidade", produto.vl_unidade));
             parms.Add(new MySqlParameter("nm_nome", produto.nm_nome));
             parms.Add(new MySqlParameter("ds_unidade", produto.ds_unidade));
             parms.Add(new MySqlParameter("dt_validade", produto.dt_validade));
@@ -43,16 +46,18 @@ namespace CaféPatronal.Programacao.Produto
         {
             string script =
             @"UPDATE tb_produto
-                 SET id_produto = @id_produto,
+                 SET
                   nm_nome = @nm_nome,
-                  ds_unidade = @ds_unidade,
-                  dt_validade = @dt_validade,
+                  vl_unidade = @vl_unidade,
+                  ds_unidade=@ds_unidade,
+                  dt_validade = @dt_validade
                   WHERE id_produto = @id_produto";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("id_produto", produto.id_produto));
             parms.Add(new MySqlParameter("nm_nome", produto.nm_nome));
             parms.Add(new MySqlParameter("ds_unidade", produto.ds_unidade));
+            parms.Add(new MySqlParameter("vl_unidade", produto.vl_unidade));
             parms.Add(new MySqlParameter("dt_validade", produto.dt_validade));
 
             Database db = new Database();
@@ -89,6 +94,7 @@ namespace CaféPatronal.Programacao.Produto
                 novoproduto.id_produto = reader.GetInt32("id_produto");
                 novoproduto.nm_nome = reader.GetString("nm_nome");
                 novoproduto.ds_unidade = reader.GetString("ds_unidade");
+                novoproduto.vl_unidade = reader.GetString("vl_unidade");
                 novoproduto.dt_validade = reader.GetDateTime("dt_validade");
 
                 produtos.Add(novoproduto);
@@ -115,6 +121,7 @@ namespace CaféPatronal.Programacao.Produto
                 novoproduto.id_produto = reader.GetInt32("id_produto");
                 novoproduto.nm_nome = reader.GetString("nm_nome");
                 novoproduto.ds_unidade = reader.GetString("ds_unidade");
+                novoproduto.vl_unidade = reader.GetString("vl_unidade");
                 novoproduto.dt_validade = reader.GetDateTime("dt_validade");
 
                 produtos.Add(novoproduto);

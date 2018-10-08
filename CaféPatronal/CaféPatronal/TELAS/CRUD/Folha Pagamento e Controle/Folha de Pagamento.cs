@@ -1,5 +1,4 @@
 ﻿using CaféPatronal.Programacao;
-using CaféPatronal.Programacao.ControlePagamento;
 using CaféPatronal.Programacao.FolhaPagamento;
 using CaféPatronal.Programacao.Funcionario;
 using CaféPatronal.Programacao.Objetos;

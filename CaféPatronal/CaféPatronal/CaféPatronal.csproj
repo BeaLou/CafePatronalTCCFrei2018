@@ -50,7 +50,7 @@
     <ApplicationIcon>Resources\whatsapp_image_2018_08_29_at_23_17_37_1_pWI_icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.10.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.SqlXml" />
@@ -73,9 +73,6 @@
     <Compile Include="Programacao\Entregável 3\ControleDPonto\ControledePontoBusiness.cs" />
     <Compile Include="Programacao\Entregável 3\ControleDPonto\ControledePontoDatabase.cs" />
     <Compile Include="Programacao\Entregável 3\ControleDPonto\ControledePontoDTO.cs" />
-    <Compile Include="Programacao\Entregável 1\ControlePagamento\CpBusiness.cs" />
-    <Compile Include="Programacao\Entregável 1\ControlePagamento\CpDatabase.cs" />
-    <Compile Include="Programacao\Entregável 1\ControlePagamento\CpDTO.cs" />
     <Compile Include="Programacao\Entregável 1\Dpto\DptoBusiness.cs" />
     <Compile Include="Programacao\Entregável 1\Dpto\DptoDatabase.cs" />
     <Compile Include="Programacao\Entregável 1\Dpto\DptoDTO.cs" />
@@ -98,9 +95,6 @@
     <Compile Include="Programacao\Entregável 4\FluxoCaixa\FluxoCaixaBusiness.cs" />
     <Compile Include="Programacao\Entregável 4\FluxoCaixa\FluxoCaixaDatabase.cs" />
     <Compile Include="Programacao\Entregável 4\FluxoCaixa\FluxoCaixaVw.cs" />
-    <Compile Include="Programacao\Entregável 1\FolhaDPonto\FolhadePontoBusiness.cs" />
-    <Compile Include="Programacao\Entregável 1\FolhaDPonto\FolhadePontoDatabase.cs" />
-    <Compile Include="Programacao\Entregável 1\FolhaDPonto\FolhadePontoDTO.cs" />
     <Compile Include="Programacao\Entregável 1\Funcionario\FuncionarioBusiness.cs" />
     <Compile Include="Programacao\Entregável 1\Funcionario\FuncionarioDatabase.cs" />
     <Compile Include="Programacao\Entregável 1\Funcionario\FuncionarioDTO.cs" />

@@ -33,7 +33,7 @@ namespace CaféPatronal.Programacao
                 }
 
             }
-            catch (Exception)
+            catch
             {
 
 
@@ -47,28 +47,33 @@ namespace CaféPatronal.Programacao
                 {
                     e.Handled = false;
                 }
-                else if (char.IsControl(e.KeyChar))
+
+                if (char.IsControl(e.KeyChar))
                 {
                     e.Handled = false;
 
                 }
-                else if (Char.IsSeparator(e.KeyChar))
+
+                if (Char.IsSeparator(e.KeyChar))
                 {
                     e.Handled = false;
                 }
-                else
+
+                if (Char.IsLetter(e.KeyChar) && e.KeyChar != ',')
                 {
                     e.Handled = true;
-
                 }
 
+
+
             }
-            catch (Exception)
+            catch
             {
 
 
             }
 
         }
+
     }
 }

@@ -137,8 +137,6 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.cbmes);
-            this.tabPage1.Controls.Add(this.label24);
             this.tabPage1.Controls.Add(this.btnSalvarFolhaPagamento);
             this.tabPage1.Controls.Add(this.btnVoltar);
             this.tabPage1.Controls.Add(this.groupBox2);
@@ -172,7 +170,7 @@
             "Outubro",
             "Novembro",
             "Dezembro"});
-            this.cbmes.Location = new System.Drawing.Point(780, 74);
+            this.cbmes.Location = new System.Drawing.Point(201, 12);
             this.cbmes.Name = "cbmes";
             this.cbmes.Size = new System.Drawing.Size(188, 33);
             this.cbmes.TabIndex = 68;
@@ -183,7 +181,7 @@
             this.label24.BackColor = System.Drawing.Color.Transparent;
             this.label24.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.Black;
-            this.label24.Location = new System.Drawing.Point(691, 74);
+            this.label24.Location = new System.Drawing.Point(112, 12);
             this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(43, 25);
@@ -210,6 +208,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.cbmes);
+            this.groupBox2.Controls.Add(this.label24);
             this.groupBox2.Controls.Add(this.btnCalcular);
             this.groupBox2.Controls.Add(this.lblSalarioLiquido);
             this.groupBox2.Controls.Add(this.nudHorasTrabalhadas);
@@ -233,7 +233,7 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Location = new System.Drawing.Point(12, 40);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(578, 396);
+            this.groupBox2.Size = new System.Drawing.Size(583, 414);
             this.groupBox2.TabIndex = 60;
             this.groupBox2.TabStop = false;
             // 
@@ -243,7 +243,7 @@
             this.btnCalcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCalcular.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCalcular.ForeColor = System.Drawing.Color.Black;
-            this.btnCalcular.Location = new System.Drawing.Point(406, 295);
+            this.btnCalcular.Location = new System.Drawing.Point(415, 331);
             this.btnCalcular.Margin = new System.Windows.Forms.Padding(4);
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.Size = new System.Drawing.Size(116, 36);
@@ -258,7 +258,7 @@
             this.lblSalarioLiquido.BackColor = System.Drawing.Color.Transparent;
             this.lblSalarioLiquido.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSalarioLiquido.ForeColor = System.Drawing.Color.Black;
-            this.lblSalarioLiquido.Location = new System.Drawing.Point(477, 351);
+            this.lblSalarioLiquido.Location = new System.Drawing.Point(495, 376);
             this.lblSalarioLiquido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSalarioLiquido.Name = "lblSalarioLiquido";
             this.lblSalarioLiquido.Size = new System.Drawing.Size(18, 25);
@@ -269,7 +269,7 @@
             // 
             this.nudHorasTrabalhadas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nudHorasTrabalhadas.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudHorasTrabalhadas.Location = new System.Drawing.Point(185, 57);
+            this.nudHorasTrabalhadas.Location = new System.Drawing.Point(202, 93);
             this.nudHorasTrabalhadas.Margin = new System.Windows.Forms.Padding(4);
             this.nudHorasTrabalhadas.Maximum = new decimal(new int[] {
             300,
@@ -286,7 +286,7 @@
             this.label21.BackColor = System.Drawing.Color.Transparent;
             this.label21.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.Black;
-            this.label21.Location = new System.Drawing.Point(17, 58);
+            this.label21.Location = new System.Drawing.Point(58, 95);
             this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(130, 25);
@@ -299,7 +299,7 @@
             this.lblText.BackColor = System.Drawing.Color.Transparent;
             this.lblText.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblText.ForeColor = System.Drawing.Color.Black;
-            this.lblText.Location = new System.Drawing.Point(364, 351);
+            this.lblText.Location = new System.Drawing.Point(373, 374);
             this.lblText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblText.Name = "lblText";
             this.lblText.Size = new System.Drawing.Size(105, 25);
@@ -313,7 +313,7 @@
             this.cboFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboFuncionario.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboFuncionario.FormattingEnabled = true;
-            this.cboFuncionario.Location = new System.Drawing.Point(185, 16);
+            this.cboFuncionario.Location = new System.Drawing.Point(202, 52);
             this.cboFuncionario.Margin = new System.Windows.Forms.Padding(4);
             this.cboFuncionario.Name = "cboFuncionario";
             this.cboFuncionario.Size = new System.Drawing.Size(191, 33);
@@ -323,7 +323,7 @@
             // 
             this.txtFaltasPriSemana.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFaltasPriSemana.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFaltasPriSemana.Location = new System.Drawing.Point(185, 93);
+            this.txtFaltasPriSemana.Location = new System.Drawing.Point(202, 129);
             this.txtFaltasPriSemana.Margin = new System.Windows.Forms.Padding(4);
             this.txtFaltasPriSemana.Name = "txtFaltasPriSemana";
             this.txtFaltasPriSemana.Size = new System.Drawing.Size(190, 32);
@@ -335,7 +335,7 @@
             this.label22.BackColor = System.Drawing.Color.Transparent;
             this.label22.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.Black;
-            this.label22.Location = new System.Drawing.Point(38, 24);
+            this.label22.Location = new System.Drawing.Point(55, 60);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(88, 25);
@@ -348,7 +348,7 @@
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.Black;
-            this.label20.Location = new System.Drawing.Point(-6, 93);
+            this.label20.Location = new System.Drawing.Point(34, 131);
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(177, 25);
@@ -359,7 +359,7 @@
             // 
             this.txtFaltaQuarSemana.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFaltaQuarSemana.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFaltaQuarSemana.Location = new System.Drawing.Point(185, 215);
+            this.txtFaltaQuarSemana.Location = new System.Drawing.Point(202, 251);
             this.txtFaltaQuarSemana.Margin = new System.Windows.Forms.Padding(4);
             this.txtFaltaQuarSemana.Name = "txtFaltaQuarSemana";
             this.txtFaltaQuarSemana.Size = new System.Drawing.Size(191, 32);
@@ -372,7 +372,7 @@
             this.chkVT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.chkVT.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkVT.ForeColor = System.Drawing.Color.Black;
-            this.chkVT.Location = new System.Drawing.Point(39, 349);
+            this.chkVT.Location = new System.Drawing.Point(78, 368);
             this.chkVT.Margin = new System.Windows.Forms.Padding(4);
             this.chkVT.Name = "chkVT";
             this.chkVT.Size = new System.Drawing.Size(119, 29);
@@ -386,7 +386,7 @@
             this.lblPorcentagem.BackColor = System.Drawing.Color.Transparent;
             this.lblPorcentagem.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPorcentagem.ForeColor = System.Drawing.Color.Black;
-            this.lblPorcentagem.Location = new System.Drawing.Point(33, 292);
+            this.lblPorcentagem.Location = new System.Drawing.Point(50, 328);
             this.lblPorcentagem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPorcentagem.Name = "lblPorcentagem";
             this.lblPorcentagem.Size = new System.Drawing.Size(98, 25);
@@ -400,7 +400,7 @@
             this.chkHoraExtra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.chkHoraExtra.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkHoraExtra.ForeColor = System.Drawing.Color.Black;
-            this.chkHoraExtra.Location = new System.Drawing.Point(209, 349);
+            this.chkHoraExtra.Location = new System.Drawing.Point(243, 368);
             this.chkHoraExtra.Margin = new System.Windows.Forms.Padding(4);
             this.chkHoraExtra.Name = "chkHoraExtra";
             this.chkHoraExtra.Size = new System.Drawing.Size(91, 29);
@@ -413,7 +413,7 @@
             // 
             this.nudHorasExtras.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nudHorasExtras.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudHorasExtras.Location = new System.Drawing.Point(184, 255);
+            this.nudHorasExtras.Location = new System.Drawing.Point(201, 291);
             this.nudHorasExtras.Margin = new System.Windows.Forms.Padding(4);
             this.nudHorasExtras.Name = "nudHorasExtras";
             this.nudHorasExtras.Size = new System.Drawing.Size(191, 32);
@@ -424,7 +424,7 @@
             this.nudPorcentagem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nudPorcentagem.DecimalPlaces = 2;
             this.nudPorcentagem.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudPorcentagem.Location = new System.Drawing.Point(185, 295);
+            this.nudPorcentagem.Location = new System.Drawing.Point(202, 331);
             this.nudPorcentagem.Margin = new System.Windows.Forms.Padding(4);
             this.nudPorcentagem.Name = "nudPorcentagem";
             this.nudPorcentagem.Size = new System.Drawing.Size(191, 32);
@@ -436,7 +436,7 @@
             this.lblHoraExtra.BackColor = System.Drawing.Color.Transparent;
             this.lblHoraExtra.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHoraExtra.ForeColor = System.Drawing.Color.Black;
-            this.lblHoraExtra.Location = new System.Drawing.Point(34, 261);
+            this.lblHoraExtra.Location = new System.Drawing.Point(51, 297);
             this.lblHoraExtra.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHoraExtra.Name = "lblHoraExtra";
             this.lblHoraExtra.Size = new System.Drawing.Size(97, 25);
@@ -449,7 +449,7 @@
             this.label19.BackColor = System.Drawing.Color.Transparent;
             this.label19.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(1, 135);
+            this.label19.Location = new System.Drawing.Point(11, 171);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(176, 25);
@@ -460,7 +460,7 @@
             // 
             this.txtFaltaTerSemana.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFaltaTerSemana.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFaltaTerSemana.Location = new System.Drawing.Point(184, 173);
+            this.txtFaltaTerSemana.Location = new System.Drawing.Point(201, 209);
             this.txtFaltaTerSemana.Margin = new System.Windows.Forms.Padding(4);
             this.txtFaltaTerSemana.Name = "txtFaltaTerSemana";
             this.txtFaltaTerSemana.Size = new System.Drawing.Size(191, 32);
@@ -472,7 +472,7 @@
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(2, 180);
+            this.label18.Location = new System.Drawing.Point(12, 216);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(174, 25);
@@ -483,7 +483,7 @@
             // 
             this.txtFaltaSegSemana.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFaltaSegSemana.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFaltaSegSemana.Location = new System.Drawing.Point(185, 133);
+            this.txtFaltaSegSemana.Location = new System.Drawing.Point(202, 169);
             this.txtFaltaSegSemana.Margin = new System.Windows.Forms.Padding(4);
             this.txtFaltaSegSemana.Name = "txtFaltaSegSemana";
             this.txtFaltaSegSemana.Size = new System.Drawing.Size(191, 32);
@@ -495,7 +495,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(7, 215);
+            this.label2.Location = new System.Drawing.Point(17, 251);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(165, 25);

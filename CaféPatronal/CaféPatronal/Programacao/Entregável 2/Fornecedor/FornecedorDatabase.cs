@@ -55,14 +55,14 @@ namespace CaféPatronal.Programacao.Estoque
         {
             string script =
             @"UPDATE tb_fornecedor
-                 SET id_fornecedor = @id_fornecedor,
+                 SET 
                   nm_nome = @nm_nome,
                   ds_cnpj = @ds_cnpj,
                   ds_telefone = @ds_telefone,
                   ds_cep = @ds_cep,
                   ds_complemento = @ds_complemento,
                   ds_numerofornec = @ds_numerofornec,
-                  ds_email = @ds_email,
+                  ds_email = @ds_email
                   WHERE id_fornecedor = @id_fornecedor";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
