@@ -185,5 +185,10 @@ namespace CaféPatronal.TELAS.Cadastro_e_Consulta
                 MessageBox.Show("Ocorreu um erro: " + ex.Message);
             }
         }
+
+        private void txtSenha_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
