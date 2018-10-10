@@ -24,7 +24,7 @@ CREATE TABLE `tb_funcionario` (
 	`ds_telefone` varchar(20) NOT NULL,
 	`ds_telefonemovel` varchar(20) NOT NULL UNIQUE,
 	`ds_cep` varchar(10) NOT NULL,
-	`ds_complemento` varchar(20),
+	`ds_complemento` varchar(20) NOT NULL,
 	`ds_ncasa` varchar(20) NOT NULL,
 	`dt_nascimento` DATE NOT NULL,
 	`ds_login` varchar(20) NOT NULL,
@@ -32,7 +32,7 @@ CREATE TABLE `tb_funcionario` (
 	`bt_permissaoadm` BOOLEAN ,
 	`bt_permissaorh` BOOLEAN ,
 	`bt_permissaofuncionario` BOOLEAN ,
-    `vl_salariobruto` DECIMAL(10,2),
+    `vl_salariobruto` DECIMAL ,
     
 	PRIMARY KEY (`id_funcionario`)
 );
@@ -70,12 +70,29 @@ CREATE TABLE `tb_pedido` (
 CREATE TABLE `tb_produto` (
 	`id_produto` INT NOT NULL AUTO_INCREMENT,
 	`nm_nome` varchar(50) NOT NULL,
+	`ds_descrição` varchar(100) NOT NULL,
+	`vl_produto` DECIMAL NOT NULL,
 	`ds_unidade` varchar(20) NOT NULL,
-    `vl_unidade` varchar (10) not null,
-	`dt_validade` DATE NOT NULL,
 	PRIMARY KEY (`id_produto`)
 );
 
+CREATE TABLE `tb_compra` (
+	`id_compra` INT NOT NULL AUTO_INCREMENT,
+	`id_fornecedor` INT NOT NULL,
+	`nm_compra` varchar(50) NOT NULL,
+	`ds_unidade` varchar(20) NOT NULL,
+	`qtd_unidade` varchar(3) NOT NULL,
+	`vl_compra` DECIMAL NOT NULL,
+	`dt_compra` DATE NOT NULL,
+	PRIMARY KEY (`id_compra`)
+);
+
+CREATE TABLE `tb_compraitem` (
+	`id_compraitem` INT NOT NULL AUTO_INCREMENT,
+	`id_compra` INT NOT NULL,
+	`id_produto` INT NOT NULL,
+	PRIMARY KEY (`id_compraitem`)
+);
 
 CREATE TABLE `tb_produtoitem` (
 	`id_produtoitem` INT NOT NULL AUTO_INCREMENT,
@@ -119,6 +136,12 @@ ALTER TABLE `tb_produtoitem` ADD CONSTRAINT `tb_produtoitem_fk1` FOREIGN KEY (`i
 
 ALTER TABLE `tb_folhapagamento` ADD CONSTRAINT `tb_folhapagamento_fk0` FOREIGN KEY (`id_funcionario`) REFERENCES `tb_funcionario`(`id_funcionario`);
 
+ALTER TABLE `tb_compra` ADD CONSTRAINT `tb_compra_fk0` FOREIGN KEY (`id_fornecedor`) REFERENCES `tb_fornecedor`(`id_fornecedor`);
+
+ALTER TABLE `tb_compraitem` ADD CONSTRAINT `tb_compraitem_fk0` FOREIGN KEY (`id_compra`) REFERENCES `tb_compra`(`id_compra`);
+
+ALTER TABLE `tb_compraitem` ADD CONSTRAINT `tb_compraitem_fk1` FOREIGN KEY (`id_produto`) REFERENCES `tb_produto`(`id_produto`);
+
 
 Create view vw_consultar_folhapagamento as select
 tb_funcionario.nm_nome,
@@ -155,15 +178,15 @@ insert into `tb_cliente`(nm_nome,nm_sobrenome,dt_datanascimento,ds_cpf,ds_email)
 ds_dpto,ds_email,ds_telefone,ds_telefonemovel
 ,ds_cep,ds_complemento,ds_ncasa,dt_nascimento,
 ds_login,ds_senha, bt_permissaoadm , bt_permissaorh , bt_permissaofuncionario,vl_salariobruto) 
-VALUES("Barbara","Florencio","014.49834.44-0","557.819.658-66","21.040.731-1","ADM"
-,"barbaraflorencio@hotmail.com.br","(11) 3870-7273","(11) 98668-5845"
-,"04763-020","Casa 1","563","1999/04/19","adm","1234", true , true , true,'901.32');
+VALUES("Ana","Carolina","014.49834.44-0","557.819.658-66","21.040.731-1","ADM"
+,"anacarolina@hotmail.com.br","(11) 3870-7273","(11) 98668-5845"
+,"04763-020","Casa 1","563","1999/04/19","adm","1234", true , true , true,"901");
 
 insert into `tb_funcionario`(nm_nome,nm_sobrenome,ds_carteiratrabalho,ds_cpf,ds_rg,ds_dpto,ds_email,
 ds_telefone,ds_telefonemovel,ds_cep,ds_complemento,ds_ncasa,dt_nascimento,ds_login,ds_senha, bt_permissaoadm , bt_permissaorh , bt_permissaofuncionario,vl_salariobruto) 
-VALUES("Fernanda","Gomes","331.66699.42-6","772.480.108-80","17.284.238-4","T.I.",
-"fernandagomes@outlook.com.br",
-"(11) 2786-1154","(11) 99788-6151","04169-970","Casa 1","508","1999/11/15","Funcionario","12345", false ,false , true,"2400.64");
+VALUES("Samira","Dias","331.66699.42-6","772.480.108-80","17.284.238-4","T.I.",
+"samiradias@outlook.com.br",
+"(11) 2786-1154","(11) 99788-6151","04169-970","Casa 1","508","1999/11/15","Funcionario","12345", false ,false , true,"982");
 
  
 insert into  `tb_pedido`(id_cliente,vl_venda)VALUES("1","10.00");
@@ -174,14 +197,7 @@ insert into  `tb_pedido`(id_cliente,vl_venda)VALUES("1","10.00");
 
 
 
-insert into`tb_produto`(nm_nome,ds_unidade,dt_validade,vl_unidade) VALUES ("Pão","KG","2019/10/4","4");
-insert into`tb_produto`(nm_nome,ds_unidade,dt_validade,vl_unidade) VALUES ("Refrigerante Coca-cola","L","2019/11/5","5");
-insert into`tb_produto`(nm_nome,ds_unidade,dt_validade,vl_unidade) VALUES ("Guardanapo","QTD","2028/12/3","7");
-insert into`tb_produto`(nm_nome,ds_unidade,dt_validade,vl_unidade) VALUES ("Coxinha","G","2018/12/5","10");
-insert into`tb_produto`(nm_nome,ds_unidade,dt_validade,vl_unidade) VALUES ("Suco","L","2019/5/8","20");
-insert into`tb_produto`(nm_nome,ds_unidade,dt_validade,vl_unidade) VALUES ("Hambúrguer","G","2019/8/6","4");
-insert into`tb_produto`(nm_nome,ds_unidade,dt_validade,vl_unidade) VALUES ("Alface","KG","2019/1/1","10");
-insert into`tb_produto`(nm_nome,ds_unidade,dt_validade,vl_unidade) VALUES ("Tomate","KG","2019/2/3","10");
+
 
 
 insert into `tb_fornecedor`(nm_nome,ds_cnpj,ds_telefone,ds_cep,
@@ -193,36 +209,7 @@ ds_complemento,ds_numerofornec,ds_email)
 VALUES ("Giovana","90.871.350/0001-16","(11)2943-1179","74475-816","Casa 1","237",
 "giovanaeduardamarlenesilva_@outlook.ind.br");
 
-insert into `tb_estoque`(id_produto,id_fornecedor,vl_compra,
-dt_datacompra,qtd_produtos,dt_validade)
- VALUES ("1","2","100","2018/09/16","5","2018/12/4");
-insert into `tb_estoque`(id_produto,id_fornecedor,
-vl_compra,dt_datacompra,qtd_produtos,dt_validade) 
-VALUES ("2","2","50","2018/09/16","4","2018/12/4");
-insert into `tb_estoque`(id_produto,id_fornecedor,vl_compra
-,dt_datacompra,qtd_produtos,dt_validade)
- VALUES ("3","2","90","2018/09/16","10","2018/12/4");
-insert into `tb_estoque`(id_produto,id_fornecedor,
-vl_compra,dt_datacompra,qtd_produtos,dt_validade)
- VALUES ("4","2","60","2018/09/16","1","2018/12/4");
-insert into `tb_estoque`(id_produto,id_fornecedor,vl_compra
-,dt_datacompra,qtd_produtos,dt_validade)
- VALUES ("5","1","40","2018/09/17","9","2018/12/19");
-insert into `tb_estoque`(id_produto,id_fornecedor,
-vl_compra,dt_datacompra,qtd_produtos,dt_validade)
- VALUES ("6","1","40","2018/09/17","1","2018/10/24");
-insert into `tb_estoque`(id_produto,id_fornecedor,
-vl_compra,dt_datacompra,qtd_produtos,dt_validade)
- VALUES ("7","1","60","2018/09/17","10","2018/11/14");
-insert into `tb_estoque`(id_produto,id_fornecedor,
-vl_compra,dt_datacompra,qtd_produtos,dt_validade)
- VALUES ("8","1","10","2018/09/17","15","2018/11/14");
-insert into `tb_estoque`(id_produto,id_fornecedor,
-vl_compra,dt_datacompra,qtd_produtos,dt_validade) 
-VALUES ("8","1","10","2018/07/23","5","2018/10/4");
-insert into `tb_estoque`(id_produto,id_fornecedor,
-vl_compra,dt_datacompra,qtd_produtos,dt_validade) 
-VALUES ("8","1","90","2018/07/23","2","2018/10/4");
+
 
 select*from tb_produto;
 

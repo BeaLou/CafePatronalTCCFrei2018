@@ -65,6 +65,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Programacao\Entregável 2\Compras\CompraItemBusiness.cs" />
+    <Compile Include="Programacao\Entregável 2\Compras\CompraItemDatabase.cs" />
+    <Compile Include="Programacao\Entregável 2\Compras\CompraItemDTO.cs" />
     <Compile Include="Programacao\Entregável 3\Cliente\ClienteBusiness.cs" />
     <Compile Include="Programacao\Entregável 3\Cliente\ClienteDatabase.cs" />
     <Compile Include="Programacao\Entregável 3\Cliente\ClienteDTO.cs" />
