@@ -94,7 +94,7 @@
             this.txtComplemento.MaxLength = 20;
             this.txtComplemento.Name = "txtComplemento";
             this.txtComplemento.Size = new System.Drawing.Size(275, 32);
-            this.txtComplemento.TabIndex = 6;
+            this.txtComplemento.TabIndex = 7;
             // 
             // lblNumero
             // 
@@ -127,7 +127,7 @@
             this.mktCnpj.Mask = "000.000.000-00";
             this.mktCnpj.Name = "mktCnpj";
             this.mktCnpj.Size = new System.Drawing.Size(275, 32);
-            this.mktCnpj.TabIndex = 2;
+            this.mktCnpj.TabIndex = 3;
             this.mktCnpj.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mktCpf_KeyPress);
             // 
             // lblCnpj
@@ -160,7 +160,7 @@
             this.txtNomeFornec.MaxLength = 20;
             this.txtNomeFornec.Name = "txtNomeFornec";
             this.txtNomeFornec.Size = new System.Drawing.Size(275, 32);
-            this.txtNomeFornec.TabIndex = 1;
+            this.txtNomeFornec.TabIndex = 2;
             this.txtNomeFornec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // txtemail
@@ -170,7 +170,7 @@
             this.txtemail.MaxLength = 50;
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(275, 32);
-            this.txtemail.TabIndex = 3;
+            this.txtemail.TabIndex = 4;
             // 
             // label1
             // 
@@ -191,7 +191,7 @@
             this.mktTelefoneFixo.Mask = "(00)0000-0000";
             this.mktTelefoneFixo.Name = "mktTelefoneFixo";
             this.mktTelefoneFixo.Size = new System.Drawing.Size(275, 32);
-            this.mktTelefoneFixo.TabIndex = 4;
+            this.mktTelefoneFixo.TabIndex = 5;
             // 
             // lblTelefoneFixo
             // 
@@ -225,7 +225,7 @@
             this.mtbCep.Mask = "0:0000-000";
             this.mtbCep.Name = "mtbCep";
             this.mtbCep.Size = new System.Drawing.Size(275, 32);
-            this.mtbCep.TabIndex = 56;
+            this.mtbCep.TabIndex = 6;
             // 
             // btnVoltar
             // 
@@ -249,7 +249,7 @@
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1065, 462);
-            this.tabControl1.TabIndex = 59;
+            this.tabControl1.TabIndex = 9;
             // 
             // tabPage1
             // 
@@ -278,7 +278,7 @@
             this.btnSalvarFornecedores.Location = new System.Drawing.Point(928, 385);
             this.btnSalvarFornecedores.Name = "btnSalvarFornecedores";
             this.btnSalvarFornecedores.Size = new System.Drawing.Size(126, 36);
-            this.btnSalvarFornecedores.TabIndex = 68;
+            this.btnSalvarFornecedores.TabIndex = 8;
             this.btnSalvarFornecedores.Text = "Salvar";
             this.btnSalvarFornecedores.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSalvarFornecedores.UseVisualStyleBackColor = false;
@@ -305,7 +305,7 @@
             this.txtNumero.MaxLength = 20;
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(275, 32);
-            this.txtNumero.TabIndex = 57;
+            this.txtNumero.TabIndex = 7;
             // 
             // groupBox1
             // 
@@ -425,7 +425,7 @@
             this.button2.Location = new System.Drawing.Point(763, 45);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(103, 33);
-            this.button2.TabIndex = 17;
+            this.button2.TabIndex = 13;
             this.button2.Text = "Alterar";
             this.button2.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.button2.UseVisualStyleBackColor = true;
@@ -440,7 +440,7 @@
             this.button1.Location = new System.Drawing.Point(654, 45);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(103, 33);
-            this.button1.TabIndex = 16;
+            this.button1.TabIndex = 12;
             this.button1.Text = "Apagar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.button1.UseVisualStyleBackColor = true;
@@ -455,7 +455,7 @@
             this.btnConsultarFornece.Location = new System.Drawing.Point(541, 45);
             this.btnConsultarFornece.Name = "btnConsultarFornece";
             this.btnConsultarFornece.Size = new System.Drawing.Size(107, 32);
-            this.btnConsultarFornece.TabIndex = 10;
+            this.btnConsultarFornece.TabIndex = 11;
             this.btnConsultarFornece.Text = "Consultar";
             this.btnConsultarFornece.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnConsultarFornece.UseVisualStyleBackColor = true;
@@ -468,7 +468,7 @@
             this.txtconsultar.MaxLength = 50;
             this.txtconsultar.Name = "txtconsultar";
             this.txtconsultar.Size = new System.Drawing.Size(456, 32);
-            this.txtconsultar.TabIndex = 9;
+            this.txtconsultar.TabIndex = 10;
             // 
             // pictureBox1
             // 

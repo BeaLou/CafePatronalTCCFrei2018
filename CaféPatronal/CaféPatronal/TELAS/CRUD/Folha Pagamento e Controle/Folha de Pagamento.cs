@@ -250,5 +250,15 @@ namespace CaféPatronal.TELAS.Fluxo_de_Caixa_e_Folha_de_Pagamento
             dgvConsultarFolha.AutoGenerateColumns = false;
             dgvConsultarFolha.DataSource = a;
         }
+
+        private void cbmes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nudHorasTrabalhadas_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

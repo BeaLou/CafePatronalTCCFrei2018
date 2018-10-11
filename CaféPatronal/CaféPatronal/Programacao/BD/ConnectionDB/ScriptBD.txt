@@ -70,7 +70,7 @@ CREATE TABLE `tb_pedido` (
 CREATE TABLE `tb_produto` (
 	`id_produto` INT NOT NULL AUTO_INCREMENT,
 	`nm_nome` varchar(50) NOT NULL,
-	`ds_descrição` varchar(100) NOT NULL,
+	`ds_descricao` varchar(100) NOT NULL,
 	`vl_produto` DECIMAL NOT NULL,
 	`ds_unidade` varchar(20) NOT NULL,
 	PRIMARY KEY (`id_produto`)
@@ -211,6 +211,6 @@ VALUES ("Giovana","90.871.350/0001-16","(11)2943-1179","74475-816","Casa 1","237
 
 
 
-select*from tb_produto;
+select*from tb_fornecedor;
 
-select *  from tb_funcionario;
+select *  from tb_fornecedor;

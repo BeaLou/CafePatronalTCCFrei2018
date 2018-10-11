@@ -62,6 +62,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnSalvarFuncionário = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtSenha = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.txtsalariobruto = new System.Windows.Forms.TextBox();
             this.txtNumero = new System.Windows.Forms.TextBox();
@@ -80,7 +81,6 @@
             this.TelefoneMóvel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnConsultarClientes = new System.Windows.Forms.Button();
             this.txtConsultarFuncionários = new System.Windows.Forms.TextBox();
-            this.txtSenha = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -110,7 +110,7 @@
             this.dtpDataNascimento.MinDate = new System.DateTime(1940, 1, 1, 0, 0, 0, 0);
             this.dtpDataNascimento.Name = "dtpDataNascimento";
             this.dtpDataNascimento.Size = new System.Drawing.Size(276, 32);
-            this.dtpDataNascimento.TabIndex = 3;
+            this.dtpDataNascimento.TabIndex = 4;
             // 
             // mbtCpf
             // 
@@ -119,7 +119,7 @@
             this.mbtCpf.Mask = "000.000.000-00";
             this.mbtCpf.Name = "mbtCpf";
             this.mbtCpf.Size = new System.Drawing.Size(276, 32);
-            this.mbtCpf.TabIndex = 5;
+            this.mbtCpf.TabIndex = 6;
             this.mbtCpf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mktCpf_KeyPress);
             // 
             // lblCpf
@@ -165,7 +165,7 @@
             this.txtSobrenome.MaxLength = 20;
             this.txtSobrenome.Name = "txtSobrenome";
             this.txtSobrenome.Size = new System.Drawing.Size(276, 32);
-            this.txtSobrenome.TabIndex = 2;
+            this.txtSobrenome.TabIndex = 3;
             this.txtSobrenome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNome_KeyPress);
             // 
             // lblSobrenome
@@ -186,7 +186,7 @@
             this.txtNome.MaxLength = 20;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(276, 32);
-            this.txtNome.TabIndex = 1;
+            this.txtNome.TabIndex = 2;
             this.txtNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNome_KeyPress);
             // 
             // txtEmail
@@ -196,7 +196,7 @@
             this.txtEmail.MaxLength = 50;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(276, 32);
-            this.txtEmail.TabIndex = 6;
+            this.txtEmail.TabIndex = 8;
             // 
             // lblsenha
             // 
@@ -231,7 +231,7 @@
             this.cboDepartamento.Location = new System.Drawing.Point(135, 299);
             this.cboDepartamento.Name = "cboDepartamento";
             this.cboDepartamento.Size = new System.Drawing.Size(276, 33);
-            this.cboDepartamento.TabIndex = 6;
+            this.cboDepartamento.TabIndex = 7;
             this.cboDepartamento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNome_KeyPress);
             // 
             // mbtRg
@@ -241,7 +241,7 @@
             this.mbtRg.Mask = "00.000.000-00";
             this.mbtRg.Name = "mbtRg";
             this.mbtRg.Size = new System.Drawing.Size(276, 26);
-            this.mbtRg.TabIndex = 12;
+            this.mbtRg.TabIndex = 13;
             this.mbtRg.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mktCpf_KeyPress);
             // 
             // lblRg
@@ -264,7 +264,7 @@
             this.mbtCarteiraTrabalho.Mask = "000.000.000-00";
             this.mbtCarteiraTrabalho.Name = "mbtCarteiraTrabalho";
             this.mbtCarteiraTrabalho.Size = new System.Drawing.Size(276, 32);
-            this.mbtCarteiraTrabalho.TabIndex = 4;
+            this.mbtCarteiraTrabalho.TabIndex = 5;
             this.mbtCarteiraTrabalho.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mktCpf_KeyPress);
             // 
             // lblCarteiraTrabalho
@@ -286,7 +286,7 @@
             this.txtLogin.MaxLength = 20;
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(276, 26);
-            this.txtLogin.TabIndex = 13;
+            this.txtLogin.TabIndex = 14;
             // 
             // lblLogin
             // 
@@ -319,7 +319,7 @@
             this.txtComplemento.MaxLength = 20;
             this.txtComplemento.Name = "txtComplemento";
             this.txtComplemento.Size = new System.Drawing.Size(276, 26);
-            this.txtComplemento.TabIndex = 8;
+            this.txtComplemento.TabIndex = 10;
             // 
             // lblNumero
             // 
@@ -376,7 +376,7 @@
             this.mtbTelefoneFixo.Mask = "(00)0000-0000";
             this.mtbTelefoneFixo.Name = "mtbTelefoneFixo";
             this.mtbTelefoneFixo.Size = new System.Drawing.Size(276, 26);
-            this.mtbTelefoneFixo.TabIndex = 10;
+            this.mtbTelefoneFixo.TabIndex = 11;
             this.mtbTelefoneFixo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mktCpf_KeyPress);
             // 
             // mtbCep
@@ -386,7 +386,7 @@
             this.mtbCep.Mask = "00000-000";
             this.mtbCep.Name = "mtbCep";
             this.mtbCep.Size = new System.Drawing.Size(276, 26);
-            this.mtbCep.TabIndex = 7;
+            this.mtbCep.TabIndex = 9;
             this.mtbCep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mktCpf_KeyPress);
             // 
             // mtbTelefoneMovel
@@ -396,7 +396,7 @@
             this.mtbTelefoneMovel.Mask = "(00)00000-0000";
             this.mtbTelefoneMovel.Name = "mtbTelefoneMovel";
             this.mtbTelefoneMovel.Size = new System.Drawing.Size(276, 26);
-            this.mtbTelefoneMovel.TabIndex = 11;
+            this.mtbTelefoneMovel.TabIndex = 12;
             this.mtbTelefoneMovel.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox2_MaskInputRejected);
             this.mtbTelefoneMovel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mktCpf_KeyPress);
             // 
@@ -422,7 +422,7 @@
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1110, 477);
-            this.tabControl1.TabIndex = 61;
+            this.tabControl1.TabIndex = 18;
             // 
             // tabPage1
             // 
@@ -452,7 +452,7 @@
             this.btnSalvarFuncionário.Location = new System.Drawing.Point(974, 393);
             this.btnSalvarFuncionário.Name = "btnSalvarFuncionário";
             this.btnSalvarFuncionário.Size = new System.Drawing.Size(126, 36);
-            this.btnSalvarFuncionário.TabIndex = 68;
+            this.btnSalvarFuncionário.TabIndex = 17;
             this.btnSalvarFuncionário.Text = "Salvar";
             this.btnSalvarFuncionário.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSalvarFuncionário.UseVisualStyleBackColor = false;
@@ -484,6 +484,16 @@
             this.groupBox1.TabIndex = 61;
             this.groupBox1.TabStop = false;
             // 
+            // txtSenha
+            // 
+            this.txtSenha.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenha.Location = new System.Drawing.Point(156, 260);
+            this.txtSenha.MaxLength = 20;
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.Size = new System.Drawing.Size(276, 26);
+            this.txtSenha.TabIndex = 15;
+            this.txtSenha.TextChanged += new System.EventHandler(this.txtSenha_TextChanged);
+            // 
             // label18
             // 
             this.label18.AutoSize = true;
@@ -501,7 +511,7 @@
             this.txtsalariobruto.MaxLength = 45;
             this.txtsalariobruto.Name = "txtsalariobruto";
             this.txtsalariobruto.Size = new System.Drawing.Size(276, 26);
-            this.txtsalariobruto.TabIndex = 15;
+            this.txtsalariobruto.TabIndex = 16;
             // 
             // txtNumero
             // 
@@ -510,7 +520,7 @@
             this.txtNumero.MaxLength = 20;
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(276, 26);
-            this.txtNumero.TabIndex = 9;
+            this.txtNumero.TabIndex = 10;
             this.txtNumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mktCpf_KeyPress);
             // 
             // groupBox2
@@ -575,7 +585,7 @@
             this.btnAlterar.Location = new System.Drawing.Point(742, 62);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(104, 33);
-            this.btnAlterar.TabIndex = 17;
+            this.btnAlterar.TabIndex = 22;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.btnAlterar.UseVisualStyleBackColor = true;
@@ -591,7 +601,7 @@
             this.button1.Location = new System.Drawing.Point(633, 62);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(104, 33);
-            this.button1.TabIndex = 16;
+            this.button1.TabIndex = 21;
             this.button1.Text = "Apagar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.button1.UseVisualStyleBackColor = true;
@@ -688,7 +698,7 @@
             this.btnConsultarClientes.Location = new System.Drawing.Point(520, 63);
             this.btnConsultarClientes.Name = "btnConsultarClientes";
             this.btnConsultarClientes.Size = new System.Drawing.Size(106, 32);
-            this.btnConsultarClientes.TabIndex = 10;
+            this.btnConsultarClientes.TabIndex = 20;
             this.btnConsultarClientes.Text = "Consultar";
             this.btnConsultarClientes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnConsultarClientes.UseVisualStyleBackColor = true;
@@ -702,17 +712,7 @@
             this.txtConsultarFuncionários.MaxLength = 50;
             this.txtConsultarFuncionários.Name = "txtConsultarFuncionários";
             this.txtConsultarFuncionários.Size = new System.Drawing.Size(456, 32);
-            this.txtConsultarFuncionários.TabIndex = 9;
-            // 
-            // txtSenha
-            // 
-            this.txtSenha.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha.Location = new System.Drawing.Point(156, 260);
-            this.txtSenha.MaxLength = 20;
-            this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(276, 26);
-            this.txtSenha.TabIndex = 14;
-            this.txtSenha.TextChanged += new System.EventHandler(this.txtSenha_TextChanged);
+            this.txtConsultarFuncionários.TabIndex = 19;
             // 
             // CadastroFuncionario
             // 

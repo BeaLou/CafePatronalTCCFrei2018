@@ -77,7 +77,7 @@
             this.txtValor.MaxLength = 50;
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(590, 32);
-            this.txtValor.TabIndex = 1;
+            this.txtValor.TabIndex = 4;
             // 
             // lblValorFinal
             // 
@@ -113,7 +113,7 @@
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1114, 472);
-            this.tabControl1.TabIndex = 60;
+            this.tabControl1.TabIndex = 6;
             // 
             // tabPage1
             // 
@@ -140,7 +140,7 @@
             this.BtnSalvarPedido.Location = new System.Drawing.Point(974, 392);
             this.BtnSalvarPedido.Name = "BtnSalvarPedido";
             this.BtnSalvarPedido.Size = new System.Drawing.Size(126, 36);
-            this.BtnSalvarPedido.TabIndex = 68;
+            this.BtnSalvarPedido.TabIndex = 5;
             this.BtnSalvarPedido.Text = "Salvar";
             this.BtnSalvarPedido.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnSalvarPedido.UseVisualStyleBackColor = false;
@@ -168,7 +168,7 @@
             this.cbFuncionarios.Location = new System.Drawing.Point(202, 98);
             this.cbFuncionarios.Name = "cbFuncionarios";
             this.cbFuncionarios.Size = new System.Drawing.Size(590, 33);
-            this.cbFuncionarios.TabIndex = 39;
+            this.cbFuncionarios.TabIndex = 3;
             // 
             // cbClientes
             // 
@@ -176,7 +176,7 @@
             this.cbClientes.Location = new System.Drawing.Point(202, 37);
             this.cbClientes.Name = "cbClientes";
             this.cbClientes.Size = new System.Drawing.Size(590, 33);
-            this.cbClientes.TabIndex = 38;
+            this.cbClientes.TabIndex = 2;
             // 
             // label2
             // 
@@ -229,7 +229,7 @@
             this.button2.Location = new System.Drawing.Point(784, 63);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(103, 33);
-            this.button2.TabIndex = 17;
+            this.button2.TabIndex = 10;
             this.button2.Text = "Alterar";
             this.button2.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.button2.UseVisualStyleBackColor = true;
@@ -244,7 +244,7 @@
             this.button1.Location = new System.Drawing.Point(675, 63);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(103, 33);
-            this.button1.TabIndex = 16;
+            this.button1.TabIndex = 9;
             this.button1.Text = "Apagar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.button1.UseVisualStyleBackColor = true;
@@ -258,7 +258,7 @@
             this.btnConsultarPedidos.Location = new System.Drawing.Point(562, 63);
             this.btnConsultarPedidos.Name = "btnConsultarPedidos";
             this.btnConsultarPedidos.Size = new System.Drawing.Size(107, 32);
-            this.btnConsultarPedidos.TabIndex = 12;
+            this.btnConsultarPedidos.TabIndex = 8;
             this.btnConsultarPedidos.Text = "Consultar";
             this.btnConsultarPedidos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnConsultarPedidos.UseVisualStyleBackColor = true;
@@ -271,7 +271,7 @@
             this.txtConsultapedidos.MaxLength = 50;
             this.txtConsultapedidos.Name = "txtConsultapedidos";
             this.txtConsultapedidos.Size = new System.Drawing.Size(456, 32);
-            this.txtConsultapedidos.TabIndex = 11;
+            this.txtConsultapedidos.TabIndex = 7;
             // 
             // pictureBox1
             // 
