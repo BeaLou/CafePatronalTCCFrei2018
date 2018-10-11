@@ -46,12 +46,16 @@
             this.lblCadastroProduto = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
-            this.txtConsultaProdutos = new System.Windows.Forms.TextBox();
+            this.btnapagar = new System.Windows.Forms.Button();
+            this.txtConsultaCompra = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblconsultaproduto = new System.Windows.Forms.Label();
-            this.dgvconsultaproduto = new System.Windows.Forms.DataGridView();
+            this.dgvconsultacompra = new System.Windows.Forms.DataGridView();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Qtd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Vl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Dataa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnConsultarFornece = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -60,7 +64,7 @@
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvconsultaproduto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvconsultacompra)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -104,6 +108,7 @@
             this.BtnSalvarCompra.Text = "Salvar";
             this.BtnSalvarCompra.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnSalvarCompra.UseVisualStyleBackColor = false;
+            this.BtnSalvarCompra.Click += new System.EventHandler(this.BtnSalvarCompra_Click);
             // 
             // groupBox1
             // 
@@ -248,12 +253,12 @@
             // tabPage2
             // 
             this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage2.Controls.Add(this.button1);
-            this.tabPage2.Controls.Add(this.txtConsultaProdutos);
+            this.tabPage2.Controls.Add(this.btnapagar);
+            this.tabPage2.Controls.Add(this.txtConsultaCompra);
             this.tabPage2.Controls.Add(this.pictureBox2);
             this.tabPage2.Controls.Add(this.pictureBox1);
             this.tabPage2.Controls.Add(this.lblconsultaproduto);
-            this.tabPage2.Controls.Add(this.dgvconsultaproduto);
+            this.tabPage2.Controls.Add(this.dgvconsultacompra);
             this.tabPage2.Controls.Add(this.btnConsultarFornece);
             this.tabPage2.Location = new System.Drawing.Point(4, 34);
             this.tabPage2.Name = "tabPage2";
@@ -263,28 +268,29 @@
             this.tabPage2.Text = "Consulta/Apagar";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnapagar
             // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(650, 42);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 33);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Apagar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnapagar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnapagar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnapagar.Image = ((System.Drawing.Image)(resources.GetObject("btnapagar.Image")));
+            this.btnapagar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnapagar.Location = new System.Drawing.Point(650, 42);
+            this.btnapagar.Name = "btnapagar";
+            this.btnapagar.Size = new System.Drawing.Size(103, 33);
+            this.btnapagar.TabIndex = 16;
+            this.btnapagar.Text = "Apagar";
+            this.btnapagar.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.btnapagar.UseVisualStyleBackColor = true;
+            this.btnapagar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // txtConsultaProdutos
+            // txtConsultaCompra
             // 
-            this.txtConsultaProdutos.BackColor = System.Drawing.Color.Ivory;
-            this.txtConsultaProdutos.Location = new System.Drawing.Point(58, 42);
-            this.txtConsultaProdutos.MaxLength = 50;
-            this.txtConsultaProdutos.Name = "txtConsultaProdutos";
-            this.txtConsultaProdutos.Size = new System.Drawing.Size(456, 32);
-            this.txtConsultaProdutos.TabIndex = 15;
+            this.txtConsultaCompra.BackColor = System.Drawing.Color.Ivory;
+            this.txtConsultaCompra.Location = new System.Drawing.Point(58, 42);
+            this.txtConsultaCompra.MaxLength = 50;
+            this.txtConsultaCompra.Name = "txtConsultaCompra";
+            this.txtConsultaCompra.Size = new System.Drawing.Size(456, 32);
+            this.txtConsultaCompra.TabIndex = 15;
             // 
             // pictureBox2
             // 
@@ -321,16 +327,53 @@
             this.lblconsultaproduto.TabIndex = 12;
             this.lblconsultaproduto.Text = "COMPRA";
             // 
-            // dgvconsultaproduto
+            // dgvconsultacompra
             // 
-            this.dgvconsultaproduto.AllowUserToAddRows = false;
-            this.dgvconsultaproduto.AllowUserToDeleteRows = false;
-            this.dgvconsultaproduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvconsultaproduto.Location = new System.Drawing.Point(58, 80);
-            this.dgvconsultaproduto.Name = "dgvconsultaproduto";
-            this.dgvconsultaproduto.ReadOnly = true;
-            this.dgvconsultaproduto.Size = new System.Drawing.Size(910, 308);
-            this.dgvconsultaproduto.TabIndex = 11;
+            this.dgvconsultacompra.AllowUserToAddRows = false;
+            this.dgvconsultacompra.AllowUserToDeleteRows = false;
+            this.dgvconsultacompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvconsultacompra.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Nome,
+            this.Qtd,
+            this.Vl,
+            this.Dataa});
+            this.dgvconsultacompra.Location = new System.Drawing.Point(58, 80);
+            this.dgvconsultacompra.Name = "dgvconsultacompra";
+            this.dgvconsultacompra.ReadOnly = true;
+            this.dgvconsultacompra.Size = new System.Drawing.Size(910, 308);
+            this.dgvconsultacompra.TabIndex = 11;
+            // 
+            // Nome
+            // 
+            this.Nome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nome.DataPropertyName = "nm_compra";
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            this.Nome.ReadOnly = true;
+            // 
+            // Qtd
+            // 
+            this.Qtd.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Qtd.DataPropertyName = "qtd_unidade";
+            this.Qtd.HeaderText = "Quantidade";
+            this.Qtd.Name = "Qtd";
+            this.Qtd.ReadOnly = true;
+            // 
+            // Vl
+            // 
+            this.Vl.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Vl.DataPropertyName = "vl_compra";
+            this.Vl.HeaderText = "Valor da Compra";
+            this.Vl.Name = "Vl";
+            this.Vl.ReadOnly = true;
+            // 
+            // Dataa
+            // 
+            this.Dataa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Dataa.DataPropertyName = "dt_compra";
+            this.Dataa.HeaderText = "Data da Compra";
+            this.Dataa.Name = "Dataa";
+            this.Dataa.ReadOnly = true;
             // 
             // btnConsultarFornece
             // 
@@ -345,6 +388,7 @@
             this.btnConsultarFornece.Text = "Consultar";
             this.btnConsultarFornece.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnConsultarFornece.UseVisualStyleBackColor = true;
+            this.btnConsultarFornece.Click += new System.EventHandler(this.btnConsultarFornece_Click);
             // 
             // CadastroCompra
             // 
@@ -368,7 +412,7 @@
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvconsultaproduto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvconsultacompra)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -392,12 +436,16 @@
         private System.Windows.Forms.Label lblCadastroProduto;
         private System.Windows.Forms.PictureBox btnVoltar;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox txtConsultaProdutos;
+        private System.Windows.Forms.Button btnapagar;
+        private System.Windows.Forms.TextBox txtConsultaCompra;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblconsultaproduto;
-        private System.Windows.Forms.DataGridView dgvconsultaproduto;
+        private System.Windows.Forms.DataGridView dgvconsultacompra;
         private System.Windows.Forms.Button btnConsultarFornece;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Qtd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Vl;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Dataa;
     }
 }

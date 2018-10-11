@@ -75,13 +75,11 @@ CREATE TABLE `tb_produto` (
 	`ds_unidade` varchar(20) NOT NULL,
 	PRIMARY KEY (`id_produto`)
 );
-
 CREATE TABLE `tb_compra` (
 	`id_compra` INT NOT NULL AUTO_INCREMENT,
 	`id_fornecedor` INT NOT NULL,
 	`nm_compra` varchar(50) NOT NULL,
-	`ds_unidade` varchar(20) NOT NULL,
-	`qtd_unidade` varchar(3) NOT NULL,
+	`qtd_unidade` varchar(20) NOT NULL,
 	`vl_compra` DECIMAL NOT NULL,
 	`dt_compra` DATE NOT NULL,
 	PRIMARY KEY (`id_compra`)
@@ -211,6 +209,6 @@ VALUES ("Giovana","90.871.350/0001-16","(11)2943-1179","74475-816","Casa 1","237
 
 
 
-select*from tb_fornecedor;
+select*from tb_produto;
 
-select *  from tb_fornecedor;
+select *  from tb_funcionario;
