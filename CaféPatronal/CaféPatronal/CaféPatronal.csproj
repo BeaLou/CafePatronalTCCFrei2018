@@ -50,7 +50,7 @@
     <ApplicationIcon>Resources\whatsapp_image_2018_08_29_at_23_17_37_1_pWI_icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=6.10.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.SqlXml" />
@@ -113,6 +113,12 @@
     <Compile Include="Programacao\Objetos\FolhaPagamento.cs" />
     <Compile Include="Programacao\Objetos\UserSession.cs" />
     <Compile Include="Programacao\Objetos\Validação.cs" />
+    <Compile Include="TELAS\Compra\CadastroCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\Compra\CadastroCompra.Designer.cs">
+      <DependentUpon>CadastroCompra.cs</DependentUpon>
+    </Compile>
     <Compile Include="TELAS\CRUD\Clientesss\AlterarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -245,6 +251,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="TELAS\Compra\CadastroCompra.resx">
+      <DependentUpon>CadastroCompra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TELAS\CRUD\Clientesss\AlterarCliente.resx">
       <DependentUpon>AlterarCliente.cs</DependentUpon>
     </EmbeddedResource>

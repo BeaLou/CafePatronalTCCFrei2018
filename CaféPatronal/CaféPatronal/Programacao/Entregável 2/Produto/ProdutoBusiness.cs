@@ -20,9 +20,13 @@ namespace CaféPatronal.Programacao.Produto
             {
                 throw new ArgumentException("Unidade é obrigatório.");
             }
-            if (produto.dt_validade > DateTime.Now)
+            if (produto.ds_descricao == string.Empty)
             {
-                throw new ArgumentException("Data de Validade é inválida.");
+                throw new ArgumentException("Descrição é obrigatório.");
+            }
+            if (produto.vl_produto <= 0)
+            {
+                throw new ArgumentException("Valor do produto é inválido.");
             }
 
             return db.Salvar(produto);
@@ -39,9 +43,13 @@ namespace CaféPatronal.Programacao.Produto
             {
                 throw new ArgumentException("Unidade é obrigatório.");
             }
-            if (produto.dt_validade > DateTime.Now)
+            if (produto.ds_descricao == string.Empty)
             {
-                throw new ArgumentException("Data de Validade é inválida.");
+                throw new ArgumentException("Descrição é obrigatório.");
+            }
+            if (produto.vl_produto <= 0)
+            {
+                throw new ArgumentException("Valor do produto é inválido.");
             }
 
             db.Alterar(produto);

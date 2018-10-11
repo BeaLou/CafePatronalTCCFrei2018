@@ -26,7 +26,6 @@ namespace CaféPatronal.TELAS.CRUD.Produ
             this.produto = produto;
             txtnome.Text = produto.nm_nome;
             cmbunidade.Text = produto.ds_unidade;
-            dtpvalidade.Value = produto.dt_validade;
 
         }
 
@@ -48,8 +47,8 @@ namespace CaféPatronal.TELAS.CRUD.Produ
             {
                 produto.nm_nome = txtnome.Text;
                 produto.ds_unidade = cmbunidade.Text;
-                produto.vl_unidade = txtUnidade.Text;
-                produto.dt_validade = dtpvalidade.Value;
+                produto.vl_produto = Convert.ToDecimal(txtValorProduto.Text);
+                produto.ds_descricao = txtUnidade.Text;
 
 
                 ProdutoBusiness business = new ProdutoBusiness();

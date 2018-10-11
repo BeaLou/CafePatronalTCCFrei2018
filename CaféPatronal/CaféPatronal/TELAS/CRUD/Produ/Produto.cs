@@ -1,5 +1,6 @@
 ﻿using CaféPatronal.Programacao;
 using CaféPatronal.Programacao.Produto;
+using CaféPatronal.TELAS.Compra;
 using CaféPatronal.TELAS.CRUD.Produ;
 using System;
 using System.Collections.Generic;
@@ -52,14 +53,16 @@ namespace CaféPatronal.TELAS.Cadastro_e_Consulta
 
         private void BtnSalvarProdutos_Click(object sender, EventArgs e)
         {
+
             try
             {
 
                 ProdutoDTO dto = new ProdutoDTO();
                 dto.nm_nome = TxtNomeProduto.Text;
+                dto.ds_descricao = txtUnidade.Text;
                 dto.ds_unidade = cboUnidade.Text;
-                dto.vl_unidade = txtUnidade.Text;
-                dto.dt_validade = dtpDataValidade.Value;
+                dto.vl_produto = Convert.ToDecimal(txtValorProduto.Text);
+
 
                 ProdutoBusiness business = new ProdutoBusiness();
                 business.Salvar(dto);
@@ -136,6 +139,13 @@ namespace CaféPatronal.TELAS.Cadastro_e_Consulta
             {
                 MessageBox.Show("Ocorreu um erro: " + ex.Message);
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            CadastroCompra tela = new CadastroCompra();
+            tela.Show();
+            this.Hide();
         }
     }
 }

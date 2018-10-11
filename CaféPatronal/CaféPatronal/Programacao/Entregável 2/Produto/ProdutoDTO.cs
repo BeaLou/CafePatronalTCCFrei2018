@@ -10,8 +10,8 @@ namespace CaféPatronal.Programacao.Produto
     {
         public int id_produto { get; set; }
         public string nm_nome { get; set; }
+        public string ds_descricao { get; set; }
+        public decimal vl_produto { get; set; }
         public string ds_unidade { get; set; }
-        public string vl_unidade { get; set; }
-        public DateTime dt_validade { get; set; }
     }
 }
