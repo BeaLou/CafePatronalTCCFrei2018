@@ -44,15 +44,14 @@ namespace CaféPatronal.TELAS.Compra
                 ComprasDTO dto = new ComprasDTO();
                 dto.id_fornecedor = fornecedor.id_fornecedor;
                 dto.nm_compra = txtNome.Text;
-                dto.qtd_unidade = txtUnidade.Text;
+                dto.qtd_unidade = cmbunidade.Text;
                 dto.vl_compra = Convert.ToDecimal(txtVlcompra.Text);
-                dto.dt_compra = dtpDatacompra.Value;
+                dto.dt_compra = DateTime.Now;
 
                 ComprasBusiness bussiness = new ComprasBusiness();
                 bussiness.Salvar(dto);
                 MessageBox.Show("Compra realizada com sucesso.");
                 txtNome.Clear();
-                txtUnidade.Clear();
                 txtVlcompra.Clear();
 
             }
