@@ -50,6 +50,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -62,9 +63,11 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.BtnHistoria);
             this.panel1.Controls.Add(this.BtnSobre);
             this.panel1.Controls.Add(this.BtnVenda);
+            this.panel1.Controls.Add(this.BtnCliente);
             this.panel1.Controls.Add(this.BtnFluxoCaixa);
             this.panel1.Controls.Add(this.BtnFolhaPagamento);
             this.panel1.Controls.Add(this.panel4);
@@ -73,7 +76,6 @@
             this.panel1.Controls.Add(this.BtnProduto);
             this.panel1.Controls.Add(this.BtnPedido);
             this.panel1.Controls.Add(this.BtnFuncionario);
-            this.panel1.Controls.Add(this.BtnCliente);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -125,7 +127,7 @@
             this.BtnVenda.ForeColor = System.Drawing.Color.Yellow;
             this.BtnVenda.Image = ((System.Drawing.Image)(resources.GetObject("BtnVenda.Image")));
             this.BtnVenda.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnVenda.Location = new System.Drawing.Point(-6, 588);
+            this.BtnVenda.Location = new System.Drawing.Point(-3, 539);
             this.BtnVenda.Name = "BtnVenda";
             this.BtnVenda.Size = new System.Drawing.Size(194, 36);
             this.BtnVenda.TabIndex = 8;
@@ -143,7 +145,7 @@
             this.BtnFluxoCaixa.ForeColor = System.Drawing.Color.Yellow;
             this.BtnFluxoCaixa.Image = ((System.Drawing.Image)(resources.GetObject("BtnFluxoCaixa.Image")));
             this.BtnFluxoCaixa.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnFluxoCaixa.Location = new System.Drawing.Point(-3, 546);
+            this.BtnFluxoCaixa.Location = new System.Drawing.Point(-3, 614);
             this.BtnFluxoCaixa.Name = "BtnFluxoCaixa";
             this.BtnFluxoCaixa.Size = new System.Drawing.Size(194, 36);
             this.BtnFluxoCaixa.TabIndex = 7;
@@ -162,7 +164,7 @@
             this.BtnFolhaPagamento.ForeColor = System.Drawing.Color.Yellow;
             this.BtnFolhaPagamento.Image = ((System.Drawing.Image)(resources.GetObject("BtnFolhaPagamento.Image")));
             this.BtnFolhaPagamento.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnFolhaPagamento.Location = new System.Drawing.Point(-6, 462);
+            this.BtnFolhaPagamento.Location = new System.Drawing.Point(-3, 289);
             this.BtnFolhaPagamento.Name = "BtnFolhaPagamento";
             this.BtnFolhaPagamento.Size = new System.Drawing.Size(194, 36);
             this.BtnFolhaPagamento.TabIndex = 0;
@@ -215,7 +217,7 @@
             this.BtnEstoque.ForeColor = System.Drawing.Color.Yellow;
             this.BtnEstoque.Image = ((System.Drawing.Image)(resources.GetObject("BtnEstoque.Image")));
             this.BtnEstoque.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnEstoque.Location = new System.Drawing.Point(0, 504);
+            this.BtnEstoque.Location = new System.Drawing.Point(-3, 581);
             this.BtnEstoque.Name = "BtnEstoque";
             this.BtnEstoque.Size = new System.Drawing.Size(194, 36);
             this.BtnEstoque.TabIndex = 6;
@@ -233,7 +235,7 @@
             this.BtnFornecedor.ForeColor = System.Drawing.Color.Yellow;
             this.BtnFornecedor.Image = ((System.Drawing.Image)(resources.GetObject("BtnFornecedor.Image")));
             this.BtnFornecedor.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnFornecedor.Location = new System.Drawing.Point(-3, 420);
+            this.BtnFornecedor.Location = new System.Drawing.Point(-3, 371);
             this.BtnFornecedor.Name = "BtnFornecedor";
             this.BtnFornecedor.Size = new System.Drawing.Size(194, 36);
             this.BtnFornecedor.TabIndex = 5;
@@ -251,7 +253,7 @@
             this.BtnProduto.ForeColor = System.Drawing.Color.Yellow;
             this.BtnProduto.Image = ((System.Drawing.Image)(resources.GetObject("BtnProduto.Image")));
             this.BtnProduto.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnProduto.Location = new System.Drawing.Point(-3, 378);
+            this.BtnProduto.Location = new System.Drawing.Point(-3, 413);
             this.BtnProduto.Name = "BtnProduto";
             this.BtnProduto.Size = new System.Drawing.Size(194, 36);
             this.BtnProduto.TabIndex = 4;
@@ -269,7 +271,7 @@
             this.BtnPedido.ForeColor = System.Drawing.Color.Yellow;
             this.BtnPedido.Image = ((System.Drawing.Image)(resources.GetObject("BtnPedido.Image")));
             this.BtnPedido.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnPedido.Location = new System.Drawing.Point(-3, 336);
+            this.BtnPedido.Location = new System.Drawing.Point(-3, 497);
             this.BtnPedido.Name = "BtnPedido";
             this.BtnPedido.Size = new System.Drawing.Size(194, 36);
             this.BtnPedido.TabIndex = 3;
@@ -287,7 +289,7 @@
             this.BtnFuncionario.ForeColor = System.Drawing.Color.Yellow;
             this.BtnFuncionario.Image = ((System.Drawing.Image)(resources.GetObject("BtnFuncionario.Image")));
             this.BtnFuncionario.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnFuncionario.Location = new System.Drawing.Point(0, 294);
+            this.BtnFuncionario.Location = new System.Drawing.Point(-3, 247);
             this.BtnFuncionario.Name = "BtnFuncionario";
             this.BtnFuncionario.Size = new System.Drawing.Size(194, 36);
             this.BtnFuncionario.TabIndex = 2;
@@ -305,7 +307,7 @@
             this.BtnCliente.ForeColor = System.Drawing.Color.Yellow;
             this.BtnCliente.Image = ((System.Drawing.Image)(resources.GetObject("BtnCliente.Image")));
             this.BtnCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnCliente.Location = new System.Drawing.Point(-3, 252);
+            this.BtnCliente.Location = new System.Drawing.Point(-3, 455);
             this.BtnCliente.Name = "BtnCliente";
             this.BtnCliente.Size = new System.Drawing.Size(194, 36);
             this.BtnCliente.TabIndex = 1;
@@ -380,6 +382,25 @@
             this.label2.TabIndex = 21;
             this.label2.Text = "Café Patronal";
             // 
+            // button1
+            // 
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Yellow;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.Location = new System.Drawing.Point(-3, 330);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(194, 36);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Compra";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -435,6 +456,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button BtnHistoria;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button button1;
     }
 }
 

@@ -150,5 +150,15 @@ namespace CaféPatronal.TELAS.Cadastro_e_Consulta
                 MessageBox.Show("Ocorreu um erro: " + ex.Message);
             }
         }
+
+        private void mktTelefoneFixo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            V.numeros(e);
+        }
+
+        private void mtbCep_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            V.numeros(e);
+        }
     }
 }

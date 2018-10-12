@@ -33,10 +33,19 @@
             this.btnVoltar = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button3 = new System.Windows.Forms.Button();
             this.BtnSalvarProdutos = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtVlProduto = new System.Windows.Forms.TextBox();
+            this.txtUnidade = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.TxtNomeProduto = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dgvConsultarProdutos = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descrição = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.txtConsultaProdutos = new System.Windows.Forms.TextBox();
@@ -44,35 +53,25 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblconsultaproduto = new System.Windows.Forms.Label();
             this.btnConsultarFornece = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtVlProduto = new System.Windows.Forms.TextBox();
-            this.txtUnidade = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.TxtNomeProduto = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dgvConsultarProdutos = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descrição = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarProdutos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarProdutos)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCadastroProduto
             // 
             this.lblCadastroProduto.AutoSize = true;
             this.lblCadastroProduto.BackColor = System.Drawing.Color.Transparent;
-            this.lblCadastroProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadastroProduto.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadastroProduto.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblCadastroProduto.Location = new System.Drawing.Point(6, 6);
             this.lblCadastroProduto.Name = "lblCadastroProduto";
-            this.lblCadastroProduto.Size = new System.Drawing.Size(311, 29);
+            this.lblCadastroProduto.Size = new System.Drawing.Size(186, 28);
             this.lblCadastroProduto.TabIndex = 31;
             this.lblCadastroProduto.Text = "CADASTRO DE PRODUTO\r\n";
             // 
@@ -93,7 +92,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(49, 18);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -102,12 +101,11 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.BtnSalvarProdutos);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Controls.Add(this.lblCadastroProduto);
             this.tabPage1.Controls.Add(this.btnVoltar);
-            this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage1.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -115,23 +113,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cadastro";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(6, 338);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(160, 66);
-            this.button3.TabIndex = 70;
-            this.button3.Text = "Compras";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // BtnSalvarProdutos
             // 
@@ -160,9 +141,72 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Location = new System.Drawing.Point(11, 38);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(720, 294);
+            this.groupBox1.Size = new System.Drawing.Size(336, 294);
             this.groupBox1.TabIndex = 34;
             this.groupBox1.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(18, 77);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(48, 25);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Preço";
+            // 
+            // txtVlProduto
+            // 
+            this.txtVlProduto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtVlProduto.Font = new System.Drawing.Font("Agency FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVlProduto.Location = new System.Drawing.Point(102, 76);
+            this.txtVlProduto.MaxLength = 30;
+            this.txtVlProduto.Name = "txtVlProduto";
+            this.txtVlProduto.Size = new System.Drawing.Size(190, 21);
+            this.txtVlProduto.TabIndex = 17;
+            this.txtVlProduto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVlProduto_KeyPress);
+            // 
+            // txtUnidade
+            // 
+            this.txtUnidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUnidade.Font = new System.Drawing.Font("Agency FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUnidade.Location = new System.Drawing.Point(102, 118);
+            this.txtUnidade.MaxLength = 300;
+            this.txtUnidade.Multiline = true;
+            this.txtUnidade.Name = "txtUnidade";
+            this.txtUnidade.Size = new System.Drawing.Size(190, 138);
+            this.txtUnidade.TabIndex = 16;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(18, 38);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(46, 25);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Nome";
+            // 
+            // TxtNomeProduto
+            // 
+            this.TxtNomeProduto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TxtNomeProduto.Font = new System.Drawing.Font("Agency FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNomeProduto.Location = new System.Drawing.Point(102, 37);
+            this.TxtNomeProduto.MaxLength = 30;
+            this.TxtNomeProduto.Name = "TxtNomeProduto";
+            this.TxtNomeProduto.Size = new System.Drawing.Size(190, 21);
+            this.TxtNomeProduto.TabIndex = 13;
+            this.TxtNomeProduto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(8, 117);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(72, 25);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Descrição";
             // 
             // tabPage2
             // 
@@ -182,156 +226,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Consulta/Apagar/Alterar";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(759, 42);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(103, 33);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "Alterar";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(650, 42);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 33);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Apagar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // txtConsultaProdutos
-            // 
-            this.txtConsultaProdutos.BackColor = System.Drawing.Color.Ivory;
-            this.txtConsultaProdutos.Location = new System.Drawing.Point(58, 42);
-            this.txtConsultaProdutos.MaxLength = 50;
-            this.txtConsultaProdutos.Name = "txtConsultaProdutos";
-            this.txtConsultaProdutos.Size = new System.Drawing.Size(456, 31);
-            this.txtConsultaProdutos.TabIndex = 15;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BackgroundImage = global::CaféPatronal.Properties.Resources.icon3;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Location = new System.Drawing.Point(989, 6);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(59, 57);
-            this.pictureBox2.TabIndex = 14;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::CaféPatronal.Properties.Resources.icon3;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(1079, -9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(10, 10);
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            // 
-            // lblconsultaproduto
-            // 
-            this.lblconsultaproduto.AutoSize = true;
-            this.lblconsultaproduto.BackColor = System.Drawing.Color.Transparent;
-            this.lblconsultaproduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblconsultaproduto.Location = new System.Drawing.Point(2, 3);
-            this.lblconsultaproduto.Name = "lblconsultaproduto";
-            this.lblconsultaproduto.Size = new System.Drawing.Size(161, 33);
-            this.lblconsultaproduto.TabIndex = 12;
-            this.lblconsultaproduto.Text = "PRODUTO";
-            // 
-            // btnConsultarFornece
-            // 
-            this.btnConsultarFornece.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConsultarFornece.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultarFornece.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultarFornece.Image")));
-            this.btnConsultarFornece.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultarFornece.Location = new System.Drawing.Point(537, 42);
-            this.btnConsultarFornece.Name = "btnConsultarFornece";
-            this.btnConsultarFornece.Size = new System.Drawing.Size(107, 32);
-            this.btnConsultarFornece.TabIndex = 10;
-            this.btnConsultarFornece.Text = "Consultar";
-            this.btnConsultarFornece.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnConsultarFornece.UseVisualStyleBackColor = true;
-            this.btnConsultarFornece.Click += new System.EventHandler(this.btnConsultarFornece_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(18, 77);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 20);
-            this.label5.TabIndex = 18;
-            this.label5.Text = "Preço";
-            // 
-            // txtVlProduto
-            // 
-            this.txtVlProduto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtVlProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVlProduto.Location = new System.Drawing.Point(102, 76);
-            this.txtVlProduto.MaxLength = 30;
-            this.txtVlProduto.Name = "txtVlProduto";
-            this.txtVlProduto.Size = new System.Drawing.Size(190, 20);
-            this.txtVlProduto.TabIndex = 17;
-            // 
-            // txtUnidade
-            // 
-            this.txtUnidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUnidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUnidade.Location = new System.Drawing.Point(446, 38);
-            this.txtUnidade.MaxLength = 300;
-            this.txtUnidade.Multiline = true;
-            this.txtUnidade.Name = "txtUnidade";
-            this.txtUnidade.Size = new System.Drawing.Size(190, 170);
-            this.txtUnidade.TabIndex = 16;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(18, 38);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 20);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Nome";
-            // 
-            // TxtNomeProduto
-            // 
-            this.TxtNomeProduto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TxtNomeProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtNomeProduto.Location = new System.Drawing.Point(102, 37);
-            this.TxtNomeProduto.MaxLength = 30;
-            this.TxtNomeProduto.Name = "TxtNomeProduto";
-            this.TxtNomeProduto.Size = new System.Drawing.Size(190, 20);
-            this.TxtNomeProduto.TabIndex = 13;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(352, 37);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 20);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "Descrição";
             // 
             // dgvConsultarProdutos
             // 
@@ -372,6 +266,95 @@
             this.Descrição.Name = "Descrição";
             this.Descrição.ReadOnly = true;
             // 
+            // button2
+            // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(759, 42);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(103, 33);
+            this.button2.TabIndex = 17;
+            this.button2.Text = "Alterar";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(650, 42);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(103, 33);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Apagar";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // txtConsultaProdutos
+            // 
+            this.txtConsultaProdutos.BackColor = System.Drawing.Color.Ivory;
+            this.txtConsultaProdutos.Location = new System.Drawing.Point(58, 42);
+            this.txtConsultaProdutos.MaxLength = 50;
+            this.txtConsultaProdutos.Name = "txtConsultaProdutos";
+            this.txtConsultaProdutos.Size = new System.Drawing.Size(456, 32);
+            this.txtConsultaProdutos.TabIndex = 15;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImage = global::CaféPatronal.Properties.Resources.icon3;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Location = new System.Drawing.Point(989, 6);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(59, 57);
+            this.pictureBox2.TabIndex = 14;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::CaféPatronal.Properties.Resources.icon3;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(1079, -9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(10, 10);
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lblconsultaproduto
+            // 
+            this.lblconsultaproduto.AutoSize = true;
+            this.lblconsultaproduto.BackColor = System.Drawing.Color.Transparent;
+            this.lblconsultaproduto.Font = new System.Drawing.Font("Agency FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblconsultaproduto.Location = new System.Drawing.Point(2, 3);
+            this.lblconsultaproduto.Name = "lblconsultaproduto";
+            this.lblconsultaproduto.Size = new System.Drawing.Size(89, 34);
+            this.lblconsultaproduto.TabIndex = 12;
+            this.lblconsultaproduto.Text = "PRODUTO";
+            // 
+            // btnConsultarFornece
+            // 
+            this.btnConsultarFornece.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultarFornece.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarFornece.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultarFornece.Image")));
+            this.btnConsultarFornece.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsultarFornece.Location = new System.Drawing.Point(537, 42);
+            this.btnConsultarFornece.Name = "btnConsultarFornece";
+            this.btnConsultarFornece.Size = new System.Drawing.Size(107, 32);
+            this.btnConsultarFornece.TabIndex = 10;
+            this.btnConsultarFornece.Text = "Consultar";
+            this.btnConsultarFornece.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnConsultarFornece.UseVisualStyleBackColor = true;
+            this.btnConsultarFornece.Click += new System.EventHandler(this.btnConsultarFornece_Click);
+            // 
             // CadastrarProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -393,9 +376,9 @@
             this.groupBox1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarProdutos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarProdutos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -415,7 +398,6 @@
         private System.Windows.Forms.Button BtnSalvarProdutos;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtVlProduto;
         private System.Windows.Forms.TextBox txtUnidade;

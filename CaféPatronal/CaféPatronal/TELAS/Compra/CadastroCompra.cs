@@ -16,6 +16,7 @@ namespace CaféPatronal.TELAS.Compra
 {
     public partial class CadastroCompra : Form
     {
+        Validação v = new Validação();
         public CadastroCompra()
         {
             InitializeComponent();
@@ -24,14 +25,14 @@ namespace CaféPatronal.TELAS.Compra
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            CadastrarProduto tela = new CadastrarProduto();
+            Form1 tela = new Form1();
             tela.Show();
             this.Hide();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            CadastrarProduto tela = new CadastrarProduto();
+            Form1 tela = new Form1();
             tela.Show();
             this.Hide();
         }
@@ -123,6 +124,11 @@ namespace CaféPatronal.TELAS.Compra
             tela.Show();
             this.Hide();
 
+        }
+
+        private void txtVlcompra_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.numeros(e);
         }
     }
 }

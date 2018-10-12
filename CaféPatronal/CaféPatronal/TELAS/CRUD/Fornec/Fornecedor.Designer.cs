@@ -94,7 +94,7 @@
             this.txtComplemento.MaxLength = 20;
             this.txtComplemento.Name = "txtComplemento";
             this.txtComplemento.Size = new System.Drawing.Size(275, 32);
-            this.txtComplemento.TabIndex = 7;
+            this.txtComplemento.TabIndex = 6;
             // 
             // lblNumero
             // 
@@ -127,7 +127,7 @@
             this.mktCnpj.Mask = "000.000.000-00";
             this.mktCnpj.Name = "mktCnpj";
             this.mktCnpj.Size = new System.Drawing.Size(275, 32);
-            this.mktCnpj.TabIndex = 3;
+            this.mktCnpj.TabIndex = 2;
             this.mktCnpj.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mktCpf_KeyPress);
             // 
             // lblCnpj
@@ -160,7 +160,7 @@
             this.txtNomeFornec.MaxLength = 20;
             this.txtNomeFornec.Name = "txtNomeFornec";
             this.txtNomeFornec.Size = new System.Drawing.Size(275, 32);
-            this.txtNomeFornec.TabIndex = 2;
+            this.txtNomeFornec.TabIndex = 1;
             this.txtNomeFornec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // txtemail
@@ -170,7 +170,7 @@
             this.txtemail.MaxLength = 50;
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(275, 32);
-            this.txtemail.TabIndex = 4;
+            this.txtemail.TabIndex = 3;
             // 
             // label1
             // 
@@ -191,7 +191,8 @@
             this.mktTelefoneFixo.Mask = "(00)0000-0000";
             this.mktTelefoneFixo.Name = "mktTelefoneFixo";
             this.mktTelefoneFixo.Size = new System.Drawing.Size(275, 32);
-            this.mktTelefoneFixo.TabIndex = 5;
+            this.mktTelefoneFixo.TabIndex = 4;
+            this.mktTelefoneFixo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mktTelefoneFixo_KeyPress);
             // 
             // lblTelefoneFixo
             // 
@@ -225,7 +226,8 @@
             this.mtbCep.Mask = "0:0000-000";
             this.mtbCep.Name = "mtbCep";
             this.mtbCep.Size = new System.Drawing.Size(275, 32);
-            this.mtbCep.TabIndex = 6;
+            this.mtbCep.TabIndex = 5;
+            this.mtbCep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtbCep_KeyPress);
             // 
             // btnVoltar
             // 
@@ -306,6 +308,7 @@
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(275, 32);
             this.txtNumero.TabIndex = 7;
+            this.txtNumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtbCep_KeyPress);
             // 
             // groupBox1
             // 
@@ -468,7 +471,7 @@
             this.txtconsultar.MaxLength = 50;
             this.txtconsultar.Name = "txtconsultar";
             this.txtconsultar.Size = new System.Drawing.Size(456, 32);
-            this.txtconsultar.TabIndex = 10;
+            this.txtconsultar.TabIndex = 8;
             // 
             // pictureBox1
             // 

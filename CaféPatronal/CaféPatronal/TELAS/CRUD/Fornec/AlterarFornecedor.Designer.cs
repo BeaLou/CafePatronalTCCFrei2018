@@ -127,7 +127,8 @@
             this.txtnumero.MaxLength = 20;
             this.txtnumero.Name = "txtnumero";
             this.txtnumero.Size = new System.Drawing.Size(275, 32);
-            this.txtnumero.TabIndex = 57;
+            this.txtnumero.TabIndex = 7;
+            this.txtnumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.maskedTextBox2_KeyPress);
             // 
             // txtcep
             // 
@@ -135,7 +136,7 @@
             this.txtcep.Mask = "0:0000-000";
             this.txtcep.Name = "txtcep";
             this.txtcep.Size = new System.Drawing.Size(275, 32);
-            this.txtcep.TabIndex = 56;
+            this.txtcep.TabIndex = 5;
             this.txtcep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.maskedTextBox2_KeyPress);
             // 
             // label4

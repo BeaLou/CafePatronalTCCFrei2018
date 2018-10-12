@@ -33,6 +33,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.BtnSalvarCompra = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbunidade = new System.Windows.Forms.ComboBox();
             this.cbfornecedor = new System.Windows.Forms.ComboBox();
             this.txtVlcompra = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
@@ -49,12 +50,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblconsultaproduto = new System.Windows.Forms.Label();
             this.dgvconsultacompra = new System.Windows.Forms.DataGridView();
-            this.btnConsultarFornece = new System.Windows.Forms.Button();
-            this.cmbunidade = new System.Windows.Forms.ComboBox();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Qtd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Vl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Dataa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnConsultarFornece = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -69,7 +69,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(41, 6);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -82,7 +82,7 @@
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Controls.Add(this.lblCadastroProduto);
             this.tabPage1.Controls.Add(this.btnVoltar);
-            this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage1.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -97,6 +97,7 @@
             this.BtnSalvarCompra.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnSalvarCompra.FlatAppearance.BorderSize = 0;
             this.BtnSalvarCompra.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnSalvarCompra.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSalvarCompra.Image = ((System.Drawing.Image)(resources.GetObject("BtnSalvarCompra.Image")));
             this.BtnSalvarCompra.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnSalvarCompra.Location = new System.Drawing.Point(924, 368);
@@ -120,76 +121,94 @@
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Location = new System.Drawing.Point(11, 37);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(439, 265);
+            this.groupBox1.Size = new System.Drawing.Size(398, 265);
             this.groupBox1.TabIndex = 34;
             this.groupBox1.TabStop = false;
             // 
+            // cmbunidade
+            // 
+            this.cmbunidade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbunidade.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbunidade.FormattingEnabled = true;
+            this.cmbunidade.Items.AddRange(new object[] {
+            "KG",
+            "G",
+            "ML",
+            "L",
+            "Unidade"});
+            this.cmbunidade.Location = new System.Drawing.Point(179, 151);
+            this.cmbunidade.Name = "cmbunidade";
+            this.cmbunidade.Size = new System.Drawing.Size(190, 33);
+            this.cmbunidade.TabIndex = 3;
+            // 
             // cbfornecedor
             // 
-            this.cbfornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbfornecedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbfornecedor.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbfornecedor.FormattingEnabled = true;
             this.cbfornecedor.Location = new System.Drawing.Point(179, 20);
             this.cbfornecedor.Name = "cbfornecedor";
             this.cbfornecedor.Size = new System.Drawing.Size(190, 33);
-            this.cbfornecedor.TabIndex = 39;
+            this.cbfornecedor.TabIndex = 1;
             // 
             // txtVlcompra
             // 
             this.txtVlcompra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtVlcompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVlcompra.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtVlcompra.Location = new System.Drawing.Point(179, 215);
             this.txtVlcompra.MaxLength = 20;
             this.txtVlcompra.Name = "txtVlcompra";
-            this.txtVlcompra.Size = new System.Drawing.Size(190, 31);
-            this.txtVlcompra.TabIndex = 33;
+            this.txtVlcompra.Size = new System.Drawing.Size(190, 32);
+            this.txtVlcompra.TabIndex = 4;
+            this.txtVlcompra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVlcompra_KeyPress);
             // 
             // txtNome
             // 
             this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.Location = new System.Drawing.Point(179, 88);
             this.txtNome.MaxLength = 20;
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(190, 31);
-            this.txtNome.TabIndex = 31;
+            this.txtNome.Size = new System.Drawing.Size(190, 32);
+            this.txtNome.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(23, 25);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(139, 29);
+            this.label3.Size = new System.Drawing.Size(98, 28);
             this.label3.TabIndex = 34;
             this.label3.Text = "Fornecedor";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(21, 151);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(104, 29);
+            this.label6.Size = new System.Drawing.Size(71, 28);
             this.label6.TabIndex = 36;
             this.label6.Text = "Unidade";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(21, 85);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 29);
+            this.label4.Size = new System.Drawing.Size(140, 28);
             this.label4.TabIndex = 35;
-            this.label4.Text = "Nome";
+            this.label4.Text = "Nome da compra";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(17, 215);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(194, 29);
+            this.label9.Size = new System.Drawing.Size(137, 28);
             this.label9.TabIndex = 37;
             this.label9.Text = "Valor da Compra";
             // 
@@ -197,11 +216,11 @@
             // 
             this.lblCadastroProduto.AutoSize = true;
             this.lblCadastroProduto.BackColor = System.Drawing.Color.Transparent;
-            this.lblCadastroProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadastroProduto.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadastroProduto.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblCadastroProduto.Location = new System.Drawing.Point(6, 6);
             this.lblCadastroProduto.Name = "lblCadastroProduto";
-            this.lblCadastroProduto.Size = new System.Drawing.Size(117, 29);
+            this.lblCadastroProduto.Size = new System.Drawing.Size(75, 28);
             this.lblCadastroProduto.TabIndex = 31;
             this.lblCadastroProduto.Text = "COMPRA";
             // 
@@ -242,10 +261,10 @@
             this.btnapagar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnapagar.Image = ((System.Drawing.Image)(resources.GetObject("btnapagar.Image")));
             this.btnapagar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnapagar.Location = new System.Drawing.Point(650, 42);
+            this.btnapagar.Location = new System.Drawing.Point(617, 44);
             this.btnapagar.Name = "btnapagar";
             this.btnapagar.Size = new System.Drawing.Size(103, 33);
-            this.btnapagar.TabIndex = 16;
+            this.btnapagar.TabIndex = 7;
             this.btnapagar.Text = "Apagar";
             this.btnapagar.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.btnapagar.UseVisualStyleBackColor = true;
@@ -254,11 +273,11 @@
             // txtConsultaCompra
             // 
             this.txtConsultaCompra.BackColor = System.Drawing.Color.Ivory;
-            this.txtConsultaCompra.Location = new System.Drawing.Point(58, 42);
+            this.txtConsultaCompra.Location = new System.Drawing.Point(36, 44);
             this.txtConsultaCompra.MaxLength = 50;
             this.txtConsultaCompra.Name = "txtConsultaCompra";
-            this.txtConsultaCompra.Size = new System.Drawing.Size(456, 31);
-            this.txtConsultaCompra.TabIndex = 15;
+            this.txtConsultaCompra.Size = new System.Drawing.Size(456, 32);
+            this.txtConsultaCompra.TabIndex = 5;
             // 
             // pictureBox2
             // 
@@ -288,10 +307,10 @@
             // 
             this.lblconsultaproduto.AutoSize = true;
             this.lblconsultaproduto.BackColor = System.Drawing.Color.Transparent;
-            this.lblconsultaproduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblconsultaproduto.Font = new System.Drawing.Font("Agency FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblconsultaproduto.Location = new System.Drawing.Point(2, 3);
             this.lblconsultaproduto.Name = "lblconsultaproduto";
-            this.lblconsultaproduto.Size = new System.Drawing.Size(142, 33);
+            this.lblconsultaproduto.Size = new System.Drawing.Size(82, 34);
             this.lblconsultaproduto.TabIndex = 12;
             this.lblconsultaproduto.Text = "COMPRA";
             // 
@@ -310,36 +329,6 @@
             this.dgvconsultacompra.ReadOnly = true;
             this.dgvconsultacompra.Size = new System.Drawing.Size(910, 308);
             this.dgvconsultacompra.TabIndex = 11;
-            // 
-            // btnConsultarFornece
-            // 
-            this.btnConsultarFornece.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConsultarFornece.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultarFornece.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultarFornece.Image")));
-            this.btnConsultarFornece.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultarFornece.Location = new System.Drawing.Point(537, 42);
-            this.btnConsultarFornece.Name = "btnConsultarFornece";
-            this.btnConsultarFornece.Size = new System.Drawing.Size(107, 32);
-            this.btnConsultarFornece.TabIndex = 10;
-            this.btnConsultarFornece.Text = "Consultar";
-            this.btnConsultarFornece.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnConsultarFornece.UseVisualStyleBackColor = true;
-            this.btnConsultarFornece.Click += new System.EventHandler(this.btnConsultarFornece_Click);
-            // 
-            // cmbunidade
-            // 
-            this.cmbunidade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbunidade.FormattingEnabled = true;
-            this.cmbunidade.Items.AddRange(new object[] {
-            "KG",
-            "G",
-            "ML",
-            "L",
-            "Unidade"});
-            this.cmbunidade.Location = new System.Drawing.Point(179, 151);
-            this.cmbunidade.Name = "cmbunidade";
-            this.cmbunidade.Size = new System.Drawing.Size(190, 33);
-            this.cmbunidade.TabIndex = 40;
             // 
             // Nome
             // 
@@ -372,6 +361,21 @@
             this.Dataa.HeaderText = "Data da Compra";
             this.Dataa.Name = "Dataa";
             this.Dataa.ReadOnly = true;
+            // 
+            // btnConsultarFornece
+            // 
+            this.btnConsultarFornece.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultarFornece.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarFornece.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultarFornece.Image")));
+            this.btnConsultarFornece.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsultarFornece.Location = new System.Drawing.Point(504, 44);
+            this.btnConsultarFornece.Name = "btnConsultarFornece";
+            this.btnConsultarFornece.Size = new System.Drawing.Size(107, 32);
+            this.btnConsultarFornece.TabIndex = 6;
+            this.btnConsultarFornece.Text = "Consultar";
+            this.btnConsultarFornece.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnConsultarFornece.UseVisualStyleBackColor = true;
+            this.btnConsultarFornece.Click += new System.EventHandler(this.btnConsultarFornece_Click);
             // 
             // CadastroCompra
             // 

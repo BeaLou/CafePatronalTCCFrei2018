@@ -2,6 +2,7 @@
 using CaféPatronal.Programacao;
 using CaféPatronal.TELAS;
 using CaféPatronal.TELAS.Cadastro_e_Consulta;
+using CaféPatronal.TELAS.Compra;
 using CaféPatronal.TELAS.Consulta;
 using CaféPatronal.TELAS.Fluxo_de_Caixa_e_Folha_de_Pagamento;
 using CaféPatronal.TELAS.MenuHistoriaSplash;
@@ -136,6 +137,13 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             Login tela = new Login();
+            tela.Show();
+            this.Hide();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            CadastroCompra tela = new CadastroCompra();
             tela.Show();
             this.Hide();
         }

@@ -146,5 +146,10 @@ namespace CaféPatronal.TELAS.Cadastro_e_Consulta
             tela.Show();
             this.Hide();
         }
+
+        private void txtVlProduto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            V.numeros(e);
+        }
     }
 }
