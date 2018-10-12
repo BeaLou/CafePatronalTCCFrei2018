@@ -24,8 +24,10 @@ namespace CaféPatronal.TELAS.CRUD.Produ
         public void LoadScreen(ProdutoDTO produto)
         {
             this.produto = produto;
-            txtnome.Text = produto.nm_nome;
-            cmbunidade.Text = produto.ds_unidade;
+            TxtNomeProduto.Text = produto.nm_nome;
+            txtUnidade.Text = produto.ds_descricao;
+            txtVlProduto.Text = Convert.ToString(produto.vl_produto);
+
 
         }
 
@@ -45,10 +47,10 @@ namespace CaféPatronal.TELAS.CRUD.Produ
         {
             try
             {
-                produto.nm_nome = txtnome.Text;
-                produto.ds_unidade = cmbunidade.Text;
-                produto.vl_produto = Convert.ToDecimal(txtValorProduto.Text);
+                produto.nm_nome = TxtNomeProduto.Text;
                 produto.ds_descricao = txtUnidade.Text;
+                produto.vl_produto = Convert.ToDecimal(txtVlProduto.Text);
+
 
 
                 ProdutoBusiness business = new ProdutoBusiness();

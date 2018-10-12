@@ -13,21 +13,19 @@ namespace CaféPatronal.Programacao.Produto
         public int Salvar(ProdutoDTO produto)
         {
             string script =
-                 @"INSERT INTO tb_produto
+                @"INSERT INTO tb_produto
                 (
                 id_produto,
                 nm_nome,   
                 ds_descricao,
-                vl_produto,
-                ds_unidade
+                vl_produto
                 )
                 VALUES
                 (
                 @id_produto,
                 @nm_nome,   
                 @ds_descricao,
-                @vl_produto,
-                @ds_unidade
+                @vl_produto
                 )";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
@@ -35,7 +33,6 @@ namespace CaféPatronal.Programacao.Produto
             parms.Add(new MySqlParameter("nm_nome", produto.nm_nome));
             parms.Add(new MySqlParameter("ds_descricao", produto.ds_descricao));
             parms.Add(new MySqlParameter("vl_produto", produto.vl_produto));
-            parms.Add(new MySqlParameter("ds_unidade", produto.ds_unidade));
 
             Database db = new Database();
             int pk = db.ExecuteInsertScriptWithPk(script, parms);
@@ -49,8 +46,7 @@ namespace CaféPatronal.Programacao.Produto
                  SET
                   nm_nome = @nm_nome,
                   ds_descricao = @ds_descricao,
-                  vl_produto=@vl_produto,
-                  ds_unidade = @ds_unidade
+                  vl_produto=@vl_produto
                   WHERE id_produto = @id_produto";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
@@ -58,7 +54,6 @@ namespace CaféPatronal.Programacao.Produto
             parms.Add(new MySqlParameter("nm_nome", produto.nm_nome));
             parms.Add(new MySqlParameter("ds_descricao", produto.ds_descricao));
             parms.Add(new MySqlParameter("vl_produto", produto.vl_produto));
-            parms.Add(new MySqlParameter("ds_unidade", produto.ds_unidade));
 
             Database db = new Database();
             db.ExecuteInsertScript(script, parms);
@@ -95,7 +90,6 @@ namespace CaféPatronal.Programacao.Produto
                 novoproduto.nm_nome = reader.GetString("nm_nome");
                 novoproduto.ds_descricao = reader.GetString("ds_descricao");
                 novoproduto.vl_produto = reader.GetDecimal("vl_produto");
-                novoproduto.ds_unidade = reader.GetString("ds_unidade");
 
                 produtos.Add(novoproduto);
 
@@ -122,7 +116,6 @@ namespace CaféPatronal.Programacao.Produto
                 novoproduto.nm_nome = reader.GetString("nm_nome");
                 novoproduto.ds_descricao = reader.GetString("ds_descricao");
                 novoproduto.vl_produto = reader.GetDecimal("vl_produto");
-                novoproduto.ds_unidade = reader.GetString("ds_unidade");
 
                 produtos.Add(novoproduto);
 

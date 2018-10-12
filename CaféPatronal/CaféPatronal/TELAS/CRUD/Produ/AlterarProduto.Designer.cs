@@ -34,18 +34,17 @@
             this.btnVoltar = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtVlProduto = new System.Windows.Forms.TextBox();
             this.txtUnidade = new System.Windows.Forms.TextBox();
-            this.cmbunidade = new System.Windows.Forms.ComboBox();
-            this.txtnome = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtValorProduto = new System.Windows.Forms.TextBox();
+            this.TxtNomeProduto = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
-            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -60,11 +59,11 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.groupBox1);
             this.tabPage3.Controls.Add(this.btnVoltar);
             this.tabPage3.Controls.Add(this.button3);
             this.tabPage3.Controls.Add(this.label4);
-            this.tabPage3.Controls.Add(this.groupBox2);
-            this.tabPage3.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage3.Location = new System.Drawing.Point(4, 34);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -105,104 +104,87 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Agency FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(6, 3);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 34);
+            this.label4.Size = new System.Drawing.Size(161, 33);
             this.label4.TabIndex = 36;
             this.label4.Text = "PRODUTO";
             // 
-            // groupBox2
+            // groupBox1
             // 
-            this.groupBox2.Controls.Add(this.txtValorProduto);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.txtUnidade);
-            this.groupBox2.Controls.Add(this.cmbunidade);
-            this.groupBox2.Controls.Add(this.txtnome);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(81, 103);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(720, 183);
-            this.groupBox2.TabIndex = 35;
-            this.groupBox2.TabStop = false;
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.txtVlProduto);
+            this.groupBox1.Controls.Add(this.txtUnidade);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.TxtNomeProduto);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Location = new System.Drawing.Point(12, 39);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(720, 294);
+            this.groupBox1.TabIndex = 39;
+            this.groupBox1.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(18, 77);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(50, 20);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Preço";
+            // 
+            // txtVlProduto
+            // 
+            this.txtVlProduto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtVlProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVlProduto.Location = new System.Drawing.Point(102, 76);
+            this.txtVlProduto.MaxLength = 30;
+            this.txtVlProduto.Name = "txtVlProduto";
+            this.txtVlProduto.Size = new System.Drawing.Size(190, 20);
+            this.txtVlProduto.TabIndex = 17;
             // 
             // txtUnidade
             // 
-            this.txtUnidade.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUnidade.Location = new System.Drawing.Point(154, 81);
-            this.txtUnidade.MaxLength = 20;
+            this.txtUnidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUnidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUnidade.Location = new System.Drawing.Point(446, 38);
+            this.txtUnidade.MaxLength = 300;
+            this.txtUnidade.Multiline = true;
             this.txtUnidade.Name = "txtUnidade";
-            this.txtUnidade.Size = new System.Drawing.Size(311, 32);
-            this.txtUnidade.TabIndex = 32;
-            // 
-            // cmbunidade
-            // 
-            this.cmbunidade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbunidade.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbunidade.FormattingEnabled = true;
-            this.cmbunidade.Items.AddRange(new object[] {
-            "Kg",
-            "G",
-            "L",
-            "ML",
-            "QTD"});
-            this.cmbunidade.Location = new System.Drawing.Point(471, 81);
-            this.cmbunidade.Name = "cmbunidade";
-            this.cmbunidade.Size = new System.Drawing.Size(228, 33);
-            this.cmbunidade.TabIndex = 31;
-            // 
-            // txtnome
-            // 
-            this.txtnome.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtnome.Location = new System.Drawing.Point(164, 33);
-            this.txtnome.MaxLength = 20;
-            this.txtnome.Name = "txtnome";
-            this.txtnome.Size = new System.Drawing.Size(535, 32);
-            this.txtnome.TabIndex = 1;
-            this.txtnome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(100, 33);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 28);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "Nome:";
+            this.txtUnidade.Size = new System.Drawing.Size(190, 170);
+            this.txtUnidade.TabIndex = 16;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(73, 86);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(18, 38);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 28);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Unidade:";
+            this.label3.Size = new System.Drawing.Size(51, 20);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Nome";
             // 
-            // txtValorProduto
+            // TxtNomeProduto
             // 
-            this.txtValorProduto.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtValorProduto.Location = new System.Drawing.Point(164, 134);
-            this.txtValorProduto.MaxLength = 20;
-            this.txtValorProduto.Name = "txtValorProduto";
-            this.txtValorProduto.Size = new System.Drawing.Size(535, 32);
-            this.txtValorProduto.TabIndex = 38;
+            this.TxtNomeProduto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TxtNomeProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNomeProduto.Location = new System.Drawing.Point(102, 37);
+            this.TxtNomeProduto.MaxLength = 30;
+            this.TxtNomeProduto.Name = "TxtNomeProduto";
+            this.TxtNomeProduto.Size = new System.Drawing.Size(190, 20);
+            this.TxtNomeProduto.TabIndex = 13;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(100, 134);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(352, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 28);
-            this.label1.TabIndex = 39;
-            this.label1.Text = "Preço";
+            this.label1.Size = new System.Drawing.Size(80, 20);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Descrição";
             // 
             // AlterarProduto
             // 
@@ -222,8 +204,8 @@
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -234,14 +216,13 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox cmbunidade;
-        private System.Windows.Forms.TextBox txtnome;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox btnVoltar;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtVlProduto;
         private System.Windows.Forms.TextBox txtUnidade;
-        private System.Windows.Forms.TextBox txtValorProduto;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox TxtNomeProduto;
         private System.Windows.Forms.Label label1;
     }
 }

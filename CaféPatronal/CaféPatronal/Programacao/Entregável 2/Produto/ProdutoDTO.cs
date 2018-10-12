@@ -12,6 +12,5 @@ namespace CaféPatronal.Programacao.Produto
         public string nm_nome { get; set; }
         public string ds_descricao { get; set; }
         public decimal vl_produto { get; set; }
-        public string ds_unidade { get; set; }
     }
 }

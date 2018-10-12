@@ -16,10 +16,7 @@ namespace CaféPatronal.Programacao.Produto
             {
                 throw new ArgumentException("Nome é obrigatório.");
             }
-            if (produto.ds_unidade == string.Empty)
-            {
-                throw new ArgumentException("Unidade é obrigatório.");
-            }
+
             if (produto.ds_descricao == string.Empty)
             {
                 throw new ArgumentException("Descrição é obrigatório.");
@@ -39,10 +36,7 @@ namespace CaféPatronal.Programacao.Produto
             {
                 throw new ArgumentException("Nome é obrigatório.");
             }
-            if (produto.ds_unidade == string.Empty)
-            {
-                throw new ArgumentException("Unidade é obrigatório.");
-            }
+
             if (produto.ds_descricao == string.Empty)
             {
                 throw new ArgumentException("Descrição é obrigatório.");

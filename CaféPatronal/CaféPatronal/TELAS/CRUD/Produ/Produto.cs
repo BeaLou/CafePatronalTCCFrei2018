@@ -60,8 +60,7 @@ namespace CaféPatronal.TELAS.Cadastro_e_Consulta
                 ProdutoDTO dto = new ProdutoDTO();
                 dto.nm_nome = TxtNomeProduto.Text;
                 dto.ds_descricao = txtUnidade.Text;
-                dto.ds_unidade = cboUnidade.Text;
-                dto.vl_produto = Convert.ToDecimal(txtValorProduto.Text);
+                dto.vl_produto = Convert.ToDecimal(txtVlProduto.Text);
 
 
                 ProdutoBusiness business = new ProdutoBusiness();
@@ -79,17 +78,17 @@ namespace CaféPatronal.TELAS.Cadastro_e_Consulta
         {
             ProdutoBusiness Business = new ProdutoBusiness();
             List<ProdutoDTO> a = Business.Consultar(txtConsultaProdutos.Text);
-            dgvconsultaproduto.AutoGenerateColumns = false;
-            dgvconsultaproduto.DataSource = a;
+            dgvConsultarProdutos.AutoGenerateColumns = false;
+            dgvConsultarProdutos.DataSource = a;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             try
             {
-                if (dgvconsultaproduto.CurrentRow != null)
+                if (dgvConsultarProdutos.CurrentRow != null)
                 {
-                    ProdutoDTO fornecedor = dgvconsultaproduto.CurrentRow.DataBoundItem as ProdutoDTO;
+                    ProdutoDTO fornecedor = dgvConsultarProdutos.CurrentRow.DataBoundItem as ProdutoDTO;
 
                     AlterarProduto tela = new AlterarProduto();
                     tela.LoadScreen(fornecedor);
@@ -112,10 +111,10 @@ namespace CaféPatronal.TELAS.Cadastro_e_Consulta
         {
             try
             {
-                if (dgvconsultaproduto.CurrentRow != null)
+                if (dgvConsultarProdutos.CurrentRow != null)
                 {
-                    ProdutoDTO produto = dgvconsultaproduto.CurrentRow.DataBoundItem as ProdutoDTO;
-                    DialogResult r = MessageBox.Show("Deseja excluir esse Produto?", "Michael Pop`s",
+                    ProdutoDTO produto = dgvConsultarProdutos.CurrentRow.DataBoundItem as ProdutoDTO;
+                    DialogResult r = MessageBox.Show("Deseja excluir esse Produto?", "Café Patronal",
                                            MessageBoxButtons.YesNo,
                                            MessageBoxIcon.Question);
                     if (r == DialogResult.Yes)
@@ -124,8 +123,8 @@ namespace CaféPatronal.TELAS.Cadastro_e_Consulta
                         business.Remover(produto.id_produto);
 
                         List<ProdutoDTO> a = business.Consultar(txtConsultaProdutos.Text);
-                        dgvconsultaproduto.AutoGenerateColumns = false;
-                        dgvconsultaproduto.DataSource = a;
+                        dgvConsultarProdutos.AutoGenerateColumns = false;
+                        dgvConsultarProdutos.DataSource = a;
 
                     }
                     else

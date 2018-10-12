@@ -2,6 +2,8 @@
 create database DBcafe;
 use DBcafe;
 
+
+
 CREATE TABLE `tb_cliente` (
 	`id_cliente` INT NOT NULL AUTO_INCREMENT,
 	`nm_nome` varchar(20) NOT NULL,
@@ -72,7 +74,6 @@ CREATE TABLE `tb_produto` (
 	`nm_nome` varchar(50) NOT NULL,
 	`ds_descricao` varchar(100) NOT NULL,
 	`vl_produto` DECIMAL NOT NULL,
-	`ds_unidade` varchar(20) NOT NULL,
 	PRIMARY KEY (`id_produto`)
 );
 CREATE TABLE `tb_compra` (
