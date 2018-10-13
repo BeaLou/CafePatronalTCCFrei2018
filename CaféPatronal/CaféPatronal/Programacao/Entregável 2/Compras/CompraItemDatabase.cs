@@ -116,5 +116,31 @@ namespace CaféPatronal.Programacao.Entregável_2.Compras
             Database db = new Database();
             db.ExecuteInsertScript(script, parms);
         }
+        public List<VwConsultarItem> ConsultarView(string produto)
+        {
+
+            string script =
+                @"SELECT * FROM vw_consultar_item
+                  WHERE nm_nome like @nm_nome";
+            List<MySqlParameter> parms = new List<MySqlParameter>();
+            parms.Add(new MySqlParameter("nm_nome", "%" + produto + "%"));
+            Database db = new Database();
+            MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
+            List<VwConsultarItem> compras = new List<VwConsultarItem>();
+            while (reader.Read())
+            {
+
+                VwConsultarItem novacompra = new VwConsultarItem();
+                novacompra.nm_nome = reader.GetString("nm_nome");
+                novacompra.id_compra = reader.GetInt32("id_compra");
+                novacompra.qtd_itens = reader.GetInt32("qtd_itens");
+                novacompra.vl_total = reader.GetDecimal("vl_total");
+
+
+                compras.Add(novacompra);
+
+            }
+            return compras;
+        }
     }
 }

@@ -15,9 +15,5 @@ namespace CaféPatronal.Programacao.Entregável_2.Compras
         public int qtd_itens { get; set; }
 
         public decimal vl_total { get; set; }
-
-
-
-
     }
 }

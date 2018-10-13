@@ -35,5 +35,9 @@ namespace CaféPatronal.Programacao.Entregável_2.Compras
         {
             db.Remover(id);
         }
+        public List<VwConsultarItem> ConsultarView(string produto)
+        {
+            return db.ConsultarView(produto);
+        }
     }
 }
