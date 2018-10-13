@@ -2,8 +2,6 @@
 create database DBcafe;
 use DBcafe;
 
-
-
 CREATE TABLE `tb_cliente` (
 	`id_cliente` INT NOT NULL AUTO_INCREMENT,
 	`nm_nome` varchar(20) NOT NULL,
@@ -85,7 +83,14 @@ CREATE TABLE `tb_compra` (
 	`dt_compra` DATE NOT NULL,
 	PRIMARY KEY (`id_compra`)
 );
- 
+
+CREATE TABLE `tb_compraitem` (
+	`id_compraitem` INT NOT NULL AUTO_INCREMENT,
+	`id_compra` INT NOT NULL,
+	`id_produto` INT NOT NULL,
+	PRIMARY KEY (`id_compraitem`)
+);
+
 CREATE TABLE `tb_produtoitem` (
 	`id_produtoitem` INT NOT NULL AUTO_INCREMENT,
 	`id_produto` INT NOT NULL,
@@ -112,6 +117,8 @@ create table `tb_dpto`(
 );
 
 
+
+
 ALTER TABLE `tb_estoque` ADD CONSTRAINT `tb_estoque_fk0` FOREIGN KEY (`id_produto`) REFERENCES `tb_produto`(`id_produto`);
 
 ALTER TABLE `tb_estoque` ADD CONSTRAINT `tb_estoque_fk1` FOREIGN KEY (`id_fornecedor`) REFERENCES `tb_fornecedor`(`id_fornecedor`);
@@ -128,6 +135,9 @@ ALTER TABLE `tb_folhapagamento` ADD CONSTRAINT `tb_folhapagamento_fk0` FOREIGN K
 
 ALTER TABLE `tb_compra` ADD CONSTRAINT `tb_compra_fk0` FOREIGN KEY (`id_fornecedor`) REFERENCES `tb_fornecedor`(`id_fornecedor`);
 
+ALTER TABLE `tb_compraitem` ADD CONSTRAINT `tb_compraitem_fk0` FOREIGN KEY (`id_compra`) REFERENCES `tb_compra`(`id_compra`);
+
+ALTER TABLE `tb_compraitem` ADD CONSTRAINT `tb_compraitem_fk1` FOREIGN KEY (`id_produto`) REFERENCES `tb_produto`(`id_produto`);
 
 
 Create view vw_consultar_folhapagamento as select
@@ -138,6 +148,23 @@ tb_folhapagamento.vl_salarioliquido
 from tb_funcionario
 JOIN tb_folhapagamento
 ON tb_folhapagamento.id_funcionario = tb_funcionario.id_funcionario;
+
+
+
+Create view vw_consultar_item as select
+tb_compra.id_compra,
+tb_produto.nm_nome,
+count(tb_compraitem.id_compraitem) as qtd_itens,
+sum(tb_produto.vl_produto) as vl_total
+from tb_compra
+Join tb_compraitem
+on tb_compraitem.id_compra = tb_compra.id_compra
+join tb_produto
+on tb_compraitem.id_produto = tb_produto.id_produto
+GROUP BY
+tb_compra.id_compra,
+tb_produto.nm_nome;
+ 
 
 
 
@@ -189,15 +216,15 @@ insert into  `tb_pedido`(id_cliente,vl_venda)VALUES("1","10.00");
 
 insert into `tb_fornecedor`(nm_nome,ds_cnpj,ds_telefone,ds_cep,
 ds_complemento,ds_numerofornec,ds_email) 
-VALUES ("3 Corações","94.143.921/0001-57","(11)3876-3684","14784-295","Casa 1","494"
+VALUES ("Márcio","94.143.921/0001-57","(11)3876-3684","14784-295","Casa 1","494"
 ,"marcioalexandrenunes-97@gmail.com");
 insert into `tb_fornecedor`(nm_nome,ds_cnpj,ds_telefone,ds_cep,
 ds_complemento,ds_numerofornec,ds_email) 
-VALUES ("Pamco","90.871.350/0001-16","(11)2943-1179","74475-816","Casa 1","237",
+VALUES ("Giovana","90.871.350/0001-16","(11)2943-1179","74475-816","Casa 1","237",
 "giovanaeduardamarlenesilva_@outlook.ind.br");
 
 
 
 select*from tb_produto;
 
-select *  from tb_funcionario;
+select *from vw_consultar_item;

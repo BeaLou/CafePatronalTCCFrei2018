@@ -28,6 +28,26 @@ namespace CaféPatronal.Programacao.Entregável_2.Compras
             return db.Salvar(compra);
 
         }
+        public int SalvarItem(CompraItemDTO produto, List<ComprasDTO> compras)
+        {
+
+
+
+            int idproduto = produto.id_produto;
+
+
+            CompraItemBusiness itemBusiness = new CompraItemBusiness();
+            foreach (ComprasDTO item in compras)
+            {
+                CompraItemDTO itemDto = new CompraItemDTO();
+                itemDto.id_compra = item.id_compra;
+                itemDto.id_produto = idproduto;
+
+                itemBusiness.Salvar(itemDto);
+            }
+
+            return idproduto;
+        }
 
         public List<ComprasDTO> Consultar(string compra)
         {
