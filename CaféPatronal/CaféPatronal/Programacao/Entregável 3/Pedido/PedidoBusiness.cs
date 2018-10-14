@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CaféPatronal.Programacao.PedidoItem;
+using CaféPatronal.Programacao.Produto;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,6 +27,25 @@ namespace CaféPatronal.Programacao.Pedido
             return db.Salvar(pedido);
 
         }
+        public int SalvarItem(PedidoDTO pedido, List<ProdutoDTO> produtos)
+        {
+            PedidoDatabase pedidoDatabase = new PedidoDatabase();
+            int idPedido = pedidoDatabase.Salvar(pedido);
+
+            PedidoItemBusiness itemBusiness = new PedidoItemBusiness();
+            foreach (ProdutoDTO item in produtos)
+            {
+                PedidoItemDTO itemDto = new PedidoItemDTO();
+                itemDto.id_pedido = idPedido;
+                itemDto.id_produto = item.id_produto;
+
+                itemBusiness.Salvar(itemDto);
+            }
+
+            return idPedido;
+        }
+
+
 
         public void Alterar(PedidoDTO pedido)
         {

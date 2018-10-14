@@ -58,6 +58,15 @@ CREATE TABLE `tb_estoque` (
 	`qtd_produtos` varchar(20) NOT NULL,
 	`dt_validade` DATE NOT NULL,
 	PRIMARY KEY (`id_estoque`)
+    
+);
+
+CREATE TABLE `tb_produto` (
+	`id_produto` INT NOT NULL AUTO_INCREMENT,
+	`nm_nome` varchar(50) NOT NULL,
+	`ds_descricao` varchar(100) NOT NULL,
+	`vl_produto` DECIMAL NOT NULL,
+	PRIMARY KEY (`id_produto`)
 );
 
 
@@ -85,18 +94,12 @@ CREATE TABLE `tb_compraitem` (
 	PRIMARY KEY (`id_compraitem`)
 );
 
-CREATE TABLE `tb_produtoitem` (
-	`id_produtoitem` INT NOT NULL AUTO_INCREMENT,
-	`id_produto` INT NOT NULL,
-	`id_pedido` INT NOT NULL,
-	PRIMARY KEY (`id_produtoitem`)
-);
 
 CREATE TABLE `tb_pedidoitem` (
 	`id_pedidoitem` INT NOT NULL AUTO_INCREMENT,
 	`id_produto` INT NOT NULL,
 	`id_pedido` INT NOT NULL,
-	PRIMARY KEY (`id_produtoitem`)
+	PRIMARY KEY (`id_pedidoitem`)
 );
 
 
@@ -130,9 +133,9 @@ ALTER TABLE `tb_pedido` ADD CONSTRAINT
  `tb_pedido_fk0` FOREIGN KEY (`id_cliente`) 
  REFERENCES `tb_cliente`(`id_cliente`) ON UPDATE cascade;
  
-ALTER TABLE `tb_produtoitem` ADD CONSTRAINT `tb_produtoitem_fk0` FOREIGN KEY (`id_produto`) REFERENCES `tb_produto`(`id_produto`);
+ALTER TABLE `tb_pedidoitem` ADD CONSTRAINT `tb_pedidoitem_fk0` FOREIGN KEY (`id_produto`) REFERENCES `tb_produto`(`id_produto`);
 
-ALTER TABLE `tb_produtoitem` ADD CONSTRAINT `tb_produtoitem_fk1` FOREIGN KEY (`id_pedido`) REFERENCES `tb_pedido`(`id_pedido`);
+ALTER TABLE `tb_pedidoitem` ADD CONSTRAINT `tb_pedidoitem_fk1` FOREIGN KEY (`id_pedido`) REFERENCES `tb_pedido`(`id_pedido`);
 
 ALTER TABLE `tb_folhapagamento` ADD CONSTRAINT `tb_folhapagamento_fk0` FOREIGN KEY (`id_funcionario`) REFERENCES `tb_funcionario`(`id_funcionario`);
 
@@ -168,6 +171,8 @@ GROUP BY
 tb_compra.id_compra,
 tb_produto.nm_nome;
  
+ 
+
 
 
 
@@ -223,4 +228,4 @@ VALUES ("Giovana","90.871.350/0001-16","(11)2943-1179","74475-816","Casa 1","237
 
 select*from tb_produto;
 
-select *from vw_consultar_item;
+select *from tb_pedidoitem;
