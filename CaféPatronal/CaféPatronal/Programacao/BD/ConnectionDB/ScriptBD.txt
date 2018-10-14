@@ -67,12 +67,12 @@ CREATE TABLE `tb_pedido` (
 	PRIMARY KEY (`id_pedido`)
 );
 
-CREATE TABLE `tb_produto` (
-	`id_produto` INT NOT NULL AUTO_INCREMENT,
-	`nm_nome` varchar(50) NOT NULL,
-	`ds_descricao` varchar(100) NOT NULL,
-	`vl_produto` DECIMAL NOT NULL,
-	PRIMARY KEY (`id_produto`)
+CREATE TABLE tb_pedido (
+    id_pedido INT NOT NULL AUTO_INCREMENT,
+    id_cliente INT NOT NULL,
+    dt_venda DATETIME NOT NULL,
+    ds_formapagamento varchar(20) NOT NULL,
+    PRIMARY KEY (id_pedido)
 );
 CREATE TABLE `tb_compra` (
 	`id_compra` INT NOT NULL AUTO_INCREMENT,
@@ -203,13 +203,6 @@ VALUES("Samira","Dias","331.66699.42-6","772.480.108-80","17.284.238-4","T.I.",
 "(11) 2786-1154","(11) 99788-6151","04169-970","Casa 1","508","1999/11/15","Funcionario","12345", false ,false , true,"982");
 
  
-insert into  `tb_pedido`(id_cliente,vl_venda)VALUES("1","10.00");
-insert into  `tb_pedido`(id_cliente,vl_venda)VALUES("2","20.00");
-insert into  `tb_pedido`(id_cliente,vl_venda)VALUES("2","4");
-insert into  `tb_pedido`(id_cliente,vl_venda)VALUES("2","5");
-insert into  `tb_pedido`(id_cliente,vl_venda)VALUES("1","10.00");
-
-
 
 
 
