@@ -60,12 +60,6 @@ CREATE TABLE `tb_estoque` (
 	PRIMARY KEY (`id_estoque`)
 );
 
-CREATE TABLE `tb_pedido` (
-	`id_pedido` INT NOT NULL AUTO_INCREMENT,
-	`id_cliente` INT NULL,
-	`vl_venda` DECIMAL NOT NULL,
-	PRIMARY KEY (`id_pedido`)
-);
 
 CREATE TABLE tb_pedido (
     id_pedido INT NOT NULL AUTO_INCREMENT,

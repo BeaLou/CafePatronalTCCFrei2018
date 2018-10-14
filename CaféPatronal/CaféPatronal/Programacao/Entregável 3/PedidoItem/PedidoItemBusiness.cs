@@ -8,5 +8,32 @@ namespace CaféPatronal.Programacao.PedidoItem
 {
     public class PedidoItemBusiness
     {
+        PedidoItemDatabase db = new PedidoItemDatabase();
+
+        public int Salvar(PedidoItemDTO pedidoitem)
+        {
+            return db.Salvar(pedidoitem);
+        }
+
+        public void Alterar(PedidoItemDTO pedidoitem)
+        {
+
+            db.Alterar(pedidoitem);
+        }
+
+        public List<PedidoItemDTO> Consultar(string pedidoitem)
+        {
+            return db.Consultar(pedidoitem);
+        }
+
+        public List<PedidoItemDTO> Listar()
+        {
+            return db.Listar();
+        }
+
+        public void Remover(int id)
+        {
+            db.Remover(id);
+        }
     }
 }

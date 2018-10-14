@@ -8,7 +8,7 @@ namespace CaféPatronal.Programacao.PedidoItem
 {
     public class PedidoItemDTO
     {
-        public int id_produtoitem { get; set; }
+        public int id_pedidoitem { get; set; }
         public int id_produto { get; set; }
         public int id_pedido { get; set; }
     }
