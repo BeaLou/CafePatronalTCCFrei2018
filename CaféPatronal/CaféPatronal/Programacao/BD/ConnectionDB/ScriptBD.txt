@@ -92,6 +92,15 @@ CREATE TABLE `tb_produtoitem` (
 	PRIMARY KEY (`id_produtoitem`)
 );
 
+CREATE TABLE `tb_pedidoitem` (
+	`id_pedidoitem` INT NOT NULL AUTO_INCREMENT,
+	`id_produto` INT NOT NULL,
+	`id_pedido` INT NOT NULL,
+	PRIMARY KEY (`id_produtoitem`)
+);
+
+
+
 CREATE TABLE tb_folhapagamento (
     `id_folhapagamento` INT NOT NULL AUTO_INCREMENT,
     `id_funcionario` INT NOT NULL,
