@@ -130,6 +130,7 @@ namespace CaféPatronal.Programacao.FolhaPagamento
                 folhas.Add(novafolha);
 
             }
+            reader.Close();
             return folhas;
         }
         public List<VwConsultarFolhapagamento> Consultarmes(string mes)

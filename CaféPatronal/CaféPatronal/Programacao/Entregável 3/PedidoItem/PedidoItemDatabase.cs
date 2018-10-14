@@ -92,6 +92,7 @@ namespace CaféPatronal.Programacao.PedidoItem
                 pedidositem.Add(novopedidoitem);
 
             }
+            reader.Close();
             return pedidositem;
         }
 
@@ -120,6 +121,7 @@ namespace CaféPatronal.Programacao.PedidoItem
                 pedidositem.Add(novopedidoitem);
 
             }
+            reader.Close();
             return pedidositem;
 
         }

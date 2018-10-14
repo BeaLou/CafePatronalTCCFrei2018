@@ -80,6 +80,7 @@ namespace CaféPatronal.Programacao.Entregável_2.Compras
                 compras.Add(novacompra);
 
             }
+            reader.Close();
             return compras;
         }
 
@@ -108,6 +109,7 @@ namespace CaféPatronal.Programacao.Entregável_2.Compras
                 compras.Add(novacompra);
 
             }
+            reader.Close();
             return compras;
         }
     }

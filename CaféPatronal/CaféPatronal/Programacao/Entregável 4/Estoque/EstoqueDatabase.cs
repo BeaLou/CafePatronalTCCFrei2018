@@ -111,6 +111,7 @@ namespace CaféPatronal.Programacao.Estoque
                 estoques.Add(novoestoque);
 
             }
+            reader.Close();
             return estoques;
         }
 
@@ -140,6 +141,7 @@ namespace CaféPatronal.Programacao.Estoque
                 estoques.Add(novoestoque);
 
             }
+            reader.Close();
             return estoques;
 
         }

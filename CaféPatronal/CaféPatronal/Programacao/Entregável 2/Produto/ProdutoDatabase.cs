@@ -94,6 +94,7 @@ namespace CaféPatronal.Programacao.Produto
                 produtos.Add(novoproduto);
 
             }
+            reader.Close();
             return produtos;
         }
 
@@ -120,6 +121,7 @@ namespace CaféPatronal.Programacao.Produto
                 produtos.Add(novoproduto);
 
             }
+            reader.Close();
             return produtos;
 
         }

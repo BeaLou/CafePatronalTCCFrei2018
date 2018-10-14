@@ -70,6 +70,7 @@ namespace CaféPatronal.Programacao.Entregável_2.Compras
                 compras.Add(novacompra);
 
             }
+            reader.Close();
             return compras;
         }
 
@@ -95,8 +96,10 @@ namespace CaféPatronal.Programacao.Entregável_2.Compras
                 compras.Add(novacompra);
 
             }
+            reader.Close();
             return compras;
         }
+
 
         public void Alterar(CompraItemDTO compra)
         {
@@ -116,6 +119,8 @@ namespace CaféPatronal.Programacao.Entregável_2.Compras
             Database db = new Database();
             db.ExecuteInsertScript(script, parms);
         }
+
+
         public List<VwConsultarItem> ConsultarView(string produto)
         {
 
@@ -140,6 +145,7 @@ namespace CaféPatronal.Programacao.Entregável_2.Compras
                 compras.Add(novacompra);
 
             }
+            reader.Close();
             return compras;
         }
     }

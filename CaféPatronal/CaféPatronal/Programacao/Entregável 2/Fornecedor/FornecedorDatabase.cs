@@ -118,6 +118,7 @@ namespace CaféPatronal.Programacao.Estoque
                 fornecedores.Add(novofornecedor);
 
             }
+            reader.Close();
             return fornecedores;
         }
 
@@ -148,6 +149,7 @@ namespace CaféPatronal.Programacao.Estoque
                 fornecedores.Add(novofornecedor);
 
             }
+            reader.Close();
             return fornecedores;
 
         }

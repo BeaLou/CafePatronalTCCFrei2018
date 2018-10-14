@@ -235,6 +235,7 @@ namespace CaféPatronal.Programacao.Funcionario
                 funcionarios.Add(novofuncionario);
 
             }
+            reader.Close();
             return funcionarios;
         }
 
@@ -278,6 +279,7 @@ namespace CaféPatronal.Programacao.Funcionario
                 funcionarios.Add(novofuncionario);
 
             }
+            reader.Close();
             return funcionarios;
 
         }

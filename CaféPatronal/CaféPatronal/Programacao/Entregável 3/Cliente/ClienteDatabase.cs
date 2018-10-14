@@ -107,6 +107,7 @@ namespace CaféPatronal.Programacao.Cliente
                 clientes.Add(novocliente);
 
             }
+            reader.Close();
             return clientes;
         }
 
@@ -135,6 +136,7 @@ namespace CaféPatronal.Programacao.Cliente
                 clientes.Add(novocliente);
 
             }
+            reader.Close();
             return clientes;
 
         }
