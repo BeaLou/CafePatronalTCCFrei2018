@@ -74,11 +74,13 @@
             this.txtItens = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.dgvItensProdutos = new System.Windows.Forms.DataGridView();
-            this.button5 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button5 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblvalortotal = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -445,6 +447,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.lblvalortotal);
+            this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.dataGridView1);
@@ -456,7 +460,7 @@
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Location = new System.Drawing.Point(10, 37);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(597, 265);
+            this.groupBox2.Size = new System.Drawing.Size(597, 285);
             this.groupBox2.TabIndex = 71;
             this.groupBox2.TabStop = false;
             // 
@@ -617,6 +621,7 @@
             this.pictureBox4.Size = new System.Drawing.Size(59, 57);
             this.pictureBox4.TabIndex = 75;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // dgvItensProdutos
             // 
@@ -632,6 +637,30 @@
             this.dgvItensProdutos.ReadOnly = true;
             this.dgvItensProdutos.Size = new System.Drawing.Size(910, 308);
             this.dgvItensProdutos.TabIndex = 74;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "nm_nome";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Nome do Item usado";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "qtd_itens";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Quantidade";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "vl_total";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Valor da Compra";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // button5
             // 
@@ -660,29 +689,23 @@
             this.label2.TabIndex = 70;
             this.label2.Text = "Consultar Items de produtos";
             // 
-            // dataGridViewTextBoxColumn1
+            // label5
             // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "nm_nome";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Nome do Item usado";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(13, 241);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(81, 25);
+            this.label5.TabIndex = 57;
+            this.label5.Text = "Valor Total: ";
             // 
-            // dataGridViewTextBoxColumn2
+            // lblvalortotal
             // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "qtd_itens";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Quantidade";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "vl_total";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Valor da Compra";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.lblvalortotal.AutoSize = true;
+            this.lblvalortotal.Location = new System.Drawing.Point(100, 241);
+            this.lblvalortotal.Name = "lblvalortotal";
+            this.lblvalortotal.Size = new System.Drawing.Size(18, 25);
+            this.lblvalortotal.TabIndex = 58;
+            this.lblvalortotal.Text = "-";
             // 
             // CadastroCompra
             // 
@@ -773,5 +796,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.Label lblvalortotal;
+        private System.Windows.Forms.Label label5;
     }
 }

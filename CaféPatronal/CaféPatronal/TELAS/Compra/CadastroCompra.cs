@@ -18,6 +18,7 @@ namespace CaféPatronal.TELAS.Compra
     public partial class CadastroCompra : Form
     {
         BindingList<ComprasDTO> produtosCarrinho = new BindingList<ComprasDTO>();
+        decimal valortotal = 0;
         Validação v = new Validação();
         public CadastroCompra()
         {
@@ -169,6 +170,8 @@ namespace CaféPatronal.TELAS.Compra
                     produtosCarrinho.Add(compra);
                     dataGridView1.AutoGenerateColumns = false;
                     dataGridView1.DataSource = produtosCarrinho;
+                    valortotal = dto.vl_produto + valortotal;
+                    lblvalortotal.Text ="R$ " + valortotal.ToString();
                     compraaaaaitemmmm.id_produto = dto.id_produto;
                 }
 
@@ -185,6 +188,8 @@ namespace CaféPatronal.TELAS.Compra
         private void button2_Click(object sender, EventArgs e)
         {
             produtosCarrinho = new BindingList<ComprasDTO>();
+            valortotal = 0;
+            lblvalortotal.Text = "R$ " + valortotal.ToString();
             dataGridView1.DataSource = produtosCarrinho;
             compraaaaaitemmmm = new CompraItemDTO();
         }
@@ -224,6 +229,13 @@ namespace CaféPatronal.TELAS.Compra
         private void txtQuantidade_KeyPress(object sender, KeyPressEventArgs e)
         {
             v.numeros(e);
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Form1 tela = new Form1();
+            tela.Show();
+            this.Hide();
         }
     }
 }
