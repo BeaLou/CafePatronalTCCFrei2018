@@ -1,4 +1,5 @@
 ﻿using CaféPatronal.Programacao.ConnectionDB;
+using CaféPatronal.Programacao.Entregável_3.PedidoItem;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -125,7 +126,60 @@ namespace CaféPatronal.Programacao.PedidoItem
             return pedidositem;
 
         }
+          public List<VwConsultarItem> ConsultarItem (int comandaid)
+        {
+            string script = @"SELECT * FROM vw_consultar_item
+                               WHERE id_pedido like @id_pedido";
 
+            List<MySqlParameter> parms = new List<MySqlParameter>();
+            parms.Add(new MySqlParameter("id_pedido", "%" + comandaid + "%"));
+
+            Database db = new Database();
+            MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
+
+            List<VwConsultarItem> consultarite = new List<VwConsultarItem>();
+            while (reader.Read())
+            {
+                VwConsultarItem novoconsulta = new VwConsultarItem();
+                novoconsulta.id_pedido = reader.GetInt32("id_pedido");
+                novoconsulta.nm_nome = reader.GetString("nm_nome");
+                novoconsulta.dt_venda = reader.GetDateTime("dt_venda");
+                novoconsulta.ds_formapagamento = reader.GetString("ds_formapagamento");
+                novoconsulta.qtd_itens = reader.GetInt32("qtd_itens");
+                novoconsulta.vl_total = reader.GetDecimal("vl_total");
+
+                consultarite.Add(novoconsulta);
+            }
+            reader.Close();
+            return consultarite;
+        }
+        public List<VwConsultarItem> ListarItem()
+        {
+            string script = @"SELECT * FROM vw_consultar_item
+                               ";
+
+            List<MySqlParameter> parms = new List<MySqlParameter>();
+          
+
+            Database db = new Database();
+            MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
+
+            List<VwConsultarItem> consultarite = new List<VwConsultarItem>();
+            while (reader.Read())
+            {
+                VwConsultarItem novoconsulta = new VwConsultarItem();
+                novoconsulta.id_pedido = reader.GetInt32("id_pedido");
+                novoconsulta.nm_nome = reader.GetString("nm_nome");
+                novoconsulta.dt_venda = reader.GetDateTime("dt_venda");
+                novoconsulta.ds_formapagamento = reader.GetString("ds_formapagamento");
+                novoconsulta.qtd_itens = reader.GetInt32("qtd_itens");
+                novoconsulta.vl_total = reader.GetDecimal("vl_total");
+
+                consultarite.Add(novoconsulta);
+            }
+            reader.Close();
+            return consultarite;
+        }
 
 
 

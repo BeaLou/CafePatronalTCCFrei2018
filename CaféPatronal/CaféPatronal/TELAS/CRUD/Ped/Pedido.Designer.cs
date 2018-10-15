@@ -62,6 +62,7 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -316,6 +317,7 @@
             this.tabPage2.Controls.Add(this.pictureBox1);
             this.tabPage2.Controls.Add(this.lblconsultarpedidos);
             this.tabPage2.Controls.Add(this.dgvConsultarPedidos);
+            this.tabPage2.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage2.Location = new System.Drawing.Point(4, 34);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -366,6 +368,7 @@
             this.btnConsultarPedidos.Text = "Consultar";
             this.btnConsultarPedidos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnConsultarPedidos.UseVisualStyleBackColor = true;
+            this.btnConsultarPedidos.Click += new System.EventHandler(this.btnConsultarPedidos_Click);
             // 
             // txtConsultapedidos
             // 
@@ -374,7 +377,7 @@
             this.txtConsultapedidos.Location = new System.Drawing.Point(87, 63);
             this.txtConsultapedidos.MaxLength = 50;
             this.txtConsultapedidos.Name = "txtConsultapedidos";
-            this.txtConsultapedidos.Size = new System.Drawing.Size(456, 31);
+            this.txtConsultapedidos.Size = new System.Drawing.Size(456, 32);
             this.txtConsultapedidos.TabIndex = 7;
             // 
             // pictureBox1
@@ -411,7 +414,8 @@
             this.Column1,
             this.Column3,
             this.Column4,
-            this.Column5});
+            this.Column5,
+            this.Column6});
             this.dgvConsultarPedidos.Location = new System.Drawing.Point(87, 101);
             this.dgvConsultarPedidos.Name = "dgvConsultarPedidos";
             this.dgvConsultarPedidos.ReadOnly = true;
@@ -421,6 +425,7 @@
             // Column2
             // 
             this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.DataPropertyName = "id_pedido";
             this.Column2.HeaderText = "Comanda";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
@@ -428,6 +433,7 @@
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.DataPropertyName = "nm_nome";
             this.Column1.HeaderText = "Nome do cliente";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
@@ -435,6 +441,7 @@
             // Column3
             // 
             this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.DataPropertyName = "dt_venda";
             this.Column3.HeaderText = "Data da venda";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
@@ -442,6 +449,7 @@
             // Column4
             // 
             this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column4.DataPropertyName = "ds_formapagamento";
             this.Column4.HeaderText = "Forma de pagamento";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
@@ -449,9 +457,18 @@
             // Column5
             // 
             this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column5.DataPropertyName = "qtd_itens";
             this.Column5.HeaderText = "Quantidade";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column6.DataPropertyName = "vl_total";
+            this.Column6.HeaderText = "Valor Total";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             // 
             // CadastrarPedido
             // 
@@ -516,5 +533,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
     }
 }

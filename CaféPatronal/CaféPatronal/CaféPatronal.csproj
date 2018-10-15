@@ -80,6 +80,7 @@
     <Compile Include="Programacao\Entregável 2\Compras\ComprasBusiness.cs" />
     <Compile Include="Programacao\Entregável 2\Compras\ComprasDatabase.cs" />
     <Compile Include="Programacao\Entregável 2\Compras\ComprasDTO.cs" />
+    <Compile Include="Programacao\Entregável 3\PedidoItem\VwConsultarItem.cs" />
     <Compile Include="Programacao\Entregável 4\Estoque\EstoqueBusiness.cs" />
     <Compile Include="Programacao\Entregável 4\Estoque\EstoqueDatabase.cs" />
     <Compile Include="Programacao\Entregável 4\Estoque\EstoqueDTO.cs" />

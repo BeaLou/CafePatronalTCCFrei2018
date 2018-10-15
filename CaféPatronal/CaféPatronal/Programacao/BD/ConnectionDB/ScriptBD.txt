@@ -171,10 +171,28 @@ GROUP BY
 tb_compra.id_compra,
 tb_produto.nm_nome;
  
- 
+drop view vw_consultar_item;
+ create view vw_consultar_item as select
+ tb_pedido.id_pedido,
+ tb_cliente.nm_nome,
+ tb_pedido.dt_venda,
+ tb_pedido.ds_formapagamento,
+ count(tb_pedidoitem.id_pedidoitem) as qtd_itens,
+ sum(tb_produto.vl_produto) as vl_total
+ from tb_pedido
+ join tb_pedidoitem
+ on tb_pedidoitem.id_pedido = tb_pedido.id_pedido
+ join tb_cliente
+ on tb_pedido.id_cliente = tb_cliente.id_cliente
+ join tb_produto
+ on tb_pedidoitem.id_produto = tb_produto.id_produto
+ GROUP BY
+ tb_pedido.id_pedido,
+ tb_cliente.nm_nome,
+ tb_pedido.dt_venda,
+ tb_pedido.ds_formapagamento;
 
-
-
+select * from vw_consultar_item;
 
 insert into `tb_dpto`(nm_nome) values ("T.I.");
 insert into `tb_dpto`(nm_nome) values ("RH");

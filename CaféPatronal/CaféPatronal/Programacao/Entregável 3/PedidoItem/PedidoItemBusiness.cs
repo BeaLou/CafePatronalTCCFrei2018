@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CaféPatronal.Programacao.Entregável_3.PedidoItem;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -34,6 +35,19 @@ namespace CaféPatronal.Programacao.PedidoItem
         public void Remover(int id)
         {
             db.Remover(id);
+        }
+        public List<VwConsultarItem> ConsultarItem (int comandaid)
+        {
+            if(comandaid == null)
+            {
+                comandaid = 0;
+            }
+
+            return db.ConsultarItem(comandaid);
+        }
+        public List<VwConsultarItem> ListarItem()
+        {
+            return db.ListarItem();
         }
     }
 }

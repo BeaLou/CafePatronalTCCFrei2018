@@ -1,7 +1,9 @@
 ﻿using CaféPatronal.Programacao;
 using CaféPatronal.Programacao.Cliente;
+using CaféPatronal.Programacao.Entregável_3.PedidoItem;
 using CaféPatronal.Programacao.Funcionario;
 using CaféPatronal.Programacao.Pedido;
+using CaféPatronal.Programacao.PedidoItem;
 using CaféPatronal.Programacao.Produto;
 using CaféPatronal.TELAS.CRUD.Ped;
 using System;
@@ -150,6 +152,38 @@ namespace CaféPatronal.TELAS.Cadastro_e_Consulta
         private void lblvalortotal_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnConsultarPedidos_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int b = 0;
+                PedidoItemBusiness business = new PedidoItemBusiness();
+                if (txtConsultapedidos.Text != string.Empty)
+                {
+                    b = Convert.ToInt32(txtConsultapedidos.Text);
+                }
+                if (b == 0)
+                {
+                    List<VwConsultarItem> g = business.ListarItem();
+                    dgvConsultarPedidos.AutoGenerateColumns = false;
+                    dgvConsultarPedidos.DataSource = g;
+                }
+                else
+                {
+
+                    List<VwConsultarItem> a = business.ConsultarItem(b);
+                    dgvConsultarPedidos.AutoGenerateColumns = false;
+                    dgvConsultarPedidos.DataSource = a;
+
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro: " + ex.Message);
+            }
+       
         }
     }
 }
