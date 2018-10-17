@@ -317,7 +317,7 @@
             this.tabPage2.Controls.Add(this.pictureBox1);
             this.tabPage2.Controls.Add(this.lblconsultarpedidos);
             this.tabPage2.Controls.Add(this.dgvConsultarPedidos);
-            this.tabPage2.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage2.Location = new System.Drawing.Point(4, 34);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -354,6 +354,7 @@
             this.button1.Text = "Apagar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnConsultarPedidos
             // 
@@ -377,7 +378,7 @@
             this.txtConsultapedidos.Location = new System.Drawing.Point(87, 63);
             this.txtConsultapedidos.MaxLength = 50;
             this.txtConsultapedidos.Name = "txtConsultapedidos";
-            this.txtConsultapedidos.Size = new System.Drawing.Size(456, 32);
+            this.txtConsultapedidos.Size = new System.Drawing.Size(456, 31);
             this.txtConsultapedidos.TabIndex = 7;
             // 
             // pictureBox1

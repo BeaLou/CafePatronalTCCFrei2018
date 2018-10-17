@@ -128,7 +128,7 @@ namespace CaféPatronal.Programacao.PedidoItem
         }
           public List<VwConsultarItem> ConsultarItem (int comandaid)
         {
-            string script = @"SELECT * FROM vw_consultar_item
+            string script = @"SELECT * FROM vw_consultar_item_pedido
                                WHERE id_pedido like @id_pedido";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
@@ -155,7 +155,7 @@ namespace CaféPatronal.Programacao.PedidoItem
         }
         public List<VwConsultarItem> ListarItem()
         {
-            string script = @"SELECT * FROM vw_consultar_item
+            string script = @"SELECT * FROM vw_consultar_item_pedido
                                ";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();

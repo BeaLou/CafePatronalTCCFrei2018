@@ -220,10 +220,17 @@ namespace CaféPatronal.TELAS.Compra
 
         private void button5_Click(object sender, EventArgs e)
         {
-            CompraItemBusiness business = new CompraItemBusiness();
-            List<VwConsultarItem> a = business.ConsultarView(txtItens.Text);
-            dgvItensProdutos.AutoGenerateColumns = false;
-            dgvItensProdutos.DataSource = a;
+            try
+            {
+                CompraItemBusiness business = new CompraItemBusiness();
+                List<VwConsultarItem> a = business.ConsultarView(txtItens.Text);
+                dgvItensProdutos.AutoGenerateColumns = false;
+                dgvItensProdutos.DataSource = a;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Occoreu um erro " + ex.Message);
+            }
         }
 
         private void txtQuantidade_KeyPress(object sender, KeyPressEventArgs e)

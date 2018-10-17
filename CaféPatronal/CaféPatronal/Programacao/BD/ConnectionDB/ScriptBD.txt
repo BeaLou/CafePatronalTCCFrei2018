@@ -171,8 +171,9 @@ GROUP BY
 tb_compra.id_compra,
 tb_produto.nm_nome;
  
-drop view vw_consultar_item;
- create view vw_consultar_item as select
+
+
+ create view vw_consultar_item_pedido as select
  tb_pedido.id_pedido,
  tb_cliente.nm_nome,
  tb_pedido.dt_venda,
@@ -192,7 +193,7 @@ drop view vw_consultar_item;
  tb_pedido.dt_venda,
  tb_pedido.ds_formapagamento;
 
-select * from vw_consultar_item;
+select * from vw_consultar_item_pedido;
 
 insert into `tb_dpto`(nm_nome) values ("T.I.");
 insert into `tb_dpto`(nm_nome) values ("RH");

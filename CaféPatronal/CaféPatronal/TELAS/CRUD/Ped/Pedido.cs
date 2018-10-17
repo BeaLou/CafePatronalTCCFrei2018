@@ -124,16 +124,32 @@ namespace CaféPatronal.TELAS.Cadastro_e_Consulta
 
         private void button4_Click(object sender, EventArgs e)
         {
-            ProdutoDTO produto = cmbproduto.SelectedItem as ProdutoDTO;
-            for (int i = 0; i < Convert.ToInt32(txtquantidade.Text); i++)
+            try
             {
-                produtos.Add(produto);
-                valordavenda = valordavenda + produto.vl_produto;
-                dgvPedido.AutoGenerateColumns = false;
-                dgvPedido.DataSource = produtos;
-                lblvalortotal.Text = "R$ " + valordavenda.ToString();
+                ProdutoDTO produto = cmbproduto.SelectedItem as ProdutoDTO;
+                for (int i = 0; i < Convert.ToInt32(txtquantidade.Text); i++)
+                {
+                    produtos.Add(produto);
+                    valordavenda = valordavenda + produto.vl_produto;
+                    dgvPedido.AutoGenerateColumns = false;
+                    dgvPedido.DataSource = produtos;
+                    lblvalortotal.Text = "R$ " + valordavenda.ToString();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                if(txtquantidade.Text == string.Empty)
+                {
+                    MessageBox.Show("Quantidade é obrigatória." );
+                }
+                else
+                {
+                    MessageBox.Show("Occoreu um erro " + ex.Message);
+                }
 
             }
+
 
         }
 
@@ -184,6 +200,11 @@ namespace CaféPatronal.TELAS.Cadastro_e_Consulta
                 MessageBox.Show("Ocorreu um erro: " + ex.Message);
             }
        
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
