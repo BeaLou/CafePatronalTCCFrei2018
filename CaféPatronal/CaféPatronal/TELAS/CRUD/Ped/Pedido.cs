@@ -17,7 +17,8 @@ using System.Windows.Forms;
 
 namespace CaféPatronal.TELAS.Cadastro_e_Consulta
 {
-    Validação v = new Validação();
+
+    
     public partial class CadastrarPedido : Form
     {
         BindingList<ProdutoDTO> produtos = new BindingList<ProdutoDTO>();
@@ -230,6 +231,7 @@ namespace CaféPatronal.TELAS.Cadastro_e_Consulta
 
         private void cmbClientes_KeyPress(object sender, KeyPressEventArgs e)
         {
+            Validação v = new Validação();
             v.letras(e);
         }
 
