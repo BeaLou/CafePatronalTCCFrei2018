@@ -58,6 +58,8 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblvalortotal = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -79,8 +81,6 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button5 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lblvalortotal = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -343,10 +343,10 @@
             // 
             this.lblconsultaproduto.AutoSize = true;
             this.lblconsultaproduto.BackColor = System.Drawing.Color.Transparent;
-            this.lblconsultaproduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblconsultaproduto.Font = new System.Drawing.Font("Agency FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblconsultaproduto.Location = new System.Drawing.Point(2, 3);
             this.lblconsultaproduto.Name = "lblconsultaproduto";
-            this.lblconsultaproduto.Size = new System.Drawing.Size(142, 33);
+            this.lblconsultaproduto.Size = new System.Drawing.Size(82, 34);
             this.lblconsultaproduto.TabIndex = 12;
             this.lblconsultaproduto.Text = "COMPRA";
             // 
@@ -464,6 +464,24 @@
             this.groupBox2.TabIndex = 71;
             this.groupBox2.TabStop = false;
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // lblvalortotal
+            // 
+            this.lblvalortotal.AutoSize = true;
+            this.lblvalortotal.Location = new System.Drawing.Point(100, 241);
+            this.lblvalortotal.Name = "lblvalortotal";
+            this.lblvalortotal.Size = new System.Drawing.Size(18, 25);
+            this.lblvalortotal.TabIndex = 58;
+            this.lblvalortotal.Text = "-";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(13, 241);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(81, 25);
+            this.label5.TabIndex = 57;
+            this.label5.Text = "Valor Total: ";
             // 
             // button2
             // 
@@ -689,24 +707,6 @@
             this.label2.Size = new System.Drawing.Size(225, 28);
             this.label2.TabIndex = 70;
             this.label2.Text = "Consultar Items de produtos";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 241);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 25);
-            this.label5.TabIndex = 57;
-            this.label5.Text = "Valor Total: ";
-            // 
-            // lblvalortotal
-            // 
-            this.lblvalortotal.AutoSize = true;
-            this.lblvalortotal.Location = new System.Drawing.Point(100, 241);
-            this.lblvalortotal.Name = "lblvalortotal";
-            this.lblvalortotal.Size = new System.Drawing.Size(18, 25);
-            this.lblvalortotal.TabIndex = 58;
-            this.lblvalortotal.Text = "-";
             // 
             // CadastroCompra
             // 

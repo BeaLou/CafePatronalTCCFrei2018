@@ -17,6 +17,7 @@ using System.Windows.Forms;
 
 namespace CaféPatronal.TELAS.Cadastro_e_Consulta
 {
+    Validação v = new Validação();
     public partial class CadastrarPedido : Form
     {
         BindingList<ProdutoDTO> produtos = new BindingList<ProdutoDTO>();
@@ -200,28 +201,38 @@ namespace CaféPatronal.TELAS.Cadastro_e_Consulta
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (dgvConsultarPedidos.CurrentRow != null)
+            try
             {
-                VwConsultarItem pedido = dgvConsultarPedidos.CurrentRow.DataBoundItem as VwConsultarItem;
-                DialogResult r = MessageBox.Show("Deseja excluir esse pedido?", "Michael Pop`s",
-                                       MessageBoxButtons.YesNo,
-                                       MessageBoxIcon.Question);
-                if (r == DialogResult.Yes)
+                if (dgvConsultarPedidos.CurrentRow != null)
                 {
-                    PedidoItemBusiness business = new PedidoItemBusiness();
-                    business.Remover(pedido.id_pedido);
+                    VwConsultarItem pedido = dgvConsultarPedidos.CurrentRow.DataBoundItem as VwConsultarItem;
+                    DialogResult r = MessageBox.Show("Deseja excluir esse pedido?", "Michael Pop`s",
+                                           MessageBoxButtons.YesNo,
+                                           MessageBoxIcon.Question);
+                    if (r == DialogResult.Yes)
+                    {
+                        PedidoItemBusiness business = new PedidoItemBusiness();
+                        business.Remover(pedido.id_pedido);
 
-                    PedidoBusiness pedidobusiness = new PedidoBusiness();
-                    pedidobusiness.Remover(pedido.id_pedido);
-                    btnConsultarPedidos_Click(null, null);
+                        PedidoBusiness pedidobusiness = new PedidoBusiness();
+                        pedidobusiness.Remover(pedido.id_pedido);
+                        btnConsultarPedidos_Click(null, null);
 
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro: " + ex);
+            }
         }
+
 
         private void cmbClientes_KeyPress(object sender, KeyPressEventArgs e)
         {
             v.letras(e);
         }
+
     }
 }
+
