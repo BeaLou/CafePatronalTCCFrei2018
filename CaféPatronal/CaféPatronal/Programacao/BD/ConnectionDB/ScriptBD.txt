@@ -51,15 +51,11 @@ CREATE TABLE `tb_fornecedor` (
 
 CREATE TABLE `tb_estoque` (
 	`id_estoque` INT NOT NULL AUTO_INCREMENT,
-	`id_produto` INT NOT NULL,
-	`id_fornecedor` INT NOT NULL,
-	`vl_compra` DECIMAL NOT NULL,
-	`dt_datacompra` DATETIME NOT NULL,
-	`qtd_produtos` varchar(20) NOT NULL,
-	`dt_validade` DATE NOT NULL,
+	`id_compra` INT NOT NULL,
+	`qtd_produtos` INT(5) NOT NULL,
 	PRIMARY KEY (`id_estoque`)
-    
 );
+
 
 CREATE TABLE `tb_produto` (
 	`id_produto` INT NOT NULL AUTO_INCREMENT,
@@ -124,10 +120,7 @@ create table `tb_dpto`(
 
 
 
-
-ALTER TABLE `tb_estoque` ADD CONSTRAINT `tb_estoque_fk0` FOREIGN KEY (`id_produto`) REFERENCES `tb_produto`(`id_produto`);
-
-ALTER TABLE `tb_estoque` ADD CONSTRAINT `tb_estoque_fk1` FOREIGN KEY (`id_fornecedor`) REFERENCES `tb_fornecedor`(`id_fornecedor`);
+ALTER TABLE `tb_estoque` ADD CONSTRAINT `tb_estoque_fk0` FOREIGN KEY (`id_compra`) REFERENCES `tb_compra`(`id_compra`);
 
 ALTER TABLE `tb_pedido` ADD CONSTRAINT
  `tb_pedido_fk0` FOREIGN KEY (`id_cliente`) 
