@@ -40,5 +40,10 @@ namespace CaféPatronal.TELAS
         {
 
         }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
