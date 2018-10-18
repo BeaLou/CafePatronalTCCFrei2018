@@ -5,7 +5,6 @@ using CaféPatronal.Programacao.Funcionario;
 using CaféPatronal.Programacao.Pedido;
 using CaféPatronal.Programacao.PedidoItem;
 using CaféPatronal.Programacao.Produto;
-using CaféPatronal.TELAS.CRUD.Ped;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -78,11 +77,9 @@ namespace CaféPatronal.TELAS.Cadastro_e_Consulta
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AlterarPedido tela = new AlterarPedido();
-            tela.Show();
-            this.Hide();
+
         }
-      
+
 
         private void tabPage1_Click(object sender, EventArgs e)
         {
@@ -93,7 +90,7 @@ namespace CaféPatronal.TELAS.Cadastro_e_Consulta
         {
             try
             {
-               
+
                 ClienteDTO cliente = cmbClientes.SelectedItem as ClienteDTO;
                 PedidoDTO dto = new PedidoDTO();
                 dto.dt_venda = DateTime.Now;
@@ -139,9 +136,9 @@ namespace CaféPatronal.TELAS.Cadastro_e_Consulta
             }
             catch (Exception ex)
             {
-                if(txtquantidade.Text == string.Empty)
+                if (txtquantidade.Text == string.Empty)
                 {
-                    MessageBox.Show("Quantidade é obrigatória." );
+                    MessageBox.Show("Quantidade é obrigatória.");
                 }
                 else
                 {
@@ -159,7 +156,7 @@ namespace CaféPatronal.TELAS.Cadastro_e_Consulta
             dgvPedido.AutoGenerateColumns = false;
             dgvPedido.DataSource = produtos;
             valordavenda = 0;
-            lblvalortotal.Text ="R$ " + valordavenda.ToString();
+            lblvalortotal.Text = "R$ " + valordavenda.ToString();
 
             txtquantidade.Clear();
 
@@ -188,23 +185,43 @@ namespace CaféPatronal.TELAS.Cadastro_e_Consulta
                 }
                 else
                 {
-
                     List<VwConsultarItem> a = business.ConsultarItem(b);
                     dgvConsultarPedidos.AutoGenerateColumns = false;
                     dgvConsultarPedidos.DataSource = a;
 
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Ocorreu um erro: " + ex.Message);
             }
-       
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (dgvConsultarPedidos.CurrentRow != null)
+            {
+                VwConsultarItem pedido = dgvConsultarPedidos.CurrentRow.DataBoundItem as VwConsultarItem;
+                DialogResult r = MessageBox.Show("Deseja excluir esse pedido?", "Michael Pop`s",
+                                       MessageBoxButtons.YesNo,
+                                       MessageBoxIcon.Question);
+                if (r == DialogResult.Yes)
+                {
+                    PedidoItemBusiness business = new PedidoItemBusiness();
+                    business.Remover(pedido.id_pedido);
 
+                    PedidoBusiness pedidobusiness = new PedidoBusiness();
+                    pedidobusiness.Remover(pedido.id_pedido);
+                    btnConsultarPedidos_Click(null, null);
+
+                }
+            }
+        }
+
+        private void cmbClientes_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.letras(e);
         }
     }
 }

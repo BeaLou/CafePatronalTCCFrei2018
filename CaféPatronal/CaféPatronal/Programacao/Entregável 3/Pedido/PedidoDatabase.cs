@@ -67,7 +67,7 @@ namespace CaféPatronal.Programacao.Pedido
             @"DELETE FROM tb_pedido WHERE id_pedido = @id_pedido";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("id_pedido", id));
+            parms.Add(new MySqlParameter("id_pedido",id));
 
             Database db = new Database();
             db.ExecuteInsertScript(script, parms);

@@ -50,7 +50,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.BtnSalvarPedido = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnConsultarPedidos = new System.Windows.Forms.Button();
             this.txtConsultapedidos = new System.Windows.Forms.TextBox();
@@ -78,11 +77,11 @@
             this.lblEstoque.AutoSize = true;
             this.lblEstoque.BackColor = System.Drawing.Color.Transparent;
             this.lblEstoque.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstoque.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstoque.ForeColor = System.Drawing.Color.Black;
             this.lblEstoque.Location = new System.Drawing.Point(3, 3);
             this.lblEstoque.Name = "lblEstoque";
-            this.lblEstoque.Size = new System.Drawing.Size(104, 29);
+            this.lblEstoque.Size = new System.Drawing.Size(64, 28);
             this.lblEstoque.TabIndex = 34;
             this.lblEstoque.Text = "PEDIDO";
             // 
@@ -103,7 +102,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(25, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -116,6 +115,7 @@
             this.tabPage1.Controls.Add(this.BtnSalvarPedido);
             this.tabPage1.Controls.Add(this.lblEstoque);
             this.tabPage1.Controls.Add(this.btnVoltar);
+            this.tabPage1.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -149,10 +149,10 @@
             // lblvalortotal
             // 
             this.lblvalortotal.AutoSize = true;
-            this.lblvalortotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblvalortotal.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblvalortotal.Location = new System.Drawing.Point(129, 254);
             this.lblvalortotal.Name = "lblvalortotal";
-            this.lblvalortotal.Size = new System.Drawing.Size(19, 25);
+            this.lblvalortotal.Size = new System.Drawing.Size(18, 25);
             this.lblvalortotal.TabIndex = 51;
             this.lblvalortotal.Text = "-";
             this.lblvalortotal.Click += new System.EventHandler(this.lblvalortotal_Click);
@@ -160,10 +160,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(7, 254);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(116, 25);
+            this.label3.Size = new System.Drawing.Size(74, 25);
             this.label3.TabIndex = 50;
             this.label3.Text = "Valor Total";
             // 
@@ -212,17 +212,17 @@
             // 
             this.txtquantidade.Location = new System.Drawing.Point(182, 163);
             this.txtquantidade.Name = "txtquantidade";
-            this.txtquantidade.Size = new System.Drawing.Size(190, 31);
+            this.txtquantidade.Size = new System.Drawing.Size(190, 32);
             this.txtquantidade.TabIndex = 46;
             this.txtquantidade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtquantidade_KeyPress);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(7, 165);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(123, 25);
+            this.label9.Size = new System.Drawing.Size(77, 25);
             this.label9.TabIndex = 45;
             this.label9.Text = "Quantidade";
             // 
@@ -238,10 +238,10 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(7, 115);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(87, 25);
+            this.label6.Size = new System.Drawing.Size(59, 25);
             this.label6.TabIndex = 42;
             this.label6.Text = "Produto";
             // 
@@ -269,24 +269,25 @@
             this.cmbClientes.Name = "cmbClientes";
             this.cmbClientes.Size = new System.Drawing.Size(190, 33);
             this.cmbClientes.TabIndex = 1;
+            this.cmbClientes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbClientes_KeyPress);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(7, 65);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(218, 25);
+            this.label4.Size = new System.Drawing.Size(139, 25);
             this.label4.TabIndex = 20;
             this.label4.Text = "Forma de Pagamento";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(7, 22);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(171, 25);
+            this.label5.Size = new System.Drawing.Size(108, 25);
             this.label5.TabIndex = 5;
             this.label5.Text = "Nome do Cliente";
             // 
@@ -310,36 +311,20 @@
             // tabPage2
             // 
             this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage2.Controls.Add(this.button2);
             this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Controls.Add(this.btnConsultarPedidos);
             this.tabPage2.Controls.Add(this.txtConsultapedidos);
             this.tabPage2.Controls.Add(this.pictureBox1);
             this.tabPage2.Controls.Add(this.lblconsultarpedidos);
             this.tabPage2.Controls.Add(this.dgvConsultarPedidos);
-            this.tabPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage2.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage2.Location = new System.Drawing.Point(4, 34);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1106, 434);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Consulta/Apagar/Alterar";
+            this.tabPage2.Text = "Consulta/Apagar";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(784, 63);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(103, 33);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Alterar";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -375,10 +360,10 @@
             // 
             this.txtConsultapedidos.BackColor = System.Drawing.Color.Ivory;
             this.txtConsultapedidos.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.txtConsultapedidos.Location = new System.Drawing.Point(87, 63);
+            this.txtConsultapedidos.Location = new System.Drawing.Point(87, 65);
             this.txtConsultapedidos.MaxLength = 50;
             this.txtConsultapedidos.Name = "txtConsultapedidos";
-            this.txtConsultapedidos.Size = new System.Drawing.Size(456, 31);
+            this.txtConsultapedidos.Size = new System.Drawing.Size(456, 32);
             this.txtConsultapedidos.TabIndex = 7;
             // 
             // pictureBox1
@@ -398,10 +383,10 @@
             // 
             this.lblconsultarpedidos.AutoSize = true;
             this.lblconsultarpedidos.BackColor = System.Drawing.Color.Transparent;
-            this.lblconsultarpedidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblconsultarpedidos.Font = new System.Drawing.Font("Agency FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblconsultarpedidos.Location = new System.Drawing.Point(2, 3);
             this.lblconsultarpedidos.Name = "lblconsultarpedidos";
-            this.lblconsultarpedidos.Size = new System.Drawing.Size(126, 33);
+            this.lblconsultarpedidos.Size = new System.Drawing.Size(72, 34);
             this.lblconsultarpedidos.TabIndex = 7;
             this.lblconsultarpedidos.Text = "PEDIDO";
             // 
@@ -512,7 +497,6 @@
         private System.Windows.Forms.Button btnConsultarPedidos;
         private System.Windows.Forms.TextBox txtConsultapedidos;
         private System.Windows.Forms.Button BtnSalvarPedido;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label lblvalortotal;

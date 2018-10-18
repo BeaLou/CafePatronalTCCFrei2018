@@ -171,12 +171,13 @@
             this.mtbCpf.Name = "mtbCpf";
             this.mtbCpf.Size = new System.Drawing.Size(456, 32);
             this.mtbCpf.TabIndex = 3;
+            this.mtbCpf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtbCpf_KeyPress);
             // 
             // dtpDataNascimento
             // 
             this.dtpDataNascimento.Location = new System.Drawing.Point(140, 224);
-            this.dtpDataNascimento.MaxDate = new System.DateTime(2050, 12, 31, 0, 0, 0, 0);
-            this.dtpDataNascimento.MinDate = new System.DateTime(1910, 1, 1, 0, 0, 0, 0);
+            this.dtpDataNascimento.MaxDate = new System.DateTime(2018, 12, 31, 0, 0, 0, 0);
+            this.dtpDataNascimento.MinDate = new System.DateTime(1930, 1, 1, 0, 0, 0, 0);
             this.dtpDataNascimento.Name = "dtpDataNascimento";
             this.dtpDataNascimento.Size = new System.Drawing.Size(456, 32);
             this.dtpDataNascimento.TabIndex = 4;

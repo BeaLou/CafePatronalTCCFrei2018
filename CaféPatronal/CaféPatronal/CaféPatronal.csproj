@@ -50,7 +50,7 @@
     <ApplicationIcon>Resources\whatsapp_image_2018_08_29_at_23_17_37_1_pWI_icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=8.0.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.10.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.SqlXml" />
@@ -144,12 +144,6 @@
     </Compile>
     <Compile Include="TELAS\CRUD\Func\AlterarFuncionario.Designer.cs">
       <DependentUpon>AlterarFuncionario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TELAS\CRUD\Ped\AlterarPedido.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TELAS\CRUD\Ped\AlterarPedido.Designer.cs">
-      <DependentUpon>AlterarPedido.cs</DependentUpon>
     </Compile>
     <Compile Include="TELAS\CRUD\Ped\Pedido.cs">
       <SubType>Form</SubType>
@@ -264,9 +258,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\CRUD\Func\AlterarFuncionario.resx">
       <DependentUpon>AlterarFuncionario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TELAS\CRUD\Ped\AlterarPedido.resx">
-      <DependentUpon>AlterarPedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\CRUD\Ped\Pedido.resx">
       <DependentUpon>Pedido.cs</DependentUpon>

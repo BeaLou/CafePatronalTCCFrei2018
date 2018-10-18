@@ -70,5 +70,10 @@ namespace CaféPatronal.TELAS.CRUD.Clientesss
                 MessageBox.Show("Ocorreu um erro: " + ex.Message);
             }
         }
+
+        private void txtcpf_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.numeros(e);
+        }
     }
 }

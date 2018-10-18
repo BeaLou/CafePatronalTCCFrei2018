@@ -131,5 +131,10 @@ namespace CaféPatronal.TELAS
             }
             
         }
+
+        private void mtbCpf_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            V.numeros(e);
+        }
     }
 }

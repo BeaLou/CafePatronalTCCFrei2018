@@ -143,18 +143,6 @@
   <metadata name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAAW5JREFUSEvt1TErRWEcx/GHEAZJMclClE2yWGRh4trsYjMwyZtg4hWwU5KZichr
-        kAEDkTIgfL9Hj27XOXJv52z3V5/bOffW/3me//Occ0M9RaYVXd+X+acP21hO7nJMM0q4wCfWkVt6sYkn
-        WFz7mMMw2lFTWjCDM3wgFo/ecIsjLKEbVcXZXaKycJp3nGAC/04DRmE7XlFe8Bl3eMAL4gqvMIkkTbBI
-        VuxtIzqwimvEATYwiBFYcBE7uMcxehCmMeBFRhawhs7kLoQxHMDZpp0iJzyOQ8z7hR/e+KU/VsYiFrOo
-        xY2DOaiDZ6UfU164DJfjsnbhSXC5LnsItiG2xPaswHbZtjZkxbb/TNiCboxFnK0b5sa5gW5kHEBu9B7c
-        +L/27lc8Wh4xz3V5wSweXY9wVfEh8ST40NwgbTBXeAofPh/CmmJvnZ3vHdsRiz/CPfG1kVs8RRY/xyx8
-        4eUaX8lb8BVdSPxT8c+lniISwhcUmWunrbgGegAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO

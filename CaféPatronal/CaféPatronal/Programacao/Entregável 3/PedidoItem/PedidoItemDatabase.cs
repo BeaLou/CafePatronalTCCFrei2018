@@ -63,10 +63,10 @@ namespace CaféPatronal.Programacao.PedidoItem
         public void Remover(int id)
         {
             string script =
-            @"DELETE FROM tb_pedidoitem WHERE id_pedido = @id_pedidoitem";
+            @"DELETE FROM tb_pedidoitem WHERE id_pedido = @id_pedido";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("id_pedidoitem", id));
+            parms.Add(new MySqlParameter("id_pedido", id));
 
             Database db = new Database();
             db.ExecuteInsertScript(script, parms);
