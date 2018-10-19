@@ -190,5 +190,10 @@ namespace CaféPatronal.TELAS.Cadastro_e_Consulta
         {
 
         }
+
+        private void txtsalariobruto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            V.numeros(e);
+        }
     }
 }

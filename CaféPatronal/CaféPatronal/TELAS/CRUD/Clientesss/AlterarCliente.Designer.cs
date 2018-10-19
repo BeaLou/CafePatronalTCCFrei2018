@@ -168,6 +168,7 @@
             // txtemail
             // 
             this.txtemail.Location = new System.Drawing.Point(140, 299);
+            this.txtemail.MaxLength = 50;
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(456, 32);
             this.txtemail.TabIndex = 5;
@@ -175,8 +176,8 @@
             // dtpnascimento
             // 
             this.dtpnascimento.Location = new System.Drawing.Point(140, 224);
-            this.dtpnascimento.MaxDate = new System.DateTime(2050, 12, 31, 0, 0, 0, 0);
-            this.dtpnascimento.MinDate = new System.DateTime(1910, 1, 1, 0, 0, 0, 0);
+            this.dtpnascimento.MaxDate = new System.DateTime(2020, 12, 31, 0, 0, 0, 0);
+            this.dtpnascimento.MinDate = new System.DateTime(1970, 1, 1, 0, 0, 0, 0);
             this.dtpnascimento.Name = "dtpnascimento";
             this.dtpnascimento.Size = new System.Drawing.Size(456, 32);
             this.dtpnascimento.TabIndex = 4;

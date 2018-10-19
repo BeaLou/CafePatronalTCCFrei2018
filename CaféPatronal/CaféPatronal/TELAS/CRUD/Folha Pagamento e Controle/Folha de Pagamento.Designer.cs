@@ -197,7 +197,7 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Location = new System.Drawing.Point(12, 32);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(588, 410);
+            this.groupBox2.Size = new System.Drawing.Size(596, 410);
             this.groupBox2.TabIndex = 60;
             this.groupBox2.TabStop = false;
             // 
@@ -223,7 +223,7 @@
             this.cbmes.Location = new System.Drawing.Point(201, 12);
             this.cbmes.Name = "cbmes";
             this.cbmes.Size = new System.Drawing.Size(188, 33);
-            this.cbmes.TabIndex = 2;
+            this.cbmes.TabIndex = 1;
             this.cbmes.SelectedIndexChanged += new System.EventHandler(this.cbmes_SelectedIndexChanged);
             // 
             // label24
@@ -249,7 +249,7 @@
             this.btnCalcular.Margin = new System.Windows.Forms.Padding(4);
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.Size = new System.Drawing.Size(116, 36);
-            this.btnCalcular.TabIndex = 13;
+            this.btnCalcular.TabIndex = 12;
             this.btnCalcular.Text = "Calcular";
             this.btnCalcular.UseVisualStyleBackColor = false;
             this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
@@ -280,7 +280,7 @@
             0});
             this.nudHorasTrabalhadas.Name = "nudHorasTrabalhadas";
             this.nudHorasTrabalhadas.Size = new System.Drawing.Size(191, 32);
-            this.nudHorasTrabalhadas.TabIndex = 4;
+            this.nudHorasTrabalhadas.TabIndex = 3;
             this.nudHorasTrabalhadas.ValueChanged += new System.EventHandler(this.nudHorasTrabalhadas_ValueChanged);
             // 
             // label21
@@ -320,7 +320,8 @@
             this.cboFuncionario.Margin = new System.Windows.Forms.Padding(4);
             this.cboFuncionario.Name = "cboFuncionario";
             this.cboFuncionario.Size = new System.Drawing.Size(191, 33);
-            this.cboFuncionario.TabIndex = 3;
+            this.cboFuncionario.TabIndex = 2;
+            this.cboFuncionario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cboFuncionario_KeyPress);
             // 
             // txtFaltasPriSemana
             // 
@@ -328,9 +329,11 @@
             this.txtFaltasPriSemana.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFaltasPriSemana.Location = new System.Drawing.Point(202, 129);
             this.txtFaltasPriSemana.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFaltasPriSemana.MaxLength = 5;
             this.txtFaltasPriSemana.Name = "txtFaltasPriSemana";
             this.txtFaltasPriSemana.Size = new System.Drawing.Size(190, 32);
-            this.txtFaltasPriSemana.TabIndex = 5;
+            this.txtFaltasPriSemana.TabIndex = 4;
+            this.txtFaltasPriSemana.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFaltasPriSemana_KeyPress);
             // 
             // label22
             // 
@@ -364,9 +367,11 @@
             this.txtFaltaQuarSemana.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFaltaQuarSemana.Location = new System.Drawing.Point(202, 251);
             this.txtFaltaQuarSemana.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFaltaQuarSemana.MaxLength = 5;
             this.txtFaltaQuarSemana.Name = "txtFaltaQuarSemana";
             this.txtFaltaQuarSemana.Size = new System.Drawing.Size(191, 32);
-            this.txtFaltaQuarSemana.TabIndex = 8;
+            this.txtFaltaQuarSemana.TabIndex = 7;
+            this.txtFaltaQuarSemana.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFaltasPriSemana_KeyPress);
             // 
             // chkVT
             // 
@@ -379,7 +384,7 @@
             this.chkVT.Margin = new System.Windows.Forms.Padding(4);
             this.chkVT.Name = "chkVT";
             this.chkVT.Size = new System.Drawing.Size(119, 29);
-            this.chkVT.TabIndex = 11;
+            this.chkVT.TabIndex = 10;
             this.chkVT.Text = "Vale transporte";
             this.chkVT.UseVisualStyleBackColor = false;
             // 
@@ -407,7 +412,7 @@
             this.chkHoraExtra.Margin = new System.Windows.Forms.Padding(4);
             this.chkHoraExtra.Name = "chkHoraExtra";
             this.chkHoraExtra.Size = new System.Drawing.Size(91, 29);
-            this.chkHoraExtra.TabIndex = 12;
+            this.chkHoraExtra.TabIndex = 11;
             this.chkHoraExtra.Text = "Hora extra";
             this.chkHoraExtra.UseVisualStyleBackColor = false;
             this.chkHoraExtra.CheckedChanged += new System.EventHandler(this.chkHoraExtra_CheckedChanged);
@@ -420,7 +425,7 @@
             this.nudHorasExtras.Margin = new System.Windows.Forms.Padding(4);
             this.nudHorasExtras.Name = "nudHorasExtras";
             this.nudHorasExtras.Size = new System.Drawing.Size(191, 32);
-            this.nudHorasExtras.TabIndex = 9;
+            this.nudHorasExtras.TabIndex = 8;
             // 
             // nudPorcentagem
             // 
@@ -431,7 +436,7 @@
             this.nudPorcentagem.Margin = new System.Windows.Forms.Padding(4);
             this.nudPorcentagem.Name = "nudPorcentagem";
             this.nudPorcentagem.Size = new System.Drawing.Size(191, 32);
-            this.nudPorcentagem.TabIndex = 10;
+            this.nudPorcentagem.TabIndex = 9;
             // 
             // lblHoraExtra
             // 
@@ -465,9 +470,11 @@
             this.txtFaltaTerSemana.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFaltaTerSemana.Location = new System.Drawing.Point(201, 209);
             this.txtFaltaTerSemana.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFaltaTerSemana.MaxLength = 5;
             this.txtFaltaTerSemana.Name = "txtFaltaTerSemana";
             this.txtFaltaTerSemana.Size = new System.Drawing.Size(191, 32);
-            this.txtFaltaTerSemana.TabIndex = 7;
+            this.txtFaltaTerSemana.TabIndex = 6;
+            this.txtFaltaTerSemana.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFaltasPriSemana_KeyPress);
             // 
             // label18
             // 
@@ -488,9 +495,11 @@
             this.txtFaltaSegSemana.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFaltaSegSemana.Location = new System.Drawing.Point(202, 172);
             this.txtFaltaSegSemana.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFaltaSegSemana.MaxLength = 5;
             this.txtFaltaSegSemana.Name = "txtFaltaSegSemana";
             this.txtFaltaSegSemana.Size = new System.Drawing.Size(191, 32);
-            this.txtFaltaSegSemana.TabIndex = 6;
+            this.txtFaltaSegSemana.TabIndex = 5;
+            this.txtFaltaSegSemana.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFaltasPriSemana_KeyPress);
             // 
             // label2
             // 

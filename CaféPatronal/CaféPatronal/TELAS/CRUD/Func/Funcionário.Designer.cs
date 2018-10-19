@@ -513,6 +513,7 @@
             this.txtsalariobruto.Name = "txtsalariobruto";
             this.txtsalariobruto.Size = new System.Drawing.Size(276, 32);
             this.txtsalariobruto.TabIndex = 16;
+            this.txtsalariobruto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsalariobruto_KeyPress);
             // 
             // txtNumero
             // 

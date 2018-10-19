@@ -105,7 +105,7 @@
             this.txtVlProduto.MaxLength = 30;
             this.txtVlProduto.Name = "txtVlProduto";
             this.txtVlProduto.Size = new System.Drawing.Size(190, 36);
-            this.txtVlProduto.TabIndex = 17;
+            this.txtVlProduto.TabIndex = 2;
             // 
             // txtUnidade
             // 
@@ -116,7 +116,7 @@
             this.txtUnidade.Multiline = true;
             this.txtUnidade.Name = "txtUnidade";
             this.txtUnidade.Size = new System.Drawing.Size(190, 170);
-            this.txtUnidade.TabIndex = 16;
+            this.txtUnidade.TabIndex = 3;
             // 
             // label3
             // 
@@ -136,7 +136,7 @@
             this.TxtNomeProduto.MaxLength = 30;
             this.TxtNomeProduto.Name = "TxtNomeProduto";
             this.TxtNomeProduto.Size = new System.Drawing.Size(190, 36);
-            this.TxtNomeProduto.TabIndex = 13;
+            this.TxtNomeProduto.TabIndex = 1;
             // 
             // label1
             // 

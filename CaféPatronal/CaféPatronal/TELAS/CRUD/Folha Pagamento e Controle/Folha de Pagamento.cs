@@ -260,5 +260,15 @@ namespace CaféPatronal.TELAS.Fluxo_de_Caixa_e_Folha_de_Pagamento
         {
 
         }
+
+        private void txtFaltasPriSemana_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            V.numeros(e);
+        }
+
+        private void cboFuncionario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            V.letras(e);
+        }
     }
 }

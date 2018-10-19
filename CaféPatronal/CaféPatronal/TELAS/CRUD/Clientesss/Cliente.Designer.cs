@@ -123,6 +123,7 @@
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(144, 283);
+            this.txtEmail.MaxLength = 50;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(456, 32);
             this.txtEmail.TabIndex = 5;
