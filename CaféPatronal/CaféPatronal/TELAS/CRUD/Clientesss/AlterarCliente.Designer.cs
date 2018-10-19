@@ -63,6 +63,8 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.BackColor = System.Drawing.Color.Linen;
+            this.tabPage3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage3.Controls.Add(this.pictureBox1);
             this.tabPage3.Controls.Add(this.button3);
             this.tabPage3.Controls.Add(this.label6);
@@ -73,7 +75,6 @@
             this.tabPage3.Size = new System.Drawing.Size(1076, 461);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Alterar";
-            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -146,7 +147,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(35, 35);
+            this.label1.Location = new System.Drawing.Point(76, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 28);
             this.label1.TabIndex = 14;
@@ -158,7 +159,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(35, 283);
+            this.label2.Location = new System.Drawing.Point(79, 299);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 28);
             this.label2.TabIndex = 8;
@@ -166,7 +167,7 @@
             // 
             // txtemail
             // 
-            this.txtemail.Location = new System.Drawing.Point(144, 283);
+            this.txtemail.Location = new System.Drawing.Point(140, 299);
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(456, 32);
             this.txtemail.TabIndex = 5;
@@ -195,11 +196,11 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(27, 220);
+            this.label3.Location = new System.Drawing.Point(35, 224);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 56);
+            this.label3.Size = new System.Drawing.Size(99, 56);
             this.label3.TabIndex = 10;
-            this.label3.Text = "Data de \r\nNascimento:";
+            this.label3.Text = "Data de \r\nNascimento\r\n";
             // 
             // txtcpf
             // 
@@ -215,7 +216,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(28, 93);
+            this.label4.Location = new System.Drawing.Point(32, 93);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(102, 28);
             this.label4.TabIndex = 6;
@@ -227,7 +228,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(35, 163);
+            this.label5.Location = new System.Drawing.Point(91, 163);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(43, 28);
             this.label5.TabIndex = 11;

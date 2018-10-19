@@ -66,18 +66,18 @@
             this.dtpCompra.MaxDate = new System.DateTime(2050, 12, 31, 0, 0, 0, 0);
             this.dtpCompra.MinDate = new System.DateTime(1910, 1, 1, 0, 0, 0, 0);
             this.dtpCompra.Name = "dtpCompra";
-            this.dtpCompra.Size = new System.Drawing.Size(590, 31);
+            this.dtpCompra.Size = new System.Drawing.Size(590, 32);
             this.dtpCompra.TabIndex = 3;
             // 
             // lblDataNascimento
             // 
             this.lblDataNascimento.AutoSize = true;
             this.lblDataNascimento.BackColor = System.Drawing.Color.Transparent;
-            this.lblDataNascimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDataNascimento.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDataNascimento.ForeColor = System.Drawing.Color.Black;
-            this.lblDataNascimento.Location = new System.Drawing.Point(39, 183);
+            this.lblDataNascimento.Location = new System.Drawing.Point(44, 185);
             this.lblDataNascimento.Name = "lblDataNascimento";
-            this.lblDataNascimento.Size = new System.Drawing.Size(194, 29);
+            this.lblDataNascimento.Size = new System.Drawing.Size(136, 28);
             this.lblDataNascimento.TabIndex = 26;
             this.lblDataNascimento.Text = "Data de Compra:";
             // 
@@ -86,7 +86,7 @@
             this.txtQuantidade.Location = new System.Drawing.Point(186, 114);
             this.txtQuantidade.MaxLength = 20;
             this.txtQuantidade.Name = "txtQuantidade";
-            this.txtQuantidade.Size = new System.Drawing.Size(590, 31);
+            this.txtQuantidade.Size = new System.Drawing.Size(590, 32);
             this.txtQuantidade.TabIndex = 2;
             this.txtQuantidade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValor_KeyPress);
             // 
@@ -94,10 +94,10 @@
             // 
             this.lblSobrenome.AutoSize = true;
             this.lblSobrenome.BackColor = System.Drawing.Color.Transparent;
-            this.lblSobrenome.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSobrenome.Location = new System.Drawing.Point(36, 114);
+            this.lblSobrenome.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSobrenome.Location = new System.Drawing.Point(82, 116);
             this.lblSobrenome.Name = "lblSobrenome";
-            this.lblSobrenome.Size = new System.Drawing.Size(144, 29);
+            this.lblSobrenome.Size = new System.Drawing.Size(98, 28);
             this.lblSobrenome.TabIndex = 25;
             this.lblSobrenome.Text = "Quantidade:";
             // 
@@ -107,18 +107,18 @@
             this.dtpValidade.MaxDate = new System.DateTime(2050, 12, 31, 0, 0, 0, 0);
             this.dtpValidade.MinDate = new System.DateTime(1910, 1, 1, 0, 0, 0, 0);
             this.dtpValidade.Name = "dtpValidade";
-            this.dtpValidade.Size = new System.Drawing.Size(590, 31);
+            this.dtpValidade.Size = new System.Drawing.Size(590, 32);
             this.dtpValidade.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(37, 259);
+            this.label1.Location = new System.Drawing.Point(42, 261);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(203, 29);
+            this.label1.Size = new System.Drawing.Size(138, 28);
             this.label1.TabIndex = 30;
             this.label1.Text = "Data de Validade:";
             // 
@@ -127,7 +127,7 @@
             this.txtValor.Location = new System.Drawing.Point(186, 49);
             this.txtValor.MaxLength = 20;
             this.txtValor.Name = "txtValor";
-            this.txtValor.Size = new System.Drawing.Size(590, 31);
+            this.txtValor.Size = new System.Drawing.Size(590, 32);
             this.txtValor.TabIndex = 1;
             this.txtValor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValor_KeyPress);
             // 
@@ -135,10 +135,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 51);
+            this.label2.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(39, 53);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(200, 29);
+            this.label2.Size = new System.Drawing.Size(141, 28);
             this.label2.TabIndex = 29;
             this.label2.Text = "Valor da Compra:";
             // 
@@ -159,7 +159,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(44, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -168,17 +168,19 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.Linen;
+            this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage1.Controls.Add(this.btnSalvarEstoque);
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.btnVoltar);
             this.tabPage1.Controls.Add(this.lblCadastroCliente);
+            this.tabPage1.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1080, 469);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cadastro";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // btnSalvarEstoque
             // 
@@ -211,20 +213,22 @@
             this.groupBox2.Size = new System.Drawing.Size(782, 322);
             this.groupBox2.TabIndex = 60;
             this.groupBox2.TabStop = false;
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // lblCadastroCliente
             // 
             this.lblCadastroCliente.AutoSize = true;
             this.lblCadastroCliente.BackColor = System.Drawing.Color.Transparent;
-            this.lblCadastroCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadastroCliente.Font = new System.Drawing.Font("Agency FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadastroCliente.Location = new System.Drawing.Point(6, 3);
             this.lblCadastroCliente.Name = "lblCadastroCliente";
-            this.lblCadastroCliente.Size = new System.Drawing.Size(374, 33);
+            this.lblCadastroCliente.Size = new System.Drawing.Size(200, 34);
             this.lblCadastroCliente.TabIndex = 4;
             this.lblCadastroCliente.Text = "CADASTRO DE ESTOQUE\r\n";
             // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.Color.Linen;
             this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage2.Controls.Add(this.button2);
             this.tabPage2.Controls.Add(this.button1);
@@ -239,7 +243,6 @@
             this.tabPage2.Size = new System.Drawing.Size(1080, 469);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Consulta/Apagar/Alterar";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -247,9 +250,9 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(747, 80);
+            this.button2.Location = new System.Drawing.Point(747, 74);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(103, 33);
+            this.button2.Size = new System.Drawing.Size(107, 38);
             this.button2.TabIndex = 17;
             this.button2.Text = "Alterar";
             this.button2.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -262,9 +265,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(638, 80);
+            this.button1.Location = new System.Drawing.Point(638, 74);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 33);
+            this.button1.Size = new System.Drawing.Size(107, 38);
             this.button1.TabIndex = 16;
             this.button1.Text = "Apagar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -295,10 +298,10 @@
             // 
             this.lblconsultadclientre.AutoSize = true;
             this.lblconsultadclientre.BackColor = System.Drawing.Color.Transparent;
-            this.lblconsultadclientre.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblconsultadclientre.Font = new System.Drawing.Font("Agency FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblconsultadclientre.Location = new System.Drawing.Point(2, 8);
             this.lblconsultadclientre.Name = "lblconsultadclientre";
-            this.lblconsultadclientre.Size = new System.Drawing.Size(157, 33);
+            this.lblconsultadclientre.Size = new System.Drawing.Size(85, 34);
             this.lblconsultadclientre.TabIndex = 12;
             this.lblconsultadclientre.Text = "ESTOQUE\r\n";
             // 
@@ -308,9 +311,9 @@
             this.btnConsultarestoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultarestoque.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultarestoque.Image")));
             this.btnConsultarestoque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultarestoque.Location = new System.Drawing.Point(525, 79);
+            this.btnConsultarestoque.Location = new System.Drawing.Point(525, 74);
             this.btnConsultarestoque.Name = "btnConsultarestoque";
-            this.btnConsultarestoque.Size = new System.Drawing.Size(107, 32);
+            this.btnConsultarestoque.Size = new System.Drawing.Size(107, 38);
             this.btnConsultarestoque.TabIndex = 10;
             this.btnConsultarestoque.Text = "Consultar";
             this.btnConsultarestoque.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -319,10 +322,10 @@
             // txtConsultarEstoque
             // 
             this.txtConsultarEstoque.BackColor = System.Drawing.Color.Ivory;
-            this.txtConsultarEstoque.Location = new System.Drawing.Point(63, 80);
+            this.txtConsultarEstoque.Location = new System.Drawing.Point(63, 77);
             this.txtConsultarEstoque.MaxLength = 50;
             this.txtConsultarEstoque.Name = "txtConsultarEstoque";
-            this.txtConsultarEstoque.Size = new System.Drawing.Size(456, 31);
+            this.txtConsultarEstoque.Size = new System.Drawing.Size(456, 32);
             this.txtConsultarEstoque.TabIndex = 9;
             // 
             // Consulta_de_Estoque

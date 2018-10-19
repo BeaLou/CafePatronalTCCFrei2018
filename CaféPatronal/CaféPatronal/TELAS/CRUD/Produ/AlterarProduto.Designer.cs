@@ -59,18 +59,19 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.BackColor = System.Drawing.Color.Linen;
+            this.tabPage3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage3.Controls.Add(this.groupBox1);
             this.tabPage3.Controls.Add(this.btnVoltar);
             this.tabPage3.Controls.Add(this.button3);
             this.tabPage3.Controls.Add(this.label4);
-            this.tabPage3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage3.Font = new System.Drawing.Font("Symbol", 8.25F);
             this.tabPage3.Location = new System.Drawing.Point(4, 34);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(1056, 410);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Alterar";
-            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -90,7 +91,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(18, 77);
+            this.label5.Location = new System.Drawing.Point(39, 78);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 28);
             this.label5.TabIndex = 18;
@@ -99,17 +100,17 @@
             // txtVlProduto
             // 
             this.txtVlProduto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtVlProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVlProduto.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtVlProduto.Location = new System.Drawing.Point(102, 76);
             this.txtVlProduto.MaxLength = 30;
             this.txtVlProduto.Name = "txtVlProduto";
-            this.txtVlProduto.Size = new System.Drawing.Size(190, 31);
+            this.txtVlProduto.Size = new System.Drawing.Size(190, 36);
             this.txtVlProduto.TabIndex = 17;
             // 
             // txtUnidade
             // 
             this.txtUnidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUnidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUnidade.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUnidade.Location = new System.Drawing.Point(102, 118);
             this.txtUnidade.MaxLength = 300;
             this.txtUnidade.Multiline = true;
@@ -121,7 +122,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(18, 38);
+            this.label3.Location = new System.Drawing.Point(42, 39);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 28);
             this.label3.TabIndex = 14;
@@ -130,18 +131,18 @@
             // TxtNomeProduto
             // 
             this.TxtNomeProduto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TxtNomeProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNomeProduto.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNomeProduto.Location = new System.Drawing.Point(102, 37);
             this.TxtNomeProduto.MaxLength = 30;
             this.TxtNomeProduto.Name = "TxtNomeProduto";
-            this.TxtNomeProduto.Size = new System.Drawing.Size(190, 31);
+            this.TxtNomeProduto.Size = new System.Drawing.Size(190, 36);
             this.TxtNomeProduto.TabIndex = 13;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(8, 117);
+            this.label1.Location = new System.Drawing.Point(8, 118);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 28);
             this.label1.TabIndex = 15;

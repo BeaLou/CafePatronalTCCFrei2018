@@ -101,6 +101,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.Linen;
+            this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage1.Controls.Add(this.BtnSalvarProdutos);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Controls.Add(this.lblCadastroProduto);
@@ -112,7 +114,6 @@
             this.tabPage1.Size = new System.Drawing.Size(1056, 410);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cadastro";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // BtnSalvarProdutos
             // 
@@ -148,28 +149,28 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(18, 77);
+            this.label5.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(39, 76);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 25);
+            this.label5.Size = new System.Drawing.Size(57, 28);
             this.label5.TabIndex = 18;
             this.label5.Text = "Preço";
             // 
             // txtVlProduto
             // 
             this.txtVlProduto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtVlProduto.Font = new System.Drawing.Font("Agency FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVlProduto.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtVlProduto.Location = new System.Drawing.Point(102, 76);
             this.txtVlProduto.MaxLength = 30;
             this.txtVlProduto.Name = "txtVlProduto";
-            this.txtVlProduto.Size = new System.Drawing.Size(190, 21);
+            this.txtVlProduto.Size = new System.Drawing.Size(190, 36);
             this.txtVlProduto.TabIndex = 17;
             this.txtVlProduto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVlProduto_KeyPress);
             // 
             // txtUnidade
             // 
             this.txtUnidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUnidade.Font = new System.Drawing.Font("Agency FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUnidade.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUnidade.Location = new System.Drawing.Point(102, 118);
             this.txtUnidade.MaxLength = 300;
             this.txtUnidade.Multiline = true;
@@ -180,36 +181,37 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(18, 38);
+            this.label3.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(42, 37);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 25);
+            this.label3.Size = new System.Drawing.Size(54, 28);
             this.label3.TabIndex = 14;
             this.label3.Text = "Nome";
             // 
             // TxtNomeProduto
             // 
             this.TxtNomeProduto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TxtNomeProduto.Font = new System.Drawing.Font("Agency FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNomeProduto.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNomeProduto.Location = new System.Drawing.Point(102, 37);
             this.TxtNomeProduto.MaxLength = 30;
             this.TxtNomeProduto.Name = "TxtNomeProduto";
-            this.TxtNomeProduto.Size = new System.Drawing.Size(190, 21);
+            this.TxtNomeProduto.Size = new System.Drawing.Size(190, 36);
             this.TxtNomeProduto.TabIndex = 13;
             this.TxtNomeProduto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(8, 117);
+            this.label4.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(8, 116);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 25);
+            this.label4.Size = new System.Drawing.Size(88, 28);
             this.label4.TabIndex = 15;
             this.label4.Text = "Descrição";
             // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.Color.Linen;
             this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage2.Controls.Add(this.dgvConsultarProdutos);
             this.tabPage2.Controls.Add(this.button2);
@@ -225,7 +227,6 @@
             this.tabPage2.Size = new System.Drawing.Size(1056, 410);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Consulta/Apagar/Alterar";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // dgvConsultarProdutos
             // 
@@ -272,9 +273,9 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(759, 42);
+            this.button2.Location = new System.Drawing.Point(742, 35);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(103, 33);
+            this.button2.Size = new System.Drawing.Size(107, 38);
             this.button2.TabIndex = 17;
             this.button2.Text = "Alterar";
             this.button2.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -287,9 +288,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(650, 42);
+            this.button1.Location = new System.Drawing.Point(633, 35);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 33);
+            this.button1.Size = new System.Drawing.Size(107, 38);
             this.button1.TabIndex = 16;
             this.button1.Text = "Apagar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -346,9 +347,9 @@
             this.btnConsultarFornece.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultarFornece.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultarFornece.Image")));
             this.btnConsultarFornece.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultarFornece.Location = new System.Drawing.Point(537, 42);
+            this.btnConsultarFornece.Location = new System.Drawing.Point(520, 35);
             this.btnConsultarFornece.Name = "btnConsultarFornece";
-            this.btnConsultarFornece.Size = new System.Drawing.Size(107, 32);
+            this.btnConsultarFornece.Size = new System.Drawing.Size(107, 38);
             this.btnConsultarFornece.TabIndex = 10;
             this.btnConsultarFornece.Text = "Consultar";
             this.btnConsultarFornece.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

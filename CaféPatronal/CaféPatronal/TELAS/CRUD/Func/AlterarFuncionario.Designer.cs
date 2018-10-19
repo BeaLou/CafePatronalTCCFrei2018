@@ -33,6 +33,7 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtsenha = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.txtsalariobruto = new System.Windows.Forms.TextBox();
             this.txtncasa = new System.Windows.Forms.TextBox();
@@ -67,7 +68,6 @@
             this.dtpnascimento = new System.Windows.Forms.DateTimePicker();
             this.button3 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtsenha = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -87,6 +87,8 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.BackColor = System.Drawing.Color.Linen;
+            this.tabPage3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage3.Controls.Add(this.pictureBox1);
             this.tabPage3.Controls.Add(this.groupBox3);
             this.tabPage3.Controls.Add(this.groupBox4);
@@ -98,7 +100,6 @@
             this.tabPage3.Size = new System.Drawing.Size(1102, 439);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Alterar";
-            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -133,11 +134,20 @@
             this.groupBox3.Controls.Add(this.txtrg);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Location = new System.Drawing.Point(500, 6);
+            this.groupBox3.Location = new System.Drawing.Point(500, 0);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(461, 433);
             this.groupBox3.TabIndex = 63;
             this.groupBox3.TabStop = false;
+            // 
+            // txtsenha
+            // 
+            this.txtsenha.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtsenha.Location = new System.Drawing.Point(158, 358);
+            this.txtsenha.MaxLength = 20;
+            this.txtsenha.Name = "txtsenha";
+            this.txtsenha.Size = new System.Drawing.Size(275, 32);
+            this.txtsenha.TabIndex = 49;
             // 
             // label18
             // 
@@ -151,20 +161,20 @@
             // 
             // txtsalariobruto
             // 
-            this.txtsalariobruto.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtsalariobruto.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtsalariobruto.Location = new System.Drawing.Point(154, 397);
             this.txtsalariobruto.MaxLength = 45;
             this.txtsalariobruto.Name = "txtsalariobruto";
-            this.txtsalariobruto.Size = new System.Drawing.Size(279, 26);
+            this.txtsalariobruto.Size = new System.Drawing.Size(279, 32);
             this.txtsalariobruto.TabIndex = 47;
             // 
             // txtncasa
             // 
-            this.txtncasa.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtncasa.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtncasa.Location = new System.Drawing.Point(158, 116);
             this.txtncasa.MaxLength = 20;
             this.txtncasa.Name = "txtncasa";
-            this.txtncasa.Size = new System.Drawing.Size(275, 26);
+            this.txtncasa.Size = new System.Drawing.Size(275, 32);
             this.txtncasa.TabIndex = 44;
             this.txtncasa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.maskedTextBox5_KeyPress);
             // 
@@ -194,39 +204,39 @@
             // 
             // txtcomplemento
             // 
-            this.txtcomplemento.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcomplemento.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcomplemento.Location = new System.Drawing.Point(158, 66);
             this.txtcomplemento.MaxLength = 20;
             this.txtcomplemento.Name = "txtcomplemento";
-            this.txtcomplemento.Size = new System.Drawing.Size(275, 26);
+            this.txtcomplemento.Size = new System.Drawing.Size(275, 32);
             this.txtcomplemento.TabIndex = 10;
             // 
             // txtcep
             // 
-            this.txtcep.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcep.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcep.Location = new System.Drawing.Point(158, 23);
             this.txtcep.Mask = "00000-000";
             this.txtcep.Name = "txtcep";
-            this.txtcep.Size = new System.Drawing.Size(275, 26);
+            this.txtcep.Size = new System.Drawing.Size(275, 32);
             this.txtcep.TabIndex = 9;
             this.txtcep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.maskedTextBox5_KeyPress);
             // 
             // txtlogin
             // 
-            this.txtlogin.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtlogin.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtlogin.Location = new System.Drawing.Point(158, 313);
             this.txtlogin.MaxLength = 20;
             this.txtlogin.Name = "txtlogin";
-            this.txtlogin.Size = new System.Drawing.Size(275, 26);
+            this.txtlogin.Size = new System.Drawing.Size(275, 32);
             this.txtlogin.TabIndex = 15;
             // 
             // txttelmovel
             // 
-            this.txttelmovel.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttelmovel.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txttelmovel.Location = new System.Drawing.Point(158, 218);
             this.txttelmovel.Mask = "(00)00000-0000";
             this.txttelmovel.Name = "txttelmovel";
-            this.txttelmovel.Size = new System.Drawing.Size(275, 26);
+            this.txttelmovel.Size = new System.Drawing.Size(275, 32);
             this.txttelmovel.TabIndex = 13;
             this.txttelmovel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.maskedTextBox5_KeyPress);
             // 
@@ -268,11 +278,11 @@
             // 
             // txttelefone
             // 
-            this.txttelefone.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttelefone.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txttelefone.Location = new System.Drawing.Point(158, 169);
             this.txttelefone.Mask = "(00)0000-0000";
             this.txttelefone.Name = "txttelefone";
-            this.txttelefone.Size = new System.Drawing.Size(275, 26);
+            this.txttelefone.Size = new System.Drawing.Size(275, 32);
             this.txttelefone.TabIndex = 12;
             this.txttelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.maskedTextBox5_KeyPress);
             // 
@@ -290,11 +300,11 @@
             // 
             // txtrg
             // 
-            this.txtrg.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtrg.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtrg.Location = new System.Drawing.Point(158, 275);
             this.txtrg.Mask = "00.000.000-00";
             this.txtrg.Name = "txtrg";
-            this.txtrg.Size = new System.Drawing.Size(275, 26);
+            this.txtrg.Size = new System.Drawing.Size(275, 32);
             this.txtrg.TabIndex = 14;
             this.txtrg.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.maskedTextBox5_KeyPress);
             // 
@@ -515,15 +525,6 @@
             this.label2.Size = new System.Drawing.Size(118, 34);
             this.label2.TabIndex = 13;
             this.label2.Text = "FUNCIONÁRIO";
-            // 
-            // txtsenha
-            // 
-            this.txtsenha.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtsenha.Location = new System.Drawing.Point(158, 358);
-            this.txtsenha.MaxLength = 20;
-            this.txtsenha.Name = "txtsenha";
-            this.txtsenha.Size = new System.Drawing.Size(275, 26);
-            this.txtsenha.TabIndex = 49;
             // 
             // AlterarFuncionario
             // 

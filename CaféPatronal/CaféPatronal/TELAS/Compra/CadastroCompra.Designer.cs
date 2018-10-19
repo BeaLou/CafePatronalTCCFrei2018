@@ -114,18 +114,22 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.Linen;
+            this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage1.Controls.Add(this.BtnSalvarCompra);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Controls.Add(this.lblCadastroProduto);
             this.tabPage1.Controls.Add(this.btnVoltar);
+            this.tabPage1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1056, 410);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cadastro";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // BtnSalvarCompra
             // 
@@ -212,7 +216,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(23, 25);
+            this.label3.Location = new System.Drawing.Point(75, 28);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 28);
             this.label3.TabIndex = 34;
@@ -222,7 +226,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(21, 151);
+            this.label6.Location = new System.Drawing.Point(102, 154);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(71, 28);
             this.label6.TabIndex = 36;
@@ -232,7 +236,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(21, 85);
+            this.label4.Location = new System.Drawing.Point(33, 88);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(140, 28);
             this.label4.TabIndex = 35;
@@ -242,7 +246,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(17, 215);
+            this.label9.Location = new System.Drawing.Point(36, 218);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(137, 28);
             this.label9.TabIndex = 37;
@@ -275,6 +279,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.Color.Linen;
             this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage2.Controls.Add(this.btnapagar);
             this.tabPage2.Controls.Add(this.txtConsultaCompra);
@@ -289,7 +294,6 @@
             this.tabPage2.Size = new System.Drawing.Size(1056, 410);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Consulta/Apagar";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // btnapagar
             // 
@@ -297,9 +301,9 @@
             this.btnapagar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnapagar.Image = ((System.Drawing.Image)(resources.GetObject("btnapagar.Image")));
             this.btnapagar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnapagar.Location = new System.Drawing.Point(617, 44);
+            this.btnapagar.Location = new System.Drawing.Point(617, 38);
             this.btnapagar.Name = "btnapagar";
-            this.btnapagar.Size = new System.Drawing.Size(103, 33);
+            this.btnapagar.Size = new System.Drawing.Size(107, 38);
             this.btnapagar.TabIndex = 7;
             this.btnapagar.Text = "Apagar";
             this.btnapagar.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -309,7 +313,7 @@
             // txtConsultaCompra
             // 
             this.txtConsultaCompra.BackColor = System.Drawing.Color.Ivory;
-            this.txtConsultaCompra.Location = new System.Drawing.Point(36, 44);
+            this.txtConsultaCompra.Location = new System.Drawing.Point(36, 41);
             this.txtConsultaCompra.MaxLength = 50;
             this.txtConsultaCompra.Name = "txtConsultaCompra";
             this.txtConsultaCompra.Size = new System.Drawing.Size(456, 32);
@@ -343,10 +347,10 @@
             // 
             this.lblconsultaproduto.AutoSize = true;
             this.lblconsultaproduto.BackColor = System.Drawing.Color.Transparent;
-            this.lblconsultaproduto.Font = new System.Drawing.Font("Agency FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblconsultaproduto.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblconsultaproduto.Location = new System.Drawing.Point(2, 3);
             this.lblconsultaproduto.Name = "lblconsultaproduto";
-            this.lblconsultaproduto.Size = new System.Drawing.Size(82, 34);
+            this.lblconsultaproduto.Size = new System.Drawing.Size(75, 28);
             this.lblconsultaproduto.TabIndex = 12;
             this.lblconsultaproduto.Text = "COMPRA";
             // 
@@ -404,9 +408,9 @@
             this.btnConsultarFornece.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultarFornece.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultarFornece.Image")));
             this.btnConsultarFornece.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultarFornece.Location = new System.Drawing.Point(504, 44);
+            this.btnConsultarFornece.Location = new System.Drawing.Point(504, 38);
             this.btnConsultarFornece.Name = "btnConsultarFornece";
-            this.btnConsultarFornece.Size = new System.Drawing.Size(107, 32);
+            this.btnConsultarFornece.Size = new System.Drawing.Size(107, 38);
             this.btnConsultarFornece.TabIndex = 6;
             this.btnConsultarFornece.Text = "Consultar";
             this.btnConsultarFornece.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -415,6 +419,8 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.BackColor = System.Drawing.Color.Linen;
+            this.tabPage3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage3.Controls.Add(this.button1);
             this.tabPage3.Controls.Add(this.groupBox2);
             this.tabPage3.Controls.Add(this.label8);
@@ -425,7 +431,6 @@
             this.tabPage3.Size = new System.Drawing.Size(1056, 410);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Itens usados em Produto";
-            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -460,7 +465,7 @@
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Location = new System.Drawing.Point(10, 37);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(597, 285);
+            this.groupBox2.Size = new System.Drawing.Size(556, 285);
             this.groupBox2.TabIndex = 71;
             this.groupBox2.TabStop = false;
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
@@ -468,24 +473,26 @@
             // lblvalortotal
             // 
             this.lblvalortotal.AutoSize = true;
-            this.lblvalortotal.Location = new System.Drawing.Point(100, 241);
+            this.lblvalortotal.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblvalortotal.Location = new System.Drawing.Point(104, 241);
             this.lblvalortotal.Name = "lblvalortotal";
-            this.lblvalortotal.Size = new System.Drawing.Size(18, 25);
+            this.lblvalortotal.Size = new System.Drawing.Size(19, 28);
             this.lblvalortotal.TabIndex = 58;
             this.lblvalortotal.Text = "-";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(13, 241);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 25);
+            this.label5.Size = new System.Drawing.Size(99, 28);
             this.label5.TabIndex = 57;
             this.label5.Text = "Valor Total: ";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(280, 186);
+            this.button2.Location = new System.Drawing.Point(432, 186);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(103, 34);
             this.button2.TabIndex = 56;
@@ -495,7 +502,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(160, 157);
+            this.button3.Location = new System.Drawing.Point(130, 147);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(114, 33);
             this.button3.TabIndex = 55;
@@ -513,7 +520,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(280, 30);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(255, 150);
             this.dataGridView1.TabIndex = 54;
             // 
             // Column1
@@ -554,7 +561,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 108);
+            this.label1.Location = new System.Drawing.Point(18, 108);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 28);
             this.label1.TabIndex = 51;
@@ -564,7 +571,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(13, 72);
+            this.label13.Location = new System.Drawing.Point(41, 72);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(71, 28);
             this.label13.TabIndex = 50;
@@ -574,7 +581,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(13, 30);
+            this.label7.Location = new System.Drawing.Point(41, 30);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(71, 28);
             this.label7.TabIndex = 49;
@@ -607,6 +614,8 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.BackColor = System.Drawing.Color.Linen;
+            this.tabPage4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage4.Controls.Add(this.txtItens);
             this.tabPage4.Controls.Add(this.pictureBox4);
             this.tabPage4.Controls.Add(this.dgvItensProdutos);
@@ -618,7 +627,6 @@
             this.tabPage4.Size = new System.Drawing.Size(1056, 410);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Consultar Itens de produtos";
-            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // txtItens
             // 
@@ -687,9 +695,9 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(490, 52);
+            this.button5.Location = new System.Drawing.Point(484, 49);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(107, 32);
+            this.button5.Size = new System.Drawing.Size(107, 38);
             this.button5.TabIndex = 72;
             this.button5.Text = "Consultar";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

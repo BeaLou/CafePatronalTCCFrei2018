@@ -206,6 +206,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.Linen;
             this.tabPage1.Controls.Add(this.btnSalvarClientes);
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.btnVoltar);
@@ -217,7 +218,6 @@
             this.tabPage1.Size = new System.Drawing.Size(1076, 461);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cadastro";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // btnSalvarClientes
             // 
@@ -248,7 +248,7 @@
             this.groupBox2.Controls.Add(this.mtbCpf);
             this.groupBox2.Controls.Add(this.lblSobrenome);
             this.groupBox2.Controls.Add(this.mktCpf);
-            this.groupBox2.Location = new System.Drawing.Point(228, 70);
+            this.groupBox2.Location = new System.Drawing.Point(12, 40);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(611, 337);
             this.groupBox2.TabIndex = 60;
@@ -256,6 +256,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.Color.Linen;
             this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage2.Controls.Add(this.button2);
             this.tabPage2.Controls.Add(this.button1);
@@ -270,7 +271,6 @@
             this.tabPage2.Size = new System.Drawing.Size(1076, 461);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Consulta/Apagar/Alterar";
-            this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // button2
@@ -279,9 +279,9 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(747, 79);
+            this.button2.Location = new System.Drawing.Point(746, 74);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(103, 33);
+            this.button2.Size = new System.Drawing.Size(107, 38);
             this.button2.TabIndex = 15;
             this.button2.Text = "Alterar";
             this.button2.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -294,9 +294,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(638, 79);
+            this.button1.Location = new System.Drawing.Point(637, 74);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 33);
+            this.button1.Size = new System.Drawing.Size(107, 38);
             this.button1.TabIndex = 14;
             this.button1.Text = "Apagar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -390,9 +390,9 @@
             this.btnConsultarClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultarClientes.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultarClientes.Image")));
             this.btnConsultarClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultarClientes.Location = new System.Drawing.Point(525, 79);
+            this.btnConsultarClientes.Location = new System.Drawing.Point(524, 74);
             this.btnConsultarClientes.Name = "btnConsultarClientes";
-            this.btnConsultarClientes.Size = new System.Drawing.Size(107, 32);
+            this.btnConsultarClientes.Size = new System.Drawing.Size(107, 38);
             this.btnConsultarClientes.TabIndex = 10;
             this.btnConsultarClientes.Text = "Consultar";
             this.btnConsultarClientes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -402,7 +402,7 @@
             // txtConsultarClientes
             // 
             this.txtConsultarClientes.BackColor = System.Drawing.Color.Ivory;
-            this.txtConsultarClientes.Location = new System.Drawing.Point(63, 80);
+            this.txtConsultarClientes.Location = new System.Drawing.Point(63, 77);
             this.txtConsultarClientes.MaxLength = 50;
             this.txtConsultarClientes.Name = "txtConsultarClientes";
             this.txtConsultarClientes.Size = new System.Drawing.Size(456, 32);

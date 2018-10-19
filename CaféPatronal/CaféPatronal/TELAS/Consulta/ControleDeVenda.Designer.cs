@@ -32,11 +32,11 @@
             this.btnVoltar = new System.Windows.Forms.PictureBox();
             this.tbControleVendas = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.lblconsultaproduto = new System.Windows.Forms.Label();
             this.dgvControleVendas = new System.Windows.Forms.DataGridView();
             this.btnConsultarVendas = new System.Windows.Forms.Button();
             this.txtConsultarVendas = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             this.tbControleVendas.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -68,6 +68,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.Linen;
             this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.lblconsultaproduto);
@@ -82,7 +83,20 @@
             this.tabPage1.Size = new System.Drawing.Size(1048, 464);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Controle de Vendas";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(634, 51);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(107, 38);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Apagar";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // lblconsultaproduto
             // 
@@ -109,9 +123,9 @@
             this.btnConsultarVendas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultarVendas.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultarVendas.Image")));
             this.btnConsultarVendas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultarVendas.Location = new System.Drawing.Point(521, 57);
+            this.btnConsultarVendas.Location = new System.Drawing.Point(521, 51);
             this.btnConsultarVendas.Name = "btnConsultarVendas";
-            this.btnConsultarVendas.Size = new System.Drawing.Size(107, 32);
+            this.btnConsultarVendas.Size = new System.Drawing.Size(107, 38);
             this.btnConsultarVendas.TabIndex = 15;
             this.btnConsultarVendas.Text = "Consultar";
             this.btnConsultarVendas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -125,20 +139,6 @@
             this.txtConsultarVendas.Name = "txtConsultarVendas";
             this.txtConsultarVendas.Size = new System.Drawing.Size(456, 30);
             this.txtConsultarVendas.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(634, 58);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 33);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Apagar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // ControleDeVenda
             // 

@@ -96,7 +96,7 @@
             this.lblNome.AutoSize = true;
             this.lblNome.BackColor = System.Drawing.Color.Transparent;
             this.lblNome.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.Location = new System.Drawing.Point(32, 28);
+            this.lblNome.Location = new System.Drawing.Point(68, 31);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(58, 28);
             this.lblNome.TabIndex = 24;
@@ -105,7 +105,7 @@
             // dtpDataNascimento
             // 
             this.dtpDataNascimento.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDataNascimento.Location = new System.Drawing.Point(135, 149);
+            this.dtpDataNascimento.Location = new System.Drawing.Point(132, 130);
             this.dtpDataNascimento.MaxDate = new System.DateTime(2050, 12, 31, 0, 0, 0, 0);
             this.dtpDataNascimento.MinDate = new System.DateTime(1940, 1, 1, 0, 0, 0, 0);
             this.dtpDataNascimento.Name = "dtpDataNascimento";
@@ -115,7 +115,7 @@
             // mbtCpf
             // 
             this.mbtCpf.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mbtCpf.Location = new System.Drawing.Point(135, 250);
+            this.mbtCpf.Location = new System.Drawing.Point(132, 257);
             this.mbtCpf.Mask = "000.000.000-00";
             this.mbtCpf.Name = "mbtCpf";
             this.mbtCpf.Size = new System.Drawing.Size(276, 32);
@@ -128,7 +128,7 @@
             this.lblCpf.BackColor = System.Drawing.Color.Transparent;
             this.lblCpf.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCpf.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblCpf.Location = new System.Drawing.Point(32, 250);
+            this.lblCpf.Location = new System.Drawing.Point(83, 259);
             this.lblCpf.Name = "lblCpf";
             this.lblCpf.Size = new System.Drawing.Size(43, 28);
             this.lblCpf.TabIndex = 23;
@@ -140,7 +140,7 @@
             this.lblDataNascimento.BackColor = System.Drawing.Color.Transparent;
             this.lblDataNascimento.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDataNascimento.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblDataNascimento.Location = new System.Drawing.Point(16, 125);
+            this.lblDataNascimento.Location = new System.Drawing.Point(23, 118);
             this.lblDataNascimento.Name = "lblDataNascimento";
             this.lblDataNascimento.Size = new System.Drawing.Size(103, 56);
             this.lblDataNascimento.TabIndex = 22;
@@ -152,7 +152,7 @@
             this.lblDepartamento.BackColor = System.Drawing.Color.Transparent;
             this.lblDepartamento.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDepartamento.ForeColor = System.Drawing.Color.Black;
-            this.lblDepartamento.Location = new System.Drawing.Point(16, 298);
+            this.lblDepartamento.Location = new System.Drawing.Point(5, 305);
             this.lblDepartamento.Name = "lblDepartamento";
             this.lblDepartamento.Size = new System.Drawing.Size(121, 28);
             this.lblDepartamento.TabIndex = 21;
@@ -161,7 +161,7 @@
             // txtSobrenome
             // 
             this.txtSobrenome.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSobrenome.Location = new System.Drawing.Point(135, 80);
+            this.txtSobrenome.Location = new System.Drawing.Point(132, 78);
             this.txtSobrenome.MaxLength = 20;
             this.txtSobrenome.Name = "txtSobrenome";
             this.txtSobrenome.Size = new System.Drawing.Size(276, 32);
@@ -173,7 +173,7 @@
             this.lblSobrenome.AutoSize = true;
             this.lblSobrenome.BackColor = System.Drawing.Color.Transparent;
             this.lblSobrenome.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSobrenome.Location = new System.Drawing.Point(15, 80);
+            this.lblSobrenome.Location = new System.Drawing.Point(24, 77);
             this.lblSobrenome.Name = "lblSobrenome";
             this.lblSobrenome.Size = new System.Drawing.Size(102, 28);
             this.lblSobrenome.TabIndex = 20;
@@ -182,7 +182,7 @@
             // txtNome
             // 
             this.txtNome.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(135, 27);
+            this.txtNome.Location = new System.Drawing.Point(132, 31);
             this.txtNome.MaxLength = 20;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(276, 32);
@@ -192,7 +192,7 @@
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(135, 347);
+            this.txtEmail.Location = new System.Drawing.Point(132, 351);
             this.txtEmail.MaxLength = 50;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(276, 32);
@@ -204,7 +204,7 @@
             this.lblsenha.BackColor = System.Drawing.Color.Transparent;
             this.lblsenha.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblsenha.ForeColor = System.Drawing.Color.Black;
-            this.lblsenha.Location = new System.Drawing.Point(51, 258);
+            this.lblsenha.Location = new System.Drawing.Point(86, 300);
             this.lblsenha.Name = "lblsenha";
             this.lblsenha.Size = new System.Drawing.Size(62, 28);
             this.lblsenha.TabIndex = 27;
@@ -216,7 +216,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(27, 348);
+            this.label1.Location = new System.Drawing.Point(71, 353);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 28);
             this.label1.TabIndex = 25;
@@ -228,7 +228,7 @@
             this.cboDepartamento.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cboDepartamento.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboDepartamento.FormattingEnabled = true;
-            this.cboDepartamento.Location = new System.Drawing.Point(135, 299);
+            this.cboDepartamento.Location = new System.Drawing.Point(132, 303);
             this.cboDepartamento.Name = "cboDepartamento";
             this.cboDepartamento.Size = new System.Drawing.Size(276, 33);
             this.cboDepartamento.TabIndex = 7;
@@ -236,11 +236,11 @@
             // 
             // mbtRg
             // 
-            this.mbtRg.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mbtRg.Location = new System.Drawing.Point(156, 188);
+            this.mbtRg.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mbtRg.Location = new System.Drawing.Point(154, 217);
             this.mbtRg.Mask = "00.000.000-00";
             this.mbtRg.Name = "mbtRg";
-            this.mbtRg.Size = new System.Drawing.Size(276, 26);
+            this.mbtRg.Size = new System.Drawing.Size(276, 32);
             this.mbtRg.TabIndex = 13;
             this.mbtRg.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mktCpf_KeyPress);
             // 
@@ -250,7 +250,7 @@
             this.lblRg.BackColor = System.Drawing.Color.Transparent;
             this.lblRg.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRg.ForeColor = System.Drawing.Color.Black;
-            this.lblRg.Location = new System.Drawing.Point(64, 196);
+            this.lblRg.Location = new System.Drawing.Point(112, 216);
             this.lblRg.Name = "lblRg";
             this.lblRg.Size = new System.Drawing.Size(36, 28);
             this.lblRg.TabIndex = 11;
@@ -260,7 +260,7 @@
             // mbtCarteiraTrabalho
             // 
             this.mbtCarteiraTrabalho.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mbtCarteiraTrabalho.Location = new System.Drawing.Point(135, 198);
+            this.mbtCarteiraTrabalho.Location = new System.Drawing.Point(132, 196);
             this.mbtCarteiraTrabalho.Mask = "000.000.000-00";
             this.mbtCarteiraTrabalho.Name = "mbtCarteiraTrabalho";
             this.mbtCarteiraTrabalho.Size = new System.Drawing.Size(276, 32);
@@ -273,7 +273,7 @@
             this.lblCarteiraTrabalho.BackColor = System.Drawing.Color.Transparent;
             this.lblCarteiraTrabalho.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCarteiraTrabalho.ForeColor = System.Drawing.Color.Black;
-            this.lblCarteiraTrabalho.Location = new System.Drawing.Point(15, 181);
+            this.lblCarteiraTrabalho.Location = new System.Drawing.Point(29, 184);
             this.lblCarteiraTrabalho.Name = "lblCarteiraTrabalho";
             this.lblCarteiraTrabalho.Size = new System.Drawing.Size(97, 56);
             this.lblCarteiraTrabalho.TabIndex = 33;
@@ -281,11 +281,11 @@
             // 
             // txtLogin
             // 
-            this.txtLogin.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLogin.Location = new System.Drawing.Point(156, 220);
+            this.txtLogin.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLogin.Location = new System.Drawing.Point(154, 255);
             this.txtLogin.MaxLength = 20;
             this.txtLogin.Name = "txtLogin";
-            this.txtLogin.Size = new System.Drawing.Size(276, 26);
+            this.txtLogin.Size = new System.Drawing.Size(276, 32);
             this.txtLogin.TabIndex = 14;
             // 
             // lblLogin
@@ -294,7 +294,7 @@
             this.lblLogin.BackColor = System.Drawing.Color.Transparent;
             this.lblLogin.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogin.ForeColor = System.Drawing.Color.Black;
-            this.lblLogin.Location = new System.Drawing.Point(55, 226);
+            this.lblLogin.Location = new System.Drawing.Point(94, 254);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(54, 28);
             this.lblLogin.TabIndex = 34;
@@ -306,7 +306,7 @@
             this.lblCep.BackColor = System.Drawing.Color.Transparent;
             this.lblCep.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCep.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblCep.Location = new System.Drawing.Point(60, 31);
+            this.lblCep.Location = new System.Drawing.Point(104, 18);
             this.lblCep.Name = "lblCep";
             this.lblCep.Size = new System.Drawing.Size(44, 28);
             this.lblCep.TabIndex = 40;
@@ -314,11 +314,11 @@
             // 
             // txtComplemento
             // 
-            this.txtComplemento.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtComplemento.Location = new System.Drawing.Point(156, 63);
+            this.txtComplemento.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtComplemento.Location = new System.Drawing.Point(154, 54);
             this.txtComplemento.MaxLength = 20;
             this.txtComplemento.Name = "txtComplemento";
-            this.txtComplemento.Size = new System.Drawing.Size(276, 26);
+            this.txtComplemento.Size = new System.Drawing.Size(276, 32);
             this.txtComplemento.TabIndex = 10;
             // 
             // lblNumero
@@ -327,7 +327,7 @@
             this.lblNumero.BackColor = System.Drawing.Color.Transparent;
             this.lblNumero.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumero.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblNumero.Location = new System.Drawing.Point(47, 95);
+            this.lblNumero.Location = new System.Drawing.Point(77, 94);
             this.lblNumero.Name = "lblNumero";
             this.lblNumero.Size = new System.Drawing.Size(71, 28);
             this.lblNumero.TabIndex = 38;
@@ -339,7 +339,7 @@
             this.lblComplemento.BackColor = System.Drawing.Color.Transparent;
             this.lblComplemento.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblComplemento.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblComplemento.Location = new System.Drawing.Point(24, 63);
+            this.lblComplemento.Location = new System.Drawing.Point(31, 56);
             this.lblComplemento.Name = "lblComplemento";
             this.lblComplemento.Size = new System.Drawing.Size(117, 28);
             this.lblComplemento.TabIndex = 36;
@@ -351,7 +351,7 @@
             this.lblTelefoneFixo.BackColor = System.Drawing.Color.Transparent;
             this.lblTelefoneFixo.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTelefoneFixo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblTelefoneFixo.Location = new System.Drawing.Point(28, 127);
+            this.lblTelefoneFixo.Location = new System.Drawing.Point(39, 140);
             this.lblTelefoneFixo.Name = "lblTelefoneFixo";
             this.lblTelefoneFixo.Size = new System.Drawing.Size(109, 28);
             this.lblTelefoneFixo.TabIndex = 43;
@@ -363,7 +363,7 @@
             this.lblTelefoneMóvel.BackColor = System.Drawing.Color.Transparent;
             this.lblTelefoneMóvel.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTelefoneMóvel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblTelefoneMóvel.Location = new System.Drawing.Point(20, 159);
+            this.lblTelefoneMóvel.Location = new System.Drawing.Point(23, 181);
             this.lblTelefoneMóvel.Name = "lblTelefoneMóvel";
             this.lblTelefoneMóvel.Size = new System.Drawing.Size(125, 28);
             this.lblTelefoneMóvel.TabIndex = 42;
@@ -371,31 +371,31 @@
             // 
             // mtbTelefoneFixo
             // 
-            this.mtbTelefoneFixo.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbTelefoneFixo.Location = new System.Drawing.Point(156, 124);
+            this.mtbTelefoneFixo.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbTelefoneFixo.Location = new System.Drawing.Point(154, 138);
             this.mtbTelefoneFixo.Mask = "(00)0000-0000";
             this.mtbTelefoneFixo.Name = "mtbTelefoneFixo";
-            this.mtbTelefoneFixo.Size = new System.Drawing.Size(276, 26);
+            this.mtbTelefoneFixo.Size = new System.Drawing.Size(276, 32);
             this.mtbTelefoneFixo.TabIndex = 11;
             this.mtbTelefoneFixo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mktCpf_KeyPress);
             // 
             // mtbCep
             // 
-            this.mtbCep.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbCep.Location = new System.Drawing.Point(156, 31);
+            this.mtbCep.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbCep.Location = new System.Drawing.Point(154, 16);
             this.mtbCep.Mask = "00000-000";
             this.mtbCep.Name = "mtbCep";
-            this.mtbCep.Size = new System.Drawing.Size(276, 26);
+            this.mtbCep.Size = new System.Drawing.Size(276, 32);
             this.mtbCep.TabIndex = 9;
             this.mtbCep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mktCpf_KeyPress);
             // 
             // mtbTelefoneMovel
             // 
-            this.mtbTelefoneMovel.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbTelefoneMovel.Location = new System.Drawing.Point(156, 156);
+            this.mtbTelefoneMovel.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbTelefoneMovel.Location = new System.Drawing.Point(154, 179);
             this.mtbTelefoneMovel.Mask = "(00)00000-0000";
             this.mtbTelefoneMovel.Name = "mtbTelefoneMovel";
-            this.mtbTelefoneMovel.Size = new System.Drawing.Size(276, 26);
+            this.mtbTelefoneMovel.Size = new System.Drawing.Size(276, 32);
             this.mtbTelefoneMovel.TabIndex = 12;
             this.mtbTelefoneMovel.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox2_MaskInputRejected);
             this.mtbTelefoneMovel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mktCpf_KeyPress);
@@ -426,6 +426,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.Linen;
+            this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage1.Controls.Add(this.btnSalvarFuncionário);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Controls.Add(this.groupBox2);
@@ -438,7 +440,6 @@
             this.tabPage1.Size = new System.Drawing.Size(1102, 439);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cadastro";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // btnSalvarFuncionário
             // 
@@ -480,17 +481,17 @@
             this.groupBox1.Controls.Add(this.lblTelefoneFixo);
             this.groupBox1.Location = new System.Drawing.Point(506, 42);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(460, 345);
+            this.groupBox1.Size = new System.Drawing.Size(460, 381);
             this.groupBox1.TabIndex = 61;
             this.groupBox1.TabStop = false;
             // 
             // txtSenha
             // 
-            this.txtSenha.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha.Location = new System.Drawing.Point(156, 260);
+            this.txtSenha.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenha.Location = new System.Drawing.Point(154, 301);
             this.txtSenha.MaxLength = 20;
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(276, 26);
+            this.txtSenha.Size = new System.Drawing.Size(276, 32);
             this.txtSenha.TabIndex = 15;
             this.txtSenha.TextChanged += new System.EventHandler(this.txtSenha_TextChanged);
             // 
@@ -498,7 +499,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(27, 284);
+            this.label18.Location = new System.Drawing.Point(37, 342);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(111, 28);
             this.label18.TabIndex = 46;
@@ -506,20 +507,20 @@
             // 
             // txtsalariobruto
             // 
-            this.txtsalariobruto.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtsalariobruto.Location = new System.Drawing.Point(156, 292);
+            this.txtsalariobruto.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtsalariobruto.Location = new System.Drawing.Point(154, 343);
             this.txtsalariobruto.MaxLength = 45;
             this.txtsalariobruto.Name = "txtsalariobruto";
-            this.txtsalariobruto.Size = new System.Drawing.Size(276, 26);
+            this.txtsalariobruto.Size = new System.Drawing.Size(276, 32);
             this.txtsalariobruto.TabIndex = 16;
             // 
             // txtNumero
             // 
-            this.txtNumero.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumero.Location = new System.Drawing.Point(156, 92);
+            this.txtNumero.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumero.Location = new System.Drawing.Point(154, 92);
             this.txtNumero.MaxLength = 20;
             this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(276, 26);
+            this.txtNumero.Size = new System.Drawing.Size(276, 32);
             this.txtNumero.TabIndex = 10;
             this.txtNumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mktCpf_KeyPress);
             // 
@@ -558,6 +559,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.Color.Linen;
             this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage2.Controls.Add(this.btnAlterar);
             this.tabPage2.Controls.Add(this.button1);
@@ -573,7 +575,6 @@
             this.tabPage2.Size = new System.Drawing.Size(1102, 439);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Consulta/Apagar/Alterar";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // btnAlterar
             // 
@@ -582,9 +583,9 @@
             this.btnAlterar.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlterar.Image = ((System.Drawing.Image)(resources.GetObject("btnAlterar.Image")));
             this.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAlterar.Location = new System.Drawing.Point(742, 62);
+            this.btnAlterar.Location = new System.Drawing.Point(744, 51);
             this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(104, 33);
+            this.btnAlterar.Size = new System.Drawing.Size(107, 38);
             this.btnAlterar.TabIndex = 22;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -598,9 +599,9 @@
             this.button1.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(633, 62);
+            this.button1.Location = new System.Drawing.Point(635, 51);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 33);
+            this.button1.Size = new System.Drawing.Size(107, 38);
             this.button1.TabIndex = 21;
             this.button1.Text = "Apagar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -695,9 +696,9 @@
             this.btnConsultarClientes.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarClientes.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultarClientes.Image")));
             this.btnConsultarClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultarClientes.Location = new System.Drawing.Point(520, 63);
+            this.btnConsultarClientes.Location = new System.Drawing.Point(522, 51);
             this.btnConsultarClientes.Name = "btnConsultarClientes";
-            this.btnConsultarClientes.Size = new System.Drawing.Size(106, 32);
+            this.btnConsultarClientes.Size = new System.Drawing.Size(107, 38);
             this.btnConsultarClientes.TabIndex = 20;
             this.btnConsultarClientes.Text = "Consultar";
             this.btnConsultarClientes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -708,7 +709,7 @@
             // 
             this.txtConsultarFuncionários.BackColor = System.Drawing.Color.Ivory;
             this.txtConsultarFuncionários.ForeColor = System.Drawing.SystemColors.Info;
-            this.txtConsultarFuncionários.Location = new System.Drawing.Point(58, 64);
+            this.txtConsultarFuncionários.Location = new System.Drawing.Point(60, 54);
             this.txtConsultarFuncionários.MaxLength = 50;
             this.txtConsultarFuncionários.Name = "txtConsultarFuncionários";
             this.txtConsultarFuncionários.Size = new System.Drawing.Size(456, 32);

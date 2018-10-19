@@ -69,6 +69,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.BackColor = System.Drawing.Color.Linen;
             this.tabPage3.Controls.Add(this.pictureBox2);
             this.tabPage3.Controls.Add(this.label11);
             this.tabPage3.Controls.Add(this.groupBox3);
@@ -80,7 +81,6 @@
             this.tabPage3.Size = new System.Drawing.Size(1057, 424);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Alterar";
-            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // pictureBox2
             // 
@@ -145,7 +145,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(33, 39);
+            this.label4.Location = new System.Drawing.Point(79, 42);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 28);
             this.label4.TabIndex = 46;
@@ -165,7 +165,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(6, 107);
+            this.label5.Location = new System.Drawing.Point(6, 109);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(117, 28);
             this.label5.TabIndex = 44;
@@ -177,7 +177,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(25, 176);
+            this.label6.Location = new System.Drawing.Point(52, 175);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(71, 28);
             this.label6.TabIndex = 45;
@@ -222,7 +222,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(28, 39);
+            this.label7.Location = new System.Drawing.Point(57, 42);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(58, 28);
             this.label7.TabIndex = 50;
@@ -234,7 +234,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(30, 114);
+            this.label8.Location = new System.Drawing.Point(60, 109);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(55, 28);
             this.label8.TabIndex = 48;
@@ -246,7 +246,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(30, 175);
+            this.label9.Location = new System.Drawing.Point(60, 175);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(55, 28);
             this.label9.TabIndex = 52;
@@ -254,7 +254,7 @@
             // 
             // txtemail
             // 
-            this.txtemail.Location = new System.Drawing.Point(118, 176);
+            this.txtemail.Location = new System.Drawing.Point(118, 173);
             this.txtemail.MaxLength = 50;
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(275, 32);
@@ -266,7 +266,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(3, 251);
+            this.label10.Location = new System.Drawing.Point(6, 251);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(109, 28);
             this.label10.TabIndex = 54;
@@ -274,7 +274,7 @@
             // 
             // txttelefone
             // 
-            this.txttelefone.Location = new System.Drawing.Point(118, 250);
+            this.txttelefone.Location = new System.Drawing.Point(118, 249);
             this.txttelefone.Mask = "(00)0000-0000";
             this.txttelefone.Name = "txttelefone";
             this.txttelefone.Size = new System.Drawing.Size(275, 32);

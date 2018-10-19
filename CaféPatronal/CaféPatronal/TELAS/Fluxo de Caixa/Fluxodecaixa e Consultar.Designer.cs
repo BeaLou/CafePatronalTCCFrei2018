@@ -63,6 +63,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.Color.Linen;
+            this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.dateTimePicker2);
@@ -78,7 +80,6 @@
             this.tabPage2.Size = new System.Drawing.Size(1117, 494);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Consultar Fluxo de Caixa";
-            this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // label5
@@ -118,7 +119,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Agency FB", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(605, 43);
+            this.label2.Location = new System.Drawing.Point(605, 42);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 32);
             this.label2.TabIndex = 72;
@@ -139,7 +140,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Agency FB", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(219, 40);
+            this.label1.Location = new System.Drawing.Point(219, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 32);
             this.label1.TabIndex = 70;

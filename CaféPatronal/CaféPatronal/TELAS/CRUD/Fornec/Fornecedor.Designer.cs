@@ -81,7 +81,7 @@
             this.lblCep.BackColor = System.Drawing.Color.Transparent;
             this.lblCep.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCep.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblCep.Location = new System.Drawing.Point(33, 39);
+            this.lblCep.Location = new System.Drawing.Point(79, 42);
             this.lblCep.Name = "lblCep";
             this.lblCep.Size = new System.Drawing.Size(44, 28);
             this.lblCep.TabIndex = 46;
@@ -102,7 +102,7 @@
             this.lblNumero.BackColor = System.Drawing.Color.Transparent;
             this.lblNumero.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumero.ForeColor = System.Drawing.Color.Black;
-            this.lblNumero.Location = new System.Drawing.Point(25, 176);
+            this.lblNumero.Location = new System.Drawing.Point(52, 178);
             this.lblNumero.Name = "lblNumero";
             this.lblNumero.Size = new System.Drawing.Size(71, 28);
             this.lblNumero.TabIndex = 45;
@@ -114,7 +114,7 @@
             this.lblComplemento.BackColor = System.Drawing.Color.Transparent;
             this.lblComplemento.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblComplemento.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblComplemento.Location = new System.Drawing.Point(6, 107);
+            this.lblComplemento.Location = new System.Drawing.Point(6, 109);
             this.lblComplemento.Name = "lblComplemento";
             this.lblComplemento.Size = new System.Drawing.Size(117, 28);
             this.lblComplemento.TabIndex = 44;
@@ -136,7 +136,7 @@
             this.lblCnpj.BackColor = System.Drawing.Color.Transparent;
             this.lblCnpj.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCnpj.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblCnpj.Location = new System.Drawing.Point(39, 114);
+            this.lblCnpj.Location = new System.Drawing.Point(66, 109);
             this.lblCnpj.Name = "lblCnpj";
             this.lblCnpj.Size = new System.Drawing.Size(55, 28);
             this.lblCnpj.TabIndex = 48;
@@ -147,7 +147,7 @@
             this.lblNome.AutoSize = true;
             this.lblNome.BackColor = System.Drawing.Color.Transparent;
             this.lblNome.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.Location = new System.Drawing.Point(37, 39);
+            this.lblNome.Location = new System.Drawing.Point(63, 41);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(58, 28);
             this.lblNome.TabIndex = 50;
@@ -166,7 +166,7 @@
             // txtemail
             // 
             this.txtemail.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtemail.Location = new System.Drawing.Point(127, 176);
+            this.txtemail.Location = new System.Drawing.Point(127, 174);
             this.txtemail.MaxLength = 50;
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(275, 32);
@@ -178,7 +178,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(39, 175);
+            this.label1.Location = new System.Drawing.Point(66, 176);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 28);
             this.label1.TabIndex = 52;
@@ -187,7 +187,7 @@
             // mktTelefoneFixo
             // 
             this.mktTelefoneFixo.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mktTelefoneFixo.Location = new System.Drawing.Point(127, 251);
+            this.mktTelefoneFixo.Location = new System.Drawing.Point(127, 250);
             this.mktTelefoneFixo.Mask = "(00)0000-0000";
             this.mktTelefoneFixo.Name = "mktTelefoneFixo";
             this.mktTelefoneFixo.Size = new System.Drawing.Size(275, 32);
@@ -200,7 +200,7 @@
             this.lblTelefoneFixo.BackColor = System.Drawing.Color.Transparent;
             this.lblTelefoneFixo.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTelefoneFixo.ForeColor = System.Drawing.Color.Black;
-            this.lblTelefoneFixo.Location = new System.Drawing.Point(12, 251);
+            this.lblTelefoneFixo.Location = new System.Drawing.Point(12, 252);
             this.lblTelefoneFixo.Name = "lblTelefoneFixo";
             this.lblTelefoneFixo.Size = new System.Drawing.Size(109, 28);
             this.lblTelefoneFixo.TabIndex = 54;
@@ -255,6 +255,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.Linen;
+            this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage1.Controls.Add(this.btnSalvarFornecedores);
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.groupBox1);
@@ -267,7 +269,6 @@
             this.tabPage1.Size = new System.Drawing.Size(1057, 424);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cadastro";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // btnSalvarFornecedores
             // 
@@ -328,6 +329,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.Color.Linen;
             this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage2.Controls.Add(this.dgvConsultarFornecedor);
             this.tabPage2.Controls.Add(this.button2);
@@ -342,7 +344,6 @@
             this.tabPage2.Size = new System.Drawing.Size(1057, 424);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Consulta/Apagar/Alterar";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // dgvConsultarFornecedor
             // 
@@ -425,9 +426,9 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(763, 45);
+            this.button2.Location = new System.Drawing.Point(750, 39);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(103, 33);
+            this.button2.Size = new System.Drawing.Size(107, 38);
             this.button2.TabIndex = 13;
             this.button2.Text = "Alterar";
             this.button2.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -440,9 +441,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(654, 45);
+            this.button1.Location = new System.Drawing.Point(641, 39);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 33);
+            this.button1.Size = new System.Drawing.Size(107, 38);
             this.button1.TabIndex = 12;
             this.button1.Text = "Apagar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -455,9 +456,9 @@
             this.btnConsultarFornece.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultarFornece.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultarFornece.Image")));
             this.btnConsultarFornece.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultarFornece.Location = new System.Drawing.Point(541, 45);
+            this.btnConsultarFornece.Location = new System.Drawing.Point(528, 39);
             this.btnConsultarFornece.Name = "btnConsultarFornece";
-            this.btnConsultarFornece.Size = new System.Drawing.Size(107, 32);
+            this.btnConsultarFornece.Size = new System.Drawing.Size(107, 38);
             this.btnConsultarFornece.TabIndex = 11;
             this.btnConsultarFornece.Text = "Consultar";
             this.btnConsultarFornece.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -467,7 +468,7 @@
             // txtconsultar
             // 
             this.txtconsultar.BackColor = System.Drawing.Color.Ivory;
-            this.txtconsultar.Location = new System.Drawing.Point(66, 45);
+            this.txtconsultar.Location = new System.Drawing.Point(66, 42);
             this.txtconsultar.MaxLength = 50;
             this.txtconsultar.Name = "txtconsultar";
             this.txtconsultar.Size = new System.Drawing.Size(456, 32);
