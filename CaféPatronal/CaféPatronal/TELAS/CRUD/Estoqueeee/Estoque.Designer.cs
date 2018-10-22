@@ -33,13 +33,13 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvconsultaestoq = new System.Windows.Forms.DataGridView();
-            this.lblconsultadclientre = new System.Windows.Forms.Label();
-            this.btnConsultarestoque = new System.Windows.Forms.Button();
-            this.txtConsultarEstoque = new System.Windows.Forms.TextBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblconsultadclientre = new System.Windows.Forms.Label();
+            this.btnConsultarestoque = new System.Windows.Forms.Button();
+            this.txtConsultarEstoque = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -70,7 +70,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1080, 469);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Consulta/Apagar/Alterar";
+            this.tabPage2.Text = "Consulta";
             // 
             // pictureBox1
             // 
@@ -95,46 +95,11 @@
             this.Column2,
             this.Column3,
             this.Column4});
-            this.dgvconsultaestoq.Location = new System.Drawing.Point(63, 117);
+            this.dgvconsultaestoq.Location = new System.Drawing.Point(8, 118);
             this.dgvconsultaestoq.Name = "dgvconsultaestoq";
             this.dgvconsultaestoq.ReadOnly = true;
-            this.dgvconsultaestoq.Size = new System.Drawing.Size(910, 322);
+            this.dgvconsultaestoq.Size = new System.Drawing.Size(1047, 329);
             this.dgvconsultaestoq.TabIndex = 13;
-            // 
-            // lblconsultadclientre
-            // 
-            this.lblconsultadclientre.AutoSize = true;
-            this.lblconsultadclientre.BackColor = System.Drawing.Color.Transparent;
-            this.lblconsultadclientre.Font = new System.Drawing.Font("Agency FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblconsultadclientre.Location = new System.Drawing.Point(2, 8);
-            this.lblconsultadclientre.Name = "lblconsultadclientre";
-            this.lblconsultadclientre.Size = new System.Drawing.Size(85, 34);
-            this.lblconsultadclientre.TabIndex = 12;
-            this.lblconsultadclientre.Text = "ESTOQUE\r\n";
-            // 
-            // btnConsultarestoque
-            // 
-            this.btnConsultarestoque.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConsultarestoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultarestoque.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultarestoque.Image")));
-            this.btnConsultarestoque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultarestoque.Location = new System.Drawing.Point(525, 74);
-            this.btnConsultarestoque.Name = "btnConsultarestoque";
-            this.btnConsultarestoque.Size = new System.Drawing.Size(107, 38);
-            this.btnConsultarestoque.TabIndex = 10;
-            this.btnConsultarestoque.Text = "Consultar";
-            this.btnConsultarestoque.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnConsultarestoque.UseVisualStyleBackColor = true;
-            this.btnConsultarestoque.Click += new System.EventHandler(this.btnConsultarestoque_Click);
-            // 
-            // txtConsultarEstoque
-            // 
-            this.txtConsultarEstoque.BackColor = System.Drawing.Color.Ivory;
-            this.txtConsultarEstoque.Location = new System.Drawing.Point(63, 77);
-            this.txtConsultarEstoque.MaxLength = 50;
-            this.txtConsultarEstoque.Name = "txtConsultarEstoque";
-            this.txtConsultarEstoque.Size = new System.Drawing.Size(456, 32);
-            this.txtConsultarEstoque.TabIndex = 9;
             // 
             // Column1
             // 
@@ -167,6 +132,41 @@
             this.Column4.HeaderText = "Data";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
+            // 
+            // lblconsultadclientre
+            // 
+            this.lblconsultadclientre.AutoSize = true;
+            this.lblconsultadclientre.BackColor = System.Drawing.Color.Transparent;
+            this.lblconsultadclientre.Font = new System.Drawing.Font("Agency FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblconsultadclientre.Location = new System.Drawing.Point(2, 8);
+            this.lblconsultadclientre.Name = "lblconsultadclientre";
+            this.lblconsultadclientre.Size = new System.Drawing.Size(85, 34);
+            this.lblconsultadclientre.TabIndex = 12;
+            this.lblconsultadclientre.Text = "ESTOQUE\r\n";
+            // 
+            // btnConsultarestoque
+            // 
+            this.btnConsultarestoque.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultarestoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarestoque.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultarestoque.Image")));
+            this.btnConsultarestoque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsultarestoque.Location = new System.Drawing.Point(473, 74);
+            this.btnConsultarestoque.Name = "btnConsultarestoque";
+            this.btnConsultarestoque.Size = new System.Drawing.Size(107, 38);
+            this.btnConsultarestoque.TabIndex = 10;
+            this.btnConsultarestoque.Text = "Consultar";
+            this.btnConsultarestoque.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnConsultarestoque.UseVisualStyleBackColor = true;
+            this.btnConsultarestoque.Click += new System.EventHandler(this.btnConsultarestoque_Click);
+            // 
+            // txtConsultarEstoque
+            // 
+            this.txtConsultarEstoque.BackColor = System.Drawing.Color.Ivory;
+            this.txtConsultarEstoque.Location = new System.Drawing.Point(11, 77);
+            this.txtConsultarEstoque.MaxLength = 50;
+            this.txtConsultarEstoque.Name = "txtConsultarEstoque";
+            this.txtConsultarEstoque.Size = new System.Drawing.Size(456, 32);
+            this.txtConsultarEstoque.TabIndex = 9;
             // 
             // Consulta_de_Estoque
             // 

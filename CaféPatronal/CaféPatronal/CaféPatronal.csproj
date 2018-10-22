@@ -122,12 +122,6 @@
     <Compile Include="TELAS\CRUD\Clientesss\AlterarCliente.Designer.cs">
       <DependentUpon>AlterarCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="TELAS\CRUD\Estoqueeee\AlterarEstoque.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TELAS\CRUD\Estoqueeee\AlterarEstoque.Designer.cs">
-      <DependentUpon>AlterarEstoque.cs</DependentUpon>
-    </Compile>
     <Compile Include="TELAS\CRUD\Fornec\AlterarFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -253,9 +247,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\CRUD\Clientesss\AlterarCliente.resx">
       <DependentUpon>AlterarCliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TELAS\CRUD\Estoqueeee\AlterarEstoque.resx">
-      <DependentUpon>AlterarEstoque.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\CRUD\Fornec\AlterarFornecedor.resx">
       <DependentUpon>AlterarFornecedor.cs</DependentUpon>
