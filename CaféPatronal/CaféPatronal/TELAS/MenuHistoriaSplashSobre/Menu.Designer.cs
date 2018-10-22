@@ -151,7 +151,7 @@
             this.BtnVenda.Name = "BtnVenda";
             this.BtnVenda.Size = new System.Drawing.Size(194, 36);
             this.BtnVenda.TabIndex = 8;
-            this.BtnVenda.Text = "Controle de Venda";
+            this.BtnVenda.Text = "Gastos";
             this.BtnVenda.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnVenda.UseVisualStyleBackColor = true;
             this.BtnVenda.Click += new System.EventHandler(this.button9_Click);

@@ -73,7 +73,7 @@ namespace CaféPatronal.Programacao.Entregável_2.Compras
                 novacompra.id_compra = reader.GetInt32("id_compra");
                 novacompra.id_fornecedor = reader.GetInt32("id_fornecedor");
                 novacompra.nm_compra = reader.GetString("nm_compra");
-                novacompra.qtd_unidade = reader.GetString("qtd_unidade");
+                novacompra.qtd_unidade = reader.GetInt32("qtd_unidade");
                 novacompra.vl_compra = reader.GetDecimal("vl_compra");
                 novacompra.dt_compra = reader.GetDateTime("dt_compra");
 
@@ -102,7 +102,7 @@ namespace CaféPatronal.Programacao.Entregável_2.Compras
                 novacompra.id_compra = reader.GetInt32("id_compra");
                 novacompra.id_fornecedor = reader.GetInt32("id_fornecedor");
                 novacompra.nm_compra = reader.GetString("nm_compra");
-                novacompra.qtd_unidade = reader.GetString("qtd_unidade");
+                novacompra.qtd_unidade = reader.GetInt32("qtd_unidade");
                 novacompra.vl_compra = reader.GetDecimal("vl_compra");
                 novacompra.dt_compra = reader.GetDateTime("dt_compra");
 

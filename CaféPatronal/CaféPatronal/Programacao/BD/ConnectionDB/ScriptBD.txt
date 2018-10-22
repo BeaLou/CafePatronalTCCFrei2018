@@ -52,7 +52,7 @@ CREATE TABLE `tb_fornecedor` (
 CREATE TABLE `tb_estoque` (
 	`id_estoque` INT NOT NULL AUTO_INCREMENT,
 	`id_compra` INT NOT NULL,
-	`qtd_produtos` INT(5) NOT NULL,
+	`ds_quantidade` DECIMAL NOT NULL,
 	PRIMARY KEY (`id_estoque`)
 );
 
@@ -90,6 +90,14 @@ CREATE TABLE `tb_compraitem` (
 	PRIMARY KEY (`id_compraitem`)
 );
 
+CREATE TABLE `tb_gasto` (
+	`id_gasto` INT NOT NULL AUTO_INCREMENT,
+	`nm_gasto` varchar(50) NOT NULL,
+	`dt_pagamento` DATE NOT NULL,
+	`vl_gasto` DECIMAL NOT NULL,
+	`ds_tipo` varchar(20) NOT NULL,
+	PRIMARY KEY (`id_gasto`)
+);
 
 CREATE TABLE `tb_pedidoitem` (
 	`id_pedidoitem` INT NOT NULL AUTO_INCREMENT,
@@ -185,6 +193,15 @@ tb_produto.nm_nome;
  tb_cliente.nm_nome,
  tb_pedido.dt_venda,
  tb_pedido.ds_formapagamento;
+ 
+ select * from tb_estoque;
+ select * from tb_produto;
+ select * from tb_compra;
+ Select nm_compra, nm_nome, ds_quantidade, tb_estoque.id_compra FROM tb_estoque 
+                                JOIN tb_compra 			p
+                                ON p.id_compra = tb_estoque.id_compra
+                                JOIN tb_fornecedor 			f
+                                ON f.id_fornecedor = p.id_fornecedor where nm_compra like "%";
 
 select * from vw_consultar_item_pedido;
 
@@ -229,15 +246,16 @@ VALUES("Samira","Dias","331.66699.42-6","772.480.108-80","17.284.238-4","T.I.",
 
 insert into `tb_fornecedor`(nm_nome,ds_cnpj,ds_telefone,ds_cep,
 ds_complemento,ds_numerofornec,ds_email) 
-VALUES ("Márcio","94.143.921/0001-57","(11)3876-3684","14784-295","Casa 1","494"
+VALUES ("Sadia","94.143.921/0001-57","(11)3876-3684","14784-295","Casa 1","494"
 ,"marcioalexandrenunes-97@gmail.com");
 insert into `tb_fornecedor`(nm_nome,ds_cnpj,ds_telefone,ds_cep,
 ds_complemento,ds_numerofornec,ds_email) 
-VALUES ("Giovana","90.871.350/0001-16","(11)2943-1179","74475-816","Casa 1","237",
+VALUES ("Lacta","90.871.350/0001-16","(11)2943-1179","74475-816","Casa 1","237",
 "giovanaeduardamarlenesilva_@outlook.ind.br");
 
 
+insert into tb_estoque(id_compra, ds_quantidade) values (1,30);
 
-select*from tb_produto;
 
 select *from tb_pedidoitem;
+

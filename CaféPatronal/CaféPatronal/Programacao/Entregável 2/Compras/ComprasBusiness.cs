@@ -16,7 +16,7 @@ namespace CaféPatronal.Programacao.Entregável_2.Compras
             {
                 throw new ArgumentException("Nome da compra é obrigatório.");
             }
-            if (compra.qtd_unidade == string.Empty)
+            if (compra.qtd_unidade == 0)
             {
                 throw new ArgumentException("Quantidade é obrigatória.");
             }

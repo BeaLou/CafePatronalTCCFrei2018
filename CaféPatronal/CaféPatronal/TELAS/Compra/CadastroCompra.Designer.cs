@@ -33,7 +33,6 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.BtnSalvarCompra = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cmbunidade = new System.Windows.Forms.ComboBox();
             this.cbfornecedor = new System.Windows.Forms.ComboBox();
             this.txtVlcompra = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
@@ -81,6 +80,7 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button5 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtqtd = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -151,7 +151,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.cmbunidade);
+            this.groupBox1.Controls.Add(this.txtqtd);
             this.groupBox1.Controls.Add(this.cbfornecedor);
             this.groupBox1.Controls.Add(this.txtVlcompra);
             this.groupBox1.Controls.Add(this.txtNome);
@@ -164,22 +164,6 @@
             this.groupBox1.Size = new System.Drawing.Size(398, 265);
             this.groupBox1.TabIndex = 34;
             this.groupBox1.TabStop = false;
-            // 
-            // cmbunidade
-            // 
-            this.cmbunidade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbunidade.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbunidade.FormattingEnabled = true;
-            this.cmbunidade.Items.AddRange(new object[] {
-            "KG",
-            "G",
-            "ML",
-            "L",
-            "Unidade"});
-            this.cmbunidade.Location = new System.Drawing.Point(179, 151);
-            this.cmbunidade.Name = "cmbunidade";
-            this.cmbunidade.Size = new System.Drawing.Size(190, 33);
-            this.cmbunidade.TabIndex = 3;
             // 
             // cbfornecedor
             // 
@@ -226,11 +210,11 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(102, 154);
+            this.label6.Location = new System.Drawing.Point(79, 156);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 28);
+            this.label6.Size = new System.Drawing.Size(94, 28);
             this.label6.TabIndex = 36;
-            this.label6.Text = "Unidade";
+            this.label6.Text = "Quantidade";
             // 
             // label4
             // 
@@ -717,6 +701,16 @@
             this.label2.TabIndex = 70;
             this.label2.Text = "Consultar Items de produtos";
             // 
+            // txtqtd
+            // 
+            this.txtqtd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtqtd.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtqtd.Location = new System.Drawing.Point(179, 156);
+            this.txtqtd.MaxLength = 20;
+            this.txtqtd.Name = "txtqtd";
+            this.txtqtd.Size = new System.Drawing.Size(190, 32);
+            this.txtqtd.TabIndex = 38;
+            // 
             // CadastroCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -777,7 +771,6 @@
         private System.Windows.Forms.Label lblconsultaproduto;
         private System.Windows.Forms.DataGridView dgvconsultacompra;
         private System.Windows.Forms.Button btnConsultarFornece;
-        private System.Windows.Forms.ComboBox cmbunidade;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn Qtd;
         private System.Windows.Forms.DataGridViewTextBoxColumn Vl;
@@ -808,5 +801,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.Label lblvalortotal;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtqtd;
     }
 }

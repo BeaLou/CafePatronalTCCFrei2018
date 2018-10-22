@@ -3,6 +3,7 @@ using CaféPatronal.Programacao.Entregável_2.Compras;
 using CaféPatronal.Programacao.Estoque;
 using CaféPatronal.Programacao.Produto;
 using CaféPatronal.TELAS.Cadastro_e_Consulta;
+using Loja_de_roupas.DB.Estoque;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -69,23 +70,47 @@ namespace CaféPatronal.TELAS.Compra
                 ComprasDTO dto = new ComprasDTO();
                 dto.id_fornecedor = fornecedor.id_fornecedor;
                 dto.nm_compra = txtNome.Text;
-                dto.qtd_unidade = cmbunidade.Text;
+                dto.qtd_unidade = Convert.ToInt32(txtqtd.Text) ;
                 dto.vl_compra = Convert.ToDecimal(txtVlcompra.Text);
                 dto.dt_compra = DateTime.Now;
 
                 ComprasBusiness bussiness = new ComprasBusiness();
                 bussiness.Salvar(dto);
-                MessageBox.Show("Compra realizada com sucesso.");
                 txtNome.Clear();
                 txtVlcompra.Clear();
+                EstoqueBusiness businessestoque = new EstoqueBusiness();
+                List<VwConsultarItem> lista = new List<VwConsultarItem>();
+                List<EstoqueDTO> estoque = new List<EstoqueDTO>();
 
+                foreach (VwConsultarItem item in lista)
+                {
+                    foreach (EstoqueDTO item2 in estoque)
+                    {
+                        if (item.id_compra == item2.id_compra)
+                        {
+                            item2.Quantidade = item2.Quantidade + item.qtd_itens;
+                        }
+                    }
+                }
+
+
+                foreach (EstoqueDTO item in estoque)
+                {
+                    EstoqueDTO estoquedto = new EstoqueDTO();
+
+                    estoquedto.id_compra = item.id_compra;
+                    estoquedto.Quantidade = item.Quantidade;
+
+                    businessestoque.Salvar(estoquedto);
+                }
+
+                MessageBox.Show("Compra efetuada com sucesso");
             }
+
             catch (Exception ex)
             {
                 MessageBox.Show("Ocorreu um erro " + ex.Message);
             }
-
-
 
         }
    

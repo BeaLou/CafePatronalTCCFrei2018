@@ -1,65 +1,49 @@
-﻿using System;
+﻿using mecanica.DB.Programação.Estoque;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CaféPatronal.Programacao.Estoque
+namespace Loja_de_roupas.DB.Estoque
 {
-    public class EstoqueBusiness
+    class EstoqueBusiness
     {
-        EstoqueDatabase db = new EstoqueDatabase();
-
-        public int Salvar(EstoqueDTO estoque)
+        public int Salvar(EstoqueDTO dto)
         {
-            if (estoque.vl_compra <= 0)
+               
+            if (dto.id_compra == 0)
             {
-                throw new ArgumentException("Valor da compra é obrigatório.");
-            }
-            if (estoque.qtd_produtos == string.Empty)
-            {
-                throw new ArgumentException("Quantidade de Produtos é obrigatório.");
+                throw new ArgumentException("Produto não foi reconhecido", "Américas Mecânica");
             }
 
-            if (estoque.dt_validade > DateTime.Now)
-            {
-                throw new ArgumentException("Data de Validade é inválida.");
-            }
-            return db.Salvar(estoque);
+
+            EstoqueDatabase db = new EstoqueDatabase();
+            return db.Salvar(dto);
         }
-
-        public void Alterar(EstoqueDTO estoque)
+        public void Alterar(EstoqueDTO dto)
         {
-            if (estoque.vl_compra <= 0)
-            {
-                throw new ArgumentException("Valor da compra é obrigatório.");
-            }
-            if (estoque.qtd_produtos == string.Empty)
-            {
-                throw new ArgumentException("Quantidade de Produtos é obrigatório.");
-            }
-
-            if (estoque.dt_validade > DateTime.Now)
-            {
-                throw new ArgumentException("Data de Validade é inválida.");
-            }
-
-            db.Alterar(estoque);
-        }
-
-        public List<EstoqueDTO> Consultar(string cliente)
-        {
-            return db.Consultar(cliente);
+            EstoqueDatabase db = new EstoqueDatabase();
+            db.Alterar(dto);
         }
 
         public List<EstoqueDTO> Listar()
         {
+            EstoqueDatabase db = new EstoqueDatabase();
             return db.Listar();
         }
 
-        //  public void Remover(int id)
-        //  {
-        //   db.Remover(id);
-        // }
+        public void Remover(int id)
+        {
+            EstoqueDatabase db = new EstoqueDatabase();
+            db.Remover(id);
+        }
+
+
+        public List<vwEstoque> Consultar(string nome)
+        {
+            EstoqueDatabase estoque = new EstoqueDatabase();
+            return estoque.Consultar(nome);
+        }
     }
 }

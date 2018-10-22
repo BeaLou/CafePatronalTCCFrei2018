@@ -81,9 +81,6 @@
     <Compile Include="Programacao\Entregável 2\Compras\ComprasDatabase.cs" />
     <Compile Include="Programacao\Entregável 2\Compras\ComprasDTO.cs" />
     <Compile Include="Programacao\Entregável 3\PedidoItem\VwConsultarItem.cs" />
-    <Compile Include="Programacao\Entregável 4\Estoque\EstoqueBusiness.cs" />
-    <Compile Include="Programacao\Entregável 4\Estoque\EstoqueDatabase.cs" />
-    <Compile Include="Programacao\Entregável 4\Estoque\EstoqueDTO.cs" />
     <Compile Include="Programacao\Entregável 1\FolhaPagamento\FolhaPagamentoBusiness.cs" />
     <Compile Include="Programacao\Entregável 1\FolhaPagamento\FolhaPagamentoDatabase.cs" />
     <Compile Include="Programacao\Entregável 1\FolhaPagamento\FolhaPagamentoDTO.cs" />
@@ -91,6 +88,10 @@
     <Compile Include="Programacao\Entregável 2\Fornecedor\FornecedorBusiness.cs" />
     <Compile Include="Programacao\Entregável 2\Fornecedor\FornecedorDTO.cs" />
     <Compile Include="Programacao\Entregável 2\Fornecedor\FornecedorDatabase.cs" />
+    <Compile Include="Programacao\Entregável 4\Estoque\EstoqueBusiness.cs" />
+    <Compile Include="Programacao\Entregável 4\Estoque\EstoqueDatabase.cs" />
+    <Compile Include="Programacao\Entregável 4\Estoque\EstoqueDTO.cs" />
+    <Compile Include="Programacao\Entregável 4\Estoque\vwEstoque.cs" />
     <Compile Include="Programacao\Entregável 4\FluxoCaixa\FluxoCaixaBusiness.cs" />
     <Compile Include="Programacao\Entregável 4\FluxoCaixa\FluxoCaixaDatabase.cs" />
     <Compile Include="Programacao\Entregável 4\FluxoCaixa\FluxoCaixaVw.cs" />
@@ -199,6 +200,12 @@
     <Compile Include="TELAS\CRUD\Folha Pagamento e Controle\Folha de Pagamento.Designer.cs">
       <DependentUpon>Folha de Pagamento.cs</DependentUpon>
     </Compile>
+    <Compile Include="TELAS\Gastos\Gastos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\Gastos\Gastos.Designer.cs">
+      <DependentUpon>Gastos.cs</DependentUpon>
+    </Compile>
     <Compile Include="TELAS\Login\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -285,6 +292,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\CRUD\Folha Pagamento e Controle\Folha de Pagamento.resx">
       <DependentUpon>Folha de Pagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TELAS\Gastos\Gastos.resx">
+      <DependentUpon>Gastos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\Login\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

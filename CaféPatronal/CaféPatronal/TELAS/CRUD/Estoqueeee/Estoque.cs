@@ -1,5 +1,7 @@
 ﻿using CaféPatronal.Programacao;
 using CaféPatronal.TELAS.CRUD.Estoqueeee;
+using Loja_de_roupas.DB.Estoque;
+using mecanica.DB.Programação.Estoque;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -58,6 +60,16 @@ namespace CaféPatronal.TELAS
 
         private void groupBox2_Enter(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnConsultarestoque_Click(object sender, EventArgs e)
+        {
+            EstoqueBusiness business = new EstoqueBusiness();
+            List<vwEstoque> vw = business.Consultar(txtConsultarEstoque.Text);
+
+            dgvconsultaestoq.AutoGenerateColumns = false;
+            dgvconsultaestoq.DataSource = vw;
 
         }
     }
