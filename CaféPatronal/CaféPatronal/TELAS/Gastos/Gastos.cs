@@ -16,5 +16,20 @@ namespace CaféPatronal.TELAS.Gastos
         {
             InitializeComponent();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Form1 tela = new Form1();
+            tela.Show();
+            this.Hide();
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Form1 tela = new Form1();
+            tela.Show();
+            this.Hide();
+        }
     }
 }
