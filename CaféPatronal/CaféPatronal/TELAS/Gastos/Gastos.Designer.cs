@@ -35,31 +35,31 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cboTipo = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtnome = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtvalor = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtpdata = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvconsultaestoq = new System.Windows.Forms.DataGridView();
+            this.btnConsultarestoque = new System.Windows.Forms.Button();
+            this.txtConsultarEstoque = new System.Windows.Forms.TextBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnConsultarestoque = new System.Windows.Forms.Button();
-            this.txtConsultarEstoque = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.Alterar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvconsultaestoq)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvconsultaestoq)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -102,6 +102,7 @@
             this.BtnSalvarPedido.Text = "Salvar";
             this.BtnSalvarPedido.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnSalvarPedido.UseVisualStyleBackColor = false;
+            this.BtnSalvarPedido.Click += new System.EventHandler(this.BtnSalvarPedido_Click);
             // 
             // pictureBox1
             // 
@@ -119,12 +120,12 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.cboTipo);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtnome);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txtvalor);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.dateTimePicker2);
+            this.groupBox1.Controls.Add(this.dtpdata);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Location = new System.Drawing.Point(12, 40);
             this.groupBox1.Name = "groupBox1";
@@ -145,13 +146,13 @@
             this.cboTipo.Size = new System.Drawing.Size(590, 33);
             this.cboTipo.TabIndex = 31;
             // 
-            // textBox1
+            // txtnome
             // 
-            this.textBox1.Location = new System.Drawing.Point(118, 39);
-            this.textBox1.MaxLength = 20;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(590, 32);
-            this.textBox1.TabIndex = 1;
+            this.txtnome.Location = new System.Drawing.Point(118, 39);
+            this.txtnome.MaxLength = 20;
+            this.txtnome.Name = "txtnome";
+            this.txtnome.Size = new System.Drawing.Size(590, 32);
+            this.txtnome.TabIndex = 1;
             // 
             // label4
             // 
@@ -164,13 +165,13 @@
             this.label4.TabIndex = 25;
             this.label4.Text = "Valor";
             // 
-            // textBox2
+            // txtvalor
             // 
-            this.textBox2.Location = new System.Drawing.Point(118, 172);
-            this.textBox2.MaxLength = 20;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(590, 32);
-            this.textBox2.TabIndex = 2;
+            this.txtvalor.Location = new System.Drawing.Point(118, 172);
+            this.txtvalor.MaxLength = 20;
+            this.txtvalor.Name = "txtvalor";
+            this.txtvalor.Size = new System.Drawing.Size(590, 32);
+            this.txtvalor.TabIndex = 2;
             // 
             // label5
             // 
@@ -196,14 +197,14 @@
             this.label6.TabIndex = 26;
             this.label6.Text = "Data de \r\nPagamento";
             // 
-            // dateTimePicker2
+            // dtpdata
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(118, 105);
-            this.dateTimePicker2.MaxDate = new System.DateTime(2050, 12, 31, 0, 0, 0, 0);
-            this.dateTimePicker2.MinDate = new System.DateTime(1910, 1, 1, 0, 0, 0, 0);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(590, 32);
-            this.dateTimePicker2.TabIndex = 3;
+            this.dtpdata.Location = new System.Drawing.Point(118, 105);
+            this.dtpdata.MaxDate = new System.DateTime(2050, 12, 31, 0, 0, 0, 0);
+            this.dtpdata.MinDate = new System.DateTime(1910, 1, 1, 0, 0, 0, 0);
+            this.dtpdata.Name = "dtpdata";
+            this.dtpdata.Size = new System.Drawing.Size(590, 32);
+            this.dtpdata.TabIndex = 3;
             // 
             // label7
             // 
@@ -242,6 +243,19 @@
             this.tabPage1.TabIndex = 3;
             this.tabPage1.Text = "Consultar";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImage = global::CaféPatronal.Properties.Resources.icon3;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Location = new System.Drawing.Point(1015, 6);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(59, 57);
+            this.pictureBox2.TabIndex = 64;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -269,38 +283,6 @@
             this.dgvconsultaestoq.Size = new System.Drawing.Size(1022, 322);
             this.dgvconsultaestoq.TabIndex = 16;
             // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.DataPropertyName = "Compra";
-            this.Column1.HeaderText = "Nome";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.DataPropertyName = "Fornecedor";
-            this.Column2.HeaderText = "Data de Pagamento";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.DataPropertyName = "Quantidade";
-            this.Column3.HeaderText = "Valor";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.DataPropertyName = "Data";
-            this.Column4.HeaderText = "Tipo";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
             // btnConsultarestoque
             // 
             this.btnConsultarestoque.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -314,6 +296,7 @@
             this.btnConsultarestoque.Text = "Consultar";
             this.btnConsultarestoque.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnConsultarestoque.UseVisualStyleBackColor = true;
+            this.btnConsultarestoque.Click += new System.EventHandler(this.btnConsultarestoque_Click);
             // 
             // txtConsultarEstoque
             // 
@@ -324,18 +307,37 @@
             this.txtConsultarEstoque.Size = new System.Drawing.Size(456, 32);
             this.txtConsultarEstoque.TabIndex = 14;
             // 
-            // pictureBox2
+            // Column1
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BackgroundImage = global::CaféPatronal.Properties.Resources.icon3;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Location = new System.Drawing.Point(1015, 6);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(59, 57);
-            this.pictureBox2.TabIndex = 64;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.DataPropertyName = "Gasto";
+            this.Column1.HeaderText = "Nome";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.DataPropertyName = "Pagamento";
+            this.Column2.HeaderText = "Data de Pagamento";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.DataPropertyName = "Valor";
+            this.Column3.HeaderText = "Valor";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column4.DataPropertyName = "Tipo";
+            this.Column4.HeaderText = "Tipo";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // Gastos
             // 
@@ -357,8 +359,8 @@
             this.groupBox1.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvconsultaestoq)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvconsultaestoq)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -369,12 +371,12 @@
         private System.Windows.Forms.TabPage Alterar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtnome;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtvalor;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtpdata;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TabPage tabPage1;
@@ -384,10 +386,10 @@
         private System.Windows.Forms.TextBox txtConsultarEstoque;
         private System.Windows.Forms.Button BtnSalvarPedido;
         private System.Windows.Forms.ComboBox cboTipo;
+        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

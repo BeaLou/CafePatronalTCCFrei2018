@@ -1,15 +1,8 @@
 ﻿using CaféPatronal.Programacao;
-using CaféPatronal.TELAS.CRUD.Estoqueeee;
 using Loja_de_roupas.DB.Estoque;
 using mecanica.DB.Programação.Estoque;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CaféPatronal.TELAS
@@ -53,9 +46,7 @@ namespace CaféPatronal.TELAS
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AlterarEstoque tela = new AlterarEstoque();
-            tela.Show();
-            this.Hide();
+       
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)
