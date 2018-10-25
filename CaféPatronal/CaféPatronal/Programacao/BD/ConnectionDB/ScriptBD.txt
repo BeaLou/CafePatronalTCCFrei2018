@@ -211,7 +211,73 @@ select sum(qtd_unidade) qtd_total, nm_compra
 from tb_compra
 group by
 nm_compra;
+
 Select * from vw_consultar_estoque;
+                                        
+create view vw_ganhos as
+select date(dt_venda)		dt_referencia,
+			   sum(vl_produto) 	vl_total
+		  from tb_pedido		pe
+		  join tb_pedidoitem	pi
+			on pe.id_pedido 	= pi.id_pedido
+		  join tb_produto		p
+			on pi.id_produto 		= p.id_produto
+		 group
+			by date(dt_venda);
+create view vw_despesas as
+            select sum(vl_total) vl_total, dt_referencia
+            from
+            (
+select date(dt_compra)			dt_referencia,
+			   sum(vl_compra) 	vl_total
+		  from tb_compra		c
+		  join tb_compraitem	ci
+			on c.id_compra 		= ci.id_compra
+		  join tb_produto		p
+			on p.id_produto 		= ci.id_produto
+		 group
+			by date(dt_compra)
+         UNION
+         select date(dt_pagamento)	dt_referencia,
+			    sum(vl_gasto)		vl_total
+		   from tb_gasto
+		  group
+		  	 by date(dt_pagamento)
+             UNION
+         select date(dt_pagamento)	dt_referencia,
+			    sum(vl_salarioliquido)		vl_total
+		   from tb_folhapagamento
+		  group
+		  	 by dt_pagamento)despesa
+             GROUP BY dt_referencia;
+          
+          drop view vw_consultar_fluxodecaixa;
+ create view vw_consultar_fluxodecaixa as
+   SELECT dt_referencia,
+		   ifnull(vl_total_ganhos, 0)		vl_total_ganhos,
+           ifnull(vl_total_despesas, 0)		vl_total_despesas,
+			IFNULL(vl_total_ganhos - vl_total_despesas, -vl_total_despesas) vl_saldo
+      FROM 
+        (
+			SELECT g.dt_referencia,
+				   g.vl_total		vl_total_ganhos,
+                   d.vl_total		vl_total_despesas
+			  FROM vw_ganhos		g		
+		 LEFT JOIN vw_despesas		d
+				ON g.dt_referencia  = d.dt_referencia
+			 UNION
+			SELECT d.dt_referencia,
+				   g.vl_total		vl_total_ganhos,
+                   d.vl_total		vl_total_despesas
+			  FROM vw_ganhos		g		
+		 RIGHT JOIN vw_despesas		d
+				ON g.dt_referencia  = d.dt_referencia
+        ) tb_Fluxo;
+select * from vw_consultar_fluxodecaixa;                     
+                     
+                     
+                     
+                     
 
 
 insert into `tb_dpto`(nm_nome) values ("T.I.");
