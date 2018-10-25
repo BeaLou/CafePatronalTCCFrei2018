@@ -1,4 +1,5 @@
 ﻿using CaféPatronal.Programacao;
+using CaféPatronal.Programacao.Produto;
 using Loja_de_roupas.DB.Estoque;
 using mecanica.DB.Programação.Estoque;
 using System;
@@ -13,8 +14,15 @@ namespace CaféPatronal.TELAS
         public Consulta_de_Estoque()
         {
             InitializeComponent();
+            CarregarCombos();
         }
-
+        void CarregarCombos()
+        {
+            ProdutoBusiness  bus = new ProdutoBusiness();
+            List<ProdutoDTO> lista = bus.Listar();
+            cbProduto.DisplayMember = nameof(ProdutoDTO.nm_nome);
+            cbProduto.DataSource = lista;
+        }
         private void Consulta_de_Estoque_Load(object sender, EventArgs e)
         {
 
@@ -56,12 +64,37 @@ namespace CaféPatronal.TELAS
 
         private void btnConsultarestoque_Click(object sender, EventArgs e)
         {
-            EstoqueBusiness business = new EstoqueBusiness();
-            List<vwEstoque> vw = business.Consultar(txtConsultarEstoque.Text);
+            try
+            {
+                if (txtConsultarEstoque.Text == string.Empty)
+                {
+                    EstoqueBusiness businessw = new EstoqueBusiness();
+                    List<vwEstoque> vww = businessw.Listar();
 
-            dgvconsultaestoq.AutoGenerateColumns = false;
-            dgvconsultaestoq.DataSource = vw;
+                    dgvconsultaestoq.AutoGenerateColumns = false;
+                    dgvconsultaestoq.DataSource = vww;
+                }
+                else
+                {
+                    EstoqueBusiness business = new EstoqueBusiness();
+                    List<vwEstoque> vw = business.Consultar(txtConsultarEstoque.Text);
 
+                    dgvconsultaestoq.AutoGenerateColumns = false;
+                    dgvconsultaestoq.DataSource = vw;
+                }
+            }
+
+            catch(Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro: " + ex.Message);
+            }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Form1 tela = new Form1();
+            tela.Show();
+            this.Hide();
         }
     }
 }

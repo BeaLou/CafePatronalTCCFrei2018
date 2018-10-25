@@ -270,5 +270,15 @@ namespace CaféPatronal.TELAS.Fluxo_de_Caixa_e_Folha_de_Pagamento
         {
             V.letras(e);
         }
+
+        private void cbmes_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            V.letras(e);
+        }
+
+        private void nudHorasExtras_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            V.numeros(e);
+        }
     }
 }

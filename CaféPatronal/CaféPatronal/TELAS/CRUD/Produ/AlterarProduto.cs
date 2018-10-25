@@ -68,5 +68,15 @@ namespace CaféPatronal.TELAS.CRUD.Produ
                 MessageBox.Show("Ocorreu um erro: " + ex.Message);
             }
         }
+
+        private void TxtNomeProduto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.letras(e);
+        }
+
+        private void txtVlProduto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.numeros(e);
+        }
     }
 }

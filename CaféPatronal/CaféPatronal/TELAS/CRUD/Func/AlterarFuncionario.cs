@@ -108,5 +108,15 @@ namespace CaféPatronal.TELAS.CRUD.Func
         {
 
         }
+
+        private void cbodepartamento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.letras(e);
+        }
+
+        private void txtsalariobruto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.numeros(e);
+        }
     }
 }

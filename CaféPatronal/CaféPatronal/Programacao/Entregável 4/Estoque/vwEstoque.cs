@@ -6,17 +6,10 @@ using System.Threading.Tasks;
 
 namespace mecanica.DB.Programação.Estoque
 {
-    class vwEstoque
+    public class vwEstoque
     {
-        public int Id { get; set; }
-
-        public string Fornecedor { get; set; }
-
-        public string Compra { get; set; }
-
-        public int Quantidade { get; set; }
-
-        public DateTime Data { get; set; }
+        public int qtd_total { get; set; }
+        public string nm_compra { get; set; }
 
 
     }

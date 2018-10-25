@@ -27,11 +27,6 @@ namespace Loja_de_roupas.DB.Estoque
             db.Alterar(dto);
         }
 
-        public List<EstoqueDTO> Listar()
-        {
-            EstoqueDatabase db = new EstoqueDatabase();
-            return db.Listar();
-        }
 
         public void Remover(int id)
         {
@@ -45,5 +40,10 @@ namespace Loja_de_roupas.DB.Estoque
             EstoqueDatabase estoque = new EstoqueDatabase();
             return estoque.Consultar(nome);
         }
-    }
+        public List<vwEstoque> Listar()
+        {
+            EstoqueDatabase estoque = new EstoqueDatabase();
+            return estoque.Listar();
+        }
+}
 }

@@ -205,6 +205,15 @@ tb_produto.nm_nome;
 
 select * from vw_consultar_item_pedido;
 
+
+create view vw_consultar_estoque as 
+select sum(qtd_unidade) qtd_total, nm_compra
+from tb_compra
+group by
+nm_compra;
+Select * from vw_consultar_estoque;
+
+
 insert into `tb_dpto`(nm_nome) values ("T.I.");
 insert into `tb_dpto`(nm_nome) values ("RH");
 insert into `tb_dpto`(nm_nome) values ("Cozinha");

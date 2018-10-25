@@ -106,6 +106,7 @@
             this.txtVlProduto.Name = "txtVlProduto";
             this.txtVlProduto.Size = new System.Drawing.Size(190, 36);
             this.txtVlProduto.TabIndex = 2;
+            this.txtVlProduto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVlProduto_KeyPress);
             // 
             // txtUnidade
             // 
@@ -137,6 +138,7 @@
             this.TxtNomeProduto.Name = "TxtNomeProduto";
             this.TxtNomeProduto.Size = new System.Drawing.Size(190, 36);
             this.TxtNomeProduto.TabIndex = 1;
+            this.TxtNomeProduto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNomeProduto_KeyPress);
             // 
             // label1
             // 

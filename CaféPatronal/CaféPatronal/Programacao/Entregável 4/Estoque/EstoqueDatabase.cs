@@ -56,11 +56,7 @@ namespace Loja_de_roupas.DB.Estoque
 
         public List<vwEstoque> Consultar(string nome)
         {
-            string script = @"Select nm_compra, nm_nome, ds_quantidade, tb_estoque.id_compra, dt_compra FROM tb_estoque 
-                                JOIN tb_compra 			p
-                                ON p.id_compra = tb_estoque.id_compra
-                                JOIN tb_fornecedor 			f
-                                ON f.id_fornecedor = p.id_fornecedor where nm_compra like @nm_compra;";
+            string script = @"Select * from vw_consultar_estoque where nm_compra = @nm_compra;";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("nm_compra", nome + "%"));
@@ -72,12 +68,8 @@ namespace Loja_de_roupas.DB.Estoque
             while (reader.Read())
             {
                 vwEstoque dto = new vwEstoque();
-                dto.Id = reader.GetInt32("id_compra");
-                dto.Compra = reader.GetString("nm_compra");
-                dto.Quantidade = reader.GetInt32("ds_quantidade");
-                dto.Fornecedor = reader.GetString("nm_nome");
-                dto.Data = reader.GetDateTime("dt_compra");
-
+                dto.qtd_total = reader.GetInt32("qtd_total");
+                dto.nm_compra = reader.GetString("nm_compra");
 
                 lista.Add(dto);
             }
@@ -86,22 +78,21 @@ namespace Loja_de_roupas.DB.Estoque
             return lista;
         }
 
-        public List<EstoqueDTO> Listar()
+        public List<vwEstoque> Listar()
         {
-            string script = @"Select * FROM tb_estoque";
+            string script = @"Select * from vw_consultar_estoque";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
 
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
 
-            List<EstoqueDTO> lista = new List<EstoqueDTO>();
+            List<vwEstoque> lista = new List<vwEstoque>();
             while (reader.Read())
             {
-                EstoqueDTO dto = new EstoqueDTO();
-                dto.Id = reader.GetInt32("id_estoque");
-                dto.id_compra = reader.GetInt32("id_compra");
-                dto.Quantidade = reader.GetInt32("ds_quantidade");
+                vwEstoque dto = new vwEstoque();
+                dto.qtd_total = reader.GetInt32("qtd_total");
+                dto.nm_compra = reader.GetString("nm_compra");
 
                 lista.Add(dto);
             }
@@ -109,5 +100,6 @@ namespace Loja_de_roupas.DB.Estoque
 
             return lista;
         }
+
     }
 }

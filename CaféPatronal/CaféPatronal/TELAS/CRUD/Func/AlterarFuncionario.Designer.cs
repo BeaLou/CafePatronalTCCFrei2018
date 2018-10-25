@@ -162,11 +162,12 @@
             // txtsalariobruto
             // 
             this.txtsalariobruto.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtsalariobruto.Location = new System.Drawing.Point(154, 397);
+            this.txtsalariobruto.Location = new System.Drawing.Point(158, 399);
             this.txtsalariobruto.MaxLength = 45;
             this.txtsalariobruto.Name = "txtsalariobruto";
             this.txtsalariobruto.Size = new System.Drawing.Size(279, 32);
             this.txtsalariobruto.TabIndex = 47;
+            this.txtsalariobruto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsalariobruto_KeyPress);
             // 
             // txtncasa
             // 
@@ -396,6 +397,7 @@
             this.cbodepartamento.Name = "cbodepartamento";
             this.cbodepartamento.Size = new System.Drawing.Size(275, 33);
             this.cbodepartamento.TabIndex = 6;
+            this.cbodepartamento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbodepartamento_KeyPress);
             // 
             // label13
             // 

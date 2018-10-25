@@ -33,6 +33,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.BtnSalvarCompra = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtqtd = new System.Windows.Forms.TextBox();
             this.cbfornecedor = new System.Windows.Forms.ComboBox();
             this.txtVlcompra = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
@@ -80,7 +81,6 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button5 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtqtd = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -165,6 +165,17 @@
             this.groupBox1.TabIndex = 34;
             this.groupBox1.TabStop = false;
             // 
+            // txtqtd
+            // 
+            this.txtqtd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtqtd.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtqtd.Location = new System.Drawing.Point(179, 156);
+            this.txtqtd.MaxLength = 20;
+            this.txtqtd.Name = "txtqtd";
+            this.txtqtd.Size = new System.Drawing.Size(190, 32);
+            this.txtqtd.TabIndex = 38;
+            this.txtqtd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtqtd_KeyPress);
+            // 
             // cbfornecedor
             // 
             this.cbfornecedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -195,6 +206,7 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(190, 32);
             this.txtNome.TabIndex = 2;
+            this.txtNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNome_KeyPress);
             // 
             // label3
             // 
@@ -700,16 +712,6 @@
             this.label2.Size = new System.Drawing.Size(225, 28);
             this.label2.TabIndex = 70;
             this.label2.Text = "Consultar Items de produtos";
-            // 
-            // txtqtd
-            // 
-            this.txtqtd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtqtd.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtqtd.Location = new System.Drawing.Point(179, 156);
-            this.txtqtd.MaxLength = 20;
-            this.txtqtd.Name = "txtqtd";
-            this.txtqtd.Size = new System.Drawing.Size(190, 32);
-            this.txtqtd.TabIndex = 38;
             // 
             // CadastroCompra
             // 

@@ -69,7 +69,7 @@ namespace CaféPatronal.TELAS.Compra
                 FornecedorDTO fornecedor = cbfornecedor.SelectedItem as FornecedorDTO;
                 ComprasDTO dto = new ComprasDTO();
                 dto.id_fornecedor = fornecedor.id_fornecedor;
-                dto.nm_compra = txtNome.Text;
+                dto.nm_compra = txtNome.Text.ToLower();
                 dto.qtd_unidade = Convert.ToInt32(txtqtd.Text) ;
                 dto.vl_compra = Convert.ToDecimal(txtVlcompra.Text);
                 dto.dt_compra = DateTime.Now;
@@ -273,6 +273,16 @@ namespace CaféPatronal.TELAS.Compra
         private void groupBox2_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.letras(e);
+        }
+
+        private void txtqtd_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.numeros(e);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using CaféPatronal.Programacao.Entregável_4.Gastos;
+﻿using CaféPatronal.Programacao;
+using CaféPatronal.Programacao.Entregável_4.Gastos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,7 @@ namespace CaféPatronal.TELAS.Gastos
 {
     public partial class Gastos : Form
     {
+        Validação v = new Validação();
         public Gastos()
         {
             InitializeComponent();
@@ -64,6 +66,16 @@ namespace CaféPatronal.TELAS.Gastos
             List<GastoDTO> a =business.Consultar(txtConsultarEstoque.Text);
             dgvconsultaestoq.AutoGenerateColumns = false;
             dgvconsultaestoq.DataSource = a;
+        }
+
+        private void txtnome_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.letras(e);
+        }
+
+        private void txtvalor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.numeros(e);
         }
     }
 }

@@ -225,6 +225,7 @@
             this.cbmes.Size = new System.Drawing.Size(188, 33);
             this.cbmes.TabIndex = 1;
             this.cbmes.SelectedIndexChanged += new System.EventHandler(this.cbmes_SelectedIndexChanged);
+            this.cbmes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbmes_KeyPress);
             // 
             // label24
             // 
@@ -426,6 +427,7 @@
             this.nudHorasExtras.Name = "nudHorasExtras";
             this.nudHorasExtras.Size = new System.Drawing.Size(191, 32);
             this.nudHorasExtras.TabIndex = 8;
+            this.nudHorasExtras.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nudHorasExtras_KeyPress);
             // 
             // nudPorcentagem
             // 
@@ -437,6 +439,7 @@
             this.nudPorcentagem.Name = "nudPorcentagem";
             this.nudPorcentagem.Size = new System.Drawing.Size(191, 32);
             this.nudPorcentagem.TabIndex = 9;
+            this.nudPorcentagem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nudHorasExtras_KeyPress);
             // 
             // lblHoraExtra
             // 
