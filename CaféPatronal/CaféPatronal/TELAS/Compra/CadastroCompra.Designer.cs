@@ -33,14 +33,8 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.BtnSalvarCompra = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtqtd = new System.Windows.Forms.TextBox();
             this.cbfornecedor = new System.Windows.Forms.ComboBox();
-            this.txtVlcompra = new System.Windows.Forms.TextBox();
-            this.txtNome = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.lblCadastroProduto = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -50,10 +44,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblconsultaproduto = new System.Windows.Forms.Label();
             this.dgvconsultacompra = new System.Windows.Forms.DataGridView();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Qtd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Vl = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Dataa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnConsultarFornece = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
@@ -65,22 +55,21 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtQuantidade = new System.Windows.Forms.TextBox();
-            this.cmbProduto = new System.Windows.Forms.ComboBox();
             this.cmbCompra = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.txtItens = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.dgvItensProdutos = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button5 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Dataa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -151,102 +140,33 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtqtd);
             this.groupBox1.Controls.Add(this.cbfornecedor);
-            this.groupBox1.Controls.Add(this.txtVlcompra);
-            this.groupBox1.Controls.Add(this.txtNome);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Location = new System.Drawing.Point(11, 37);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(398, 265);
+            this.groupBox1.Size = new System.Drawing.Size(398, 84);
             this.groupBox1.TabIndex = 34;
             this.groupBox1.TabStop = false;
-            // 
-            // txtqtd
-            // 
-            this.txtqtd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtqtd.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtqtd.Location = new System.Drawing.Point(179, 156);
-            this.txtqtd.MaxLength = 20;
-            this.txtqtd.Name = "txtqtd";
-            this.txtqtd.Size = new System.Drawing.Size(190, 32);
-            this.txtqtd.TabIndex = 3;
-            this.txtqtd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtqtd_KeyPress);
             // 
             // cbfornecedor
             // 
             this.cbfornecedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbfornecedor.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbfornecedor.FormattingEnabled = true;
-            this.cbfornecedor.Location = new System.Drawing.Point(179, 20);
+            this.cbfornecedor.Location = new System.Drawing.Point(119, 30);
             this.cbfornecedor.Name = "cbfornecedor";
             this.cbfornecedor.Size = new System.Drawing.Size(190, 33);
             this.cbfornecedor.TabIndex = 1;
-            // 
-            // txtVlcompra
-            // 
-            this.txtVlcompra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtVlcompra.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVlcompra.Location = new System.Drawing.Point(179, 215);
-            this.txtVlcompra.MaxLength = 20;
-            this.txtVlcompra.Name = "txtVlcompra";
-            this.txtVlcompra.Size = new System.Drawing.Size(190, 32);
-            this.txtVlcompra.TabIndex = 4;
-            this.txtVlcompra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVlcompra_KeyPress);
-            // 
-            // txtNome
-            // 
-            this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNome.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(179, 88);
-            this.txtNome.MaxLength = 20;
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(190, 32);
-            this.txtNome.TabIndex = 2;
-            this.txtNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNome_KeyPress);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(75, 28);
+            this.label3.Location = new System.Drawing.Point(15, 32);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 28);
             this.label3.TabIndex = 34;
             this.label3.Text = "Fornecedor";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(79, 156);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(94, 28);
-            this.label6.TabIndex = 36;
-            this.label6.Text = "Quantidade";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(33, 88);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(140, 28);
-            this.label4.TabIndex = 35;
-            this.label4.Text = "Nome da compra";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(36, 218);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(137, 28);
-            this.label9.TabIndex = 37;
-            this.label9.Text = "Valor da Compra";
             // 
             // lblCadastroProduto
             // 
@@ -357,46 +277,12 @@
             this.dgvconsultacompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvconsultacompra.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nome,
-            this.Qtd,
-            this.Vl,
             this.Dataa});
             this.dgvconsultacompra.Location = new System.Drawing.Point(36, 81);
             this.dgvconsultacompra.Name = "dgvconsultacompra";
             this.dgvconsultacompra.ReadOnly = true;
             this.dgvconsultacompra.Size = new System.Drawing.Size(910, 308);
             this.dgvconsultacompra.TabIndex = 11;
-            // 
-            // Nome
-            // 
-            this.Nome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Nome.DataPropertyName = "nm_compra";
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
-            this.Nome.ReadOnly = true;
-            // 
-            // Qtd
-            // 
-            this.Qtd.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Qtd.DataPropertyName = "qtd_unidade";
-            this.Qtd.HeaderText = "Unidade";
-            this.Qtd.Name = "Qtd";
-            this.Qtd.ReadOnly = true;
-            // 
-            // Vl
-            // 
-            this.Vl.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Vl.DataPropertyName = "vl_compra";
-            this.Vl.HeaderText = "Valor da Compra";
-            this.Vl.Name = "Vl";
-            this.Vl.ReadOnly = true;
-            // 
-            // Dataa
-            // 
-            this.Dataa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Dataa.DataPropertyName = "dt_compra";
-            this.Dataa.HeaderText = "Data da Compra";
-            this.Dataa.Name = "Dataa";
-            this.Dataa.ReadOnly = true;
             // 
             // btnConsultarFornece
             // 
@@ -454,11 +340,9 @@
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Controls.Add(this.txtQuantidade);
-            this.groupBox2.Controls.Add(this.cmbProduto);
             this.groupBox2.Controls.Add(this.cmbCompra);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Location = new System.Drawing.Point(10, 37);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(556, 285);
@@ -498,7 +382,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(130, 147);
+            this.button3.Location = new System.Drawing.Point(130, 109);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(114, 33);
             this.button3.TabIndex = 4;
@@ -529,27 +413,18 @@
             // 
             // txtQuantidade
             // 
-            this.txtQuantidade.Location = new System.Drawing.Point(123, 107);
+            this.txtQuantidade.Location = new System.Drawing.Point(123, 69);
             this.txtQuantidade.MaxLength = 7;
             this.txtQuantidade.Name = "txtQuantidade";
             this.txtQuantidade.Size = new System.Drawing.Size(121, 32);
             this.txtQuantidade.TabIndex = 3;
             this.txtQuantidade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQuantidade_KeyPress);
             // 
-            // cmbProduto
-            // 
-            this.cmbProduto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbProduto.FormattingEnabled = true;
-            this.cmbProduto.Location = new System.Drawing.Point(123, 30);
-            this.cmbProduto.Name = "cmbProduto";
-            this.cmbProduto.Size = new System.Drawing.Size(121, 33);
-            this.cmbProduto.TabIndex = 1;
-            // 
             // cmbCompra
             // 
             this.cmbCompra.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCompra.FormattingEnabled = true;
-            this.cmbCompra.Location = new System.Drawing.Point(123, 70);
+            this.cmbCompra.Location = new System.Drawing.Point(123, 30);
             this.cmbCompra.Name = "cmbCompra";
             this.cmbCompra.Size = new System.Drawing.Size(121, 33);
             this.cmbCompra.TabIndex = 2;
@@ -558,7 +433,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(18, 108);
+            this.label1.Location = new System.Drawing.Point(18, 70);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 28);
             this.label1.TabIndex = 51;
@@ -568,21 +443,11 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(41, 72);
+            this.label13.Location = new System.Drawing.Point(41, 32);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(71, 28);
             this.label13.TabIndex = 50;
             this.label13.Text = "Compra";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(41, 30);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(71, 28);
-            this.label7.TabIndex = 49;
-            this.label7.Text = "Produto";
             // 
             // label8
             // 
@@ -653,7 +518,6 @@
             this.dgvItensProdutos.AllowUserToDeleteRows = false;
             this.dgvItensProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvItensProdutos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3});
             this.dgvItensProdutos.Location = new System.Drawing.Point(22, 89);
@@ -661,30 +525,6 @@
             this.dgvItensProdutos.ReadOnly = true;
             this.dgvItensProdutos.Size = new System.Drawing.Size(910, 308);
             this.dgvItensProdutos.TabIndex = 74;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "nm_nome";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Nome do Item usado";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "qtd_itens";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Quantidade";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "vl_total";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Valor da Compra";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // button5
             // 
@@ -712,6 +552,37 @@
             this.label2.Size = new System.Drawing.Size(225, 28);
             this.label2.TabIndex = 70;
             this.label2.Text = "Consultar Items de produtos";
+            // 
+            // Nome
+            // 
+            this.Nome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nome.HeaderText = "Nome Fornecedor";
+            this.Nome.Name = "Nome";
+            this.Nome.ReadOnly = true;
+            // 
+            // Dataa
+            // 
+            this.Dataa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Dataa.DataPropertyName = "dt_compra";
+            this.Dataa.HeaderText = "Data da Compra";
+            this.Dataa.Name = "Dataa";
+            this.Dataa.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "qtd_itens";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Quantidade";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "vl_total";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Valor da Compra";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // CadastroCompra
             // 
@@ -757,12 +628,7 @@
         private System.Windows.Forms.Button BtnSalvarCompra;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox cbfornecedor;
-        private System.Windows.Forms.TextBox txtVlcompra;
-        private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblCadastroProduto;
         private System.Windows.Forms.PictureBox btnVoltar;
         private System.Windows.Forms.TabPage tabPage2;
@@ -773,10 +639,6 @@
         private System.Windows.Forms.Label lblconsultaproduto;
         private System.Windows.Forms.DataGridView dgvconsultacompra;
         private System.Windows.Forms.Button btnConsultarFornece;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Qtd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Vl;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Dataa;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label8;
@@ -786,11 +648,9 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.TextBox txtQuantidade;
-        private System.Windows.Forms.ComboBox cmbProduto;
         private System.Windows.Forms.ComboBox cmbCompra;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TextBox txtItens;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -798,11 +658,11 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.Label lblvalortotal;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtqtd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Dataa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
     }
 }
