@@ -27,6 +27,8 @@ namespace CaféPatronal.Programacao.FolhaPagamento
         public decimal vl_salarioliquido { get; set; }
         public string ds_mes { get; set; }
 
+        public DateTime dt_pagamento { get; set; }
+
         public string faltaprimeira { get; set; }
         public string faltasegunda { get; set; }
         public string faltaterceira { get; set; }

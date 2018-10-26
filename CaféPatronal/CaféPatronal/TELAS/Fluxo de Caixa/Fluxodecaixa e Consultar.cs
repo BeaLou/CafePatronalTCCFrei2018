@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CaféPatronal.Programacao.FluxoCaixa;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -43,6 +44,38 @@ namespace CaféPatronal.TELAS
 
         private void tabPage2_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnConsularFluxo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FluxoCaixaBusiness business = new FluxoCaixaBusiness();
+                List<FluxoCaixaVw> lista = business.Consultar(dtpInicio.Value, dtpFim.Value);
+
+                dgvFluxo.AutoGenerateColumns = false;
+                dgvFluxo.DataSource = lista;
+                decimal saldo = 0;
+                foreach (FluxoCaixaVw item in lista)
+                {
+                    saldo = saldo + item.Lucro;
+                }
+
+                lblSaldo.Text = "R$ " + saldo.ToString();
+                if (saldo < 0)
+                {
+                    lblSaldo.ForeColor = Color.Red;
+                }
+                else
+                {
+                    lblSaldo.ForeColor = Color.Green;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro: " + ex.Message);
+            }
 
         }
     }

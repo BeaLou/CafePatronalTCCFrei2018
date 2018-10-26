@@ -31,30 +31,30 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Consulta_de_Fluxo_de_Caixa));
             this.tbControleVendas = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblSaldo = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtpFim = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpInicio = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.dgvFluxoCaixa = new System.Windows.Forms.DataGridView();
-            this.d = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Des = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Luc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnConsularFluxo = new System.Windows.Forms.Button();
+            this.dgvFluxo = new System.Windows.Forms.DataGridView();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbControleVendas.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFluxoCaixa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFluxo)).BeginInit();
             this.SuspendLayout();
             // 
             // tbControleVendas
             // 
             this.tbControleVendas.Controls.Add(this.tabPage2);
-            this.tbControleVendas.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbControleVendas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbControleVendas.Location = new System.Drawing.Point(30, 12);
             this.tbControleVendas.Name = "tbControleVendas";
             this.tbControleVendas.SelectedIndex = 0;
@@ -65,14 +65,14 @@
             // 
             this.tabPage2.BackColor = System.Drawing.Color.Linen;
             this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage2.Controls.Add(this.label5);
+            this.tabPage2.Controls.Add(this.dgvFluxo);
+            this.tabPage2.Controls.Add(this.lblSaldo);
             this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Controls.Add(this.dateTimePicker2);
+            this.tabPage2.Controls.Add(this.dtpFim);
             this.tabPage2.Controls.Add(this.label2);
-            this.tabPage2.Controls.Add(this.dateTimePicker1);
+            this.tabPage2.Controls.Add(this.dtpInicio);
             this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Controls.Add(this.label4);
-            this.tabPage2.Controls.Add(this.dgvFluxoCaixa);
             this.tabPage2.Controls.Add(this.pictureBox1);
             this.tabPage2.Controls.Add(this.btnConsularFluxo);
             this.tabPage2.Location = new System.Drawing.Point(4, 34);
@@ -82,67 +82,67 @@
             this.tabPage2.Text = "Consultar Fluxo de Caixa";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
-            // label5
+            // lblSaldo
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Agency FB", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(161, 83);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(23, 32);
-            this.label5.TabIndex = 75;
-            this.label5.Text = "-";
+            this.lblSaldo.AutoSize = true;
+            this.lblSaldo.BackColor = System.Drawing.Color.Transparent;
+            this.lblSaldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSaldo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblSaldo.Location = new System.Drawing.Point(249, 83);
+            this.lblSaldo.Name = "lblSaldo";
+            this.lblSaldo.Size = new System.Drawing.Size(23, 31);
+            this.lblSaldo.TabIndex = 75;
+            this.lblSaldo.Text = "-";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Agency FB", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label3.Location = new System.Drawing.Point(6, 83);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(165, 32);
+            this.label3.Size = new System.Drawing.Size(237, 31);
             this.label3.TabIndex = 74;
             this.label3.Text = "Valor final do mês:";
             // 
-            // dateTimePicker2
+            // dtpFim
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(666, 42);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 32);
-            this.dateTimePicker2.TabIndex = 73;
+            this.dtpFim.Location = new System.Drawing.Point(666, 42);
+            this.dtpFim.Name = "dtpFim";
+            this.dtpFim.Size = new System.Drawing.Size(200, 31);
+            this.dtpFim.TabIndex = 73;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Agency FB", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Location = new System.Drawing.Point(605, 42);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 32);
+            this.label2.Size = new System.Drawing.Size(81, 31);
             this.label2.TabIndex = 72;
             this.label2.Text = "Final:";
             // 
-            // dateTimePicker1
+            // dtpInicio
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(286, 42);
-            this.dateTimePicker1.MaxDate = new System.DateTime(2019, 12, 31, 0, 0, 0, 0);
-            this.dateTimePicker1.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 32);
-            this.dateTimePicker1.TabIndex = 71;
+            this.dtpInicio.Location = new System.Drawing.Point(286, 42);
+            this.dtpInicio.MaxDate = new System.DateTime(2019, 12, 31, 0, 0, 0, 0);
+            this.dtpInicio.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.dtpInicio.Name = "dtpInicio";
+            this.dtpInicio.Size = new System.Drawing.Size(200, 31);
+            this.dtpInicio.TabIndex = 71;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Agency FB", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(219, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 32);
+            this.label1.Size = new System.Drawing.Size(86, 31);
             this.label1.TabIndex = 70;
             this.label1.Text = "Início:";
             // 
@@ -150,50 +150,13 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Agency FB", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label4.Location = new System.Drawing.Point(3, 3);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(168, 40);
+            this.label4.Size = new System.Drawing.Size(291, 37);
             this.label4.TabIndex = 69;
             this.label4.Text = " FLUXO DE CAIXA";
-            // 
-            // dgvFluxoCaixa
-            // 
-            this.dgvFluxoCaixa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFluxoCaixa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.d,
-            this.Des,
-            this.Gan,
-            this.Luc});
-            this.dgvFluxoCaixa.Location = new System.Drawing.Point(10, 129);
-            this.dgvFluxoCaixa.Name = "dgvFluxoCaixa";
-            this.dgvFluxoCaixa.Size = new System.Drawing.Size(1085, 352);
-            this.dgvFluxoCaixa.TabIndex = 16;
-            // 
-            // d
-            // 
-            this.d.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.d.HeaderText = "Data";
-            this.d.Name = "d";
-            // 
-            // Des
-            // 
-            this.Des.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Des.HeaderText = "Despesas";
-            this.Des.Name = "Des";
-            // 
-            // Gan
-            // 
-            this.Gan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Gan.HeaderText = "Ganhos";
-            this.Gan.Name = "Gan";
-            // 
-            // Luc
-            // 
-            this.Luc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Luc.HeaderText = "Lucros";
-            this.Luc.Name = "Luc";
             // 
             // pictureBox1
             // 
@@ -220,6 +183,58 @@
             this.btnConsularFluxo.Text = "Consultar";
             this.btnConsularFluxo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnConsularFluxo.UseVisualStyleBackColor = true;
+            this.btnConsularFluxo.Click += new System.EventHandler(this.btnConsularFluxo_Click);
+            // 
+            // dgvFluxo
+            // 
+            this.dgvFluxo.AllowUserToAddRows = false;
+            this.dgvFluxo.AllowUserToDeleteRows = false;
+            this.dgvFluxo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFluxo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column2,
+            this.Column1,
+            this.Column3,
+            this.Column4});
+            this.dgvFluxo.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvFluxo.Location = new System.Drawing.Point(0, 123);
+            this.dgvFluxo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dgvFluxo.Name = "dgvFluxo";
+            this.dgvFluxo.ReadOnly = true;
+            this.dgvFluxo.RowHeadersVisible = false;
+            this.dgvFluxo.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
+            this.dgvFluxo.Size = new System.Drawing.Size(1115, 369);
+            this.dgvFluxo.TabIndex = 83;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.DataPropertyName = "Data";
+            this.Column2.HeaderText = "Data";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.DataPropertyName = "Despesas";
+            this.Column1.HeaderText = "Despesas";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.DataPropertyName = "Ganhos";
+            this.Column3.HeaderText = "Ganhos";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "Lucro";
+            this.Column4.HeaderText = "Lucro";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // Consulta_de_Fluxo_de_Caixa
             // 
@@ -237,8 +252,8 @@
             this.tbControleVendas.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFluxoCaixa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFluxo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -246,19 +261,19 @@
         #endregion
         private System.Windows.Forms.TabControl tbControleVendas;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.DataGridView dgvFluxoCaixa;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnConsularFluxo;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtpFim;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpInicio;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn d;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Des;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Gan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Luc;
+        private System.Windows.Forms.Label lblSaldo;
+        private System.Windows.Forms.DataGridView dgvFluxo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }

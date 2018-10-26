@@ -13,7 +13,7 @@ namespace CaféPatronal.Programacao.FolhaPagamento
         public int Salvar(FolhaPagamentoDTO folha)
         {
             string script =
-           @"INSERT INTO tb_folhapagamento
+                @"INSERT INTO tb_folhapagamento
                 (
                 id_folhapagamento,
                 id_funcionario,   
@@ -24,7 +24,8 @@ namespace CaféPatronal.Programacao.FolhaPagamento
                 vl_fgts,
                 vl_ValeTransporte,
                 vl_salarioliquido,
-                ds_mes    
+                ds_mes,
+                dt_pagamento
                 )
                 VALUES
                 (
@@ -37,7 +38,8 @@ namespace CaféPatronal.Programacao.FolhaPagamento
                 @vl_fgts,
                 @vl_ValeTransporte,
                 @vl_salarioliquido,
-                @ds_mes
+                @ds_mes,
+                @dt_pagamento
                 )";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
@@ -51,6 +53,7 @@ namespace CaféPatronal.Programacao.FolhaPagamento
             parms.Add(new MySqlParameter("vl_ValeTransporte", folha.vl_ValeTransporte));
             parms.Add(new MySqlParameter("vl_salarioliquido", folha.vl_salarioliquido));
             parms.Add(new MySqlParameter("ds_mes", folha.ds_mes));
+            parms.Add(new MySqlParameter("dt_pagamento", folha.dt_pagamento));
 
 
             Database db = new Database();
@@ -72,6 +75,7 @@ namespace CaféPatronal.Programacao.FolhaPagamento
                   vl_ValeTransporte = @vl_ValeTransporte,
                   vl_salarioliquido=@vl_salarioliquido,
                   ds_mes =@ds_mes,
+                  dt_pagamento = @dt_pagamento,
                   WHERE id_folhapagamento = @id_folhapagamento";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
@@ -85,6 +89,7 @@ namespace CaféPatronal.Programacao.FolhaPagamento
             parms.Add(new MySqlParameter("vl_ValeTransporte", folha.vl_ValeTransporte));
             parms.Add(new MySqlParameter("vl_salarioliquido", folha.vl_salarioliquido));
             parms.Add(new MySqlParameter("ds_mes", folha.ds_mes));
+            parms.Add(new MySqlParameter("dt_pagamento", folha.dt_pagamento));
 
             Database db = new Database();
             db.ExecuteInsertScript(script, parms);
@@ -106,7 +111,7 @@ namespace CaféPatronal.Programacao.FolhaPagamento
         public List<FolhaPagamentoDTO> Listar()
         {
             string script =
-              @"SELECT * FROM tb_folhapagamento";
+                @"SELECT * FROM tb_folhapagamento";
             List<MySqlParameter> parms = new List<MySqlParameter>();
 
             Database db = new Database();
@@ -126,6 +131,8 @@ namespace CaféPatronal.Programacao.FolhaPagamento
                 novafolha.vl_fgts = reader.GetDecimal("vl_fgts");
                 novafolha.vl_ValeTransporte = reader.GetDecimal("vl_ValeTransporte");
                 novafolha.vl_salarioliquido = reader.GetDecimal("vl_salarioliquido");
+                novafolha.ds_mes = reader.GetString("ds_mes");
+                novafolha.dt_pagamento = reader.GetDateTime("dt_pagamento");
 
                 folhas.Add(novafolha);
 
@@ -133,6 +140,7 @@ namespace CaféPatronal.Programacao.FolhaPagamento
             reader.Close();
             return folhas;
         }
+
         public List<VwConsultarFolhapagamento> Consultarmes(string mes)
         {
 
