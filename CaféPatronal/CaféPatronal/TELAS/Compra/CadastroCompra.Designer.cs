@@ -173,7 +173,7 @@
             this.txtqtd.MaxLength = 20;
             this.txtqtd.Name = "txtqtd";
             this.txtqtd.Size = new System.Drawing.Size(190, 32);
-            this.txtqtd.TabIndex = 38;
+            this.txtqtd.TabIndex = 3;
             this.txtqtd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtqtd_KeyPress);
             // 
             // cbfornecedor
