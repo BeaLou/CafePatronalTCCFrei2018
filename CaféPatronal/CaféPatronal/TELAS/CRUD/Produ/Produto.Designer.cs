@@ -276,7 +276,7 @@
             this.button2.Location = new System.Drawing.Point(742, 35);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(107, 38);
-            this.button2.TabIndex = 17;
+            this.button2.TabIndex = 3;
             this.button2.Text = "Alterar";
             this.button2.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.button2.UseVisualStyleBackColor = true;
@@ -291,7 +291,7 @@
             this.button1.Location = new System.Drawing.Point(633, 35);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(107, 38);
-            this.button1.TabIndex = 16;
+            this.button1.TabIndex = 2;
             this.button1.Text = "Apagar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.button1.UseVisualStyleBackColor = true;
@@ -304,7 +304,7 @@
             this.txtConsultaProdutos.MaxLength = 50;
             this.txtConsultaProdutos.Name = "txtConsultaProdutos";
             this.txtConsultaProdutos.Size = new System.Drawing.Size(456, 32);
-            this.txtConsultaProdutos.TabIndex = 15;
+            this.txtConsultaProdutos.TabIndex = 1;
             // 
             // pictureBox2
             // 

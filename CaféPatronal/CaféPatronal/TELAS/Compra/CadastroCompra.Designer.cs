@@ -109,7 +109,7 @@
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1064, 448);
-            this.tabControl1.TabIndex = 62;
+            this.tabControl1.TabIndex = 6;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPage1
@@ -300,7 +300,7 @@
             this.btnapagar.Location = new System.Drawing.Point(617, 38);
             this.btnapagar.Name = "btnapagar";
             this.btnapagar.Size = new System.Drawing.Size(107, 38);
-            this.btnapagar.TabIndex = 7;
+            this.btnapagar.TabIndex = 3;
             this.btnapagar.Text = "Apagar";
             this.btnapagar.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.btnapagar.UseVisualStyleBackColor = true;
@@ -313,7 +313,7 @@
             this.txtConsultaCompra.MaxLength = 50;
             this.txtConsultaCompra.Name = "txtConsultaCompra";
             this.txtConsultaCompra.Size = new System.Drawing.Size(456, 32);
-            this.txtConsultaCompra.TabIndex = 5;
+            this.txtConsultaCompra.TabIndex = 1;
             // 
             // pictureBox2
             // 
@@ -407,7 +407,7 @@
             this.btnConsultarFornece.Location = new System.Drawing.Point(504, 38);
             this.btnConsultarFornece.Name = "btnConsultarFornece";
             this.btnConsultarFornece.Size = new System.Drawing.Size(107, 38);
-            this.btnConsultarFornece.TabIndex = 6;
+            this.btnConsultarFornece.TabIndex = 2;
             this.btnConsultarFornece.Text = "Consultar";
             this.btnConsultarFornece.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnConsultarFornece.UseVisualStyleBackColor = true;
@@ -440,7 +440,7 @@
             this.button1.Location = new System.Drawing.Point(923, 368);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(126, 36);
-            this.button1.TabIndex = 72;
+            this.button1.TabIndex = 6;
             this.button1.Text = "Salvar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = false;
@@ -491,7 +491,7 @@
             this.button2.Location = new System.Drawing.Point(432, 186);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(103, 34);
-            this.button2.TabIndex = 56;
+            this.button2.TabIndex = 5;
             this.button2.Text = "Limpar ";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -501,7 +501,7 @@
             this.button3.Location = new System.Drawing.Point(130, 147);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(114, 33);
-            this.button3.TabIndex = 55;
+            this.button3.TabIndex = 4;
             this.button3.Text = "Adicionar";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -533,7 +533,7 @@
             this.txtQuantidade.MaxLength = 7;
             this.txtQuantidade.Name = "txtQuantidade";
             this.txtQuantidade.Size = new System.Drawing.Size(121, 32);
-            this.txtQuantidade.TabIndex = 53;
+            this.txtQuantidade.TabIndex = 3;
             this.txtQuantidade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQuantidade_KeyPress);
             // 
             // cmbProduto
@@ -543,7 +543,7 @@
             this.cmbProduto.Location = new System.Drawing.Point(123, 30);
             this.cmbProduto.Name = "cmbProduto";
             this.cmbProduto.Size = new System.Drawing.Size(121, 33);
-            this.cmbProduto.TabIndex = 48;
+            this.cmbProduto.TabIndex = 1;
             // 
             // cmbCompra
             // 
@@ -552,7 +552,7 @@
             this.cmbCompra.Location = new System.Drawing.Point(123, 70);
             this.cmbCompra.Name = "cmbCompra";
             this.cmbCompra.Size = new System.Drawing.Size(121, 33);
-            this.cmbCompra.TabIndex = 52;
+            this.cmbCompra.TabIndex = 2;
             // 
             // label1
             // 
@@ -632,7 +632,7 @@
             this.txtItens.MaxLength = 50;
             this.txtItens.Name = "txtItens";
             this.txtItens.Size = new System.Drawing.Size(456, 32);
-            this.txtItens.TabIndex = 71;
+            this.txtItens.TabIndex = 1;
             // 
             // pictureBox4
             // 
@@ -695,7 +695,7 @@
             this.button5.Location = new System.Drawing.Point(484, 49);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(107, 38);
-            this.button5.TabIndex = 72;
+            this.button5.TabIndex = 2;
             this.button5.Text = "Consultar";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button5.UseVisualStyleBackColor = true;

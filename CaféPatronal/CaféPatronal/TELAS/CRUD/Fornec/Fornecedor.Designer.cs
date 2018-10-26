@@ -429,7 +429,7 @@
             this.button2.Location = new System.Drawing.Point(750, 39);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(107, 38);
-            this.button2.TabIndex = 13;
+            this.button2.TabIndex = 4;
             this.button2.Text = "Alterar";
             this.button2.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.button2.UseVisualStyleBackColor = true;
@@ -444,7 +444,7 @@
             this.button1.Location = new System.Drawing.Point(641, 39);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(107, 38);
-            this.button1.TabIndex = 12;
+            this.button1.TabIndex = 3;
             this.button1.Text = "Apagar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.button1.UseVisualStyleBackColor = true;
@@ -459,7 +459,7 @@
             this.btnConsultarFornece.Location = new System.Drawing.Point(528, 39);
             this.btnConsultarFornece.Name = "btnConsultarFornece";
             this.btnConsultarFornece.Size = new System.Drawing.Size(107, 38);
-            this.btnConsultarFornece.TabIndex = 11;
+            this.btnConsultarFornece.TabIndex = 2;
             this.btnConsultarFornece.Text = "Consultar";
             this.btnConsultarFornece.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnConsultarFornece.UseVisualStyleBackColor = true;
@@ -472,7 +472,7 @@
             this.txtconsultar.MaxLength = 50;
             this.txtconsultar.Name = "txtconsultar";
             this.txtconsultar.Size = new System.Drawing.Size(456, 32);
-            this.txtconsultar.TabIndex = 8;
+            this.txtconsultar.TabIndex = 1;
             // 
             // pictureBox1
             // 

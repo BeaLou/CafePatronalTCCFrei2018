@@ -283,7 +283,7 @@
             this.button2.Location = new System.Drawing.Point(746, 74);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(107, 38);
-            this.button2.TabIndex = 15;
+            this.button2.TabIndex = 4;
             this.button2.Text = "Alterar";
             this.button2.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.button2.UseVisualStyleBackColor = true;
@@ -298,7 +298,7 @@
             this.button1.Location = new System.Drawing.Point(637, 74);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(107, 38);
-            this.button1.TabIndex = 14;
+            this.button1.TabIndex = 3;
             this.button1.Text = "Apagar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.button1.UseVisualStyleBackColor = true;
@@ -394,7 +394,7 @@
             this.btnConsultarClientes.Location = new System.Drawing.Point(524, 74);
             this.btnConsultarClientes.Name = "btnConsultarClientes";
             this.btnConsultarClientes.Size = new System.Drawing.Size(107, 38);
-            this.btnConsultarClientes.TabIndex = 10;
+            this.btnConsultarClientes.TabIndex = 2;
             this.btnConsultarClientes.Text = "Consultar";
             this.btnConsultarClientes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnConsultarClientes.UseVisualStyleBackColor = true;
@@ -407,7 +407,7 @@
             this.txtConsultarClientes.MaxLength = 50;
             this.txtConsultarClientes.Name = "txtConsultarClientes";
             this.txtConsultarClientes.Size = new System.Drawing.Size(456, 32);
-            this.txtConsultarClientes.TabIndex = 9;
+            this.txtConsultarClientes.TabIndex = 1;
             // 
             // Cadastro_de_Clientes
             // 

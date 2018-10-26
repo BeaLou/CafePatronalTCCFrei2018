@@ -162,7 +162,7 @@
             this.dtpFim.Location = new System.Drawing.Point(666, 42);
             this.dtpFim.Name = "dtpFim";
             this.dtpFim.Size = new System.Drawing.Size(200, 32);
-            this.dtpFim.TabIndex = 73;
+            this.dtpFim.TabIndex = 2;
             // 
             // label2
             // 
@@ -183,7 +183,7 @@
             this.dtpInicio.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.dtpInicio.Name = "dtpInicio";
             this.dtpInicio.Size = new System.Drawing.Size(200, 32);
-            this.dtpInicio.TabIndex = 71;
+            this.dtpInicio.TabIndex = 1;
             // 
             // label1
             // 
@@ -230,7 +230,7 @@
             this.btnConsularFluxo.Location = new System.Drawing.Point(954, 80);
             this.btnConsularFluxo.Name = "btnConsularFluxo";
             this.btnConsularFluxo.Size = new System.Drawing.Size(108, 40);
-            this.btnConsularFluxo.TabIndex = 19;
+            this.btnConsularFluxo.TabIndex = 3;
             this.btnConsularFluxo.Text = "Consultar";
             this.btnConsularFluxo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnConsularFluxo.UseVisualStyleBackColor = true;

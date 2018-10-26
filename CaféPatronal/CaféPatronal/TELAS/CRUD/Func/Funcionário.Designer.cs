@@ -110,7 +110,7 @@
             this.dtpDataNascimento.MinDate = new System.DateTime(1940, 1, 1, 0, 0, 0, 0);
             this.dtpDataNascimento.Name = "dtpDataNascimento";
             this.dtpDataNascimento.Size = new System.Drawing.Size(276, 32);
-            this.dtpDataNascimento.TabIndex = 4;
+            this.dtpDataNascimento.TabIndex = 3;
             // 
             // mbtCpf
             // 
@@ -119,7 +119,7 @@
             this.mbtCpf.Mask = "000.000.000-00";
             this.mbtCpf.Name = "mbtCpf";
             this.mbtCpf.Size = new System.Drawing.Size(276, 32);
-            this.mbtCpf.TabIndex = 6;
+            this.mbtCpf.TabIndex = 5;
             this.mbtCpf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mktCpf_KeyPress);
             // 
             // lblCpf
@@ -165,7 +165,7 @@
             this.txtSobrenome.MaxLength = 20;
             this.txtSobrenome.Name = "txtSobrenome";
             this.txtSobrenome.Size = new System.Drawing.Size(276, 32);
-            this.txtSobrenome.TabIndex = 3;
+            this.txtSobrenome.TabIndex = 2;
             this.txtSobrenome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNome_KeyPress);
             // 
             // lblSobrenome
@@ -186,7 +186,7 @@
             this.txtNome.MaxLength = 20;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(276, 32);
-            this.txtNome.TabIndex = 2;
+            this.txtNome.TabIndex = 1;
             this.txtNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNome_KeyPress);
             // 
             // txtEmail
@@ -196,7 +196,7 @@
             this.txtEmail.MaxLength = 50;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(276, 32);
-            this.txtEmail.TabIndex = 8;
+            this.txtEmail.TabIndex = 7;
             // 
             // lblsenha
             // 
@@ -231,7 +231,7 @@
             this.cboDepartamento.Location = new System.Drawing.Point(132, 303);
             this.cboDepartamento.Name = "cboDepartamento";
             this.cboDepartamento.Size = new System.Drawing.Size(276, 33);
-            this.cboDepartamento.TabIndex = 7;
+            this.cboDepartamento.TabIndex = 6;
             this.cboDepartamento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNome_KeyPress);
             // 
             // mbtRg
@@ -264,7 +264,7 @@
             this.mbtCarteiraTrabalho.Mask = "000.000.000-00";
             this.mbtCarteiraTrabalho.Name = "mbtCarteiraTrabalho";
             this.mbtCarteiraTrabalho.Size = new System.Drawing.Size(276, 32);
-            this.mbtCarteiraTrabalho.TabIndex = 5;
+            this.mbtCarteiraTrabalho.TabIndex = 4;
             this.mbtCarteiraTrabalho.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mktCpf_KeyPress);
             // 
             // lblCarteiraTrabalho
@@ -319,7 +319,7 @@
             this.txtComplemento.MaxLength = 20;
             this.txtComplemento.Name = "txtComplemento";
             this.txtComplemento.Size = new System.Drawing.Size(276, 32);
-            this.txtComplemento.TabIndex = 10;
+            this.txtComplemento.TabIndex = 9;
             // 
             // lblNumero
             // 
@@ -386,7 +386,7 @@
             this.mtbCep.Mask = "00000-000";
             this.mtbCep.Name = "mtbCep";
             this.mtbCep.Size = new System.Drawing.Size(276, 32);
-            this.mtbCep.TabIndex = 9;
+            this.mtbCep.TabIndex = 8;
             this.mtbCep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mktCpf_KeyPress);
             // 
             // mtbTelefoneMovel
@@ -587,7 +587,7 @@
             this.btnAlterar.Location = new System.Drawing.Point(744, 51);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(107, 38);
-            this.btnAlterar.TabIndex = 22;
+            this.btnAlterar.TabIndex = 4;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.btnAlterar.UseVisualStyleBackColor = true;
@@ -603,7 +603,7 @@
             this.button1.Location = new System.Drawing.Point(635, 51);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(107, 38);
-            this.button1.TabIndex = 21;
+            this.button1.TabIndex = 3;
             this.button1.Text = "Apagar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.button1.UseVisualStyleBackColor = true;
@@ -700,7 +700,7 @@
             this.btnConsultarClientes.Location = new System.Drawing.Point(522, 51);
             this.btnConsultarClientes.Name = "btnConsultarClientes";
             this.btnConsultarClientes.Size = new System.Drawing.Size(107, 38);
-            this.btnConsultarClientes.TabIndex = 20;
+            this.btnConsultarClientes.TabIndex = 2;
             this.btnConsultarClientes.Text = "Consultar";
             this.btnConsultarClientes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnConsultarClientes.UseVisualStyleBackColor = true;
@@ -714,7 +714,7 @@
             this.txtConsultarFuncionários.MaxLength = 50;
             this.txtConsultarFuncionários.Name = "txtConsultarFuncionários";
             this.txtConsultarFuncionários.Size = new System.Drawing.Size(456, 32);
-            this.txtConsultarFuncionários.TabIndex = 19;
+            this.txtConsultarFuncionários.TabIndex = 1;
             // 
             // CadastroFuncionario
             // 

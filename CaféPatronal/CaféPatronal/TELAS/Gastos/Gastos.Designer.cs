@@ -98,7 +98,7 @@
             this.BtnSalvarPedido.Location = new System.Drawing.Point(948, 427);
             this.BtnSalvarPedido.Name = "BtnSalvarPedido";
             this.BtnSalvarPedido.Size = new System.Drawing.Size(126, 36);
-            this.BtnSalvarPedido.TabIndex = 64;
+            this.BtnSalvarPedido.TabIndex = 5;
             this.BtnSalvarPedido.Text = "Salvar";
             this.BtnSalvarPedido.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnSalvarPedido.UseVisualStyleBackColor = false;
@@ -144,7 +144,7 @@
             this.cboTipo.Margin = new System.Windows.Forms.Padding(4);
             this.cboTipo.Name = "cboTipo";
             this.cboTipo.Size = new System.Drawing.Size(590, 33);
-            this.cboTipo.TabIndex = 31;
+            this.cboTipo.TabIndex = 4;
             // 
             // txtnome
             // 
@@ -172,7 +172,7 @@
             this.txtvalor.MaxLength = 20;
             this.txtvalor.Name = "txtvalor";
             this.txtvalor.Size = new System.Drawing.Size(590, 32);
-            this.txtvalor.TabIndex = 2;
+            this.txtvalor.TabIndex = 3;
             this.txtvalor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtvalor_KeyPress);
             // 
             // label5
@@ -206,7 +206,7 @@
             this.dtpdata.MinDate = new System.DateTime(1910, 1, 1, 0, 0, 0, 0);
             this.dtpdata.Name = "dtpdata";
             this.dtpdata.Size = new System.Drawing.Size(590, 32);
-            this.dtpdata.TabIndex = 3;
+            this.dtpdata.TabIndex = 2;
             // 
             // label7
             // 
@@ -326,7 +326,7 @@
             this.btnConsultarestoque.Location = new System.Drawing.Point(484, 76);
             this.btnConsultarestoque.Name = "btnConsultarestoque";
             this.btnConsultarestoque.Size = new System.Drawing.Size(107, 38);
-            this.btnConsultarestoque.TabIndex = 15;
+            this.btnConsultarestoque.TabIndex = 2;
             this.btnConsultarestoque.Text = "Consultar";
             this.btnConsultarestoque.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnConsultarestoque.UseVisualStyleBackColor = true;
@@ -339,7 +339,7 @@
             this.txtConsultarEstoque.MaxLength = 50;
             this.txtConsultarEstoque.Name = "txtConsultarEstoque";
             this.txtConsultarEstoque.Size = new System.Drawing.Size(456, 32);
-            this.txtConsultarEstoque.TabIndex = 14;
+            this.txtConsultarEstoque.TabIndex = 1;
             // 
             // Gastos
             // 

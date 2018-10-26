@@ -164,7 +164,7 @@
             this.btnSalvarFolhaPagamento.Location = new System.Drawing.Point(968, 408);
             this.btnSalvarFolhaPagamento.Name = "btnSalvarFolhaPagamento";
             this.btnSalvarFolhaPagamento.Size = new System.Drawing.Size(126, 36);
-            this.btnSalvarFolhaPagamento.TabIndex = 14;
+            this.btnSalvarFolhaPagamento.TabIndex = 13;
             this.btnSalvarFolhaPagamento.Text = "Salvar";
             this.btnSalvarFolhaPagamento.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSalvarFolhaPagamento.UseVisualStyleBackColor = false;
@@ -195,9 +195,9 @@
             this.groupBox2.Controls.Add(this.label18);
             this.groupBox2.Controls.Add(this.txtFaltaSegSemana);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(12, 32);
+            this.groupBox2.Location = new System.Drawing.Point(12, 31);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(596, 410);
+            this.groupBox2.Size = new System.Drawing.Size(599, 411);
             this.groupBox2.TabIndex = 60;
             this.groupBox2.TabStop = false;
             // 
@@ -614,7 +614,7 @@
             this.btnConsultar.Location = new System.Drawing.Point(528, 60);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(107, 38);
-            this.btnConsultar.TabIndex = 17;
+            this.btnConsultar.TabIndex = 2;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnConsultar.UseVisualStyleBackColor = true;
@@ -629,7 +629,7 @@
             this.txtConsultarFolha.MaxLength = 50;
             this.txtConsultarFolha.Name = "txtConsultarFolha";
             this.txtConsultarFolha.Size = new System.Drawing.Size(456, 42);
-            this.txtConsultarFolha.TabIndex = 16;
+            this.txtConsultarFolha.TabIndex = 1;
             // 
             // pictureBox2
             // 

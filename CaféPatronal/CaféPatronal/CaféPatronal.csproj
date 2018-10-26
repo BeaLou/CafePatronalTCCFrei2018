@@ -179,12 +179,6 @@
     <Compile Include="TELAS\CRUD\Func\Funcionário.Designer.cs">
       <DependentUpon>Funcionário.cs</DependentUpon>
     </Compile>
-    <Compile Include="TELAS\Consulta\ControleDeVenda.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TELAS\Consulta\ControleDeVenda.Designer.cs">
-      <DependentUpon>ControleDeVenda.cs</DependentUpon>
-    </Compile>
     <Compile Include="TELAS\Fluxo de Caixa\Fluxodecaixa e Consultar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -277,9 +271,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\CRUD\Func\Funcionário.resx">
       <DependentUpon>Funcionário.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TELAS\Consulta\ControleDeVenda.resx">
-      <DependentUpon>ControleDeVenda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\Fluxo de Caixa\Fluxodecaixa e Consultar.resx">
       <DependentUpon>Fluxodecaixa e Consultar.cs</DependentUpon>
