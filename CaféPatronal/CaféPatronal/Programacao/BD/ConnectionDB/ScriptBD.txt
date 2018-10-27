@@ -1,6 +1,6 @@
-﻿ drop database DBcafe;
-create database DBcafe;
-use DBcafe;
+﻿drop database DBpop;
+create database DBpop;
+use DBpop;
 
 CREATE TABLE `tb_cliente` (
 	`id_cliente` INT NOT NULL AUTO_INCREMENT,
