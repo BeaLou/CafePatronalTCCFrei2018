@@ -1,5 +1,6 @@
 ﻿using CaféPatronal.Programacao;
 using CaféPatronal.Programacao.Produto;
+using Loja_de_roupas.DB.Estoque;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -86,6 +87,20 @@ namespace CaféPatronal.TELAS
             //{
             //    MessageBox.Show("Ocorreu um erro: " + ex.Message);
             //}
+
+            try
+            {
+                EstoqueBusiness business = new EstoqueBusiness();
+                List<EstoqueDTO> a = business.Consultar(txtConsultarEstoque.Text);
+                dgvconsultaestoq.AutoGenerateColumns = false;
+                dgvconsultaestoq.DataSource = a;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro: " + ex.Message);
+            }
+
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

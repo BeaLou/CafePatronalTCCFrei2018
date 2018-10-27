@@ -28,6 +28,12 @@ namespace Loja_de_roupas.DB.Estoque
             db.Remover(id);
         }
 
+        public List<EstoqueDTO> Consultar(string estoq)
+        {
+            EstoqueDatabase db = new EstoqueDatabase();
+
+            return db.Consultar(estoq);
+        }
 
     }
 

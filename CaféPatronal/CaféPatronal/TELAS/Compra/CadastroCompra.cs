@@ -64,6 +64,56 @@ namespace CaféPatronal.TELAS.Compra
 
         private void BtnSalvarCompra_Click(object sender, EventArgs e)
         {
+            try
+            {
+                CompraItemBusiness compraaaaaiteeeeembusineeeees = new CompraItemBusiness();
+                // int quantidade = int.Parse(txtqtd.Text);
+                FornecedorDTO fornecedor = cbfornecedor.SelectedItem as FornecedorDTO;
+                ComprasDTO dto = new ComprasDTO();
+                dto.id_fornecedor = fornecedor.id_fornecedor;
+                dto.dt_compra = DateTime.Now;
+
+                ComprasBusiness bussiness = new ComprasBusiness();
+                bussiness.Salvar(dto);
+
+                EstoqueBusiness businessestoque = new EstoqueBusiness();
+                // List<VwConsultarItem> lista = compraaaaaiteeeeembusineeeees.ConsultarView(txtNome.Text);
+                List<EstoqueDTO> estoque = new List<EstoqueDTO>();
+
+                //foreach (VwConsultarItem item in lista)
+                //{
+                //    foreach (EstoqueDTO item2 in estoque)
+                //    {
+                //        if (item.id_compra == item2.id_compra)
+                //        {
+                //            item2.Quantidade += item.qtd_itens;
+                //        }
+                //    }
+                //}
+
+
+                foreach (EstoqueDTO item in estoque)
+                {
+                    EstoqueDTO estoquedto = new EstoqueDTO();
+
+                    estoquedto.id_produtocompra = item.id_produtocompra;
+                    estoquedto.ds_quantidade = item.ds_quantidade;
+
+                    businessestoque.Salvar(estoquedto);
+                }
+
+                MessageBox.Show("Compra efetuada com sucesso");
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro " + ex.Message);
+            }
+
+
+
+
+            //---------------------------------------não mexer nesta bagaça debaixo em nome de deus------------------------------------------
             //try
             //{
             //    FornecedorDTO fornecedor = cbfornecedor.SelectedItem as FornecedorDTO;
@@ -113,7 +163,7 @@ namespace CaféPatronal.TELAS.Compra
             //}
 
         }
-   
+
 
         private void btnConsultarFornece_Click(object sender, EventArgs e)
         {
