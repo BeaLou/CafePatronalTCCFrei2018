@@ -11,6 +11,6 @@ namespace CaféPatronal.Programacao.Entregável_2.Compras
         //VAI DA OS PROP TAB TAB NÉ SAFADA
         public int id_compraitem { get; set; }
         public int id_compra { get; set; }
-        public int id_produto { get; set; }
+        public int id_produtocompra { get; set; }
     }
 }

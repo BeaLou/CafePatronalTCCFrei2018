@@ -1,5 +1,4 @@
-﻿using mecanica.DB.Programação.Estoque;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,24 +8,19 @@ namespace Loja_de_roupas.DB.Estoque
 {
     class EstoqueBusiness
     {
+
         public int Salvar(EstoqueDTO dto)
         {
-               
-            if (dto.id_compra == 0)
+
+            if (dto.id_produtocompra == 0)
             {
-                throw new ArgumentException("Produto não foi reconhecido", "Américas Mecânica");
+                throw new ArgumentException("Produto não foi reconhecido");
             }
 
 
             EstoqueDatabase db = new EstoqueDatabase();
             return db.Salvar(dto);
         }
-        public void Alterar(EstoqueDTO dto)
-        {
-            EstoqueDatabase db = new EstoqueDatabase();
-            db.Alterar(dto);
-        }
-
 
         public void Remover(int id)
         {
@@ -35,15 +29,6 @@ namespace Loja_de_roupas.DB.Estoque
         }
 
 
-        public List<vwEstoque> Consultar(string nome)
-        {
-            EstoqueDatabase estoque = new EstoqueDatabase();
-            return estoque.Consultar(nome);
-        }
-        public List<vwEstoque> Listar()
-        {
-            EstoqueDatabase estoque = new EstoqueDatabase();
-            return estoque.Listar();
-        }
-}
+    }
+
 }

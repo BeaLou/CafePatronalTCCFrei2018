@@ -3,7 +3,7 @@ using CaféPatronal.Programacao;
 using CaféPatronal.TELAS;
 using CaféPatronal.TELAS.Cadastro_e_Consulta;
 using CaféPatronal.TELAS.Compra;
-using CaféPatronal.TELAS.Consulta;
+//using CaféPatronal.TELAS.Consulta;
 using CaféPatronal.TELAS.Fluxo_de_Caixa_e_Folha_de_Pagamento;
 using CaféPatronal.TELAS.Gastos;
 using CaféPatronal.TELAS.MenuHistoriaSplash;

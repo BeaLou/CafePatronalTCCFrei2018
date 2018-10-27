@@ -17,27 +17,18 @@ namespace CaféPatronal.Programacao.Entregável_2.Compras
                 (
                 id_compra,
                 id_fornecedor,   
-                nm_compra,
-                qtd_unidade,     
-                vl_compra,
                 dt_compra
                 )
                 VALUES
                 (
                 @id_compra,
                 @id_fornecedor,   
-                @nm_compra,
-                @qtd_unidade,     
-                @vl_compra,
                 @dt_compra
                 )";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("id_compra", compras.id_compra));
             parms.Add(new MySqlParameter("id_fornecedor", compras.id_fornecedor));
-            parms.Add(new MySqlParameter("nm_compra", compras.nm_compra));
-            parms.Add(new MySqlParameter("qtd_unidade", compras.qtd_unidade));
-            parms.Add(new MySqlParameter("vl_compra", compras.vl_compra));
             parms.Add(new MySqlParameter("dt_compra", compras.dt_compra));
 
             Database db = new Database();
@@ -72,9 +63,6 @@ namespace CaféPatronal.Programacao.Entregável_2.Compras
                 ComprasDTO novacompra = new ComprasDTO();
                 novacompra.id_compra = reader.GetInt32("id_compra");
                 novacompra.id_fornecedor = reader.GetInt32("id_fornecedor");
-                novacompra.nm_compra = reader.GetString("nm_compra");
-                novacompra.qtd_unidade = reader.GetInt32("qtd_unidade");
-                novacompra.vl_compra = reader.GetDecimal("vl_compra");
                 novacompra.dt_compra = reader.GetDateTime("dt_compra");
 
                 compras.Add(novacompra);
@@ -89,9 +77,8 @@ namespace CaféPatronal.Programacao.Entregável_2.Compras
 
             string script =
                 @"SELECT * FROM tb_compra
-                  WHERE nm_compra like @nm_compra";
+                  WHERE dt_compra like @dt_compra";
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("nm_compra", "%" + compra + "%"));
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
             List<ComprasDTO> compras = new List<ComprasDTO>();
@@ -101,9 +88,6 @@ namespace CaféPatronal.Programacao.Entregável_2.Compras
                 ComprasDTO novacompra = new ComprasDTO();
                 novacompra.id_compra = reader.GetInt32("id_compra");
                 novacompra.id_fornecedor = reader.GetInt32("id_fornecedor");
-                novacompra.nm_compra = reader.GetString("nm_compra");
-                novacompra.qtd_unidade = reader.GetInt32("qtd_unidade");
-                novacompra.vl_compra = reader.GetDecimal("vl_compra");
                 novacompra.dt_compra = reader.GetDateTime("dt_compra");
 
                 compras.Add(novacompra);

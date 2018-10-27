@@ -1,4 +1,4 @@
-﻿drop database DBcafe;
+﻿ drop database DBcafe;
 create database DBcafe;
 use DBcafe;
 
@@ -51,7 +51,7 @@ CREATE TABLE `tb_fornecedor` (
 
 CREATE TABLE `tb_estoque` (
 	`id_estoque` INT NOT NULL AUTO_INCREMENT,
-	`id_compra` INT NOT NULL,
+	`id_produtocompra` INT NOT NULL,
 	`ds_quantidade` DECIMAL NOT NULL,
 	PRIMARY KEY (`id_estoque`)
 );
@@ -60,7 +60,7 @@ CREATE TABLE `tb_estoque` (
 CREATE TABLE `tb_produto` (
 	`id_produto` INT NOT NULL AUTO_INCREMENT,
 	`nm_nome` varchar(50) NOT NULL,
-	`ds_descricao` varchar(100) NOT NULL,
+	`ds_descricao` varchar(300) NOT NULL,
 	`vl_produto` DECIMAL NOT NULL,
 	PRIMARY KEY (`id_produto`)
 );
@@ -76,17 +76,15 @@ CREATE TABLE tb_pedido (
 CREATE TABLE `tb_compra` (
 	`id_compra` INT NOT NULL AUTO_INCREMENT,
 	`id_fornecedor` INT NOT NULL,
-	`nm_compra` varchar(50) NOT NULL,
-	`qtd_unidade` varchar(20) NOT NULL,
-	`vl_compra` DECIMAL NOT NULL,
 	`dt_compra` DATE NOT NULL,
 	PRIMARY KEY (`id_compra`)
 );
 
+
 CREATE TABLE `tb_compraitem` (
 	`id_compraitem` INT NOT NULL AUTO_INCREMENT,
 	`id_compra` INT NOT NULL,
-	`id_produto` INT NOT NULL,
+	`id_produtocompra` INT NOT NULL,
 	PRIMARY KEY (`id_compraitem`)
 );
 
@@ -119,6 +117,7 @@ CREATE TABLE tb_folhapagamento (
     `vl_ValeTransporte` DECIMAL NOT NULL,
     `vl_salarioliquido` DECIMAL NOT NULL,
     `ds_mes` varchar (20) NOT NULL,
+    `dt_pagamento` date NOT NULL,
     PRIMARY KEY (id_folhapagamento)
 );
 
@@ -126,9 +125,16 @@ create table `tb_dpto`(
 `nm_nome` varchar(30)
 );
 
+CREATE TABLE `tb_produtocompra` (
+	`id_produtocompra` INT NOT NULL AUTO_INCREMENT,
+	`nm_produtocompra` varchar(20) NOT NULL,
+	`vl_valor` DECIMAL NOT NULL,
+	PRIMARY KEY (`id_produtocompra`)
+);
 
 
-ALTER TABLE `tb_estoque` ADD CONSTRAINT `tb_estoque_fk0` FOREIGN KEY (`id_compra`) REFERENCES `tb_compra`(`id_compra`);
+
+ALTER TABLE `tb_estoque` ADD CONSTRAINT `tb_estoque_fk0` FOREIGN KEY (`id_produtocompra`) REFERENCES `tb_produtocompra`(`id_produtocompra`);
 
 ALTER TABLE `tb_pedido` ADD CONSTRAINT
  `tb_pedido_fk0` FOREIGN KEY (`id_cliente`) 
@@ -144,7 +150,7 @@ ALTER TABLE `tb_compra` ADD CONSTRAINT `tb_compra_fk0` FOREIGN KEY (`id_forneced
 
 ALTER TABLE `tb_compraitem` ADD CONSTRAINT `tb_compraitem_fk0` FOREIGN KEY (`id_compra`) REFERENCES `tb_compra`(`id_compra`);
 
-ALTER TABLE `tb_compraitem` ADD CONSTRAINT `tb_compraitem_fk1` FOREIGN KEY (`id_produto`) REFERENCES `tb_produto`(`id_produto`);
+ALTER TABLE `tb_compraitem` ADD CONSTRAINT `tb_compraitem_fk1` FOREIGN KEY (`id_produtocompra`) REFERENCES `tb_produtocompra`(`id_produtocompra`);
 
 
 Create view vw_consultar_folhapagamento as select
@@ -155,24 +161,6 @@ tb_folhapagamento.vl_salarioliquido
 from tb_funcionario
 JOIN tb_folhapagamento
 ON tb_folhapagamento.id_funcionario = tb_funcionario.id_funcionario;
-
-
-
-Create view vw_consultar_item as select
-tb_compra.id_compra,
-tb_produto.nm_nome,
-count(tb_compraitem.id_compraitem) as qtd_itens,
-sum(tb_produto.vl_produto) as vl_total
-from tb_compra
-Join tb_compraitem
-on tb_compraitem.id_compra = tb_compra.id_compra
-join tb_produto
-on tb_compraitem.id_produto = tb_produto.id_produto
-GROUP BY
-tb_compra.id_compra,
-tb_produto.nm_nome;
- 
-
 
  create view vw_consultar_item_pedido as select
  tb_pedido.id_pedido,
@@ -193,91 +181,36 @@ tb_produto.nm_nome;
  tb_cliente.nm_nome,
  tb_pedido.dt_venda,
  tb_pedido.ds_formapagamento;
- 
- select * from tb_estoque;
- select * from tb_produto;
- select * from tb_compra;
- Select nm_compra, nm_nome, ds_quantidade, tb_estoque.id_compra FROM tb_estoque 
-                                JOIN tb_compra 			p
-                                ON p.id_compra = tb_estoque.id_compra
-                                JOIN tb_fornecedor 			f
-                                ON f.id_fornecedor = p.id_fornecedor where nm_compra like "%";
 
-select * from vw_consultar_item_pedido;
-
-
-create view vw_consultar_estoque as 
-select sum(qtd_unidade) qtd_total, nm_compra
-from tb_compra
-group by
-nm_compra;
-
-Select * from vw_consultar_estoque;
                                         
-create view vw_ganhos as
-select date(dt_venda)		dt_referencia,
-			   sum(vl_produto) 	vl_total
-		  from tb_pedido		pe
-		  join tb_pedidoitem	pi
-			on pe.id_pedido 	= pi.id_pedido
-		  join tb_produto		p
-			on pi.id_produto 		= p.id_produto
-		 group
-			by date(dt_venda);
-create view vw_despesas as
-            select sum(vl_total) vl_total, dt_referencia
-            from
-            (
-select date(dt_compra)			dt_referencia,
-			   sum(vl_compra) 	vl_total
-		  from tb_compra		c
-		  join tb_compraitem	ci
-			on c.id_compra 		= ci.id_compra
-		  join tb_produto		p
-			on p.id_produto 		= ci.id_produto
-		 group
-			by date(dt_compra)
-         UNION
-         select date(dt_pagamento)	dt_referencia,
-			    sum(vl_gasto)		vl_total
-		   from tb_gasto
-		  group
-		  	 by date(dt_pagamento)
-             UNION
-         select date(dt_pagamento)	dt_referencia,
-			    sum(vl_salarioliquido)		vl_total
-		   from tb_folhapagamento
-		  group
-		  	 by dt_pagamento)despesa
-             GROUP BY dt_referencia;
-          
-          drop view vw_consultar_fluxodecaixa;
- create view vw_consultar_fluxodecaixa as
-   SELECT dt_referencia,
-		   ifnull(vl_total_ganhos, 0)		vl_total_ganhos,
-           ifnull(vl_total_despesas, 0)		vl_total_despesas,
-			IFNULL(vl_total_ganhos - vl_total_despesas, -vl_total_despesas) vl_saldo
-      FROM 
-        (
-			SELECT g.dt_referencia,
-				   g.vl_total		vl_total_ganhos,
-                   d.vl_total		vl_total_despesas
-			  FROM vw_ganhos		g		
-		 LEFT JOIN vw_despesas		d
-				ON g.dt_referencia  = d.dt_referencia
-			 UNION
-			SELECT d.dt_referencia,
-				   g.vl_total		vl_total_ganhos,
-                   d.vl_total		vl_total_despesas
-			  FROM vw_ganhos		g		
-		 RIGHT JOIN vw_despesas		d
-				ON g.dt_referencia  = d.dt_referencia
-        ) tb_Fluxo;
-select * from vw_consultar_fluxodecaixa;                     
-                     
-                     
-                     
-                     
+
+
+select * from tb_estoque;		-- (fk) id_produto_compra
+
+								-- tb_produto_compra	 (salame) (+)id_produto_compra,nm_produto,vl_produto,
+select * from tb_compra;		-- tb_pedido_compra		 (x) nm_compra, qtd_unidade, vl_compra
+select * from tb_compraitem;	-- tb_pedido_compra_item (x) id_produto (+) id_produto_compra
+
+-- VENDAS
+select * from tb_produto; -- tb_produto_venda
+select * from tb_pedido;  -- tb_pedido_venda
+select * from tb_pedidoitem; -- tb_pedido_venda_item
+
+
+INSERT INTO `tb_produto`(nm_nome,ds_descricao,vl_produto) VALUES("Batatas Assassinas","Batata frita com bacon e queijo cheddar
+acompanhado de uma porção de calabresa(opcional).",10);  
+INSERT INTO `tb_produto`(nm_nome,ds_descricao,vl_produto) VALUES("Aeronions","Anéis de cebola empanados acompanhado por molho barbecue da casa.",21);  
+INSERT INTO `tb_produto`(nm_nome,ds_descricao,vl_produto) VALUES("Red Hot Chilli Burguer","Hambúrguer artesanal, queijo cheddar, anéis de cebola empanados, bacon caramelizado, molho picante da casa, pão brioche artesanal.",19);  
+INSERT INTO `tb_produto`(nm_nome,ds_descricao,vl_produto) VALUES("The Chikens","Hambúrguer artesanal de frango, cebola caramelizada, alface, tomate, pão tradicional.Acompanha chips de batata doce com molho agridoce (opcional).",13);
+INSERT INTO `tb_produto`(nm_nome,ds_descricao,vl_produto) VALUES("Michael Pop's Kids","Hambúrguer artesanal, alface americana, tomate e pão americano.",14);    
+INSERT INTO `tb_produto`(nm_nome,ds_descricao,vl_produto) VALUES("Pink Floyd(vegano)","Hambúrguer de beterraba, alface, tomate, molho tradicional da casa, cebola roxa, pão tradicional.Acompanhado de grão de bico crocante..",25); 
+INSERT INTO `tb_produto`(nm_nome,ds_descricao,vl_produto) VALUES("Michael Pop's Super","Pão brioche, hambúrguer de carne, queijo provolone, alface americana, tomate,cebola e bacon fatiado.",23);  
+
+
+
+
+
+
 
 
 insert into `tb_dpto`(nm_nome) values ("T.I.");
@@ -329,8 +262,16 @@ VALUES ("Lacta","90.871.350/0001-16","(11)2943-1179","74475-816","Casa 1","237",
 "giovanaeduardamarlenesilva_@outlook.ind.br");
 
 
-insert into tb_estoque(id_compra, ds_quantidade) values (1,30);
+
 
 
 select *from tb_pedidoitem;
 
+
+
+
+
+
+                                
+                              
+                  

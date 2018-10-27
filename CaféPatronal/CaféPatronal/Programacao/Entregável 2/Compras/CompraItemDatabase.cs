@@ -17,19 +17,19 @@ namespace CaféPatronal.Programacao.Entregável_2.Compras
                 (
                 id_compraitem,
                 id_compra,   
-                id_produto  
+                id_produtocompra  
                 )
                 VALUES
                 (
                 @id_compraitem,
                 @id_compra,   
-                @id_produto
+                @id_produtocompra
                 )";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("id_compraitem", compras.id_compraitem));
             parms.Add(new MySqlParameter("id_compra", compras.id_compra));
-            parms.Add(new MySqlParameter("id_produto", compras.id_produto));
+            parms.Add(new MySqlParameter("id_produtocompra", compras.id_produtocompra));
 
 
             Database db = new Database();
@@ -40,10 +40,10 @@ namespace CaféPatronal.Programacao.Entregável_2.Compras
         public void Remover(int id)
         {
             string script =
-            @"DELETE FROM tb_compraitem WHERE id_compraitem = @id_compraitem";
+            @"DELETE FROM vw_consultar_item WHERE id_compra= @id_compra";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("id_compraitem", id));
+            parms.Add(new MySqlParameter("id_compra", id));
 
             Database db = new Database();
             db.ExecuteInsertScript(script, parms);
@@ -65,7 +65,7 @@ namespace CaféPatronal.Programacao.Entregável_2.Compras
                 CompraItemDTO novacompra = new CompraItemDTO();
                 novacompra.id_compraitem = reader.GetInt32("id_compraitem");
                 novacompra.id_compra = reader.GetInt32("id_compra");
-                novacompra.id_produto = reader.GetInt32("id_produto");
+                novacompra.id_produtocompra = reader.GetInt32("id_produtocompra");
 
                 compras.Add(novacompra);
 
@@ -91,15 +91,13 @@ namespace CaféPatronal.Programacao.Entregável_2.Compras
                 CompraItemDTO novacompra = new CompraItemDTO();
                 novacompra.id_compraitem = reader.GetInt32("id_compraitem");
                 novacompra.id_compra = reader.GetInt32("id_compra");
-                novacompra.id_produto = reader.GetInt32("id_produto");
+                novacompra.id_produtocompra = reader.GetInt32("id_produtocompra");
 
                 compras.Add(novacompra);
 
             }
-            reader.Close();
             return compras;
         }
-
 
         public void Alterar(CompraItemDTO compra)
         {
@@ -108,45 +106,43 @@ namespace CaféPatronal.Programacao.Entregável_2.Compras
                  SET 
                   id_compraitem = @id_compraitem,
                   id_compra = @id_compra,
-                  id_produto = @id_produto,
+                  id_produtocompra = @id_produtocompra,
                   WHERE id_compraitem = @id_compraitem";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("id_compraitem", compra.id_compraitem));
             parms.Add(new MySqlParameter("id_compra", compra.id_compra));
-            parms.Add(new MySqlParameter("id_produto", compra.id_produto));
+            parms.Add(new MySqlParameter("id_produtocompra", compra.id_produtocompra));
 
             Database db = new Database();
             db.ExecuteInsertScript(script, parms);
         }
+        //public List<VwConsultarItem> ConsultarView(string produto)
+        //{
+
+        //    string script =
+        //        @"SELECT * FROM vw_consultar_item
+        //          WHERE nm_nome like @nm_nome";
+        //    List<MySqlParameter> parms = new List<MySqlParameter>();
+        //    parms.Add(new MySqlParameter("nm_nome", "%" + produto + "%"));
+        //    Database db = new Database();
+        //    MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
+        //List<VwConsultarItem> compras = new List<VwConsultarItem>();
+        //while (reader.Read())
+        //{
+
+        //    VwConsultarItem novacompra = new VwConsultarItem();
+        //    novacompra.nm_nome= reader.GetString("nm_nome");
+        //    novacompra.id_compra = reader.GetInt32("id_compra");
+        //    novacompra.qtd_itens = reader.GetInt32("qtd_itens");
+        //    novacompra.vl_total = reader.GetDecimal("vl_total");
 
 
-        public List<VwConsultarItem> ConsultarView(string produto)
-        {
+        //    compras.Add(novacompra);
 
-            string script =
-                @"SELECT * FROM vw_consultar_item
-                  WHERE nm_nome like @nm_nome";
-            List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("nm_nome", "%" + produto + "%"));
-            Database db = new Database();
-            MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
-            List<VwConsultarItem> compras = new List<VwConsultarItem>();
-            while (reader.Read())
-            {
-
-                VwConsultarItem novacompra = new VwConsultarItem();
-                novacompra.nm_nome = reader.GetString("nm_nome");
-                novacompra.id_compra = reader.GetInt32("id_compra");
-                novacompra.qtd_itens = reader.GetInt32("qtd_itens");
-                novacompra.vl_total = reader.GetDecimal("vl_total");
-
-
-                compras.Add(novacompra);
-
-            }
-            reader.Close();
-            return compras;
-        }
+        //}
+        //reader.Close();
+        //return compras;
+        //}
     }
 }

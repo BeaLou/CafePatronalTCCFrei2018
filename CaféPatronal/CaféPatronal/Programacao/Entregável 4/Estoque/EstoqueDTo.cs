@@ -8,10 +8,10 @@ namespace Loja_de_roupas.DB.Estoque
 {
     class EstoqueDTO
     {
-        public int Id{ get; set; }
+        public int id_estoque { get; set; }
 
-        public int id_compra{ get; set; }
+        public int id_produtocompra { get; set; }
 
-        public int Quantidade{ get; set; }
+        public decimal ds_quantidade { get; set; }
     }
 }

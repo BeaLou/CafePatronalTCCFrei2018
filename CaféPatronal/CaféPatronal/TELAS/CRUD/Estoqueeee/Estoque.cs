@@ -1,7 +1,5 @@
 ﻿using CaféPatronal.Programacao;
 using CaféPatronal.Programacao.Produto;
-using Loja_de_roupas.DB.Estoque;
-using mecanica.DB.Programação.Estoque;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -64,30 +62,30 @@ namespace CaféPatronal.TELAS
 
         private void btnConsultarestoque_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (txtConsultarEstoque.Text == string.Empty)
-                {
-                    EstoqueBusiness businessw = new EstoqueBusiness();
-                    List<vwEstoque> vww = businessw.Listar();
+            //try
+            //{
+            //    if (txtConsultarEstoque.Text == string.Empty)
+            //    {
+            //        EstoqueBusiness businessw = new EstoqueBusiness();
+            //        List<vwEstoque> vww = businessw.Listar();
 
-                    dgvconsultaestoq.AutoGenerateColumns = false;
-                    dgvconsultaestoq.DataSource = vww;
-                }
-                else
-                {
-                    EstoqueBusiness business = new EstoqueBusiness();
-                    List<vwEstoque> vw = business.Consultar(txtConsultarEstoque.Text);
+            //        dgvconsultaestoq.AutoGenerateColumns = false;
+            //        dgvconsultaestoq.DataSource = vww;
+            //    }
+            //    else
+            //    {
+            //        EstoqueBusiness business = new EstoqueBusiness();
+            //        List<vwEstoque> vw = business.Consultar(txtConsultarEstoque.Text);
 
-                    dgvconsultaestoq.AutoGenerateColumns = false;
-                    dgvconsultaestoq.DataSource = vw;
-                }
-            }
+            //        dgvconsultaestoq.AutoGenerateColumns = false;
+            //        dgvconsultaestoq.DataSource = vw;
+            //    }
+            //}
 
-            catch(Exception ex)
-            {
-                MessageBox.Show("Ocorreu um erro: " + ex.Message);
-            }
+            //catch(Exception ex)
+            //{
+            //    MessageBox.Show("Ocorreu um erro: " + ex.Message);
+            //}
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
