@@ -65,10 +65,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Programacao\Entregável 2\Compras\CompraItemBusiness.cs" />
-    <Compile Include="Programacao\Entregável 2\Compras\CompraItemDatabase.cs" />
-    <Compile Include="Programacao\Entregável 2\Compras\CompraItemDTO.cs" />
-    <Compile Include="Programacao\Entregável 2\Compras\VwConsultarItem.cs" />
+    <Compile Include="Programacao\Entregável 2\Compras\Compraitem\CompraItemBusiness.cs" />
+    <Compile Include="Programacao\Entregável 2\Compras\Compraitem\CompraItemDatabase.cs" />
+    <Compile Include="Programacao\Entregável 2\Compras\Compraitem\CompraItemDTO.cs" />
+    <Compile Include="Programacao\Entregável 2\Compras\Compraitem\VwConsultarItem.cs" />
+    <Compile Include="Programacao\Entregável 2\Compras\ProdutoCompra\ProdutoCompraBusiness.cs" />
+    <Compile Include="Programacao\Entregável 2\Compras\ProdutoCompra\ProdutoCompraDatabase.cs" />
+    <Compile Include="Programacao\Entregável 2\Compras\ProdutoCompra\ProdutoCompraDTO.cs" />
     <Compile Include="Programacao\Entregável 3\Cliente\ClienteBusiness.cs" />
     <Compile Include="Programacao\Entregável 3\Cliente\ClienteDatabase.cs" />
     <Compile Include="Programacao\Entregável 3\Cliente\ClienteDTO.cs" />
@@ -77,9 +80,9 @@
     <Compile Include="Programacao\Entregável 1\Dpto\DptoBusiness.cs" />
     <Compile Include="Programacao\Entregável 1\Dpto\DptoDatabase.cs" />
     <Compile Include="Programacao\Entregável 1\Dpto\DptoDTO.cs" />
-    <Compile Include="Programacao\Entregável 2\Compras\ComprasBusiness.cs" />
-    <Compile Include="Programacao\Entregável 2\Compras\ComprasDatabase.cs" />
-    <Compile Include="Programacao\Entregável 2\Compras\ComprasDTO.cs" />
+    <Compile Include="Programacao\Entregável 2\Compras\Comprasss\ComprasBusiness.cs" />
+    <Compile Include="Programacao\Entregável 2\Compras\Comprasss\ComprasDatabase.cs" />
+    <Compile Include="Programacao\Entregável 2\Compras\Comprasss\ComprasDTO.cs" />
     <Compile Include="Programacao\Entregável 3\PedidoItem\VwConsultarItem.cs" />
     <Compile Include="Programacao\Entregável 1\FolhaPagamento\FolhaPagamentoBusiness.cs" />
     <Compile Include="Programacao\Entregável 1\FolhaPagamento\FolhaPagamentoDatabase.cs" />
@@ -351,5 +354,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

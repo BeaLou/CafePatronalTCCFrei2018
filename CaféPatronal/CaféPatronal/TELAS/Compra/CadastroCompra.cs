@@ -334,6 +334,13 @@ namespace CaféPatronal.TELAS.Compra
         {
             //v.numeros(e);
         }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+             Form1 tela = new Form1();
+            tela.Show();
+            this.Hide();
+        }
     }
 }
 
