@@ -21,11 +21,11 @@ namespace CaféPatronal.TELAS.Compra
         //BindingList<ComprasDTO> produtosCarrinho = new BindingList<ComprasDTO>();
         //decimal valortotal = 0;
         //Validação v = new Validação();
-        //public CadastroCompra()
-        //{
-        //    InitializeComponent();
-        //    CarregarCombos();
-        //}
+        public CadastroCompra()
+        {
+            InitializeComponent();
+           
+        }
         //void CarregarCombos()
         //{
         //    FOrnecedorBusiness bus = new FOrnecedorBusiness();

@@ -46,7 +46,7 @@
             this.lblEmail.AutoSize = true;
             this.lblEmail.BackColor = System.Drawing.Color.Transparent;
             this.lblEmail.Font = new System.Drawing.Font("Agency FB", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(106, 216);
+            this.lblEmail.Location = new System.Drawing.Point(106, 179);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(118, 44);
             this.lblEmail.TabIndex = 0;
@@ -58,7 +58,7 @@
             this.lblsenha.BackColor = System.Drawing.Color.Transparent;
             this.lblsenha.Font = new System.Drawing.Font("Agency FB", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblsenha.ForeColor = System.Drawing.Color.Black;
-            this.lblsenha.Location = new System.Drawing.Point(125, 318);
+            this.lblsenha.Location = new System.Drawing.Point(125, 281);
             this.lblsenha.Name = "lblsenha";
             this.lblsenha.Size = new System.Drawing.Size(99, 44);
             this.lblsenha.TabIndex = 1;
@@ -67,7 +67,7 @@
             // txtUsuarioLogin
             // 
             this.txtUsuarioLogin.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuarioLogin.Location = new System.Drawing.Point(230, 222);
+            this.txtUsuarioLogin.Location = new System.Drawing.Point(230, 185);
             this.txtUsuarioLogin.MaxLength = 20;
             this.txtUsuarioLogin.Name = "txtUsuarioLogin";
             this.txtUsuarioLogin.Size = new System.Drawing.Size(200, 32);
@@ -76,7 +76,7 @@
             // txtSenha
             // 
             this.txtSenha.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha.Location = new System.Drawing.Point(230, 324);
+            this.txtSenha.Location = new System.Drawing.Point(230, 287);
             this.txtSenha.MaxLength = 20;
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
