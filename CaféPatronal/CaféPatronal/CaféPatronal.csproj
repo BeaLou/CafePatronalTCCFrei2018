@@ -50,7 +50,7 @@
     <ApplicationIcon>Resources\whatsapp_image_2018_08_29_at_23_17_37_1_pWI_icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.10.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.SqlXml" />
@@ -65,6 +65,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Programacao\API\Email.cs" />
     <Compile Include="Programacao\Entregável 2\Compras\Compraitem\CompraItemBusiness.cs" />
     <Compile Include="Programacao\Entregável 2\Compras\Compraitem\CompraItemDatabase.cs" />
     <Compile Include="Programacao\Entregável 2\Compras\Compraitem\CompraItemDTO.cs" />
@@ -115,6 +116,12 @@
     <Compile Include="Programacao\Objetos\FolhaPagamento.cs" />
     <Compile Include="Programacao\Objetos\UserSession.cs" />
     <Compile Include="Programacao\Objetos\Validação.cs" />
+    <Compile Include="TELAS\API\Email.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\API\Email.Designer.cs">
+      <DependentUpon>Email.cs</DependentUpon>
+    </Compile>
     <Compile Include="TELAS\Compra\CadastroCompra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -241,6 +248,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="TELAS\API\Email.resx">
+      <DependentUpon>Email.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TELAS\Compra\CadastroCompra.resx">
       <DependentUpon>CadastroCompra.cs</DependentUpon>
     </EmbeddedResource>
@@ -339,6 +349,12 @@
     <None Include="Resources\2.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Programacao\API\email.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Programacao\API\emailicon.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Programacao\BD\ConnectionDB\ScriptBD.txt" />
     <Content Include="Resources\whatsapp_image_2018_08_29_at_23_17_37_1_pWI_icon.ico" />
   </ItemGroup>

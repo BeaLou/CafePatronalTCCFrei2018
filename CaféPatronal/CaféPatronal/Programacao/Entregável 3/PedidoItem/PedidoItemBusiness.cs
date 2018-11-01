@@ -38,11 +38,7 @@ namespace CaféPatronal.Programacao.PedidoItem
         }
         public List<VwConsultarItem> ConsultarItem (int comandaid)
         {
-            if(comandaid == null)
-            {
-                comandaid = 0;
-            }
-
+          
             return db.ConsultarItem(comandaid);
         }
         public List<VwConsultarItem> ListarItem()

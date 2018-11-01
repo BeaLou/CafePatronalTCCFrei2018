@@ -1,12 +1,14 @@
 ﻿
 using CaféPatronal.Programacao;
 using CaféPatronal.TELAS;
+using CaféPatronal.TELAS.API;
 using CaféPatronal.TELAS.Cadastro_e_Consulta;
 using CaféPatronal.TELAS.Compra;
 //using CaféPatronal.TELAS.Consulta;
 using CaféPatronal.TELAS.Fluxo_de_Caixa_e_Folha_de_Pagamento;
 using CaféPatronal.TELAS.Gastos;
 using CaféPatronal.TELAS.MenuHistoriaSplash;
+using Nsf._2018.Modulo2.DB.Filosofia.Plugin;
 using System;
 using System.Windows.Forms;
 
@@ -145,6 +147,13 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         private void button1_Click_1(object sender, EventArgs e)
         {
             CadastroCompra tela = new CadastroCompra();
+            tela.Show();
+            this.Hide();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Enviar_Email tela = new Enviar_Email();
             tela.Show();
             this.Hide();
         }
