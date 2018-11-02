@@ -24,5 +24,14 @@ namespace CaféPatronal.Programacao.Entregável_2.Compras.ProdutoCompra
             return db.Salvar(produtoCompra);
 
         }
+        public List<ProdutoCompraDTO> Consultar(string produtocompra)
+        {
+            return db.Consultar(produtocompra);
+        }
+        public void Remover(int id)
+        {
+            db.Remover(id);
+        }
+
     }
 }

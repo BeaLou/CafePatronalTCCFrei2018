@@ -45,7 +45,7 @@
             // 
             this.lblAnexo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblAnexo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblAnexo.Location = new System.Drawing.Point(241, 185);
+            this.lblAnexo.Location = new System.Drawing.Point(340, 172);
             this.lblAnexo.Margin = new System.Windows.Forms.Padding(4);
             this.lblAnexo.Name = "lblAnexo";
             this.lblAnexo.Size = new System.Drawing.Size(319, 20);
@@ -57,7 +57,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Agency FB", 18F);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(132, 175);
+            this.label3.Location = new System.Drawing.Point(231, 162);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 28);
@@ -67,7 +67,7 @@
             // txtMensagem
             // 
             this.txtMensagem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMensagem.Location = new System.Drawing.Point(241, 221);
+            this.txtMensagem.Location = new System.Drawing.Point(340, 208);
             this.txtMensagem.Margin = new System.Windows.Forms.Padding(4);
             this.txtMensagem.Multiline = true;
             this.txtMensagem.Name = "txtMensagem";
@@ -77,7 +77,7 @@
             // txtAssunto
             // 
             this.txtAssunto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtAssunto.Location = new System.Drawing.Point(241, 132);
+            this.txtAssunto.Location = new System.Drawing.Point(340, 119);
             this.txtAssunto.Margin = new System.Windows.Forms.Padding(4);
             this.txtAssunto.Name = "txtAssunto";
             this.txtAssunto.Size = new System.Drawing.Size(319, 20);
@@ -90,7 +90,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Agency FB", 18F);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(95, 230);
+            this.label2.Location = new System.Drawing.Point(194, 217);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(102, 28);
@@ -103,7 +103,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Agency FB", 18F);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(116, 124);
+            this.label1.Location = new System.Drawing.Point(215, 111);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 28);
@@ -116,7 +116,7 @@
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Agency FB", 18F);
             this.btnSalvar.ForeColor = System.Drawing.Color.Black;
-            this.btnSalvar.Location = new System.Drawing.Point(595, 361);
+            this.btnSalvar.Location = new System.Drawing.Point(694, 348);
             this.btnSalvar.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(81, 36);
@@ -128,7 +128,7 @@
             // txtPara
             // 
             this.txtPara.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPara.Location = new System.Drawing.Point(241, 80);
+            this.txtPara.Location = new System.Drawing.Point(340, 67);
             this.txtPara.Margin = new System.Windows.Forms.Padding(4);
             this.txtPara.Name = "txtPara";
             this.txtPara.Size = new System.Drawing.Size(319, 20);
@@ -140,7 +140,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Agency FB", 18F);
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(86, 72);
+            this.label5.Location = new System.Drawing.Point(185, 59);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(111, 28);
@@ -153,7 +153,7 @@
             this.btnVoltar.BackgroundImage = global::CaféPatronal.Properties.Resources.icon3;
             this.btnVoltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVoltar.Location = new System.Drawing.Point(832, 80);
+            this.btnVoltar.Location = new System.Drawing.Point(968, 12);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(59, 57);
             this.btnVoltar.TabIndex = 41;

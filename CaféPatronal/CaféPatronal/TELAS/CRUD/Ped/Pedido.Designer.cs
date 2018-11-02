@@ -141,7 +141,7 @@
             this.groupBox2.Controls.Add(this.cmbClientes);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Location = new System.Drawing.Point(216, 58);
+            this.groupBox2.Location = new System.Drawing.Point(8, 45);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(691, 308);
             this.groupBox2.TabIndex = 37;

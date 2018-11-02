@@ -8,7 +8,6 @@ namespace CaféPatronal.Programacao.Entregável_2.Compras
 {
     public class CompraItemDTO
     {
-        //VAI DA OS PROP TAB TAB NÉ SAFADA
         public int id_compraitem { get; set; }
         public int id_compra { get; set; }
         public int id_produtocompra { get; set; }

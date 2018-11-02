@@ -49,6 +49,7 @@ namespace CaféPatronal.TELAS
 
         private void btnConsularFluxo_Click(object sender, EventArgs e)
         {
+
             try
             {
                 FluxoCaixaBusiness business = new FluxoCaixaBusiness();
@@ -76,6 +77,7 @@ namespace CaféPatronal.TELAS
             {
                 MessageBox.Show("Ocorreu um erro: " + ex.Message);
             }
+
 
         }
     }

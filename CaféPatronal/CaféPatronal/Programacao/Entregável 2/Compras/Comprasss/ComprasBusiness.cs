@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CaféPatronal.Programacao.Entregável_2.Compras.ProdutoCompra;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,41 +7,27 @@ using System.Threading.Tasks;
 
 namespace CaféPatronal.Programacao.Entregável_2.Compras
 {
-   public class ComprasBusiness
+    class ComprasBusiness
     {
-       ComprasDatabase db = new ComprasDatabase();
+        ComprasDatabase db = new ComprasDatabase();
 
-        public int Salvar(ComprasDTO compra)
+        public int Salvar(ComprasDTO compra, List<ProdutoCompraDTO> produtos)
         {
-            if (compra.dt_compra == DateTime.Now)
+            int idCompra = db.Salvar(compra);
+
+            CompraItemBusiness compraitemBusiness = new CompraItemBusiness();
+            foreach (ProdutoCompraDTO item in produtos)
             {
-                throw new ArgumentException("Nome da compra é obrigatório.");
+                CompraItemDTO compraitemDTO = new CompraItemDTO();
+                compraitemDTO.id_compra = idCompra;
+                compraitemDTO.id_produtocompra = item.id_produtocompra;
+
+                compraitemBusiness.Salvar(compraitemDTO);
             }
-
-            return db.Salvar(compra);
-
+            return idCompra;
         }
 
-        //public int SalvarItem(CompraItemDTO produto, List<ComprasDTO> compras)
-        //{
 
-
-
-        //    int id_compra = produto.id_compra;
-
-
-        //    CompraItemBusiness itemBusiness = new CompraItemBusiness();
-        //    foreach (ComprasDTO item in compras)
-        //    {
-        //        CompraItemDTO itemDto = new CompraItemDTO();
-        //        itemDto.id_compra = item.id_compra;
-        //        itemDto.id_produtocompra = id_produtocompra;
-
-        //        itemBusiness.Salvar(itemDto);
-        //    }
-
-        //    return id_produtocompra;
-        //}
 
         public List<ComprasDTO> Consultar(string compra)
         {

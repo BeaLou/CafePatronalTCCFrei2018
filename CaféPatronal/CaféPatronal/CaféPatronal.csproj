@@ -50,7 +50,11 @@
     <ApplicationIcon>Resources\whatsapp_image_2018_08_29_at_23_17_37_1_pWI_icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=6.10.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data.EntityFramework, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySQL.Data.EntityFrameworkCore, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySQL.Data.EntityFrameworkCore.Design, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Web, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.SqlXml" />
@@ -95,6 +99,7 @@
     <Compile Include="Programacao\Entregável 4\Estoque\EstoqueBusiness.cs" />
     <Compile Include="Programacao\Entregável 4\Estoque\EstoqueDatabase.cs" />
     <Compile Include="Programacao\Entregável 4\Estoque\EstoqueDTO.cs" />
+    <Compile Include="Programacao\Entregável 4\Estoque\vwconsultarestoque.cs" />
     <Compile Include="Programacao\Entregável 4\FluxoCaixa\FluxoCaixaBusiness.cs" />
     <Compile Include="Programacao\Entregável 4\FluxoCaixa\FluxoCaixaDatabase.cs" />
     <Compile Include="Programacao\Entregável 4\FluxoCaixa\FluxoCaixaVw.cs" />

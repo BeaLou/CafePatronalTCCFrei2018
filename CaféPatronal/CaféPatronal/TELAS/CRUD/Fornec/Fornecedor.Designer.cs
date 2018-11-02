@@ -278,7 +278,7 @@
             this.btnSalvarFornecedores.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSalvarFornecedores.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvarFornecedores.Image")));
             this.btnSalvarFornecedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalvarFornecedores.Location = new System.Drawing.Point(928, 385);
+            this.btnSalvarFornecedores.Location = new System.Drawing.Point(923, 380);
             this.btnSalvarFornecedores.Name = "btnSalvarFornecedores";
             this.btnSalvarFornecedores.Size = new System.Drawing.Size(126, 36);
             this.btnSalvarFornecedores.TabIndex = 8;

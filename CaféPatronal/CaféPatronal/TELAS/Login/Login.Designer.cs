@@ -58,7 +58,7 @@
             this.lblsenha.BackColor = System.Drawing.Color.Transparent;
             this.lblsenha.Font = new System.Drawing.Font("Agency FB", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblsenha.ForeColor = System.Drawing.Color.Black;
-            this.lblsenha.Location = new System.Drawing.Point(125, 281);
+            this.lblsenha.Location = new System.Drawing.Point(125, 265);
             this.lblsenha.Name = "lblsenha";
             this.lblsenha.Size = new System.Drawing.Size(99, 44);
             this.lblsenha.TabIndex = 1;
@@ -76,7 +76,7 @@
             // txtSenha
             // 
             this.txtSenha.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha.Location = new System.Drawing.Point(230, 287);
+            this.txtSenha.Location = new System.Drawing.Point(230, 271);
             this.txtSenha.MaxLength = 20;
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';

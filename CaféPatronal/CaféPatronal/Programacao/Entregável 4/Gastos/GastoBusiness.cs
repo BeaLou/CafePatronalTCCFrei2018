@@ -15,19 +15,19 @@ namespace CaféPatronal.Programacao.Entregável_4.Gastos
 
             if (dto.Gasto == string.Empty)
             {
-                throw new ArgumentException("Gasto é obrigatório", "Lottus Store");
+                throw new ArgumentException("Gasto é obrigatório", "Café Patronal");
             }
             if (dto.Tipo == string.Empty)
             {
-                throw new ArgumentException("Tipo é obrigatório", "Lottus Store");
+                throw new ArgumentException("Tipo é obrigatório", "Café Patronal");
             }
             if (dto.Valor == 0)
             {
-                throw new ArgumentException("Valor é obrigatório", "Lottus Store");
+                throw new ArgumentException("Valor é obrigatório", "Café Patronal");
             }
             if (dto.Pagamento > DateTime.Now)
             {
-                throw new ArgumentException("Data muito avançada", "Lottus Store");
+                throw new ArgumentException("Data muito avançada", "Café Patronal");
             }
 
             return db.Salvar(dto);

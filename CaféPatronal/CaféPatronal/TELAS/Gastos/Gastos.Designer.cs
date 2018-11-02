@@ -279,7 +279,7 @@
             this.Column2,
             this.Column3,
             this.Column4});
-            this.dgvconsultaestoq.Location = new System.Drawing.Point(22, 119);
+            this.dgvconsultaestoq.Location = new System.Drawing.Point(22, 107);
             this.dgvconsultaestoq.Name = "dgvconsultaestoq";
             this.dgvconsultaestoq.ReadOnly = true;
             this.dgvconsultaestoq.Size = new System.Drawing.Size(1022, 322);
@@ -323,7 +323,7 @@
             this.btnConsultarestoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultarestoque.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultarestoque.Image")));
             this.btnConsultarestoque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultarestoque.Location = new System.Drawing.Point(484, 76);
+            this.btnConsultarestoque.Location = new System.Drawing.Point(484, 64);
             this.btnConsultarestoque.Name = "btnConsultarestoque";
             this.btnConsultarestoque.Size = new System.Drawing.Size(107, 38);
             this.btnConsultarestoque.TabIndex = 2;
@@ -335,7 +335,7 @@
             // txtConsultarEstoque
             // 
             this.txtConsultarEstoque.BackColor = System.Drawing.Color.Ivory;
-            this.txtConsultarEstoque.Location = new System.Drawing.Point(22, 79);
+            this.txtConsultarEstoque.Location = new System.Drawing.Point(22, 67);
             this.txtConsultarEstoque.MaxLength = 50;
             this.txtConsultarEstoque.Name = "txtConsultarEstoque";
             this.txtConsultarEstoque.Size = new System.Drawing.Size(456, 32);

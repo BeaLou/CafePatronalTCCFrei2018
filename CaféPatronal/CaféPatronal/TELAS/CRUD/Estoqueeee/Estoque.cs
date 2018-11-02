@@ -1,4 +1,6 @@
 ﻿using CaféPatronal.Programacao;
+using CaféPatronal.Programacao.Entregável_2.Compras.ProdutoCompra;
+using CaféPatronal.Programacao.Entregável_4.Estoque;
 using CaféPatronal.Programacao.Produto;
 using Loja_de_roupas.DB.Estoque;
 using System;
@@ -17,10 +19,12 @@ namespace CaféPatronal.TELAS
         }
         void CarregarCombos()
         {
-            ProdutoBusiness  bus = new ProdutoBusiness();
-            List<ProdutoDTO> lista = bus.Listar();
-            cbProduto.DisplayMember = nameof(ProdutoDTO.nm_nome);
-            cbProduto.DataSource = lista;
+            ProdutoCompraBusiness busi = new ProdutoCompraBusiness();
+            List<Programacao.Entregável_2.Compras.ProdutoCompra.ProdutoCompraDTO> list = busi.Consultar(string.Empty);
+            cbProduto.DisplayMember = nameof(ProdutoCompraDTO.nm_produtocompra);
+            cbProduto.ValueMember = nameof(ProdutoCompraDTO.id_produtocompra);
+            cbProduto.DataSource = list;
+
         }
         private void Consulta_de_Estoque_Load(object sender, EventArgs e)
         {
@@ -63,44 +67,18 @@ namespace CaféPatronal.TELAS
 
         private void btnConsultarestoque_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    if (txtConsultarEstoque.Text == string.Empty)
-            //    {
-            //        EstoqueBusiness businessw = new EstoqueBusiness();
-            //        List<vwEstoque> vww = businessw.Listar();
-
-            //        dgvconsultaestoq.AutoGenerateColumns = false;
-            //        dgvconsultaestoq.DataSource = vww;
-            //    }
-            //    else
-            //    {
-            //        EstoqueBusiness business = new EstoqueBusiness();
-            //        List<vwEstoque> vw = business.Consultar(txtConsultarEstoque.Text);
-
-            //        dgvconsultaestoq.AutoGenerateColumns = false;
-            //        dgvconsultaestoq.DataSource = vw;
-            //    }
-            //}
-
-            //catch(Exception ex)
-            //{
-            //    MessageBox.Show("Ocorreu um erro: " + ex.Message);
-            //}
-
             try
             {
                 EstoqueBusiness business = new EstoqueBusiness();
-                List<EstoqueDTO> a = business.Consultar(txtConsultarEstoque.Text);
-                dgvconsultaestoq.AutoGenerateColumns = false;
-                dgvconsultaestoq.DataSource = a;
+                List<vwconsultarestoque> a = business.ConsultarEstoque(txtConsultarEstoque.Text);
+                dgvué.AutoGenerateColumns = false;
+                dgvué.DataSource = a;
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Ocorreu um erro: " + ex.Message);
             }
-
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -108,6 +86,55 @@ namespace CaféPatronal.TELAS
             Form1 tela = new Form1();
             tela.Show();
             this.Hide();
+        }
+
+        private void BtnSalvarCompra_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (lblAtual.Text == "0")
+                {
+                    MessageBox.Show("Pesquise o Produto de compra");
+                }
+                if (nudQtd.Value == 0)
+                {
+                    MessageBox.Show("Coloque o valor para retirar");
+                }
+
+                else
+                {
+                    ProdutoCompraDTO dto = cbProduto.SelectedItem as ProdutoCompraDTO;
+                    EstoqueDTO estoque = new EstoqueDTO();
+                    EstoqueBusiness business = new EstoqueBusiness();
+                    estoque.id_produtocompra = dto.id_produtocompra;
+                    estoque.ds_quantidade = Convert.ToDecimal(lblAtual.Text) - nudQtd.Value;
+                    business.Alterar(estoque);
+                    MessageBox.Show("Estoque alterado com sucesso");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro: " + ex.Message);
+            }
+        }
+
+        private void Pesquisar_Click(object sender, EventArgs e)
+        {
+            ProdutoCompraDTO dto = cbProduto.SelectedItem as ProdutoCompraDTO;
+            EstoqueBusiness business = new EstoqueBusiness();
+            vwconsultarestoque view = business.ConsultarEstoqueView(dto.nm_produtocompra);
+            lblAtual.Text = view.ds_quantidade.ToString();
+        }
+
+        private void cbProduto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            V.letras(e);
+        }
+
+        private void nudQtd_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            V.numeros(e);
         }
     }
 }

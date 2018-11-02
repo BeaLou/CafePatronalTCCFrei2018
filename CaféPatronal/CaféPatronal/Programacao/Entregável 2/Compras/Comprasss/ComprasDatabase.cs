@@ -18,18 +18,21 @@ namespace CaféPatronal.Programacao.Entregável_2.Compras
                 id_compra,
                 id_fornecedor,   
                 dt_compra
+                
                 )
                 VALUES
                 (
                 @id_compra,
                 @id_fornecedor,   
                 @dt_compra
+                
                 )";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("id_compra", compras.id_compra));
             parms.Add(new MySqlParameter("id_fornecedor", compras.id_fornecedor));
             parms.Add(new MySqlParameter("dt_compra", compras.dt_compra));
+           
 
             Database db = new Database();
             int pk = db.ExecuteInsertScriptWithPk(script, parms);
@@ -64,6 +67,7 @@ namespace CaféPatronal.Programacao.Entregável_2.Compras
                 novacompra.id_compra = reader.GetInt32("id_compra");
                 novacompra.id_fornecedor = reader.GetInt32("id_fornecedor");
                 novacompra.dt_compra = reader.GetDateTime("dt_compra");
+                
 
                 compras.Add(novacompra);
 
@@ -89,7 +93,7 @@ namespace CaféPatronal.Programacao.Entregável_2.Compras
                 novacompra.id_compra = reader.GetInt32("id_compra");
                 novacompra.id_fornecedor = reader.GetInt32("id_fornecedor");
                 novacompra.dt_compra = reader.GetDateTime("dt_compra");
-
+                
                 compras.Add(novacompra);
 
             }

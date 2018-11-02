@@ -276,7 +276,7 @@
             this.button2.Location = new System.Drawing.Point(742, 35);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(107, 38);
-            this.button2.TabIndex = 3;
+            this.button2.TabIndex = 4;
             this.button2.Text = "Alterar";
             this.button2.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.button2.UseVisualStyleBackColor = true;
@@ -291,7 +291,7 @@
             this.button1.Location = new System.Drawing.Point(633, 35);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(107, 38);
-            this.button1.TabIndex = 2;
+            this.button1.TabIndex = 3;
             this.button1.Text = "Apagar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.button1.UseVisualStyleBackColor = true;
@@ -350,7 +350,7 @@
             this.btnConsultarFornece.Location = new System.Drawing.Point(520, 35);
             this.btnConsultarFornece.Name = "btnConsultarFornece";
             this.btnConsultarFornece.Size = new System.Drawing.Size(107, 38);
-            this.btnConsultarFornece.TabIndex = 10;
+            this.btnConsultarFornece.TabIndex = 2;
             this.btnConsultarFornece.Text = "Consultar";
             this.btnConsultarFornece.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnConsultarFornece.UseVisualStyleBackColor = true;

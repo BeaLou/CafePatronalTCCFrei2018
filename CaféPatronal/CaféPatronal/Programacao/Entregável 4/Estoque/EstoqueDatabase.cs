@@ -1,4 +1,5 @@
 ﻿using CaféPatronal.Programacao.ConnectionDB;
+using CaféPatronal.Programacao.Entregável_4.Estoque;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -19,7 +20,7 @@ namespace Loja_de_roupas.DB.Estoque
                 (@id_produtocompra, @ds_quantidade)";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("id_compra", dto.id_produtocompra));
+            parms.Add(new MySqlParameter("id_produtocompra", dto.id_produtocompra));
             parms.Add(new MySqlParameter("ds_quantidade", dto.ds_quantidade));
 
             Database db = new Database();
@@ -38,6 +39,7 @@ namespace Loja_de_roupas.DB.Estoque
             Database db = new Database();
             db.ExecuteInsertScript(script, parms);
         }
+
 
         public List<EstoqueDTO> Consultar(string estoq)
         {
@@ -61,6 +63,92 @@ namespace Loja_de_roupas.DB.Estoque
 
                 fornecedores.Add(novoestoq);
 
+            }
+            reader.Close();
+            return fornecedores;
+        }
+
+        public List<EstoqueDTO> Listar()
+        {
+
+            string script =
+                @"SELECT * FROM tb_estoque";
+            List<MySqlParameter> parms = new List<MySqlParameter>();
+            Database db = new Database();
+            MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
+            List<EstoqueDTO> fornecedores = new List<EstoqueDTO>();
+            while (reader.Read())
+            {
+
+                EstoqueDTO novoestoq = new EstoqueDTO();
+
+                novoestoq.id_estoque = reader.GetInt32("id_estoque");
+                novoestoq.id_produtocompra = reader.GetInt32("id_produtocompra");
+                novoestoq.ds_quantidade = reader.GetDecimal("ds_quantidade");
+
+                fornecedores.Add(novoestoq);
+
+            }
+            reader.Close();
+            return fornecedores;
+        }
+
+        public void Alterar(EstoqueDTO dto)
+        {
+            string script =
+            @"UPDATE tb_estoque
+                 SET 
+                  ds_quantidade = @ds_quantidade
+                  
+                  WHERE id_produtocompra = @id_produtocompra";
+
+            List<MySqlParameter> parms = new List<MySqlParameter>();
+            parms.Add(new MySqlParameter("id_produtocompra", dto.id_produtocompra));
+            parms.Add(new MySqlParameter("ds_quantidade", dto.ds_quantidade));
+
+            Database db = new Database();
+            db.ExecuteInsertScript(script, parms);
+        }
+
+
+        public List<vwconsultarestoque> ConsultarEstoque(string produtoestoque)
+        {
+
+            string script =
+                @"SELECT * FROM vw_consultar_estoque
+                  WHERE nm_produtocompra like @nm_produtocompra";
+            List<MySqlParameter> parms = new List<MySqlParameter>();
+            parms.Add(new MySqlParameter("nm_produtocompra", "%" + produtoestoque + "%"));
+            Database db = new Database();
+            MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
+            List<vwconsultarestoque> fornecedores = new List<vwconsultarestoque>();
+            while (reader.Read())
+            {
+
+                vwconsultarestoque novoestoq = new vwconsultarestoque();
+                novoestoq.nm_produtocompra = reader.GetString("nm_produtocompra");
+                novoestoq.ds_quantidade = reader.GetDecimal("ds_quantidade");
+
+                fornecedores.Add(novoestoq);
+
+            }
+            reader.Close();
+            return fornecedores;
+        }
+        public vwconsultarestoque ConsultarEstoqueView(string produtoestoque)
+        {
+            string script =
+                @"SELECT * FROM vw_consultar_estoque
+                  WHERE nm_produtocompra = @nm_produtocompra";
+            List<MySqlParameter> parms = new List<MySqlParameter>();
+            parms.Add(new MySqlParameter("nm_produtocompra", produtoestoque));
+            Database db = new Database();
+            MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
+            vwconsultarestoque fornecedores = new vwconsultarestoque();
+            while (reader.Read())
+            {
+                fornecedores.nm_produtocompra = reader.GetString("nm_produtocompra");
+                fornecedores.ds_quantidade = reader.GetDecimal("ds_quantidade");
             }
             reader.Close();
             return fornecedores;

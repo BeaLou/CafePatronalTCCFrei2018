@@ -55,7 +55,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(46, 14);
+            this.tabControl1.Location = new System.Drawing.Point(40, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1084, 499);
@@ -129,7 +129,7 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Location = new System.Drawing.Point(6, 42);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(611, 337);
+            this.groupBox1.Size = new System.Drawing.Size(611, 346);
             this.groupBox1.TabIndex = 61;
             this.groupBox1.TabStop = false;
             // 

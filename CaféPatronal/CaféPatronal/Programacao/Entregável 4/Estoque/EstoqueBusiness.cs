@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CaféPatronal.Programacao.Entregável_4.Estoque;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,7 +18,6 @@ namespace Loja_de_roupas.DB.Estoque
                 throw new ArgumentException("Produto não foi reconhecido");
             }
 
-
             EstoqueDatabase db = new EstoqueDatabase();
             return db.Salvar(dto);
         }
@@ -34,7 +34,28 @@ namespace Loja_de_roupas.DB.Estoque
 
             return db.Consultar(estoq);
         }
+        public List<EstoqueDTO> Listar()
+        {
+            EstoqueDatabase db = new EstoqueDatabase();
+            return db.Listar();
+        }
+        public void Alterar(EstoqueDTO dto)
+        {
 
+            EstoqueDatabase db = new EstoqueDatabase();
+            db.Alterar(dto);
+        }
+
+        public List<vwconsultarestoque> ConsultarEstoque(string produtoestoque)
+        {
+            EstoqueDatabase db = new EstoqueDatabase();
+            return db.ConsultarEstoque(produtoestoque);
+        }
+        public vwconsultarestoque ConsultarEstoqueView(string produtoestoque)
+        {
+            EstoqueDatabase db = new EstoqueDatabase();
+            return db.ConsultarEstoqueView(produtoestoque);
+        }
     }
 
 }

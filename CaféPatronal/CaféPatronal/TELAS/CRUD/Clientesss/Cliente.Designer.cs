@@ -280,7 +280,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(746, 74);
+            this.button2.Location = new System.Drawing.Point(703, 54);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(107, 38);
             this.button2.TabIndex = 4;
@@ -295,7 +295,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(637, 74);
+            this.button1.Location = new System.Drawing.Point(594, 54);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(107, 38);
             this.button1.TabIndex = 3;
@@ -339,10 +339,10 @@
             this.Datanascimento,
             this.Cpf,
             this.Email});
-            this.dgvConsultarCliente.Location = new System.Drawing.Point(63, 118);
+            this.dgvConsultarCliente.Location = new System.Drawing.Point(20, 98);
             this.dgvConsultarCliente.Name = "dgvConsultarCliente";
             this.dgvConsultarCliente.ReadOnly = true;
-            this.dgvConsultarCliente.Size = new System.Drawing.Size(910, 322);
+            this.dgvConsultarCliente.Size = new System.Drawing.Size(1016, 322);
             this.dgvConsultarCliente.TabIndex = 11;
             // 
             // Nome
@@ -391,7 +391,7 @@
             this.btnConsultarClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultarClientes.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultarClientes.Image")));
             this.btnConsultarClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultarClientes.Location = new System.Drawing.Point(524, 74);
+            this.btnConsultarClientes.Location = new System.Drawing.Point(481, 54);
             this.btnConsultarClientes.Name = "btnConsultarClientes";
             this.btnConsultarClientes.Size = new System.Drawing.Size(107, 38);
             this.btnConsultarClientes.TabIndex = 2;
@@ -403,7 +403,7 @@
             // txtConsultarClientes
             // 
             this.txtConsultarClientes.BackColor = System.Drawing.Color.Ivory;
-            this.txtConsultarClientes.Location = new System.Drawing.Point(63, 77);
+            this.txtConsultarClientes.Location = new System.Drawing.Point(20, 57);
             this.txtConsultarClientes.MaxLength = 50;
             this.txtConsultarClientes.Name = "txtConsultarClientes";
             this.txtConsultarClientes.Size = new System.Drawing.Size(456, 32);

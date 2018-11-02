@@ -63,7 +63,7 @@ namespace CaféPatronal.TELAS.Gastos
         private void btnConsultarestoque_Click(object sender, EventArgs e)
         {
             GastoBusiness business = new GastoBusiness();
-            List<GastoDTO> a =business.Consultar(txtConsultarEstoque.Text);
+            List<GastoDTO> a = business.Consultar(txtConsultarEstoque.Text);
             dgvconsultaestoq.AutoGenerateColumns = false;
             dgvconsultaestoq.DataSource = a;
         }
