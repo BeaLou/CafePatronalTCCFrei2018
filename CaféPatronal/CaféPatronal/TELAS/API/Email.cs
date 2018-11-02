@@ -33,7 +33,7 @@ namespace CaféPatronal.TELAS.API
 
                 email.Enviar();
 
-                MessageBox.Show("Mensagem enviada com sucesso", "Américas Mecânica");
+                MessageBox.Show("Mensagem enviada com sucesso", "Cafe Patronal");
             }
             catch (Exception Ex)
             {

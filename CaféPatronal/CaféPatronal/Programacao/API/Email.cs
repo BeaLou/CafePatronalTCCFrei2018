@@ -81,7 +81,7 @@ namespace Nsf._2018.Modulo2.DB.Filosofia.Plugin
 
         public void AdicionarImagem(MailMessage mail)
         {
-            string attachmentPath = "Programacao/API/emailicon.jpg";
+            string attachmentPath = "Programacao/API/logopatronal.jpg";
             Attachment inline = new Attachment(attachmentPath);
             inline.ContentDisposition.Inline = true;
             inline.ContentDisposition.DispositionType = DispositionTypeNames.Inline;
@@ -90,7 +90,7 @@ namespace Nsf._2018.Modulo2.DB.Filosofia.Plugin
 
             mail.Attachments.Add(inline);
 
-            
+
         }
 
         public void AdicionarAnexo(string arquivo)
