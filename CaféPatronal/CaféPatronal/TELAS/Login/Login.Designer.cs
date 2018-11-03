@@ -127,7 +127,7 @@
             this.btnLogar.FlatAppearance.BorderSize = 0;
             this.btnLogar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogar.Font = new System.Drawing.Font("Agency FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogar.Location = new System.Drawing.Point(230, 396);
+            this.btnLogar.Location = new System.Drawing.Point(230, 341);
             this.btnLogar.Name = "btnLogar";
             this.btnLogar.Size = new System.Drawing.Size(200, 42);
             this.btnLogar.TabIndex = 5;

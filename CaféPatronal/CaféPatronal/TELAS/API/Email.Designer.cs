@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Enviar_Email));
-            this.lblAnexo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtMensagem = new System.Windows.Forms.TextBox();
             this.txtAssunto = new System.Windows.Forms.TextBox();
@@ -43,21 +42,12 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lblAnexo
-            // 
-            this.lblAnexo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblAnexo.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.lblAnexo.Location = new System.Drawing.Point(152, 142);
-            this.lblAnexo.Margin = new System.Windows.Forms.Padding(4);
-            this.lblAnexo.Name = "lblAnexo";
-            this.lblAnexo.Size = new System.Drawing.Size(319, 32);
-            this.lblAnexo.TabIndex = 40;
             // 
             // label3
             // 
@@ -77,20 +67,21 @@
             this.txtMensagem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMensagem.Location = new System.Drawing.Point(152, 190);
             this.txtMensagem.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMensagem.MaxLength = 300;
             this.txtMensagem.Multiline = true;
             this.txtMensagem.Name = "txtMensagem";
             this.txtMensagem.Size = new System.Drawing.Size(416, 142);
-            this.txtMensagem.TabIndex = 38;
+            this.txtMensagem.TabIndex = 4;
             // 
             // txtAssunto
             // 
             this.txtAssunto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAssunto.Location = new System.Drawing.Point(152, 88);
             this.txtAssunto.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAssunto.MaxLength = 20;
             this.txtAssunto.Name = "txtAssunto";
             this.txtAssunto.Size = new System.Drawing.Size(319, 32);
-            this.txtAssunto.TabIndex = 37;
-            this.txtAssunto.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtAssunto_MouseClick);
+            this.txtAssunto.TabIndex = 2;
             // 
             // label2
             // 
@@ -129,7 +120,7 @@
             this.btnSalvar.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(77, 36);
-            this.btnSalvar.TabIndex = 34;
+            this.btnSalvar.TabIndex = 5;
             this.btnSalvar.Text = "Enviar";
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
@@ -139,9 +130,10 @@
             this.txtPara.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPara.Location = new System.Drawing.Point(152, 37);
             this.txtPara.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPara.MaxLength = 60;
             this.txtPara.Name = "txtPara";
             this.txtPara.Size = new System.Drawing.Size(319, 32);
-            this.txtPara.TabIndex = 33;
+            this.txtPara.TabIndex = 1;
             // 
             // label5
             // 
@@ -181,15 +173,14 @@
             this.label4.Size = new System.Drawing.Size(78, 45);
             this.label4.TabIndex = 42;
             this.label4.Text = "Email";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.txtPara);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btnSalvar);
-            this.groupBox1.Controls.Add(this.lblAnexo);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtAssunto);
@@ -224,6 +215,22 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Enviar Email";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Agency FB", 18F);
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(152, 140);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(195, 36);
+            this.button1.TabIndex = 40;
+            this.button1.Text = "Anexar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Enviar_Email
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -247,8 +254,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox lblAnexo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtMensagem;
         private System.Windows.Forms.TextBox txtAssunto;
@@ -262,5 +267,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Button button1;
     }
 }

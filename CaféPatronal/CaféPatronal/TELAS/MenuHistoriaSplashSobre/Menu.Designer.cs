@@ -97,7 +97,7 @@
             this.button1.Location = new System.Drawing.Point(-3, 329);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(194, 36);
-            this.button1.TabIndex = 11;
+            this.button1.TabIndex = 5;
             this.button1.Text = "Compra";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = true;
@@ -115,7 +115,7 @@
             this.BtnHistoria.Location = new System.Drawing.Point(3, 144);
             this.BtnHistoria.Name = "BtnHistoria";
             this.BtnHistoria.Size = new System.Drawing.Size(188, 44);
-            this.BtnHistoria.TabIndex = 10;
+            this.BtnHistoria.TabIndex = 1;
             this.BtnHistoria.Text = "História";
             this.BtnHistoria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnHistoria.UseVisualStyleBackColor = true;
@@ -133,7 +133,7 @@
             this.BtnSobre.Location = new System.Drawing.Point(0, 182);
             this.BtnSobre.Name = "BtnSobre";
             this.BtnSobre.Size = new System.Drawing.Size(194, 44);
-            this.BtnSobre.TabIndex = 9;
+            this.BtnSobre.TabIndex = 2;
             this.BtnSobre.Text = "Sobre";
             this.BtnSobre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnSobre.UseVisualStyleBackColor = true;
@@ -151,7 +151,7 @@
             this.BtnVenda.Location = new System.Drawing.Point(-3, 538);
             this.BtnVenda.Name = "BtnVenda";
             this.BtnVenda.Size = new System.Drawing.Size(194, 36);
-            this.BtnVenda.TabIndex = 8;
+            this.BtnVenda.TabIndex = 10;
             this.BtnVenda.Text = "Gastos";
             this.BtnVenda.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnVenda.UseVisualStyleBackColor = true;
@@ -169,7 +169,7 @@
             this.BtnCliente.Location = new System.Drawing.Point(-3, 454);
             this.BtnCliente.Name = "BtnCliente";
             this.BtnCliente.Size = new System.Drawing.Size(194, 36);
-            this.BtnCliente.TabIndex = 1;
+            this.BtnCliente.TabIndex = 8;
             this.BtnCliente.Text = "Cliente";
             this.BtnCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnCliente.UseVisualStyleBackColor = true;
@@ -187,7 +187,7 @@
             this.BtnFluxoCaixa.Location = new System.Drawing.Point(0, 613);
             this.BtnFluxoCaixa.Name = "BtnFluxoCaixa";
             this.BtnFluxoCaixa.Size = new System.Drawing.Size(194, 36);
-            this.BtnFluxoCaixa.TabIndex = 7;
+            this.BtnFluxoCaixa.TabIndex = 12;
             this.BtnFluxoCaixa.Text = "Fluxo de Caixa";
             this.BtnFluxoCaixa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnFluxoCaixa.UseVisualStyleBackColor = true;
@@ -206,7 +206,7 @@
             this.BtnFolhaPagamento.Location = new System.Drawing.Point(-3, 288);
             this.BtnFolhaPagamento.Name = "BtnFolhaPagamento";
             this.BtnFolhaPagamento.Size = new System.Drawing.Size(194, 36);
-            this.BtnFolhaPagamento.TabIndex = 0;
+            this.BtnFolhaPagamento.TabIndex = 4;
             this.BtnFolhaPagamento.Text = "Folha de Pagamento";
             this.BtnFolhaPagamento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnFolhaPagamento.UseVisualStyleBackColor = true;
@@ -259,7 +259,7 @@
             this.BtnEstoque.Location = new System.Drawing.Point(0, 580);
             this.BtnEstoque.Name = "BtnEstoque";
             this.BtnEstoque.Size = new System.Drawing.Size(194, 36);
-            this.BtnEstoque.TabIndex = 6;
+            this.BtnEstoque.TabIndex = 11;
             this.BtnEstoque.Text = "Estoque";
             this.BtnEstoque.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnEstoque.UseVisualStyleBackColor = true;
@@ -277,7 +277,7 @@
             this.BtnFornecedor.Location = new System.Drawing.Point(-3, 370);
             this.BtnFornecedor.Name = "BtnFornecedor";
             this.BtnFornecedor.Size = new System.Drawing.Size(194, 36);
-            this.BtnFornecedor.TabIndex = 5;
+            this.BtnFornecedor.TabIndex = 6;
             this.BtnFornecedor.Text = "Fornecedor";
             this.BtnFornecedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnFornecedor.UseVisualStyleBackColor = true;
@@ -295,7 +295,7 @@
             this.BtnProduto.Location = new System.Drawing.Point(-3, 412);
             this.BtnProduto.Name = "BtnProduto";
             this.BtnProduto.Size = new System.Drawing.Size(194, 36);
-            this.BtnProduto.TabIndex = 4;
+            this.BtnProduto.TabIndex = 7;
             this.BtnProduto.Text = "Produto";
             this.BtnProduto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnProduto.UseVisualStyleBackColor = true;
@@ -313,7 +313,7 @@
             this.BtnPedido.Location = new System.Drawing.Point(-3, 496);
             this.BtnPedido.Name = "BtnPedido";
             this.BtnPedido.Size = new System.Drawing.Size(194, 36);
-            this.BtnPedido.TabIndex = 3;
+            this.BtnPedido.TabIndex = 9;
             this.BtnPedido.Text = "Pedido";
             this.BtnPedido.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnPedido.UseVisualStyleBackColor = true;
@@ -331,7 +331,7 @@
             this.BtnFuncionario.Location = new System.Drawing.Point(-3, 246);
             this.BtnFuncionario.Name = "BtnFuncionario";
             this.BtnFuncionario.Size = new System.Drawing.Size(194, 36);
-            this.BtnFuncionario.TabIndex = 2;
+            this.BtnFuncionario.TabIndex = 3;
             this.BtnFuncionario.Text = "Funcionário";
             this.BtnFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnFuncionario.UseVisualStyleBackColor = true;
@@ -415,8 +415,8 @@
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(252, 208);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(164, 49);
-            this.button2.TabIndex = 23;
+            this.button2.Size = new System.Drawing.Size(164, 56);
+            this.button2.TabIndex = 13;
             this.button2.Text = "Enviar Email";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = false;

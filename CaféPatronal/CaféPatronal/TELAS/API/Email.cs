@@ -34,78 +34,40 @@ namespace CaféPatronal.TELAS.API
                 email.Enviar();
 
                 MessageBox.Show("Mensagem enviada com sucesso", "Cafe Patronal");
+                txtMensagem.Clear();
+                txtAssunto.Clear();
+                txtPara.Clear();
+                button1.Text="Anexar";
             }
             catch (Exception Ex)
             {
                 MessageBox.Show("Ocorreu o erro : " + Ex.Message);
             }
         }
-
-        private void txtAnexo_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtAnexo_MouseClick(object sender, MouseEventArgs e)
-        {
-            OpenFileDialog janela = new OpenFileDialog();
-            janela.ShowDialog();
-
-            lblAnexo.Text = janela.FileName;
-
-            email.AdicionarAnexo(janela.FileName);
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtMensagem_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtAssunto_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPara_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             Form1 tela = new Form1();
             tela.Show();
             this.Hide();
         }
-
-        private void txtAssunto_MouseClick(object sender, MouseEventArgs e)
+        private void txtAnexo_MouseClick(object sender, MouseEventArgs e)
         {
-         
+            OpenFileDialog janela = new OpenFileDialog();
+            janela.ShowDialog();
+
+            button1.Text = janela.FileName;
+
+            email.AdicionarAnexo(janela.FileName);
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
+            OpenFileDialog janela = new OpenFileDialog();
+            janela.ShowDialog();
 
+            button1.Text = janela.FileName;
+
+            email.AdicionarAnexo(janela.FileName);
         }
     }
 }
