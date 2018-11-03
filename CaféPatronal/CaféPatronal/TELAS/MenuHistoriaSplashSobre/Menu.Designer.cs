@@ -324,7 +324,7 @@
             this.BtnFuncionario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnFuncionario.FlatAppearance.BorderSize = 0;
             this.BtnFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnFuncionario.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnFuncionario.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnFuncionario.ForeColor = System.Drawing.Color.Yellow;
             this.BtnFuncionario.Image = ((System.Drawing.Image)(resources.GetObject("BtnFuncionario.Image")));
             this.BtnFuncionario.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -405,12 +405,21 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(1129, 600);
+            this.button2.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Yellow;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(252, 208);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 38);
+            this.button2.Size = new System.Drawing.Size(164, 49);
             this.button2.TabIndex = 23;
-            this.button2.Text = "email";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Text = "Enviar Email";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // Form1

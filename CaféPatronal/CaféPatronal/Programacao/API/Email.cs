@@ -11,8 +11,6 @@ namespace Nsf._2018.Modulo2.DB.Filosofia.Plugin
 {
     public class Email
     {
-
-
         public string Para { get; set; }
         public string Assunto { get; set; }
         
