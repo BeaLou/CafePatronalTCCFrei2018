@@ -207,7 +207,7 @@ namespace CaféPatronal.TELAS.Cadastro_e_Consulta
                 if (dgvConsultarPedidos.CurrentRow != null)
                 {
                     VwConsultarItem pedido = dgvConsultarPedidos.CurrentRow.DataBoundItem as VwConsultarItem;
-                    DialogResult r = MessageBox.Show("Deseja excluir esse pedido?", "Michael Pop`s",
+                    DialogResult r = MessageBox.Show("Deseja excluir esse pedido?", "Café Patronal",
                                            MessageBoxButtons.YesNo,
                                            MessageBoxIcon.Question);
                     if (r == DialogResult.Yes)

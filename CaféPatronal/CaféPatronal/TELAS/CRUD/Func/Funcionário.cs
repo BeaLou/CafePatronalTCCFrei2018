@@ -168,7 +168,7 @@ namespace CaféPatronal.TELAS.Cadastro_e_Consulta
             try
             {
                 FuncionarioDTO funcionario = dgvConsultarFuncionarios.CurrentRow.DataBoundItem as FuncionarioDTO;
-                DialogResult r = MessageBox.Show("Deseja excluir esse funcionário?", "Michael Pop`s",
+                DialogResult r = MessageBox.Show("Deseja excluir esse funcionário?", "Café Patronal",
                                        MessageBoxButtons.YesNo,
                                        MessageBoxIcon.Question);
                 if (r == DialogResult.Yes)

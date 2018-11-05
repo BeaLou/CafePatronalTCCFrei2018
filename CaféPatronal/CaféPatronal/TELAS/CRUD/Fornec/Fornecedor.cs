@@ -124,7 +124,7 @@ namespace CaféPatronal.TELAS.Cadastro_e_Consulta
                 if (dgvConsultarFornecedor.CurrentRow != null)
                 {
                     FornecedorDTO fornecedor = dgvConsultarFornecedor.CurrentRow.DataBoundItem as FornecedorDTO;
-                    DialogResult r = MessageBox.Show("Deseja excluir esse fornecedor?", "Michael Pop`s",
+                    DialogResult r = MessageBox.Show("Deseja excluir esse fornecedor?", "Café Patronal",
                                            MessageBoxButtons.YesNo,
                                            MessageBoxIcon.Question);
                     if (r == DialogResult.Yes)
