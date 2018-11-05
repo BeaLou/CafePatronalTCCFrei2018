@@ -51,7 +51,7 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                 }
                 else
                 {
-                    MessageBox.Show("Credenciais inválidas.", "Michael Pop`s", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Credenciais inválidas.", "Café Patronal", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             catch (Exception ex)
