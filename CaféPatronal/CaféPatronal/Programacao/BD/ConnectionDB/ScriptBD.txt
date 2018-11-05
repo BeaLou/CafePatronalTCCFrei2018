@@ -280,6 +280,10 @@ insert into `tb_dpto`(nm_nome) values ("Aux. Cozinha");
 insert into `tb_dpto`(nm_nome) values ("Aux. Financeiro");
 insert into `tb_dpto`(nm_nome) values ("Chefe de Cozinha");
 insert into `tb_dpto`(nm_nome) values ("Recepcionista");
+insert into `tb_dpto`(nm_nome) values ("Barman/Barista");
+insert into `tb_dpto`(nm_nome) values ("Administrador");
+insert into `tb_dpto`(nm_nome) values ("Gerente");
+insert into `tb_dpto`(nm_nome) values ("Auxiliar De Limpeza");
 
 insert into `tb_cliente`(nm_nome,nm_sobrenome,dt_datanascimento,ds_cpf,ds_email)
  VALUES("João","Da Silva","1989/2/12","660.563.910-35","joãodasilva@gmail.com");
