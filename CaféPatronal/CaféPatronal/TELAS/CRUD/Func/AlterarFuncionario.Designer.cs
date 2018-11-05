@@ -68,6 +68,8 @@
             this.dtpnascimento = new System.Windows.Forms.DateTimePicker();
             this.button3 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.rbnvendedor = new System.Windows.Forms.RadioButton();
+            this.rbnadm = new System.Windows.Forms.RadioButton();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -116,6 +118,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.rbnvendedor);
+            this.groupBox3.Controls.Add(this.rbnadm);
             this.groupBox3.Controls.Add(this.txtsenha);
             this.groupBox3.Controls.Add(this.label18);
             this.groupBox3.Controls.Add(this.txtsalariobruto);
@@ -143,7 +147,7 @@
             // txtsenha
             // 
             this.txtsenha.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtsenha.Location = new System.Drawing.Point(158, 358);
+            this.txtsenha.Location = new System.Drawing.Point(158, 333);
             this.txtsenha.MaxLength = 20;
             this.txtsenha.Name = "txtsenha";
             this.txtsenha.Size = new System.Drawing.Size(275, 32);
@@ -153,7 +157,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(25, 397);
+            this.label18.Location = new System.Drawing.Point(25, 372);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(111, 28);
             this.label18.TabIndex = 48;
@@ -162,7 +166,7 @@
             // txtsalariobruto
             // 
             this.txtsalariobruto.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtsalariobruto.Location = new System.Drawing.Point(158, 399);
+            this.txtsalariobruto.Location = new System.Drawing.Point(158, 374);
             this.txtsalariobruto.MaxLength = 45;
             this.txtsalariobruto.Name = "txtsalariobruto";
             this.txtsalariobruto.Size = new System.Drawing.Size(279, 32);
@@ -225,7 +229,7 @@
             // txtlogin
             // 
             this.txtlogin.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtlogin.Location = new System.Drawing.Point(158, 313);
+            this.txtlogin.Location = new System.Drawing.Point(158, 288);
             this.txtlogin.MaxLength = 20;
             this.txtlogin.Name = "txtlogin";
             this.txtlogin.Size = new System.Drawing.Size(275, 32);
@@ -247,7 +251,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(35, 313);
+            this.label5.Location = new System.Drawing.Point(35, 288);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(54, 28);
             this.label5.TabIndex = 34;
@@ -259,7 +263,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(35, 275);
+            this.label6.Location = new System.Drawing.Point(35, 250);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(36, 28);
             this.label6.TabIndex = 11;
@@ -293,7 +297,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(35, 351);
+            this.label8.Location = new System.Drawing.Point(35, 326);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(62, 28);
             this.label8.TabIndex = 27;
@@ -302,7 +306,7 @@
             // txtrg
             // 
             this.txtrg.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtrg.Location = new System.Drawing.Point(158, 275);
+            this.txtrg.Location = new System.Drawing.Point(158, 250);
             this.txtrg.Mask = "00.000.000-00";
             this.txtrg.Name = "txtrg";
             this.txtrg.Size = new System.Drawing.Size(275, 32);
@@ -528,6 +532,28 @@
             this.label2.TabIndex = 13;
             this.label2.Text = "FUNCIONÁRIO";
             // 
+            // rbnvendedor
+            // 
+            this.rbnvendedor.AutoSize = true;
+            this.rbnvendedor.Location = new System.Drawing.Point(264, 404);
+            this.rbnvendedor.Name = "rbnvendedor";
+            this.rbnvendedor.Size = new System.Drawing.Size(169, 29);
+            this.rbnvendedor.TabIndex = 51;
+            this.rbnvendedor.TabStop = true;
+            this.rbnvendedor.Text = "Permissão de vendedor";
+            this.rbnvendedor.UseVisualStyleBackColor = true;
+            // 
+            // rbnadm
+            // 
+            this.rbnadm.AutoSize = true;
+            this.rbnadm.Location = new System.Drawing.Point(57, 404);
+            this.rbnadm.Name = "rbnadm";
+            this.rbnadm.Size = new System.Drawing.Size(156, 29);
+            this.rbnadm.TabIndex = 50;
+            this.rbnadm.TabStop = true;
+            this.rbnadm.Text = "Permissão para ADM";
+            this.rbnadm.UseVisualStyleBackColor = true;
+            // 
             // AlterarFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -595,5 +621,7 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txtsalariobruto;
         private System.Windows.Forms.TextBox txtsenha;
+        private System.Windows.Forms.RadioButton rbnvendedor;
+        private System.Windows.Forms.RadioButton rbnadm;
     }
 }

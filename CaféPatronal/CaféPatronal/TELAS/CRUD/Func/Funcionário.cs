@@ -102,6 +102,8 @@ namespace CaféPatronal.TELAS.Cadastro_e_Consulta
                 dto.ds_complemento = txtComplemento.Text;
                 dto.ds_ncasa = txtNumero.Text;
                 dto.vl_salariobruto = Convert.ToDecimal(txtsalariobruto.Text);
+                dto.bt_permissaoadm = rbnADM.Checked;
+                dto.bt_permissaofuncionario = rdnvendedor.Checked;
 
 
                 FuncionarioBusiness business = new FuncionarioBusiness();

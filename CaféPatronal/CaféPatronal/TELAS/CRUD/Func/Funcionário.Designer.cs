@@ -81,6 +81,8 @@
             this.TelefoneMóvel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnConsultarClientes = new System.Windows.Forms.Button();
             this.txtConsultarFuncionários = new System.Windows.Forms.TextBox();
+            this.rdnvendedor = new System.Windows.Forms.RadioButton();
+            this.rbnADM = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -461,6 +463,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.rdnvendedor);
+            this.groupBox1.Controls.Add(this.rbnADM);
             this.groupBox1.Controls.Add(this.txtSenha);
             this.groupBox1.Controls.Add(this.label18);
             this.groupBox1.Controls.Add(this.txtsalariobruto);
@@ -479,9 +483,9 @@
             this.groupBox1.Controls.Add(this.mbtRg);
             this.groupBox1.Controls.Add(this.lblTelefoneMóvel);
             this.groupBox1.Controls.Add(this.lblTelefoneFixo);
-            this.groupBox1.Location = new System.Drawing.Point(506, 42);
+            this.groupBox1.Location = new System.Drawing.Point(506, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(460, 381);
+            this.groupBox1.Size = new System.Drawing.Size(460, 425);
             this.groupBox1.TabIndex = 61;
             this.groupBox1.TabStop = false;
             // 
@@ -541,9 +545,9 @@
             this.groupBox2.Controls.Add(this.mbtCpf);
             this.groupBox2.Controls.Add(this.lblNome);
             this.groupBox2.Controls.Add(this.dtpDataNascimento);
-            this.groupBox2.Location = new System.Drawing.Point(12, 42);
+            this.groupBox2.Location = new System.Drawing.Point(12, 40);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(488, 391);
+            this.groupBox2.Size = new System.Drawing.Size(488, 389);
             this.groupBox2.TabIndex = 60;
             this.groupBox2.TabStop = false;
             // 
@@ -716,6 +720,28 @@
             this.txtConsultarFuncionários.Size = new System.Drawing.Size(456, 32);
             this.txtConsultarFuncionários.TabIndex = 1;
             // 
+            // rdnvendedor
+            // 
+            this.rdnvendedor.AutoSize = true;
+            this.rdnvendedor.Location = new System.Drawing.Point(244, 381);
+            this.rdnvendedor.Name = "rdnvendedor";
+            this.rdnvendedor.Size = new System.Drawing.Size(169, 29);
+            this.rdnvendedor.TabIndex = 49;
+            this.rdnvendedor.TabStop = true;
+            this.rdnvendedor.Text = "Permissão de vendedor";
+            this.rdnvendedor.UseVisualStyleBackColor = true;
+            // 
+            // rbnADM
+            // 
+            this.rbnADM.AutoSize = true;
+            this.rbnADM.Location = new System.Drawing.Point(36, 381);
+            this.rbnADM.Name = "rbnADM";
+            this.rbnADM.Size = new System.Drawing.Size(156, 29);
+            this.rbnADM.TabIndex = 48;
+            this.rbnADM.TabStop = true;
+            this.rbnADM.Text = "Permissão para ADM";
+            this.rbnADM.UseVisualStyleBackColor = true;
+            // 
             // CadastroFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -799,5 +825,7 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txtsalariobruto;
         private System.Windows.Forms.TextBox txtSenha;
+        private System.Windows.Forms.RadioButton rdnvendedor;
+        private System.Windows.Forms.RadioButton rbnADM;
     }
 }

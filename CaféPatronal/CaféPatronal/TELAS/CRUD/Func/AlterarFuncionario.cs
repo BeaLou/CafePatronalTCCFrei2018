@@ -87,6 +87,8 @@ namespace CaféPatronal.TELAS.CRUD.Func
                 funcionario.ds_complemento = txtcomplemento.Text;
                 funcionario.ds_ncasa = txtncasa.Text;
                 funcionario.vl_salariobruto = Convert.ToDecimal(txtsalariobruto.Text);
+                funcionario.bt_permissaoadm = rbnadm.Checked;
+                funcionario.bt_permissaofuncionario = rbnvendedor.Checked;
 
                 FuncionarioBusiness business = new FuncionarioBusiness();
                 business.Alterar(funcionario);
