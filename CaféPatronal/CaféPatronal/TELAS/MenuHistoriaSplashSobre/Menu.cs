@@ -30,8 +30,9 @@ namespace CaféPatronal
                     BtnFolhaPagamento.Enabled = false;
                     BtnFornecedor.Enabled = false;
                     BtnVenda.Enabled = false;
-                    BtnEstoque.Enabled = false;
                     BtnFluxoCaixa.Enabled = false;
+                    btncompras.Enabled = false;
+                    BtnFuncionario.Enabled = false;
 
 
                 }

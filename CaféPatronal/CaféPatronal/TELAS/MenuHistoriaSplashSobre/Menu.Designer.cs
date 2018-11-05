@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btncompras = new System.Windows.Forms.Button();
             this.BtnHistoria = new System.Windows.Forms.Button();
             this.BtnSobre = new System.Windows.Forms.Button();
             this.BtnVenda = new System.Windows.Forms.Button();
@@ -64,7 +64,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btncompras);
             this.panel1.Controls.Add(this.BtnHistoria);
             this.panel1.Controls.Add(this.BtnSobre);
             this.panel1.Controls.Add(this.BtnVenda);
@@ -84,24 +84,24 @@
             this.panel1.Size = new System.Drawing.Size(194, 650);
             this.panel1.TabIndex = 0;
             // 
-            // button1
+            // btncompras
             // 
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Yellow;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(-3, 329);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(194, 36);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Compra";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.btncompras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btncompras.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btncompras.FlatAppearance.BorderSize = 0;
+            this.btncompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncompras.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncompras.ForeColor = System.Drawing.Color.Yellow;
+            this.btncompras.Image = ((System.Drawing.Image)(resources.GetObject("btncompras.Image")));
+            this.btncompras.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btncompras.Location = new System.Drawing.Point(-3, 329);
+            this.btncompras.Name = "btncompras";
+            this.btncompras.Size = new System.Drawing.Size(194, 36);
+            this.btncompras.TabIndex = 5;
+            this.btncompras.Text = "Compra";
+            this.btncompras.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btncompras.UseVisualStyleBackColor = true;
+            this.btncompras.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // BtnHistoria
             // 
@@ -478,7 +478,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button BtnHistoria;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btncompras;
         private System.Windows.Forms.Button button2;
     }
 }
