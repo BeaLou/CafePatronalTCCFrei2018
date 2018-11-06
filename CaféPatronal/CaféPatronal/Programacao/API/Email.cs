@@ -43,8 +43,11 @@ namespace Nsf._2018.Modulo2.DB.Filosofia.Plugin
                 email.Body = Mensagem;
                 email.IsBodyHtml = true;
 
+                // Adiciona Imagem no Corpo do Email
+                AdicionarImagem(email);
 
-                
+
+
                 // Configura os parâmetros do objeto SMTP
                 SmtpClient smtp = new SmtpClient();
                 smtp.Host = "smtp.gmail.com";
@@ -57,6 +60,7 @@ namespace Nsf._2018.Modulo2.DB.Filosofia.Plugin
 
                 // Envia a mensagem
                 smtp.Send(email);
+
 
             });
         }
@@ -73,6 +77,17 @@ namespace Nsf._2018.Modulo2.DB.Filosofia.Plugin
             Mensagem = html.Replace("{MENSAGEM}", Mensagem);
             
             return Mensagem;
+        }
+        public void AdicionarImagem(MailMessage mail)
+        {
+            string attachmentPath = "Programacao/API/logopatronal.jpg";
+            Attachment inline = new Attachment(attachmentPath);
+            inline.ContentDisposition.Inline = true;
+            inline.ContentDisposition.DispositionType = DispositionTypeNames.Inline;
+            inline.ContentId = "icon";
+            inline.ContentType.MediaType = "image/jpg";
+
+            mail.Attachments.Add(inline);
         }
 
 

@@ -124,7 +124,7 @@
             // 
             this.mktCnpj.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mktCnpj.Location = new System.Drawing.Point(127, 107);
-            this.mktCnpj.Mask = "000.000.000-00";
+            this.mktCnpj.Mask = "00.000.000/0000-00";
             this.mktCnpj.Name = "mktCnpj";
             this.mktCnpj.Size = new System.Drawing.Size(275, 32);
             this.mktCnpj.TabIndex = 2;

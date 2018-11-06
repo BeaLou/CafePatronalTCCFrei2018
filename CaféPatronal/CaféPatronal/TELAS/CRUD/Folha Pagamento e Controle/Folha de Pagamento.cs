@@ -280,5 +280,10 @@ namespace CaféPatronal.TELAS.Fluxo_de_Caixa_e_Folha_de_Pagamento
         {
             V.numeros(e);
         }
+
+        private void lblSalarioLiquido_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

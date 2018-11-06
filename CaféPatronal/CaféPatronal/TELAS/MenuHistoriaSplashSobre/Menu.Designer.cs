@@ -345,7 +345,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(194, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(842, 35);
+            this.panel2.Size = new System.Drawing.Size(1042, 35);
             this.panel2.TabIndex = 1;
             // 
             // panel3
@@ -355,7 +355,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(842, 35);
+            this.panel3.Size = new System.Drawing.Size(1042, 35);
             this.panel3.TabIndex = 2;
             // 
             // pictureBox3
@@ -448,7 +448,7 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1036, 650);
+            this.ClientSize = new System.Drawing.Size(1236, 650);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);

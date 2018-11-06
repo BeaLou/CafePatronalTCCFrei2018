@@ -267,6 +267,7 @@
             this.lblSalarioLiquido.Size = new System.Drawing.Size(18, 25);
             this.lblSalarioLiquido.TabIndex = 59;
             this.lblSalarioLiquido.Text = "-";
+            this.lblSalarioLiquido.Click += new System.EventHandler(this.lblSalarioLiquido_Click_1);
             // 
             // nudHorasTrabalhadas
             // 
