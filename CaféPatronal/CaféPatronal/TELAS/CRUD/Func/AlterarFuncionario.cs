@@ -1,4 +1,5 @@
 ﻿using CaféPatronal.Programacao;
+using CaféPatronal.Programacao.Dpto;
 using CaféPatronal.Programacao.Funcionario;
 using CaféPatronal.TELAS.Cadastro_e_Consulta;
 using System;
@@ -21,7 +22,14 @@ namespace CaféPatronal.TELAS.CRUD.Func
         {
             InitializeComponent();
         }
-         public void LoadScreen(FuncionarioDTO funcionario)
+        void CarregarCombos()
+        {
+            DptoBusiness bus = new DptoBusiness();
+            List<DptoDTO> lista = bus.Listar();
+            cbodepartamento.DisplayMember = nameof(DptoDTO.nm_nome);
+            cbodepartamento.DataSource = lista;
+        }
+        public void LoadScreen(FuncionarioDTO funcionario)
         {
             this.funcionario = funcionario;
 
