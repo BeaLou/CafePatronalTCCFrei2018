@@ -1,5 +1,7 @@
 ﻿using CaféPatronal.Programacao;
 using CaféPatronal.Programacao.Funcionario;
+
+using CaféPatronal.TELAS.MenuHistoriaSplashSobre;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -59,6 +61,13 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                 MessageBox.Show("Ocorreu um erro" + ex.Message);
 
             }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Esqueci tela = new Esqueci();
+            tela.Show();
+            this.Hide();
         }
     }
 }
