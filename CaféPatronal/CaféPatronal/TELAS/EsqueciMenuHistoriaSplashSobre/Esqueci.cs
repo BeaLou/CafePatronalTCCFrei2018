@@ -52,8 +52,7 @@ namespace CaféPatronal.TELAS.MenuHistoriaSplashSobre
             email.Para = paraqm;
             email.Assunto = "Recuperação de senha - Café Patronal/Parthenon";
             email.Mensagem = "Olá, " + nome + " foi solicitado uma recuperação de senha para sua conta no sistema " +
-                " Café Patronal, sua senha" + " é " + pega + ", caso você não tenha solicitado uma recuperação, comunique a gerência.                                                                       Grato EQUIPE FENIX";
-
+                " Café Patronal, sua senha" + " é " + pega + ", caso você não tenha solicitado uma recuperação, comunique a gerência. GRATO EQUIPE PARTHENON";
             if (eemail == paraqm)
             {
                 email.Enviar();
