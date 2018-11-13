@@ -158,5 +158,19 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Question)
             tela.Show();
             this.Hide();
         }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            FrmGráficos tela = new FrmGráficos();
+            tela.Show();
+            this.Hide();
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            FrmClima tela = new FrmClima();
+            tela.Show();
+            this.Hide();
+        }
     }
 }

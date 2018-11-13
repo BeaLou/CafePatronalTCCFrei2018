@@ -50,10 +50,11 @@
     <ApplicationIcon>Resources\whatsapp_image_2018_08_29_at_23_17_37_1_pWI_icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.10.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.SqlXml" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -123,6 +124,18 @@
     </Compile>
     <Compile Include="TELAS\API\Email.Designer.cs">
       <DependentUpon>Email.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TELAS\API\FrmClima.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\API\FrmClima.Designer.cs">
+      <DependentUpon>FrmClima.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TELAS\API\FrmGráficos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\API\FrmGráficos.Designer.cs">
+      <DependentUpon>FrmGráficos.cs</DependentUpon>
     </Compile>
     <Compile Include="TELAS\Compra\CadastroCompra.cs">
       <SubType>Form</SubType>
@@ -258,6 +271,12 @@
     </Compile>
     <EmbeddedResource Include="TELAS\API\Email.resx">
       <DependentUpon>Email.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TELAS\API\FrmClima.resx">
+      <DependentUpon>FrmClima.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TELAS\API\FrmGráficos.resx">
+      <DependentUpon>FrmGráficos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\Compra\CadastroCompra.resx">
       <DependentUpon>CadastroCompra.cs</DependentUpon>
