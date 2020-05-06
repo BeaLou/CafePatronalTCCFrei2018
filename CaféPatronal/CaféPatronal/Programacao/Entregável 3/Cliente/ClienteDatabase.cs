@@ -2,6 +2,7 @@
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,13 +33,13 @@ namespace CaféPatronal.Programacao.Cliente
                     @ds_email  
                 )";
 
-            List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("id_cliente", cliente.id_cliente));
-            parms.Add(new MySqlParameter("nm_nome", cliente.nm_nome));
-            parms.Add(new MySqlParameter("nm_sobrenome", cliente.nm_sobrenome));
-            parms.Add(new MySqlParameter("dt_datanascimento", cliente.dt_datanascimento));
-            parms.Add(new MySqlParameter("ds_cpf", cliente.ds_cpf));
-            parms.Add(new MySqlParameter("ds_email", cliente.ds_email));
+            List<SqlParameter> parms = new List<SqlParameter>();
+            parms.Add(new SqlParameter("id_cliente", cliente.id_cliente));
+            parms.Add(new SqlParameter("nm_nome", cliente.nm_nome));
+            parms.Add(new SqlParameter("nm_sobrenome", cliente.nm_sobrenome));
+            parms.Add(new SqlParameter("dt_datanascimento", cliente.dt_datanascimento));
+            parms.Add(new SqlParameter("ds_cpf", cliente.ds_cpf));
+            parms.Add(new SqlParameter("ds_email", cliente.ds_email));
             Database db = new Database();
             int pk = db.ExecuteInsertScriptWithPk(script, parms);
             return pk;
@@ -57,13 +58,13 @@ namespace CaféPatronal.Programacao.Cliente
                   ds_email = @ds_email
                   WHERE id_cliente = @id_cliente";
 
-            List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("id_cliente", cliente.id_cliente));
-            parms.Add(new MySqlParameter("nm_nome", cliente.nm_nome));
-            parms.Add(new MySqlParameter("nm_sobrenome", cliente.nm_sobrenome));
-            parms.Add(new MySqlParameter("dt_datanascimento", cliente.dt_datanascimento));
-            parms.Add(new MySqlParameter("ds_cpf", cliente.ds_cpf));
-            parms.Add(new MySqlParameter("ds_email", cliente.ds_email));
+            List<SqlParameter> parms = new List<SqlParameter>();
+            parms.Add(new SqlParameter("id_cliente", cliente.id_cliente));
+            parms.Add(new SqlParameter("nm_nome", cliente.nm_nome));
+            parms.Add(new SqlParameter("nm_sobrenome", cliente.nm_sobrenome));
+            parms.Add(new SqlParameter("dt_datanascimento", cliente.dt_datanascimento));
+            parms.Add(new SqlParameter("ds_cpf", cliente.ds_cpf));
+            parms.Add(new SqlParameter("ds_email", cliente.ds_email));
 
 
             Database db = new Database();
@@ -76,8 +77,8 @@ namespace CaféPatronal.Programacao.Cliente
             string script =
             @"DELETE FROM tb_cliente WHERE id_cliente = @id_cliente";
 
-            List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("id_cliente", id));
+            List<SqlParameter> parms = new List<SqlParameter>();
+            parms.Add(new SqlParameter("id_cliente", id));
 
             Database db = new Database();
             db.ExecuteInsertScript(script, parms);
@@ -87,7 +88,7 @@ namespace CaféPatronal.Programacao.Cliente
         {
             string script =
                 @"SELECT * FROM tb_cliente";
-            List<MySqlParameter> parms = new List<MySqlParameter>();
+            List<SqlParameter> parms = new List<SqlParameter>();
 
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
@@ -117,8 +118,8 @@ namespace CaféPatronal.Programacao.Cliente
             string script =
                 @"SELECT * FROM tb_cliente
                   WHERE nm_nome like @nm_nome";
-            List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("nm_nome", "%" + cliente + "%"));
+            List<SqlParameter> parms = new List<SqlParameter>();
+            parms.Add(new SqlParameter("nm_nome", "%" + cliente + "%"));
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
             List<ClienteDTO> clientes = new List<ClienteDTO>();

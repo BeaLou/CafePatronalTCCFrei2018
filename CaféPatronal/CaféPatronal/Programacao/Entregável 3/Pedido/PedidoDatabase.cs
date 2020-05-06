@@ -2,6 +2,7 @@
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,11 +30,11 @@ namespace CaféPatronal.Programacao.Pedido
                 @ds_formapagamento
                 )";
 
-            List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("id_pedido", pedido.id_pedido));
-            parms.Add(new MySqlParameter("id_cliente", pedido.id_cliente));
-            parms.Add(new MySqlParameter("dt_venda", pedido.dt_venda));
-            parms.Add(new MySqlParameter("ds_formapagamento", pedido.ds_formapagamento));
+            List<SqlParameter> parms = new List<SqlParameter>();
+            parms.Add(new SqlParameter("id_pedido", pedido.id_pedido));
+            parms.Add(new SqlParameter("id_cliente", pedido.id_cliente));
+            parms.Add(new SqlParameter("dt_venda", pedido.dt_venda));
+            parms.Add(new SqlParameter("ds_formapagamento", pedido.ds_formapagamento));
 
             Database db = new Database();
             int pk = db.ExecuteInsertScriptWithPk(script, parms);
@@ -50,11 +51,11 @@ namespace CaféPatronal.Programacao.Pedido
                   ds_formapagamento = @ds_formapagamento  
                   WHERE id_pedido = @id_pedido,";
 
-            List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("id_pedido", pedido.id_pedido));
-            parms.Add(new MySqlParameter("id_cliente", pedido.id_cliente));
-            parms.Add(new MySqlParameter("dt_venda", pedido.dt_venda));
-            parms.Add(new MySqlParameter("ds_formapagamento", pedido.ds_formapagamento));
+            List<SqlParameter> parms = new List<SqlParameter>();
+            parms.Add(new SqlParameter("id_pedido", pedido.id_pedido));
+            parms.Add(new SqlParameter("id_cliente", pedido.id_cliente));
+            parms.Add(new SqlParameter("dt_venda", pedido.dt_venda));
+            parms.Add(new SqlParameter("ds_formapagamento", pedido.ds_formapagamento));
 
             Database db = new Database();
             db.ExecuteInsertScript(script, parms);
@@ -66,8 +67,8 @@ namespace CaféPatronal.Programacao.Pedido
             string script =
             @"DELETE FROM tb_pedido WHERE id_pedido = @id_pedido";
 
-            List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("id_pedido",id));
+            List<SqlParameter> parms = new List<SqlParameter>();
+            parms.Add(new SqlParameter("id_pedido",id));
 
             Database db = new Database();
             db.ExecuteInsertScript(script, parms);
@@ -77,7 +78,7 @@ namespace CaféPatronal.Programacao.Pedido
         {
             string script =
                 @"SELECT * FROM tb_pedido";
-            List<MySqlParameter> parms = new List<MySqlParameter>();
+            List<SqlParameter> parms = new List<SqlParameter>();
 
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
@@ -107,8 +108,8 @@ namespace CaféPatronal.Programacao.Pedido
                 @"SELECT * FROM tb_pedido
                   WHERE id_pedido like @id_pedido";
 
-            List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("id_pedido", "%" + pedido + "%"));
+            List<SqlParameter> parms = new List<SqlParameter>();
+            parms.Add(new SqlParameter("id_pedido", "%" + pedido + "%"));
 
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);

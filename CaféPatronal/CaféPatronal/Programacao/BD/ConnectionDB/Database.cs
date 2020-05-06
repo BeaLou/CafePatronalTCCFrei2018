@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,7 +10,7 @@ namespace CaféPatronal.Programacao.ConnectionDB
 {
    public class Database
     {
-        public void ExecuteInsertScript(string script, List<MySqlParameter> parameters)
+        public void ExecuteInsertScript(string script, List<SqlParameter> parameters)
         {
             Connection conn = new Connection();
             MySqlConnection connection = conn.Create();
@@ -19,7 +20,7 @@ namespace CaféPatronal.Programacao.ConnectionDB
 
             if (parameters != null)
             {
-                foreach (MySqlParameter param in parameters)
+                foreach(SqlParameter param in parameters)
                 {
                     command.Parameters.Add(param);
                 }
@@ -29,7 +30,7 @@ namespace CaféPatronal.Programacao.ConnectionDB
             connection.Close();
         }
 
-        public int ExecuteInsertScriptWithPk(string script, List<MySqlParameter> parameters)
+        public int ExecuteInsertScriptWithPk(string script, List<SqlParameter> parameters)
         {
             Connection conn = new Connection();
             MySqlConnection connection = conn.Create();
@@ -39,7 +40,7 @@ namespace CaféPatronal.Programacao.ConnectionDB
 
             if (parameters != null)
             {
-                foreach (MySqlParameter param in parameters)
+                foreach (SqlParameter param in parameters)
                 {
                     command.Parameters.Add(param);
                 }
@@ -52,7 +53,7 @@ namespace CaféPatronal.Programacao.ConnectionDB
             return id;
         }
 
-        public MySql.Data.MySqlClient.MySqlDataReader ExecuteSelectScript(string script, List<MySqlParameter> parameters)
+        public MySql.Data.MySqlClient.MySqlDataReader ExecuteSelectScript(string script, List<SqlParameter> parameters)
         {
             Connection conn = new Connection();
             MySqlConnection connection = conn.Create();
@@ -62,7 +63,7 @@ namespace CaféPatronal.Programacao.ConnectionDB
 
             if (parameters != null)
             {
-                foreach (MySqlParameter param in parameters)
+                foreach (SqlParameter param in parameters)
                 {
                     command.Parameters.Add(param);
                 }

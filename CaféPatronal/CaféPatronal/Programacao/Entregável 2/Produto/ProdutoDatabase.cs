@@ -2,6 +2,7 @@
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,11 +29,11 @@ namespace CaféPatronal.Programacao.Produto
                 @vl_produto
                 )";
 
-            List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("id_produto", produto.id_produto));
-            parms.Add(new MySqlParameter("nm_nome", produto.nm_nome));
-            parms.Add(new MySqlParameter("ds_descricao", produto.ds_descricao));
-            parms.Add(new MySqlParameter("vl_produto", produto.vl_produto));
+            List<SqlParameter> parms = new List<SqlParameter>();
+            parms.Add(new SqlParameter("id_produto", produto.id_produto));
+            parms.Add(new SqlParameter("nm_nome", produto.nm_nome));
+            parms.Add(new SqlParameter("ds_descricao", produto.ds_descricao));
+            parms.Add(new SqlParameter("vl_produto", produto.vl_produto));
 
             Database db = new Database();
             int pk = db.ExecuteInsertScriptWithPk(script, parms);
@@ -49,11 +50,11 @@ namespace CaféPatronal.Programacao.Produto
                   vl_produto=@vl_produto
                   WHERE id_produto = @id_produto";
 
-            List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("id_produto", produto.id_produto));
-            parms.Add(new MySqlParameter("nm_nome", produto.nm_nome));
-            parms.Add(new MySqlParameter("ds_descricao", produto.ds_descricao));
-            parms.Add(new MySqlParameter("vl_produto", produto.vl_produto));
+            List<SqlParameter> parms = new List<SqlParameter>();
+            parms.Add(new SqlParameter("id_produto", produto.id_produto));
+            parms.Add(new SqlParameter("nm_nome", produto.nm_nome));
+            parms.Add(new SqlParameter("ds_descricao", produto.ds_descricao));
+            parms.Add(new SqlParameter("vl_produto", produto.vl_produto));
 
             Database db = new Database();
             db.ExecuteInsertScript(script, parms);
@@ -65,8 +66,8 @@ namespace CaféPatronal.Programacao.Produto
             string script =
             @"DELETE FROM tb_produto WHERE id_produto = @id_produto";
 
-            List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("id_produto", id));
+            List<SqlParameter> parms = new List<SqlParameter>();
+            parms.Add(new SqlParameter("id_produto", id));
 
             Database db = new Database();
             db.ExecuteInsertScript(script, parms);
@@ -76,7 +77,7 @@ namespace CaféPatronal.Programacao.Produto
         {
             string script =
                 @"SELECT * FROM tb_produto";
-            List<MySqlParameter> parms = new List<MySqlParameter>();
+            List<SqlParameter> parms = new List<SqlParameter>();
 
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
@@ -104,8 +105,8 @@ namespace CaféPatronal.Programacao.Produto
             string script =
                 @"SELECT * FROM tb_produto
                   WHERE nm_nome like @nm_nome";
-            List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("nm_nome", "%" + produto + "%"));
+            List<SqlParameter> parms = new List<SqlParameter>();
+            parms.Add(new SqlParameter("nm_nome", "%" + produto + "%"));
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
             List<ProdutoDTO> produtos = new List<ProdutoDTO>();

@@ -2,6 +2,7 @@
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,11 +18,11 @@ namespace CaféPatronal.Programacao.Entregável_4.Gastos
                 VALUES
                 (@nm_gasto, @ds_tipo, @dt_pagamento, @vl_gasto)";
 
-            List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("nm_gasto", dto.Gasto));
-            parms.Add(new MySqlParameter("ds_tipo", dto.Tipo));
-            parms.Add(new MySqlParameter("dt_pagamento", dto.Pagamento));
-            parms.Add(new MySqlParameter("vl_gasto", dto.Valor));
+            List<SqlParameter> parms = new List<SqlParameter>();
+            parms.Add(new SqlParameter("nm_gasto", dto.Gasto));
+            parms.Add(new SqlParameter("ds_tipo", dto.Tipo));
+            parms.Add(new SqlParameter("dt_pagamento", dto.Pagamento));
+            parms.Add(new SqlParameter("vl_gasto", dto.Valor));
 
             Database db = new Database();
 
@@ -32,8 +33,8 @@ namespace CaféPatronal.Programacao.Entregável_4.Gastos
         {
             string script = @"SELECT * FROM tb_gasto WHERE nm_gasto like @nm_gasto";
 
-            List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("nm_gasto", gasto + "%"));
+            List<SqlParameter> parms = new List<SqlParameter>();
+            parms.Add(new SqlParameter("nm_gasto", gasto + "%"));
 
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
@@ -60,7 +61,7 @@ namespace CaféPatronal.Programacao.Entregável_4.Gastos
         {
             string script = @"SELECT * FROM tb_gasto";
 
-            List<MySqlParameter> parms = new List<MySqlParameter>();
+            List<SqlParameter> parms = new List<SqlParameter>();
 
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
@@ -86,8 +87,8 @@ namespace CaféPatronal.Programacao.Entregável_4.Gastos
         public void Remover(int id)
         {
             string script = "DELETE FROM tb_gasto WHERE id_gasto = id_gasto";
-            List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("id_gasto", id));
+            List<SqlParameter> parms = new List<SqlParameter>();
+            parms.Add(new SqlParameter("id_gasto", id));
 
             Database db = new Database();
             db.ExecuteInsertScript(script, parms);
@@ -103,12 +104,12 @@ namespace CaféPatronal.Programacao.Entregável_4.Gastos
                         WHERE id_gasto = @id_gasto";
 
 
-            List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("id_gasto", dto.Id));
-            parms.Add(new MySqlParameter("nm_gasto", dto.Gasto));
-            parms.Add(new MySqlParameter("ds_tipo", dto.Tipo));
-            parms.Add(new MySqlParameter("dt_pagamento", dto.Pagamento));
-            parms.Add(new MySqlParameter("vl_gasto", dto.Valor));
+            List<SqlParameter> parms = new List<SqlParameter>();
+            parms.Add(new SqlParameter("id_gasto", dto.Id));
+            parms.Add(new SqlParameter("nm_gasto", dto.Gasto));
+            parms.Add(new SqlParameter("ds_tipo", dto.Tipo));
+            parms.Add(new SqlParameter("dt_pagamento", dto.Pagamento));
+            parms.Add(new SqlParameter("vl_gasto", dto.Valor));
 
             Database db = new Database();
             db.ExecuteInsertScript(script, parms);

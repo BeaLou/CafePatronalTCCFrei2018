@@ -2,6 +2,7 @@
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,9 +15,9 @@ namespace CaféPatronal.Programacao.Funcionario
         {
             string script = @"SELECT * FROM tb_funcionario WHERE ds_login = @ds_login AND ds_senha = @ds_senha";
 
-            List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("ds_login", login));
-            parms.Add(new MySqlParameter("ds_senha", senha));
+            List<SqlParameter> parms = new List<SqlParameter>();
+            parms.Add(new SqlParameter("ds_login", login));
+            parms.Add(new SqlParameter("ds_senha", senha));
 
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
@@ -102,28 +103,28 @@ namespace CaféPatronal.Programacao.Funcionario
                  @vl_salariobruto 
                 )";
 
-            List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("id_funcionario", funcionario.id_funcionario));
+            List<SqlParameter> parms = new List<SqlParameter>();
+            parms.Add(new SqlParameter("id_funcionario", funcionario.id_funcionario));
 
-            parms.Add(new MySqlParameter("nm_nome", funcionario.nm_nome));
-            parms.Add(new MySqlParameter("nm_sobrenome", funcionario.nm_sobrenome));
-            parms.Add(new MySqlParameter("ds_carteiratrabalho", funcionario.ds_carteiratrabalho));
-            parms.Add(new MySqlParameter("ds_cpf", funcionario.ds_cpf));
-            parms.Add(new MySqlParameter("ds_rg", funcionario.ds_rg));
-            parms.Add(new MySqlParameter("ds_dpto", funcionario.ds_dpto));
-            parms.Add(new MySqlParameter("ds_email", funcionario.ds_email));
-            parms.Add(new MySqlParameter("ds_telefone", funcionario.ds_telefone));
-            parms.Add(new MySqlParameter("ds_telefonemovel", funcionario.ds_telefonemovel));
-            parms.Add(new MySqlParameter("ds_cep", funcionario.ds_cep));
-            parms.Add(new MySqlParameter("ds_complemento", funcionario.ds_ncasa));
-            parms.Add(new MySqlParameter("ds_ncasa", funcionario.ds_ncasa));
-            parms.Add(new MySqlParameter("dt_nascimento", funcionario.dt_nascimento));
-            parms.Add(new MySqlParameter("ds_login", funcionario.ds_login));
-            parms.Add(new MySqlParameter("ds_senha", funcionario.ds_senha));
-            parms.Add(new MySqlParameter("bt_permissaoadm", funcionario.bt_permissaoadm));
-            parms.Add(new MySqlParameter("bt_permissaorh", funcionario.bt_permissaorh));
-            parms.Add(new MySqlParameter("bt_permissaofuncionario", funcionario.bt_permissaofuncionario));
-            parms.Add(new MySqlParameter("vl_salariobruto", funcionario.vl_salariobruto));
+            parms.Add(new SqlParameter("nm_nome", funcionario.nm_nome));
+            parms.Add(new SqlParameter("nm_sobrenome", funcionario.nm_sobrenome));
+            parms.Add(new SqlParameter("ds_carteiratrabalho", funcionario.ds_carteiratrabalho));
+            parms.Add(new SqlParameter("ds_cpf", funcionario.ds_cpf));
+            parms.Add(new SqlParameter("ds_rg", funcionario.ds_rg));
+            parms.Add(new SqlParameter("ds_dpto", funcionario.ds_dpto));
+            parms.Add(new SqlParameter("ds_email", funcionario.ds_email));
+            parms.Add(new SqlParameter("ds_telefone", funcionario.ds_telefone));
+            parms.Add(new SqlParameter("ds_telefonemovel", funcionario.ds_telefonemovel));
+            parms.Add(new SqlParameter("ds_cep", funcionario.ds_cep));
+            parms.Add(new SqlParameter("ds_complemento", funcionario.ds_ncasa));
+            parms.Add(new SqlParameter("ds_ncasa", funcionario.ds_ncasa));
+            parms.Add(new SqlParameter("dt_nascimento", funcionario.dt_nascimento));
+            parms.Add(new SqlParameter("ds_login", funcionario.ds_login));
+            parms.Add(new SqlParameter("ds_senha", funcionario.ds_senha));
+            parms.Add(new SqlParameter("bt_permissaoadm", funcionario.bt_permissaoadm));
+            parms.Add(new SqlParameter("bt_permissaorh", funcionario.bt_permissaorh));
+            parms.Add(new SqlParameter("bt_permissaofuncionario", funcionario.bt_permissaofuncionario));
+            parms.Add(new SqlParameter("vl_salariobruto", funcionario.vl_salariobruto));
             Database db = new Database();
             int pk = db.ExecuteInsertScriptWithPk(script, parms);
             return pk;
@@ -155,28 +156,28 @@ namespace CaféPatronal.Programacao.Funcionario
                  vl_salariobruto = @vl_salariobruto
                  WHERE id_funcionario = @id_funcionario";
 
-            List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("id_funcionario", funcionario.id_funcionario));
+            List<SqlParameter> parms = new List<SqlParameter>();
+            parms.Add(new SqlParameter("id_funcionario", funcionario.id_funcionario));
 
-            parms.Add(new MySqlParameter("nm_nome", funcionario.nm_nome));
-            parms.Add(new MySqlParameter("nm_sobrenome", funcionario.nm_sobrenome));
-            parms.Add(new MySqlParameter("ds_carteiratrabalho", funcionario.ds_carteiratrabalho));
-            parms.Add(new MySqlParameter("ds_cpf", funcionario.ds_cpf));
-            parms.Add(new MySqlParameter("ds_rg", funcionario.ds_rg));
-            parms.Add(new MySqlParameter("ds_dpto", funcionario.ds_dpto));
-            parms.Add(new MySqlParameter("ds_email", funcionario.ds_email));
-            parms.Add(new MySqlParameter("ds_telefone", funcionario.ds_telefone));
-            parms.Add(new MySqlParameter("ds_telefonemovel", funcionario.ds_telefonemovel));
-            parms.Add(new MySqlParameter("ds_cep", funcionario.ds_cep));
-            parms.Add(new MySqlParameter("ds_complemento", funcionario.ds_ncasa));
-            parms.Add(new MySqlParameter("ds_ncasa", funcionario.ds_ncasa));
-            parms.Add(new MySqlParameter("dt_nascimento", funcionario.dt_nascimento));
-            parms.Add(new MySqlParameter("ds_login", funcionario.ds_login));
-            parms.Add(new MySqlParameter("ds_senha", funcionario.ds_senha));
-            parms.Add(new MySqlParameter("bt_permissaoadm", funcionario.bt_permissaoadm));
-            parms.Add(new MySqlParameter("bt_permissaorh", funcionario.bt_permissaorh));
-            parms.Add(new MySqlParameter("bt_permissaofuncionario", funcionario.bt_permissaofuncionario));
-            parms.Add(new MySqlParameter("vl_salariobruto", funcionario.vl_salariobruto));
+            parms.Add(new SqlParameter("nm_nome", funcionario.nm_nome));
+            parms.Add(new SqlParameter("nm_sobrenome", funcionario.nm_sobrenome));
+            parms.Add(new SqlParameter("ds_carteiratrabalho", funcionario.ds_carteiratrabalho));
+            parms.Add(new SqlParameter("ds_cpf", funcionario.ds_cpf));
+            parms.Add(new SqlParameter("ds_rg", funcionario.ds_rg));
+            parms.Add(new SqlParameter("ds_dpto", funcionario.ds_dpto));
+            parms.Add(new SqlParameter("ds_email", funcionario.ds_email));
+            parms.Add(new SqlParameter("ds_telefone", funcionario.ds_telefone));
+            parms.Add(new SqlParameter("ds_telefonemovel", funcionario.ds_telefonemovel));
+            parms.Add(new SqlParameter("ds_cep", funcionario.ds_cep));
+            parms.Add(new SqlParameter("ds_complemento", funcionario.ds_ncasa));
+            parms.Add(new SqlParameter("ds_ncasa", funcionario.ds_ncasa));
+            parms.Add(new SqlParameter("dt_nascimento", funcionario.dt_nascimento));
+            parms.Add(new SqlParameter("ds_login", funcionario.ds_login));
+            parms.Add(new SqlParameter("ds_senha", funcionario.ds_senha));
+            parms.Add(new SqlParameter("bt_permissaoadm", funcionario.bt_permissaoadm));
+            parms.Add(new SqlParameter("bt_permissaorh", funcionario.bt_permissaorh));
+            parms.Add(new SqlParameter("bt_permissaofuncionario", funcionario.bt_permissaofuncionario));
+            parms.Add(new SqlParameter("vl_salariobruto", funcionario.vl_salariobruto));
 
 
             Database db = new Database();
@@ -189,8 +190,8 @@ namespace CaféPatronal.Programacao.Funcionario
             string script =
             @"DELETE FROM tb_funcionario WHERE id_funcionario = @id_funcionario";
 
-            List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("id_funcionario", id));
+            List<SqlParameter> parms = new List<SqlParameter>();
+            parms.Add(new SqlParameter("id_funcionario", id));
 
             Database db = new Database();
             db.ExecuteInsertScript(script, parms);
@@ -200,7 +201,7 @@ namespace CaféPatronal.Programacao.Funcionario
         {
             string script =
                 @"SELECT * FROM tb_funcionario";
-            List<MySqlParameter> parms = new List<MySqlParameter>();
+            List<SqlParameter> parms = new List<SqlParameter>();
 
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
@@ -245,8 +246,8 @@ namespace CaféPatronal.Programacao.Funcionario
             string script =
                 @"SELECT * FROM tb_funcionario
                   WHERE nm_nome like @nm_nome";
-            List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("nm_nome", "%" + funcionario + "%"));
+            List<SqlParameter> parms = new List<SqlParameter>();
+            parms.Add(new SqlParameter("nm_nome", "%" + funcionario + "%"));
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
             List<FuncionarioDTO> funcionarios = new List<FuncionarioDTO>();

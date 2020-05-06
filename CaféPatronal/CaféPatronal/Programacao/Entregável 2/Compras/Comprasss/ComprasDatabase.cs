@@ -2,6 +2,7 @@
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,10 +29,10 @@ namespace CaféPatronal.Programacao.Entregável_2.Compras
                 
                 )";
 
-            List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("id_compra", compras.id_compra));
-            parms.Add(new MySqlParameter("id_fornecedor", compras.id_fornecedor));
-            parms.Add(new MySqlParameter("dt_compra", compras.dt_compra));
+            List<SqlParameter> parms = new List<SqlParameter>();
+            parms.Add(new SqlParameter("id_compra", compras.id_compra));
+            parms.Add(new SqlParameter("id_fornecedor", compras.id_fornecedor));
+            parms.Add(new SqlParameter("dt_compra", compras.dt_compra));
            
 
             Database db = new Database();
@@ -43,8 +44,8 @@ namespace CaféPatronal.Programacao.Entregável_2.Compras
             string script =
             @"DELETE FROM tb_compra WHERE id_compra = @id_compra";
 
-            List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("id_compra", id));
+            List<SqlParameter> parms = new List<SqlParameter>();
+            parms.Add(new SqlParameter("id_compra", id));
 
             Database db = new Database();
             db.ExecuteInsertScript(script, parms);
@@ -54,7 +55,7 @@ namespace CaféPatronal.Programacao.Entregável_2.Compras
         {
             string script =
                 @"SELECT * FROM tb_compra";
-            List<MySqlParameter> parms = new List<MySqlParameter>();
+            List<SqlParameter> parms = new List<SqlParameter>();
 
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
@@ -82,7 +83,7 @@ namespace CaféPatronal.Programacao.Entregável_2.Compras
             string script =
                 @"SELECT * FROM tb_compra
                   WHERE dt_compra like @dt_compra";
-            List<MySqlParameter> parms = new List<MySqlParameter>();
+            List<SqlParameter> parms = new List<SqlParameter>();
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
             List<ComprasDTO> compras = new List<ComprasDTO>();

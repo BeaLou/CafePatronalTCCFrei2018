@@ -2,6 +2,7 @@
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,9 +17,9 @@ namespace CaféPatronal.Programacao.FluxoCaixa
             WHERE dt_referencia >= @dt_inicio
                 AND dt_referencia <= @dt_fim;";
 
-            List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("dt_inicio", Inicio));
-            parms.Add(new MySqlParameter("dt_fim", Fim));
+            List<SqlParameter> parms = new List<SqlParameter>();
+            parms.Add(new SqlParameter("dt_inicio", Inicio));
+            parms.Add(new SqlParameter("dt_fim", Fim));
 
 
             Database db = new Database();
@@ -48,7 +49,7 @@ namespace CaféPatronal.Programacao.FluxoCaixa
             string script = @"select * from vw_consultar_fluxodecaixa";
 
 
-            List<MySqlParameter> parms = new List<MySqlParameter>();
+            List<SqlParameter> parms = new List<SqlParameter>();
             Database db = new Database();
 
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);

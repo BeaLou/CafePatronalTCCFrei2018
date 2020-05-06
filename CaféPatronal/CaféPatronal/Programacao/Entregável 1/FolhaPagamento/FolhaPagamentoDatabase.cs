@@ -2,6 +2,7 @@
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -42,18 +43,18 @@ namespace CaféPatronal.Programacao.FolhaPagamento
                 @dt_pagamento
                 )";
 
-            List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("id_folhapagamento", folha.id_folhapagamento));
-            parms.Add(new MySqlParameter("id_funcionario", folha.id_funcionario));
-            parms.Add(new MySqlParameter("hr_horasextras", folha.hr_horasextras));
-            parms.Add(new MySqlParameter("bt_valetransporte", folha.bt_valetransporte));
-            parms.Add(new MySqlParameter("vl_inss", folha.vl_inss));
-            parms.Add(new MySqlParameter("vl_ir", folha.vl_ir));
-            parms.Add(new MySqlParameter("vl_fgts", folha.vl_fgts));
-            parms.Add(new MySqlParameter("vl_ValeTransporte", folha.vl_ValeTransporte));
-            parms.Add(new MySqlParameter("vl_salarioliquido", folha.vl_salarioliquido));
-            parms.Add(new MySqlParameter("ds_mes", folha.ds_mes));
-            parms.Add(new MySqlParameter("dt_pagamento", folha.dt_pagamento));
+            List<SqlParameter> parms = new List<SqlParameter>();
+            parms.Add(new SqlParameter("id_folhapagamento", folha.id_folhapagamento));
+            parms.Add(new SqlParameter("id_funcionario", folha.id_funcionario));
+            parms.Add(new SqlParameter("hr_horasextras", folha.hr_horasextras));
+            parms.Add(new SqlParameter("bt_valetransporte", folha.bt_valetransporte));
+            parms.Add(new SqlParameter("vl_inss", folha.vl_inss));
+            parms.Add(new SqlParameter("vl_ir", folha.vl_ir));
+            parms.Add(new SqlParameter("vl_fgts", folha.vl_fgts));
+            parms.Add(new SqlParameter("vl_ValeTransporte", folha.vl_ValeTransporte));
+            parms.Add(new SqlParameter("vl_salarioliquido", folha.vl_salarioliquido));
+            parms.Add(new SqlParameter("ds_mes", folha.ds_mes));
+            parms.Add(new SqlParameter("dt_pagamento", folha.dt_pagamento));
 
 
             Database db = new Database();
@@ -78,18 +79,18 @@ namespace CaféPatronal.Programacao.FolhaPagamento
                   dt_pagamento = @dt_pagamento,
                   WHERE id_folhapagamento = @id_folhapagamento";
 
-            List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("id_folhapagamento", folha.id_folhapagamento));
-            parms.Add(new MySqlParameter("id_funcionario", folha.id_funcionario));
-            parms.Add(new MySqlParameter("hr_horasextras", folha.hr_horasextras));
-            parms.Add(new MySqlParameter("bt_valetransporte", folha.bt_valetransporte));
-            parms.Add(new MySqlParameter("vl_inss", folha.vl_inss));
-            parms.Add(new MySqlParameter("vl_ir", folha.vl_ir));
-            parms.Add(new MySqlParameter("vl_fgts", folha.vl_fgts));
-            parms.Add(new MySqlParameter("vl_ValeTransporte", folha.vl_ValeTransporte));
-            parms.Add(new MySqlParameter("vl_salarioliquido", folha.vl_salarioliquido));
-            parms.Add(new MySqlParameter("ds_mes", folha.ds_mes));
-            parms.Add(new MySqlParameter("dt_pagamento", folha.dt_pagamento));
+            List<SqlParameter> parms = new List<SqlParameter>();
+            parms.Add(new SqlParameter("id_folhapagamento", folha.id_folhapagamento));
+            parms.Add(new SqlParameter("id_funcionario", folha.id_funcionario));
+            parms.Add(new SqlParameter("hr_horasextras", folha.hr_horasextras));
+            parms.Add(new SqlParameter("bt_valetransporte", folha.bt_valetransporte));
+            parms.Add(new SqlParameter("vl_inss", folha.vl_inss));
+            parms.Add(new SqlParameter("vl_ir", folha.vl_ir));
+            parms.Add(new SqlParameter("vl_fgts", folha.vl_fgts));
+            parms.Add(new SqlParameter("vl_ValeTransporte", folha.vl_ValeTransporte));
+            parms.Add(new SqlParameter("vl_salarioliquido", folha.vl_salarioliquido));
+            parms.Add(new SqlParameter("ds_mes", folha.ds_mes));
+            parms.Add(new SqlParameter("dt_pagamento", folha.dt_pagamento));
 
             Database db = new Database();
             db.ExecuteInsertScript(script, parms);
@@ -101,8 +102,8 @@ namespace CaféPatronal.Programacao.FolhaPagamento
             string script =
             @"DELETE FROM tb_folhapagamento WHERE id_folhapagamento = @id_folhapagamento";
 
-            List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("id_folhapagamento", id));
+            List<SqlParameter> parms = new List<SqlParameter>();
+            parms.Add(new SqlParameter("id_folhapagamento", id));
 
             Database db = new Database();
             db.ExecuteInsertScript(script, parms);
@@ -112,7 +113,7 @@ namespace CaféPatronal.Programacao.FolhaPagamento
         {
             string script =
                 @"SELECT * FROM tb_folhapagamento";
-            List<MySqlParameter> parms = new List<MySqlParameter>();
+            List<SqlParameter> parms = new List<SqlParameter>();
 
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
@@ -147,8 +148,8 @@ namespace CaféPatronal.Programacao.FolhaPagamento
             string script =
             @"SELECT * FROM vw_consultar_folhapagamento
                    WHERE ds_mes like @ds_mes";
-            List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("ds_mes", "%" + mes + "%"));
+            List<SqlParameter> parms = new List<SqlParameter>();
+            parms.Add(new SqlParameter("ds_mes", "%" + mes + "%"));
 
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);

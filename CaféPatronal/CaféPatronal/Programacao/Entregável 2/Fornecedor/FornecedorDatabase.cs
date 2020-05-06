@@ -2,6 +2,7 @@
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,15 +37,15 @@ namespace CaféPatronal.Programacao.Estoque
                 @ds_email
                 )";
 
-            List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("id_fornecedor", fornecedor.id_fornecedor));
-            parms.Add(new MySqlParameter("nm_nome", fornecedor.nm_nome));
-            parms.Add(new MySqlParameter("ds_cnpj", fornecedor.ds_cnpj));
-            parms.Add(new MySqlParameter("ds_telefone", fornecedor.ds_telefone));
-            parms.Add(new MySqlParameter("ds_cep", fornecedor.ds_cep));
-            parms.Add(new MySqlParameter("ds_complemento", fornecedor.ds_complemento));
-            parms.Add(new MySqlParameter("ds_numerofornec", fornecedor.ds_numerofornecedor));
-            parms.Add(new MySqlParameter("ds_email", fornecedor.ds_email));
+            List<SqlParameter> parms = new List<SqlParameter>();
+            parms.Add(new SqlParameter("id_fornecedor", fornecedor.id_fornecedor));
+            parms.Add(new SqlParameter("nm_nome", fornecedor.nm_nome));
+            parms.Add(new SqlParameter("ds_cnpj", fornecedor.ds_cnpj));
+            parms.Add(new SqlParameter("ds_telefone", fornecedor.ds_telefone));
+            parms.Add(new SqlParameter("ds_cep", fornecedor.ds_cep));
+            parms.Add(new SqlParameter("ds_complemento", fornecedor.ds_complemento));
+            parms.Add(new SqlParameter("ds_numerofornec", fornecedor.ds_numerofornecedor));
+            parms.Add(new SqlParameter("ds_email", fornecedor.ds_email));
 
             Database db = new Database();
             int pk = db.ExecuteInsertScriptWithPk(script, parms);
@@ -65,15 +66,15 @@ namespace CaféPatronal.Programacao.Estoque
                   ds_email = @ds_email
                   WHERE id_fornecedor = @id_fornecedor";
 
-            List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("id_fornecedor", fornecedor.id_fornecedor));
-            parms.Add(new MySqlParameter("nm_nome", fornecedor.nm_nome));
-            parms.Add(new MySqlParameter("ds_cnpj", fornecedor.ds_cnpj));
-            parms.Add(new MySqlParameter("ds_telefone", fornecedor.ds_telefone));
-            parms.Add(new MySqlParameter("ds_cep", fornecedor.ds_cep));
-            parms.Add(new MySqlParameter("ds_complemento", fornecedor.ds_complemento));
-            parms.Add(new MySqlParameter("ds_numerofornec", fornecedor.ds_numerofornecedor));
-            parms.Add(new MySqlParameter("ds_email", fornecedor.ds_email));
+            List<SqlParameter> parms = new List<SqlParameter>();
+            parms.Add(new SqlParameter("id_fornecedor", fornecedor.id_fornecedor));
+            parms.Add(new SqlParameter("nm_nome", fornecedor.nm_nome));
+            parms.Add(new SqlParameter("ds_cnpj", fornecedor.ds_cnpj));
+            parms.Add(new SqlParameter("ds_telefone", fornecedor.ds_telefone));
+            parms.Add(new SqlParameter("ds_cep", fornecedor.ds_cep));
+            parms.Add(new SqlParameter("ds_complemento", fornecedor.ds_complemento));
+            parms.Add(new SqlParameter("ds_numerofornec", fornecedor.ds_numerofornecedor));
+            parms.Add(new SqlParameter("ds_email", fornecedor.ds_email));
 
             Database db = new Database();
             db.ExecuteInsertScript(script, parms);
@@ -85,8 +86,8 @@ namespace CaféPatronal.Programacao.Estoque
             string script =
             @"DELETE FROM tb_fornecedor WHERE id_fornecedor = @id_fornecedor";
 
-            List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("id_fornecedor", id));
+            List<SqlParameter> parms = new List<SqlParameter>();
+            parms.Add(new SqlParameter("id_fornecedor", id));
 
             Database db = new Database();
             db.ExecuteInsertScript(script, parms);
@@ -96,7 +97,7 @@ namespace CaféPatronal.Programacao.Estoque
         {
             string script =
                 @"SELECT * FROM tb_fornecedor";
-            List<MySqlParameter> parms = new List<MySqlParameter>();
+            List<SqlParameter> parms = new List<SqlParameter>();
 
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
@@ -128,8 +129,8 @@ namespace CaféPatronal.Programacao.Estoque
             string script =
                 @"SELECT * FROM tb_fornecedor
                   WHERE nm_nome like @nm_nome";
-            List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("nm_nome", "%" + fornecedor + "%"));
+            List<SqlParameter> parms = new List<SqlParameter>();
+            parms.Add(new SqlParameter("nm_nome", "%" + fornecedor + "%"));
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
             List<FornecedorDTO> fornecedores = new List<FornecedorDTO>();
